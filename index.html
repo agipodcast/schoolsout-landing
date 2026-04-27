@@ -84,6 +84,14 @@
       color: var(--cream);
     }
 
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
     .nav-link {
       font-size: 15px;
       font-weight: 700;
@@ -424,7 +432,8 @@
       background: #e4aa00;
     }
 
-    .listen-box {
+    .listen-box,
+    .contact-box {
       display: grid;
       grid-template-columns: 1fr auto;
       gap: 30px;
@@ -435,7 +444,8 @@
       background: rgba(247, 240, 223, 0.05);
     }
 
-    .listen-copy {
+    .listen-copy,
+    .contact-copy {
       color: var(--cream-soft);
       max-width: 680px;
     }
@@ -497,7 +507,8 @@
 
       .hero-grid,
       .signup-card,
-      .listen-box {
+      .listen-box,
+      .contact-box {
         grid-template-columns: 1fr;
       }
 
@@ -532,6 +543,10 @@
         width: 100%;
       }
 
+      .nav {
+        align-items: flex-start;
+      }
+
       .nav-link {
         padding: 8px 13px;
       }
@@ -543,7 +558,10 @@
   <header>
     <div class="wrap nav">
       <a class="brand" href="#top" aria-label="Schools Out Saturdays home">Schools Out Saturdays</a>
-      <a class="nav-link" href="#listen">Listen</a>
+      <div class="nav-links">
+        <a class="nav-link" href="#listen">Listen</a>
+        <a class="nav-link" href="https://share-na2.hsforms.com/172rws_4LT7CcG4mtdk137w41aedp" target="_blank" rel="noopener noreferrer">Get in Touch</a>
+      </div>
     </div>
   </header>
 
@@ -628,6 +646,22 @@
           <a class="button button-secondary" href="https://podcasts.apple.com/us/podcast/agi-advance-grow-innovate-with-ai/id1812450522" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
           <a class="button button-secondary" href="https://open.spotify.com/show/6mijpuwWNrXYvMgRazLfUN" target="_blank" rel="noopener noreferrer">Spotify</a>
           <a class="button button-secondary" href="https://www.youtube.com/playlist?list=PLBeGVU933EaEQeGMLi4Vk6D-bXUutguAe" target="_blank" rel="noopener noreferrer">YouTube</a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="contact-title">
+      <div class="wrap contact-box">
+        <div>
+          <div class="section-kicker">Get in touch</div>
+          <h2 id="contact-title">Want to talk about AI in education?</h2>
+          <p class="contact-copy">
+            If you teach, lead, sponsor, or want to be a guest on the show, we'd love to hear from you.
+          </p>
+        </div>
+
+        <div class="button-row">
+          <a class="button button-primary" href="https://share-na2.hsforms.com/172rws_4LT7CcG4mtdk137w41aedp" target="_blank" rel="noopener noreferrer">Get in Touch</a>
         </div>
       </div>
     </section>
