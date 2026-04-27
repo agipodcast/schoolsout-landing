@@ -265,22 +265,163 @@
 
     .form-placeholder {
       min-height: 320px;
-      border: 1px dashed rgba(245, 184, 0, 0.56);
+      border: none;
       border-radius: 24px;
-      background: rgba(15, 23, 41, 0.5);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 28px;
-      text-align: center;
-      color: var(--muted);
-      font-size: 16px;
+      background: var(--cream);
+      padding: 30px;
+      color: #17213a;
+      text-align: left;
+      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22);
     }
 
-    .form-placeholder code {
-      color: var(--gold-soft);
-      font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
-      white-space: normal;
+    .form-placeholder h2 {
+      color: #111827;
+      font-size: clamp(30px, 3vw, 42px);
+      margin-bottom: 22px;
+      text-align: center;
+    }
+
+    .form-placeholder .hs-form,
+    .form-placeholder form {
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: #17213a;
+    }
+
+    .form-placeholder .hs-form-field {
+      margin-bottom: 16px;
+    }
+
+    .form-placeholder label,
+    .form-placeholder .hs-form label,
+    .form-placeholder .hs-form-field label {
+      display: block;
+      margin-bottom: 7px;
+      color: #17213a;
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 1.35;
+    }
+
+    .form-placeholder .hs-form-required {
+      color: #b45309;
+      margin-left: 3px;
+    }
+
+    .form-placeholder input[type="text"],
+    .form-placeholder input[type="email"],
+    .form-placeholder input[type="tel"],
+    .form-placeholder textarea,
+    .form-placeholder select,
+    .form-placeholder .hs-input {
+      width: 100% !important;
+      min-height: 46px;
+      border: 1px solid #c9c0ac;
+      border-radius: 8px;
+      background: #fffaf0;
+      color: #111827;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      line-height: 1.4;
+      padding: 11px 12px;
+      outline: none;
+      box-shadow: none;
+    }
+
+    .form-placeholder textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .form-placeholder input[type="text"]:focus,
+    .form-placeholder input[type="email"]:focus,
+    .form-placeholder input[type="tel"]:focus,
+    .form-placeholder textarea:focus,
+    .form-placeholder select:focus,
+    .form-placeholder .hs-input:focus {
+      border-color: var(--gold);
+      box-shadow: 0 0 0 3px rgba(245, 184, 0, 0.22);
+    }
+
+    .form-placeholder .hs-field-desc,
+    .form-placeholder .hs-error-msg,
+    .form-placeholder .hs-error-msgs,
+    .form-placeholder .hs_error_rollup {
+      font-size: 13px;
+      line-height: 1.4;
+    }
+
+    .form-placeholder .hs-field-desc {
+      color: #5f6472;
+      margin-top: 4px;
+    }
+
+    .form-placeholder .hs-error-msg,
+    .form-placeholder .hs-error-msgs label {
+      color: #b42318;
+      font-weight: 700;
+    }
+
+    .form-placeholder .legal-consent-container,
+    .form-placeholder .hs-richtext {
+      color: #4b5563;
+      font-size: 12px;
+      line-height: 1.45;
+      margin-top: 8px;
+    }
+
+    .form-placeholder .legal-consent-container a,
+    .form-placeholder .hs-richtext a {
+      color: #7c5a00;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .form-placeholder input[type="checkbox"] {
+      width: 16px !important;
+      height: 16px;
+      margin-right: 8px;
+      accent-color: var(--gold);
+    }
+
+    .form-placeholder .hs-form-checkbox,
+    .form-placeholder .hs-form-booleancheckbox {
+      margin-top: 8px;
+    }
+
+    .form-placeholder .hs-form-checkbox label,
+    .form-placeholder .hs-form-booleancheckbox label {
+      display: flex;
+      align-items: flex-start;
+      gap: 8px;
+      font-weight: 500;
+      color: #374151;
+    }
+
+    .form-placeholder .actions {
+      margin-top: 20px;
+      padding: 0;
+    }
+
+    .form-placeholder input[type="submit"],
+    .form-placeholder .hs-button {
+      appearance: none;
+      border: none;
+      border-radius: 999px;
+      background: var(--gold);
+      color: #111827;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 16px;
+      font-weight: 800;
+      line-height: 1;
+      min-height: 48px;
+      padding: 14px 22px;
+      cursor: pointer;
+      box-shadow: 0 12px 26px rgba(245, 184, 0, 0.26);
+    }
+
+    .form-placeholder input[type="submit"]:hover,
+    .form-placeholder .hs-button:hover {
+      background: #e4aa00;
     }
 
     .listen-box {
@@ -376,6 +517,11 @@
       .signup-card {
         padding: 26px;
         border-radius: 26px;
+      }
+
+      .form-placeholder {
+        padding: 22px;
+        border-radius: 20px;
       }
 
       .platforms {
