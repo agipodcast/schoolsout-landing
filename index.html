@@ -1,28 +1,29 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Events | Schools Out Saturdays</title>
-  <meta name="description" content="AI education events across Indiana and the Midwest from Schools Out Saturdays and AGI Podcast.">
-
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Schools Out Saturdays | AGI Podcast</title>
+  <meta name="description" content="Schools Out Saturdays is a podcast and newsletter for educators preparing students for an AI-shaped future." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@500;600;700&display=swap" rel="stylesheet" />
   <style>
     :root {
-      --navy: #0f1729;
-      --navy-soft: #17213a;
-      --navy-card: #1a2342;
+      --bg: #0f1729;
+      --bg-alt: #121d36;
+      --panel: rgba(255, 255, 255, 0.06);
+      --panel-border: rgba(255, 255, 255, 0.12);
+      --text: #f5f1e8;
+      --muted: #d5d0c4;
       --gold: #f5b800;
-      --gold-soft: #ffd96a;
-      --cream: #f7f0df;
-      --cream-soft: #e8deca;
-      --muted: #b8c0d4;
-      --line: rgba(247, 240, 223, 0.16);
-      --shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
-      --max-width: 1120px;
+      --gold-dark: #d89c00;
+      --cream: #f4efe3;
+      --ink: #172033;
+      --line: rgba(255, 255, 255, 0.14);
+      --shadow: 0 18px 60px rgba(0, 0, 0, 0.28);
+      --radius: 28px;
+      --max: 1180px;
     }
 
     * {
@@ -35,13 +36,17 @@
 
     body {
       margin: 0;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 18px;
-      line-height: 1.65;
-      color: var(--cream);
+      font-family: "Inter", sans-serif;
       background:
-        radial-gradient(circle at 82% 10%, rgba(245, 184, 0, 0.13), transparent 34%),
-        linear-gradient(180deg, var(--navy), #10182b 50%, #0d1425);
+        radial-gradient(circle at top right, rgba(245, 184, 0, 0.18), transparent 28%),
+        linear-gradient(180deg, #0d1630 0%, #101a31 45%, #0d162c 100%);
+      color: var(--text);
+      line-height: 1.65;
+    }
+
+    img {
+      max-width: 100%;
+      display: block;
     }
 
     a {
@@ -49,608 +54,542 @@
       text-decoration: none;
     }
 
-    p {
-      margin: 0;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-    }
-
     .wrap {
-      width: min(var(--max-width), calc(100% - 40px));
+      width: min(calc(100% - 32px), var(--max));
       margin: 0 auto;
     }
 
-    header {
-      padding: 28px 0;
-      border-bottom: 1px solid var(--line);
-      background: rgba(15, 23, 41, 0.82);
-      backdrop-filter: blur(12px);
+    .site-header {
       position: sticky;
       top: 0;
       z-index: 20;
+      backdrop-filter: blur(10px);
+      background: rgba(13, 22, 44, 0.88);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .site-header .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      min-height: 72px;
+    }
+
+    .brand {
+      font-family: "Lora", serif;
+      font-size: 1.6rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
     }
 
     .nav {
       display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 24px;
-    }
-
-    .brand {
-      font-family: "Lora", Georgia, serif;
-      font-size: 24px;
-      font-weight: 700;
-      letter-spacing: -0.03em;
-      color: var(--cream);
-      white-space: nowrap;
-    }
-
-    .nav-links {
-      display: flex;
       align-items: center;
       gap: 12px;
       flex-wrap: wrap;
-      justify-content: flex-end;
     }
 
     .nav-link {
-      font-size: 15px;
-      font-weight: 700;
-      color: var(--cream-soft);
-      border: 1px solid var(--line);
-      padding: 9px 15px;
-      border-radius: 999px;
-    }
-
-    .nav-link:hover {
-      border-color: rgba(245, 184, 0, 0.55);
-      color: var(--gold-soft);
-    }
-
-    .nav-link.active {
-      background: var(--gold);
-      border-color: var(--gold);
-      color: #111827;
-    }
-
-    main {
-      overflow: hidden;
-    }
-
-    section {
-      padding: 76px 0;
-      border-top: 1px solid var(--line);
-    }
-
-    .top-section {
-      padding: 86px 0 72px;
-      border-top: none;
-    }
-
-    .top-grid {
-      display: grid;
-      gap: 28px;
-      max-width: 860px;
-    }
-
-    .mark {
-      display: inline-flex;
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 10px;
-      width: fit-content;
-      padding: 26px 30px;
-      border: 1px solid var(--line);
-      border-radius: 28px;
-      background: rgba(247, 240, 223, 0.05);
-      box-shadow: var(--shadow);
-    }
-
-    .mark-kicker {
-      color: var(--gold);
-      font-size: 13px;
-      font-weight: 800;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-    }
-
-    .mark-title {
-      font-family: "Lora", Georgia, serif;
-      font-size: clamp(38px, 6vw, 68px);
-      font-weight: 700;
-      line-height: 0.98;
-      letter-spacing: -0.05em;
-      color: var(--cream);
-    }
-
-    .mark-subtitle {
-      color: var(--cream-soft);
-      font-size: 18px;
-      font-weight: 700;
-    }
-
-    .intro-copy {
-      color: var(--cream-soft);
-      max-width: 760px;
-      font-size: 20px;
-      line-height: 1.7;
-    }
-
-    .section-kicker {
-      color: var(--gold);
-      font-weight: 800;
-      font-size: 14px;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-bottom: 14px;
-    }
-
-    h1,
-    h2,
-    h3 {
-      font-family: "Lora", Georgia, serif;
-      letter-spacing: -0.045em;
-      line-height: 1.05;
-      color: var(--cream);
-      margin: 0;
-    }
-
-    h1 {
-      font-size: clamp(46px, 7vw, 84px);
-    }
-
-    h2 {
-      font-size: clamp(34px, 4.6vw, 56px);
-      margin-bottom: 18px;
-    }
-
-    h3 {
-      font-size: clamp(27px, 3vw, 36px);
-      margin-bottom: 10px;
-    }
-
-    .events-grid {
-      display: grid;
-      grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 26px;
-      margin-top: 34px;
-    }
-
-    .event-card {
-      position: relative;
-      display: block;
-      overflow: hidden;
-      border: 1px solid var(--line);
-      border-radius: 30px;
-      background: rgba(247, 240, 223, 0.06);
-      box-shadow: var(--shadow);
-      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
-    }
-
-    .event-card:hover {
-      transform: translateY(-4px);
-      border-color: rgba(245, 184, 0, 0.55);
-      background: rgba(247, 240, 223, 0.08);
-    }
-
-    .event-image {
-      position: relative;
-      min-height: 260px;
-      background: var(--navy-soft);
-      overflow: hidden;
-    }
-
-    .event-image img {
-      width: 100%;
-      height: 100%;
-      min-height: 260px;
-      object-fit: cover;
-      object-position: center;
-    }
-
-    .badge {
-      position: absolute;
-      top: 18px;
-      right: 18px;
-      z-index: 2;
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      min-height: 34px;
-      padding: 7px 12px;
+      min-height: 42px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid var(--panel-border);
+      color: var(--text);
+      font-size: 0.98rem;
+      font-weight: 600;
+      background: rgba(255, 255, 255, 0.02);
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .nav-link:hover {
+      transform: translateY(-1px);
+      border-color: rgba(245, 184, 0, 0.45);
+      background: rgba(255, 255, 255, 0.05);
+    }
+
+    .hero {
+      padding: 72px 0 54px;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.1fr 0.9fr;
+      gap: 56px;
+      align-items: center;
+    }
+
+    .eyebrow {
+      display: inline-block;
+      margin-bottom: 20px;
+      color: var(--gold);
+      font-size: 0.98rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    h1, h2, h3 {
+      margin: 0 0 16px;
+      font-family: "Lora", serif;
+      letter-spacing: -0.03em;
+      line-height: 0.97;
+    }
+
+    h1 {
+      font-size: clamp(3rem, 7vw, 6rem);
+      max-width: 11ch;
+    }
+
+    h2 {
+      font-size: clamp(2.2rem, 4.5vw, 3.6rem);
+      max-width: 12ch;
+    }
+
+    h3 {
+      font-size: 1.4rem;
+      line-height: 1.2;
+    }
+
+    .hero p,
+    .section-copy p,
+    .listen-copy,
+    .contact-copy,
+    .form-copy {
+      font-size: 1.125rem;
+      color: var(--muted);
+      margin: 0 0 18px;
+      max-width: 40rem;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 54px;
+      padding: 0 24px;
       border-radius: 999px;
       background: var(--gold);
       color: #111827;
-      font-size: 13px;
       font-weight: 800;
-      box-shadow: 0 14px 30px rgba(0, 0, 0, 0.28);
+      font-size: 1rem;
+      box-shadow: 0 10px 28px rgba(245, 184, 0, 0.2);
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
-    .event-body {
-      padding: 28px;
+    .button:hover {
+      transform: translateY(-1px);
+      background: #ffc826;
     }
 
-    .event-meta {
-      color: var(--gold-soft);
-      font-size: 15px;
-      font-weight: 800;
-      letter-spacing: 0.02em;
-      margin-bottom: 14px;
+    .hero-card {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 18px;
+      background: linear-gradient(180deg, rgba(7, 18, 48, 0.82), rgba(10, 22, 48, 0.88));
+      border: 1px solid var(--panel-border);
+      border-radius: 34px;
+      box-shadow: var(--shadow);
+      min-height: 420px;
     }
 
-    .event-description {
-      color: var(--cream-soft);
-      font-size: 18px;
-      line-height: 1.6;
+    .hero-card img {
+      width: 100%;
+      height: auto;
+      border-radius: 24px;
+      object-fit: cover;
     }
 
-    .event-link-note {
+    .section {
+      padding: 72px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .why-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 26px;
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .section-label {
       display: inline-block;
-      margin-top: 22px;
-      color: var(--cream);
-      font-size: 15px;
+      margin-bottom: 18px;
+      color: var(--gold);
+      font-size: 0.92rem;
       font-weight: 800;
-      text-decoration: underline;
-      text-decoration-color: rgba(245, 184, 0, 0.55);
-      text-underline-offset: 5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
     }
 
-    .submit {
-      background:
-        radial-gradient(circle at 20% 20%, rgba(245, 184, 0, 0.1), transparent 32%),
-        rgba(26, 35, 66, 0.54);
-    }
-
-    .submit-card {
+    .signup-card,
+    .listen-panel,
+    .contact-panel {
       display: grid;
       grid-template-columns: 0.9fr 1.1fr;
-      gap: 38px;
-      align-items: start;
-      background: rgba(247, 240, 223, 0.06);
-      border: 1px solid var(--line);
-      border-radius: 34px;
-      padding: 40px;
+      gap: 40px;
+      padding: 32px;
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.07), rgba(255, 255, 255, 0.05));
+      border: 1px solid var(--panel-border);
+      border-radius: var(--radius);
       box-shadow: var(--shadow);
     }
 
-    .submit-copy {
-      color: var(--cream-soft);
-      font-size: 19px;
-    }
-
-    .form-placeholder {
-      min-height: 300px;
-      border: none;
-      border-radius: 24px;
+    .form-card {
       background: var(--cream);
-      padding: 30px;
-      color: #17213a;
-      text-align: left;
-      box-shadow: 0 18px 44px rgba(0, 0, 0, 0.22);
+      color: var(--ink);
+      border-radius: 22px;
+      padding: 28px 24px;
+      border: 1px solid rgba(23, 32, 51, 0.08);
+      min-height: 320px;
     }
 
-    .form-placeholder .hs-form,
-    .form-placeholder form {
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      color: #17213a;
+    .form-card h2 {
+      color: var(--ink);
+      max-width: none;
+      margin-bottom: 18px;
+      font-size: clamp(2rem, 4vw, 3rem);
     }
 
-    .form-placeholder .hs-form-field {
+    .form-card .hs-form,
+    .form-card .hbspt-form {
+      color: var(--ink);
+    }
+
+    .form-card .hs-form-field {
       margin-bottom: 16px;
     }
 
-    .form-placeholder label,
-    .form-placeholder .hs-form label,
-    .form-placeholder .hs-form-field label {
+    .form-card label {
       display: block;
-      margin-bottom: 7px;
-      color: #17213a;
-      font-size: 14px;
+      margin-bottom: 6px;
+      color: var(--ink);
+      font-size: 0.95rem;
       font-weight: 700;
-      line-height: 1.35;
-    }
-
-    .form-placeholder .hs-form-required {
-      color: #b45309;
-      margin-left: 3px;
-    }
-
-    .form-placeholder input[type="text"],
-    .form-placeholder input[type="email"],
-    .form-placeholder input[type="tel"],
-    .form-placeholder textarea,
-    .form-placeholder select,
-    .form-placeholder .hs-input {
-      width: 100% !important;
-      min-height: 46px;
-      border: 1px solid #c9c0ac;
-      border-radius: 8px;
-      background: #fffaf0;
-      color: #111827;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 16px;
       line-height: 1.4;
-      padding: 11px 12px;
-      outline: none;
-      box-shadow: none;
     }
 
-    .form-placeholder textarea {
-      min-height: 100px;
+    .form-card input[type="text"],
+    .form-card input[type="email"],
+    .form-card input[type="tel"],
+    .form-card input[type="number"],
+    .form-card input[type="date"],
+    .form-card select,
+    .form-card textarea {
+      width: 100% !important;
+      border: 1px solid rgba(23, 32, 51, 0.18);
+      border-radius: 12px;
+      background: #fffdf8;
+      color: var(--ink);
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
+      padding: 14px 14px;
+      min-height: 48px;
+      box-shadow: none;
+      outline: none;
+      transition: border-color 0.2s ease, box-shadow 0.2s ease;
+    }
+
+    .form-card textarea {
+      min-height: 120px;
       resize: vertical;
     }
 
-    .form-placeholder input[type="text"]:focus,
-    .form-placeholder input[type="email"]:focus,
-    .form-placeholder input[type="tel"]:focus,
-    .form-placeholder textarea:focus,
-    .form-placeholder select:focus,
-    .form-placeholder .hs-input:focus {
-      border-color: var(--gold);
-      box-shadow: 0 0 0 3px rgba(245, 184, 0, 0.22);
+    .form-card input:focus,
+    .form-card select:focus,
+    .form-card textarea:focus {
+      border-color: rgba(245, 184, 0, 0.9);
+      box-shadow: 0 0 0 3px rgba(245, 184, 0, 0.18);
     }
 
-    .form-placeholder .hs-field-desc,
-    .form-placeholder .hs-error-msg,
-    .form-placeholder .hs-error-msgs,
-    .form-placeholder .hs_error_rollup {
-      font-size: 13px;
-      line-height: 1.4;
+    .form-card ul {
+      padding-left: 18px;
+      margin: 6px 0 0;
+      color: #9f2d2d;
+      font-size: 0.88rem;
     }
 
-    .form-placeholder .hs-field-desc {
-      color: #5f6472;
+    .form-card .hs-error-msgs {
       margin-top: 4px;
     }
 
-    .form-placeholder .hs-error-msg,
-    .form-placeholder .hs-error-msgs label {
-      color: #b42318;
-      font-weight: 700;
-    }
-
-    .form-placeholder .legal-consent-container,
-    .form-placeholder .hs-richtext {
-      color: #4b5563;
-      font-size: 12px;
-      line-height: 1.45;
-      margin-top: 8px;
-    }
-
-    .form-placeholder .legal-consent-container a,
-    .form-placeholder .hs-richtext a {
-      color: #7c5a00;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-    }
-
-    .form-placeholder input[type="checkbox"] {
-      width: 16px !important;
-      height: 16px;
-      margin-right: 8px;
-      accent-color: var(--gold);
-    }
-
-    .form-placeholder .hs-form-checkbox,
-    .form-placeholder .hs-form-booleancheckbox {
-      margin-top: 8px;
-    }
-
-    .form-placeholder .hs-form-checkbox label,
-    .form-placeholder .hs-form-booleancheckbox label {
-      display: flex;
-      align-items: flex-start;
-      gap: 8px;
-      font-weight: 500;
-      color: #374151;
-    }
-
-    .form-placeholder .actions {
-      margin-top: 20px;
+    .form-card .inputs-list {
+      list-style: none;
       padding: 0;
+      margin: 8px 0 0;
     }
 
-    .form-placeholder input[type="submit"],
-    .form-placeholder .hs-button {
+    .form-card .inputs-list li {
+      margin-bottom: 8px;
+    }
+
+    .form-card input[type="checkbox"] {
+      width: auto;
+      margin-right: 8px;
+      transform: translateY(1px);
+    }
+
+    .form-card .legal-consent-container,
+    .form-card .hs-richtext,
+    .form-card .hs-form-booleancheckbox-display span,
+    .form-card .hs-form-booleancheckbox-display label {
+      color: rgba(23, 32, 51, 0.82);
+      font-size: 0.9rem;
+      font-weight: 500;
+    }
+
+    .form-card .actions {
+      margin-top: 18px;
+    }
+
+    .form-card input[type="submit"],
+    .form-card .hs-button,
+    .form-card button {
       appearance: none;
       border: none;
       border-radius: 999px;
       background: var(--gold);
       color: #111827;
-      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      font-size: 16px;
+      font-family: "Inter", sans-serif;
+      font-size: 1rem;
       font-weight: 800;
       line-height: 1;
-      min-height: 48px;
-      padding: 14px 22px;
+      padding: 15px 24px;
       cursor: pointer;
-      box-shadow: 0 12px 26px rgba(245, 184, 0, 0.26);
+      box-shadow: 0 10px 24px rgba(245, 184, 0, 0.18);
+      transition: transform 0.2s ease, background 0.2s ease;
     }
 
-    .form-placeholder input[type="submit"]:hover,
-    .form-placeholder .hs-button:hover {
-      background: #e4aa00;
+    .form-card input[type="submit"]:hover,
+    .form-card .hs-button:hover,
+    .form-card button:hover {
+      background: #ffc826;
+      transform: translateY(-1px);
     }
 
-    footer {
-      padding: 40px 0;
-      border-top: 1px solid var(--line);
-      color: var(--muted);
-      font-size: 15px;
-    }
-
-    .footer-row {
+    .platforms {
       display: flex;
-      justify-content: space-between;
-      gap: 20px;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 20px;
+    }
+
+    .platform-link {
+      display: inline-flex;
       align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0 18px;
+      border-radius: 999px;
+      border: 1px solid var(--panel-border);
+      background: rgba(255, 255, 255, 0.04);
+      font-weight: 700;
+      transition: transform 0.2s ease, border-color 0.2s ease, background 0.2s ease;
+    }
+
+    .platform-link:hover {
+      transform: translateY(-1px);
+      border-color: rgba(245, 184, 0, 0.45);
+      background: rgba(255, 255, 255, 0.07);
+    }
+
+    .small-note {
+      font-size: 1rem;
+      color: var(--muted);
+      margin-top: 8px;
+      max-width: 52rem;
+    }
+
+    .contact-panel {
+      grid-template-columns: 1fr auto;
+      align-items: center;
+    }
+
+    .site-footer {
+      padding: 26px 0 36px;
+      font-size: 0.98rem;
+      color: var(--muted);
+    }
+
+    .site-footer .wrap {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
       flex-wrap: wrap;
     }
 
     .footer-brand {
-      color: var(--cream);
-      font-weight: 800;
+      font-weight: 700;
+      color: var(--text);
     }
 
     .footer-link {
-      color: var(--cream-soft);
-      text-decoration: underline;
-      text-decoration-color: rgba(245, 184, 0, 0.5);
-      text-underline-offset: 4px;
+      color: var(--muted);
+    }
+
+    .footer-link:hover {
+      color: var(--text);
     }
 
     @media (max-width: 768px) {
-      body {
-        font-size: 18px;
-      }
-
-      .wrap {
-        width: min(100% - 28px, var(--max-width));
-      }
-
-      header {
-        padding: 20px 0;
-      }
-
-      .nav {
+      .site-header .wrap {
+        flex-direction: column;
         align-items: flex-start;
+        padding: 14px 0;
       }
 
-      .brand {
-        font-size: 21px;
+      .hero {
+        padding-top: 52px;
       }
 
-      .nav-links {
-        gap: 8px;
-      }
-
-      .nav-link {
-        padding: 8px 12px;
-        font-size: 14px;
-      }
-
-      .top-section {
-        padding: 56px 0 54px;
-      }
-
-      .mark {
-        padding: 22px;
-        border-radius: 24px;
-      }
-
-      section {
-        padding: 56px 0;
-      }
-
-      .events-grid,
-      .submit-card {
+      .hero-grid,
+      .signup-card,
+      .listen-panel,
+      .contact-panel {
         grid-template-columns: 1fr;
       }
 
-      .event-image,
-      .event-image img {
-        min-height: 220px;
+      .hero-card {
+        min-height: auto;
       }
 
-      .event-body,
-      .submit-card {
-        padding: 26px;
+      h1 {
+        max-width: 100%;
       }
 
-      .form-placeholder {
-        padding: 22px;
-        border-radius: 20px;
+      .signup-card,
+      .listen-panel,
+      .contact-panel {
+        padding: 24px;
+      }
+
+      .platforms {
+        gap: 10px;
+      }
+
+      .site-footer .wrap {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
 </head>
-
 <body>
-  <header>
-    <div class="wrap nav">
-      <a class="brand" href="index.html" aria-label="Schools Out Saturdays home">Schools Out Saturdays</a>
-      <div class="nav-links">
-        <a class="nav-link" href="index.html#listen">Listen</a>
-        <a class="nav-link" href="index.html#subscribe">Field Notes</a>
+  <header class="site-header">
+    <div class="wrap">
+      <a class="brand" href="#">Schools Out Saturdays</a>
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="#listen">Listen</a>
+        <a class="nav-link" href="https://schoolsout.agipodcast.ai/events">Events</a>
         <a class="nav-link" href="https://share-na2.hsforms.com/172rws_4LT7CcG4mtdk137w41aedp" target="_blank" rel="noopener noreferrer">Get in Touch</a>
-        <a class="nav-link active" href="events.html" aria-current="page">Events</a>
-      </div>
+      </nav>
     </div>
   </header>
 
   <main>
-    <section class="top-section" aria-labelledby="page-title">
-      <div class="wrap top-grid">
-        <div class="mark" aria-label="Schools Out Saturdays events mark">
-          <div class="mark-kicker">Schools Out Saturdays presents</div>
-          <h1 class="mark-title" id="page-title">Events</h1>
-          <div class="mark-subtitle">AI in education, close enough to attend</div>
-        </div>
-
-        <p class="intro-copy">
-          AI in education is moving fast. These are the events worth knowing about across Indiana and the Midwest. If you're hosting one, submit it below.
-        </p>
-      </div>
-    </section>
-
-    <section aria-labelledby="events-title">
-      <div class="wrap">
-        <div class="section-kicker">Upcoming</div>
-        <h2 id="events-title">Events worth knowing about.</h2>
-
-        <div class="events-grid">
-          <a class="event-card" href="https://www.eventbrite.com/e/ai-symposium-tickets-1982887582136?aff=oddtdtcreator" target="_blank" rel="noopener noreferrer">
-            <div class="event-image">
-              <span class="badge">Jason speaking</span>
-              <img src="ai-symposium-may12.png" alt="AI Symposium: Leading the Shift event image">
-            </div>
-
-            <div class="event-body">
-              <h3>AI Symposium: Leading the Shift</h3>
-              <div class="event-meta">Tuesday, May 12, 2026 · CIESC, Indianapolis, IN</div>
-              <p class="event-description">
-                A full-day symposium for educational leaders moving beyond AI tools to system-wide change. Jason joins a lineup of educators and leaders discussing coaching, instructional rigor, and differentiation frameworks.
-              </p>
-              <span class="event-link-note">View event details</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section class="submit" aria-labelledby="submit-title">
-      <div class="wrap submit-card">
+    <section class="hero">
+      <div class="wrap hero-grid">
         <div>
-          <div class="section-kicker">Submit an event</div>
-          <h2 id="submit-title">Submit an Event</h2>
-          <p class="submit-copy">
-            Hosting an AI education event in the Midwest? Send it our way. We'll review and add approved events within 48 hours.
-          </p>
+          <div class="eyebrow">AI in education, minus the theater</div>
+          <h1>Preparing students for their future, not our past.</h1>
+          <p>Schools Out Saturdays is a podcast for educators trying to make sense of AI without turning school into a tech circus. Field Notes is the weekly companion, a short note with practical signals, questions, and opportunities from the edge of school and work.</p>
+          <a class="button" href="#field-notes">Subscribe to Field Notes</a>
         </div>
 
-        <div class="form-placeholder" aria-label="HubSpot event submission form placeholder">
-          <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
-          <script>
-            hbspt.forms.create({
-              portalId: "244029517",
-              formId: "fdd94ac5-a5e0-4936-a83c-0cbf467966aa",
-              region: "na2"
-            });
-          </script>
+        <div class="hero-card">
+          <img src="schools-out-logo.png" alt="Schools Out Saturdays artwork" />
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="why-grid">
+          <div>
+            <div class="section-label">Why this exists</div>
+            <h2>Educators are being handed tools before they have a map.</h2>
+          </div>
+          <div class="section-copy">
+            <p>The AI conversation in education is moving fast. Students are testing tools, teachers are setting rules class by class, and schools are trying to make policy while the ground keeps moving. That is a hard place to teach from.</p>
+            <p>Schools Out Saturdays brings real conversations to the surface. Teachers, faculty, founders, workforce people, and school leaders talking about what they are seeing, what they are worried about, and what they wish more people understood. No canned ed-tech pitch. No magic wand.</p>
+            <p>Schools Out Field Notes adds a weekly rhythm to that conversation. One practical signal, one small thing to think about, and one reply question that helps us learn from the people closest to students.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="field-notes">
+      <div class="wrap">
+        <div class="signup-card">
+          <div>
+            <div class="section-label">The weekly note</div>
+            <h2>Join Schools Out Field Notes.</h2>
+            <p class="form-copy">A weekly note for educators preparing students for an AI-shaped future, with practical signals, questions, and opportunities from the edge of school and work.</p>
+          </div>
+
+          <div class="form-card">
+            <h2>Schools Out Field Notes</h2>
+            <script charset="utf-8" type="text/javascript" src="//js-na2.hsforms.net/forms/embed/v2.js"></script>
+            <script>
+              hbspt.forms.create({
+                portalId: "244029517",
+                formId: "3fbae9ad-3525-46c4-aeaf-460d6fac64ca",
+                region: "na2"
+              });
+            </script>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="listen">
+      <div class="wrap">
+        <div class="listen-panel">
+          <div>
+            <div class="section-label">Listen</div>
+            <h2>Start with the podcast.</h2>
+            <p class="listen-copy">Schools Out Saturdays lives inside the AGI Podcast network. YouTube has a dedicated Schools Out playlist. Apple and Spotify currently host the full network feed; a separated feed is coming soon.</p>
+          </div>
+
+          <div>
+            <div class="platforms">
+              <a class="platform-link" href="https://podcasts.apple.com/us/podcast/agi-advance-grow-innovate-with-ai/id1812450522" target="_blank" rel="noopener noreferrer">Apple Podcasts</a>
+              <a class="platform-link" href="https://open.spotify.com/show/6mijpuwWNrXYvMgRazLfUN" target="_blank" rel="noopener noreferrer">Spotify</a>
+              <a class="platform-link" href="https://www.youtube.com/playlist?list=PLBeGVU933EaEQeGMLi4Vk6D-bXUutguAe" target="_blank" rel="noopener noreferrer">YouTube</a>
+              <a class="platform-link" href="/events">Events</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="wrap">
+        <div class="contact-panel">
+          <div>
+            <h3>Want to talk about AI in education?</h3>
+            <p class="contact-copy">If you teach, lead, sponsor, or want to be a guest on the show, we'd love to hear from you.</p>
+          </div>
+          <div>
+            <a class="button" href="https://share-na2.hsforms.com/172rws_4LT7CcG4mtdk137w41aedp" target="_blank" rel="noopener noreferrer">Get in Touch</a>
+          </div>
         </div>
       </div>
     </section>
   </main>
 
-  <footer>
-    <div class="wrap footer-row">
+  <footer class="site-footer">
+    <div class="wrap">
       <div>
-        <span class="footer-brand">AGI Podcast</span>
-        <span> © 2026</span>
+        <div class="footer-brand">AGI Podcast</div>
+        <div>&copy; 2026 AGI Podcast. All rights reserved.</div>
       </div>
       <a class="footer-link" href="https://agipodcast.ai">agipodcast.ai</a>
     </div>
