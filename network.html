@@ -1,0 +1,579 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>The Network | Schools Out Saturdays</title>
+  <meta name="description" content="The AGI Podcast network of shows from Schools Out Saturdays, including The Weekly Blitz, The Vibe, Data Bytes, and Capacity Overload.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    :root {
+      --navy: #0f1729;
+      --navy-soft: #17213a;
+      --navy-card: #1a2342;
+      --gold: #f5b800;
+      --gold-soft: #ffd96a;
+      --cream: #f7f0df;
+      --cream-soft: #e8deca;
+      --muted: #b8c0d4;
+      --line: rgba(247, 240, 223, 0.16);
+      --shadow: 0 28px 80px rgba(0, 0, 0, 0.28);
+      --max-width: 1120px;
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      font-size: 18px;
+      line-height: 1.65;
+      color: var(--cream);
+      background:
+        radial-gradient(circle at 82% 10%, rgba(245, 184, 0, 0.13), transparent 34%),
+        linear-gradient(180deg, var(--navy), #10182b 50%, #0d1425);
+    }
+
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    p {
+      margin: 0;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+    }
+
+    .wrap {
+      width: min(var(--max-width), calc(100% - 40px));
+      margin: 0 auto;
+    }
+
+    header {
+      padding: 28px 0;
+      border-bottom: 1px solid var(--line);
+      background: rgba(15, 23, 41, 0.82);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 20;
+    }
+
+    .nav {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 24px;
+    }
+
+    .brand {
+      font-family: "Lora", Georgia, serif;
+      font-size: 24px;
+      font-weight: 700;
+      letter-spacing: -0.03em;
+      color: var(--cream);
+      white-space: nowrap;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-link {
+      font-size: 15px;
+      font-weight: 700;
+      color: var(--cream-soft);
+      border: 1px solid var(--line);
+      padding: 9px 15px;
+      border-radius: 999px;
+      background: rgba(247, 240, 223, 0.02);
+    }
+
+    .nav-link:hover {
+      border-color: rgba(245, 184, 0, 0.55);
+      color: var(--gold-soft);
+      background: rgba(247, 240, 223, 0.05);
+    }
+
+    .nav-link.active {
+      background: var(--gold);
+      border-color: var(--gold);
+      color: #111827;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    section {
+      padding: 76px 0;
+      border-top: 1px solid var(--line);
+    }
+
+    .top-section {
+      padding: 86px 0 72px;
+      border-top: none;
+    }
+
+    .top-grid {
+      display: grid;
+      gap: 28px;
+      max-width: 880px;
+    }
+
+    .mark {
+      display: inline-flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      width: fit-content;
+      padding: 26px 30px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background: rgba(247, 240, 223, 0.05);
+      box-shadow: var(--shadow);
+    }
+
+    .mark-kicker,
+    .section-kicker,
+    .flagship-kicker {
+      color: var(--gold);
+      font-weight: 800;
+      font-size: 14px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .mark-kicker {
+      font-size: 13px;
+      letter-spacing: 0.15em;
+    }
+
+    .section-kicker,
+    .flagship-kicker {
+      margin-bottom: 14px;
+    }
+
+    .mark-title {
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(38px, 6vw, 68px);
+      font-weight: 700;
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      color: var(--cream);
+      margin: 0;
+    }
+
+    .mark-subtitle {
+      color: var(--cream-soft);
+      font-size: 18px;
+      font-weight: 700;
+    }
+
+    .intro-copy {
+      color: var(--cream-soft);
+      max-width: 780px;
+      font-size: 20px;
+      line-height: 1.7;
+    }
+
+    h1,
+    h2,
+    h3 {
+      font-family: "Lora", Georgia, serif;
+      letter-spacing: -0.045em;
+      line-height: 1.05;
+      color: var(--cream);
+      margin: 0;
+    }
+
+    h2 {
+      font-size: clamp(34px, 4.6vw, 56px);
+      margin-bottom: 18px;
+    }
+
+    h3 {
+      font-size: clamp(27px, 3vw, 36px);
+      margin-bottom: 10px;
+    }
+
+    .flagship-section {
+      background:
+        radial-gradient(circle at 20% 10%, rgba(245, 184, 0, 0.14), transparent 34%),
+        rgba(26, 35, 66, 0.42);
+    }
+
+    .flagship-card {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 34px;
+      align-items: center;
+      padding: 42px;
+      border-radius: 34px;
+      border: 1px solid rgba(245, 184, 0, 0.42);
+      background:
+        linear-gradient(135deg, rgba(245, 184, 0, 0.14), rgba(247, 240, 223, 0.05)),
+        rgba(247, 240, 223, 0.06);
+      box-shadow: var(--shadow);
+    }
+
+    .flagship-copy {
+      color: var(--cream-soft);
+      max-width: 740px;
+      font-size: 19px;
+      line-height: 1.7;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 52px;
+      padding: 13px 22px;
+      border-radius: 999px;
+      font-weight: 800;
+      font-size: 16px;
+      transition: transform 160ms ease, border-color 160ms ease, background 160ms ease;
+      white-space: nowrap;
+    }
+
+    .button:hover {
+      transform: translateY(-1px);
+    }
+
+    .button-primary {
+      background: var(--gold);
+      color: #111827;
+      box-shadow: 0 18px 42px rgba(245, 184, 0, 0.22);
+    }
+
+    .button-primary:hover {
+      background: #ffc826;
+    }
+
+    .shows-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 26px;
+      margin-top: 34px;
+    }
+
+    .other-grid {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr);
+      gap: 26px;
+      margin-top: 34px;
+      max-width: 720px;
+    }
+
+    .show-card {
+      position: relative;
+      display: block;
+      overflow: hidden;
+      border: 1px solid var(--line);
+      border-radius: 30px;
+      background: rgba(247, 240, 223, 0.06);
+      box-shadow: var(--shadow);
+      transition: transform 180ms ease, border-color 180ms ease, background 180ms ease;
+    }
+
+    .show-card:hover {
+      transform: translateY(-4px);
+      border-color: rgba(245, 184, 0, 0.55);
+      background: rgba(247, 240, 223, 0.08);
+    }
+
+    .show-image {
+      position: relative;
+      min-height: 240px;
+      background: var(--navy-soft);
+      overflow: hidden;
+    }
+
+    .show-image img {
+      width: 100%;
+      height: 100%;
+      min-height: 240px;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    .show-body {
+      padding: 28px;
+    }
+
+    .show-meta {
+      color: var(--gold-soft);
+      font-size: 15px;
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      margin-bottom: 14px;
+    }
+
+    .show-description {
+      color: var(--cream-soft);
+      font-size: 18px;
+      line-height: 1.6;
+    }
+
+    .show-link-note {
+      display: inline-block;
+      margin-top: 22px;
+      color: var(--cream);
+      font-size: 15px;
+      font-weight: 800;
+      text-decoration: underline;
+      text-decoration-color: rgba(245, 184, 0, 0.55);
+      text-underline-offset: 5px;
+    }
+
+    footer {
+      padding: 40px 0;
+      border-top: 1px solid var(--line);
+      color: var(--muted);
+      font-size: 15px;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      align-items: center;
+      flex-wrap: wrap;
+    }
+
+    .footer-brand {
+      color: var(--cream);
+      font-weight: 800;
+    }
+
+    .footer-link {
+      color: var(--cream-soft);
+      text-decoration: underline;
+      text-decoration-color: rgba(245, 184, 0, 0.5);
+      text-underline-offset: 4px;
+    }
+
+    @media (max-width: 768px) {
+      body {
+        font-size: 18px;
+      }
+
+      .wrap {
+        width: min(100% - 28px, var(--max-width));
+      }
+
+      header {
+        padding: 20px 0;
+      }
+
+      .nav {
+        align-items: flex-start;
+      }
+
+      .brand {
+        font-size: 21px;
+      }
+
+      .nav-links {
+        gap: 8px;
+      }
+
+      .nav-link {
+        padding: 8px 12px;
+        font-size: 14px;
+      }
+
+      .top-section {
+        padding: 56px 0 54px;
+      }
+
+      .mark {
+        padding: 22px;
+        border-radius: 24px;
+      }
+
+      section {
+        padding: 56px 0;
+      }
+
+      .flagship-card,
+      .shows-grid,
+      .other-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .flagship-card {
+        padding: 26px;
+        border-radius: 26px;
+      }
+
+      .show-image,
+      .show-image img {
+        min-height: 220px;
+      }
+
+      .show-body {
+        padding: 26px;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header>
+    <div class="wrap nav">
+      <a class="brand" href="/" aria-label="Schools Out Saturdays home">Schools Out Saturdays</a>
+      <div class="nav-links">
+        <a class="nav-link" href="/#listen">Listen</a>
+        <a class="nav-link" href="/#subscribe">Field Notes</a>
+        <a class="nav-link" href="/events">Events</a>
+        <a class="nav-link active" href="/network" aria-current="page">Network</a>
+        <a class="nav-link" href="https://share-na2.hsforms.com/172rws_4LT7CcG4mtdk137w41aedp" target="_blank" rel="noopener noreferrer">Get in Touch</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="top-section" aria-labelledby="page-title">
+      <div class="wrap top-grid">
+        <div class="mark" aria-label="Schools Out Saturdays network mark">
+          <div class="mark-kicker">Schools Out Saturdays presents</div>
+          <h1 class="mark-title" id="page-title">The Network</h1>
+          <div class="mark-subtitle">Four shows. One curiosity. Real conversations about AI.</div>
+        </div>
+
+        <p class="intro-copy">
+          AGI Podcast is a small network of shows for people who want practical, honest conversations about AI. Some shows are for educators. Some are for builders. Some are for the quiet infrastructure underneath all of it. Find the one that fits.
+        </p>
+      </div>
+    </section>
+
+    <section class="flagship-section" aria-labelledby="flagship-title">
+      <div class="wrap">
+        <div class="flagship-card">
+          <div>
+            <div class="flagship-kicker">Flagship show</div>
+            <h2 id="flagship-title">Schools Out Saturdays</h2>
+            <p class="flagship-copy">
+              AI in education, minus the theater. School's Out Saturdays is the home of the AGI Podcast Network. A weekly conversation about how AI is changing what students need, what teachers face, and what schools are being asked to do.
+            </p>
+          </div>
+
+          <a class="button button-primary" href="/">Visit Schools Out Saturdays</a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="network-title">
+      <div class="wrap">
+        <div class="section-kicker">The network</div>
+        <h2 id="network-title">More from AGI Podcast.</h2>
+
+        <div class="shows-grid">
+          <a class="show-card" href="https://www.youtube.com/playlist?list=PLBeGVU933EaEH3AGEpGy2s3yi8zKDRkvT" target="_blank" rel="noopener noreferrer">
+            <div class="show-image">
+              <img src="weekly-blitz.png" alt="The Weekly Blitz show artwork">
+            </div>
+
+            <div class="show-body">
+              <h3>The Weekly Blitz</h3>
+              <div class="show-meta">Co-hosted with Julie Koehrer · Lafayette's Q106.7</div>
+              <p class="show-description">
+                A fast, practical Monday recap of what changed in AI, what matters, and what might hit your workweek next.
+              </p>
+              <span class="show-link-note">Watch the playlist</span>
+            </div>
+          </a>
+
+          <a class="show-card" href="https://www.youtube.com/playlist?list=PLBeGVU933EaFBQG98zL8nmtyTUSr39QTe" target="_blank" rel="noopener noreferrer">
+            <div class="show-image">
+              <img src="the-vibe.png" alt="The Vibe show artwork">
+            </div>
+
+            <div class="show-body">
+              <h3>The Vibe</h3>
+              <div class="show-meta">Monthly · Long-form conversations</div>
+              <p class="show-description">
+                No code. No clock. No BS. Jason sits down with educators, builders, leaders, and deep thinkers for unscripted conversations about what AI is making possible, what it is making complicated, and what we owe each other as the tools get more powerful.
+              </p>
+              <span class="show-link-note">Watch the playlist</span>
+            </div>
+          </a>
+
+          <a class="show-card" href="https://www.youtube.com/playlist?list=PLBeGVU933EaFNK_Em851U6ZRGCPgQjL-k" target="_blank" rel="noopener noreferrer">
+            <div class="show-image">
+              <img src="data-bytes.png" alt="Data Bytes show artwork">
+            </div>
+
+            <div class="show-body">
+              <h3>Data Bytes</h3>
+              <div class="show-meta">Short-form clip series · Published when worth it</div>
+              <p class="show-description">
+                Data explained like the work actually depends on it. Data Bytes pulls the data conversations worth amplifying out of The Vibe, Weekly Blitz, and Schools Out Saturdays. Hygiene, governance, semantics, literacy, and the quiet infrastructure behind useful AI.
+              </p>
+              <span class="show-link-note">Watch the playlist</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <section aria-labelledby="beyond-title">
+      <div class="wrap">
+        <div class="section-kicker">Beyond the network</div>
+        <h2 id="beyond-title">Jason's other shows.</h2>
+
+        <div class="other-grid">
+          <a class="show-card" href="https://www.youtube.com/watch?v=WkwIdRatRCY" target="_blank" rel="noopener noreferrer">
+            <div class="show-image">
+              <img src="capacity-overload.png" alt="Capacity Overload: AI for Social Work show artwork">
+            </div>
+
+            <div class="show-body">
+              <h3>Capacity Overload: AI for Social Work</h3>
+              <div class="show-meta">From CitizenAI · Co-hosted with Oliver Belanger</div>
+              <p class="show-description">
+                Real stories from the front lines of social work, and honest conversations about the tools that might help. Each episode brings real conversations about service delivery, burnout, data, trust, and where technology can support the people doing the work without pretending to replace them.
+              </p>
+              <span class="show-link-note">Watch the episode</span>
+            </div>
+          </a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="wrap footer-row">
+      <div>
+        <span class="footer-brand">AGI Podcast</span>
+        <span> © 2026</span>
+      </div>
+      <a class="footer-link" href="https://agipodcast.ai">agipodcast.ai</a>
+    </div>
+  </footer>
+</body>
+</html>
