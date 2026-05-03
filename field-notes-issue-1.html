@@ -1,0 +1,735 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>School’s Out Field Notes | The Bridge Is the Assignment</title>
+  <meta name="description" content="School’s Out Field Notes Issue 1: The Bridge Is the Assignment. A graphic reportage essay for educators about AI access, readiness, projects, and what students need next." />
+
+  <meta property="og:title" content="School’s Out Field Notes | The Bridge Is the Assignment" />
+  <meta property="og:description" content="Access to AI is spreading fast. Readiness is something else. This Field Note asks what students still need to build." />
+  <meta property="og:image" content="/field-notes-header.png" />
+  <meta property="og:type" content="article" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:wght@500;600;700&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy: #0f1729;
+      --navy-soft: #17213a;
+      --navy-card: #1a2342;
+      --gold: #f5b800;
+      --gold-soft: #ffd96a;
+      --cream: #f7f0df;
+      --cream-soft: #e8deca;
+      --muted: #b8c0d4;
+      --line: rgba(247, 240, 223, 0.16);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(245, 184, 0, 0.12), transparent 34rem),
+        radial-gradient(circle at 80% 10%, rgba(255, 217, 106, 0.08), transparent 28rem),
+        var(--navy);
+      color: var(--cream);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--gold-soft);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(15, 23, 41, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      color: var(--cream);
+      text-decoration: none;
+      line-height: 1.1;
+    }
+
+    .brand strong {
+      font-family: "Lora", Georgia, serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-top: 0.15rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .nav-links a {
+      color: var(--cream-soft);
+      font-size: 0.88rem;
+      font-weight: 700;
+      padding: 0.55rem 0.8rem;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: var(--gold);
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    main {
+      overflow: hidden;
+    }
+
+    .page-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem 5rem;
+    }
+
+    .article-hero {
+      margin-bottom: 3rem;
+      padding: 1rem;
+      background: rgba(26, 35, 66, 0.72);
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .article-hero img {
+      width: 100%;
+      border-radius: 22px;
+      border: 1px solid rgba(247, 240, 223, 0.14);
+    }
+
+    .article-head {
+      max-width: 880px;
+      margin: 0 auto 3rem;
+      text-align: center;
+    }
+
+    .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.45rem;
+      margin-bottom: 1rem;
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .article-head h1 {
+      margin: 0;
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(2.4rem, 7vw, 5.3rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+    }
+
+    .article-head p {
+      max-width: 700px;
+      margin: 1.25rem auto 0;
+      color: var(--cream-soft);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    .article-body {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .article-section {
+      margin: 4.5rem 0;
+    }
+
+    .article-section:first-child {
+      margin-top: 0;
+    }
+
+    .article-section h2 {
+      margin: 0 0 1.25rem;
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(1.9rem, 4vw, 3.1rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      color: var(--cream);
+    }
+
+    .article-section p {
+      margin: 1rem 0;
+      color: var(--cream-soft);
+      font-size: 1.075rem;
+    }
+
+    .article-section strong {
+      color: var(--cream);
+    }
+
+    .section-image {
+      max-width: 900px;
+      margin: 4rem auto 2.25rem;
+      padding: 0.85rem;
+      background: rgba(247, 240, 223, 0.055);
+      border: 1px solid var(--line);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .section-image img {
+      width: 100%;
+      border-radius: 20px;
+      border: 1px solid rgba(247, 240, 223, 0.14);
+    }
+
+    .pull-quote {
+      margin: 1.65rem 0;
+      padding: 1.05rem 1.2rem 1.05rem 1.35rem;
+      border-left: 4px solid var(--gold);
+      background: rgba(245, 184, 0, 0.08);
+      border-radius: 0 18px 18px 0;
+      color: var(--cream);
+      font-size: clamp(1.18rem, 2.3vw, 1.55rem);
+      line-height: 1.42;
+      font-weight: 800;
+    }
+
+    .source {
+      margin-top: 1.25rem;
+      color: var(--muted);
+      font-size: 0.94rem;
+      font-style: italic;
+    }
+
+    .source a {
+      color: var(--gold-soft);
+      font-weight: 700;
+    }
+
+    .experiment-card {
+      margin-top: 1.5rem;
+      padding: 1.35rem;
+      background:
+        linear-gradient(135deg, rgba(245, 184, 0, 0.11), rgba(26, 35, 66, 0.82)),
+        var(--navy-card);
+      border: 1px solid rgba(245, 184, 0, 0.28);
+      border-radius: 24px;
+    }
+
+    .experiment-card ol {
+      margin: 1rem 0 0;
+      padding-left: 1.35rem;
+      color: var(--cream-soft);
+      font-size: 1.05rem;
+    }
+
+    .experiment-card li {
+      margin: 0.55rem 0;
+      padding-left: 0.25rem;
+    }
+
+    .closing-question {
+      margin: 4.75rem 0 1rem;
+      padding: 2rem;
+      background: var(--cream);
+      color: var(--navy);
+      border-radius: 28px;
+      box-shadow: var(--shadow);
+    }
+
+    .closing-question h2 {
+      color: var(--navy);
+    }
+
+    .closing-question p {
+      color: rgba(15, 23, 41, 0.82);
+    }
+
+    .closing-question .pull-quote {
+      background: rgba(245, 184, 0, 0.18);
+      color: var(--navy);
+    }
+
+    .article-nav {
+      max-width: 820px;
+      margin: 3rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0.75rem 1rem;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--gold);
+    }
+
+    .button:hover {
+      background: var(--gold-soft);
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--cream);
+      border-color: var(--line);
+    }
+
+    .button.secondary:hover {
+      background: rgba(247, 240, 223, 0.08);
+      color: var(--cream);
+    }
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      background: rgba(10, 16, 30, 0.52);
+    }
+
+    .footer-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 3rem 1.25rem;
+      display: grid;
+      grid-template-columns: 1.3fr 0.7fr;
+      gap: 2rem;
+      align-items: start;
+    }
+
+    .footer-wrap h2 {
+      margin: 0 0 0.75rem;
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(1.5rem, 3vw, 2.2rem);
+      line-height: 1.15;
+    }
+
+    .footer-wrap p {
+      margin: 0 0 1.25rem;
+      color: var(--cream-soft);
+      max-width: 620px;
+    }
+
+    .footer-links {
+      display: flex;
+      flex-direction: column;
+      gap: 0.6rem;
+      align-items: flex-start;
+    }
+
+    .footer-links a {
+      color: var(--cream-soft);
+      font-weight: 700;
+    }
+
+    .footer-bottom {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 0 1.25rem 2rem;
+      color: var(--muted);
+      font-size: 0.9rem;
+    }
+
+    @media (max-width: 768px) {
+      .nav-wrap {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+
+      .nav-links {
+        justify-content: flex-start;
+      }
+
+      .nav-links a {
+        padding: 0.48rem 0.68rem;
+        font-size: 0.82rem;
+      }
+
+      .page-shell {
+        padding-top: 2rem;
+      }
+
+      .article-hero {
+        padding: 0.6rem;
+        border-radius: 20px;
+      }
+
+      .article-hero img {
+        border-radius: 15px;
+      }
+
+      .article-section {
+        margin: 3.3rem 0;
+      }
+
+      .article-section p {
+        font-size: 1rem;
+      }
+
+      .section-image {
+        margin: 3rem -0.15rem 1.75rem;
+        padding: 0.55rem;
+        border-radius: 20px;
+      }
+
+      .section-image img {
+        border-radius: 15px;
+      }
+
+      .pull-quote {
+        padding: 0.95rem 1rem;
+      }
+
+      .closing-question {
+        padding: 1.35rem;
+      }
+
+      .footer-wrap {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="/">
+        <strong>School’s Out Saturdays</strong>
+        <span>Preparing students for their future, not our past.</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="/#listen">Listen</a>
+        <a class="active" href="/">Field Notes</a>
+        <a href="/events">Events</a>
+        <a href="/network">Network</a>
+        <a href="https://share-na2.hsforms.com/172rws_4LT7CcG4mtdk137w41aedp">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-shell">
+      <figure class="article-hero" aria-label="School’s Out Field Notes header image">
+        <img src="/field-notes-header.png" alt="School’s Out Field Notes banner with the phrase graphic reportage for educators." />
+      </figure>
+
+      <section class="article-head">
+        <div class="kicker">Field Notes Issue 1</div>
+        <h1>The Bridge Is the Assignment</h1>
+        <p>Access to AI is spreading fast. Readiness is something else. Students do not become ready because they can open a chatbot.</p>
+      </section>
+
+      <article class="article-body">
+        <section class="article-section">
+          <h2>Welcome to School’s Out Field Notes</h2>
+
+          <p>I’m Jason Padgett, wearer of many hats and power user of multimodal AI tools.</p>
+
+          <p>By day, I serve as Director of Partnerships and Growth for CitizenAI, a vertical AI company building chat-based support tools for social workers, case managers, recovery coaches, and the people they serve.</p>
+
+          <p>Nights and weekends, I host the AGI Podcast Network, including The Weekly Blitz, The Vibe, and our flagship education show, School’s Out Saturdays. That is where we talk with students, teachers, administrators, workforce leaders, and edtech builders about how to navigate the age of intelligence in a way that prepares students for their future, not our past.</p>
+
+          <p>Professionally, that’s the short version.</p>
+
+          <p>Personally, I’m a husband, father, grandfather, volunteer educator, and pseudo nerd.</p>
+
+          <p>I have never been formally employed as a teacher, but education has been part of my life for a long time. Around 2010, I taught recovery and wellness once a week at Hope Academy, a charter high school in Indianapolis for students working through drug and alcohol issues. More recently, I’ve taught basic AI literacy through the Wabash Area Lifetime Learning Association, and I’ve been a guest speaker at Purdue University, Ivy Tech Lafayette, and through the Skyepack Career+Pathways Program.</p>
+
+          <p>My wife was an English teacher at Hope Academy when we met. Her mother was a teacher. Her aunt was a teacher. Many of my dear friends, like Ronda Swartz, work in education.</p>
+
+          <p>So yes, education is near and dear to my heart.</p>
+
+          <p>My older children graduated from Purdue University, one with a PharmD and one with a bachelor’s in biochemistry. My youngest is a freshman at Carmel High School.</p>
+
+          <p>That means this conversation is not abstract for me. It is professional, personal, and sitting at my kitchen table.</p>
+
+          <p>I believe we are standing at the edge of a major change in how we work, live, learn, create, and engage with technology and one another. Our education systems have to navigate that change in a way that prepares students for their future, not our past.</p>
+
+          <p>That is why Field Notes exists.</p>
+
+          <p>A weekly note about AI, education, literacy, and practical use, written as a conversation starter and a compass for the people doing the work in the field.</p>
+
+          <p>Teachers. School leaders. Parents. Workforce partners. Higher ed faculty. Builders.</p>
+
+          <p>The people close enough to students to know what is actually happening.</p>
+
+          <p>And with that, let’s start with a bridge.</p>
+        </section>
+
+        <figure class="section-image">
+          <img src="/field-notes-access-readiness.png" alt="A student stands at the edge of a bridge between school and an AI-shaped workplace, representing the gap between access and readiness." />
+        </figure>
+
+        <section class="article-section">
+          <h2>Access Isn’t Readiness</h2>
+
+          <p>Access is the easy part.</p>
+
+          <p>A student can open an AI tool in ten seconds. That does not mean they know how to question the answer, explain the process, check the source, spot the shortcut, or decide when the tool is doing too much.</p>
+
+          <p>I call that the readiness gap.</p>
+
+          <p>And I think that gap is going to matter more than whether a school blocks one tool, approves another tool, or spends the next semester rewriting an acceptable use policy that will be outdated by the time everyone has finished arguing over the commas.</p>
+
+          <p>Students are already using AI.</p>
+
+          <p>Some are using it well. Some are using it poorly. Some are using it like a tutor. Some are using it like a vending machine. Prompt in, finished answer out.</p>
+
+          <p>Those are not the same behavior.</p>
+
+          <p>That is where school still matters. Maybe more than ever.</p>
+
+          <p>Before the question becomes, “Did students use AI?” I think the better question is:</p>
+
+          <div class="pull-quote">What did AI help them do, and what did they still have to think through?</div>
+
+          <p>Pearson and AWS make a similar point in their AI readiness report. Their focus is higher education and work, but the warning applies earlier than college. Access to AI tools does not equal applied readiness. Readiness means students can use the tool, apply judgment, communicate clearly, think ethically, and work well with intelligent systems.</p>
+
+          <p>That does not start magically at age eighteen.</p>
+
+          <p>It starts with practice.</p>
+
+          <p class="source">Source: <a href="https://www.pearson.com/content/dam/global-store/global/resources/ai-readiness/AI-Readiness-Report-2026.pdf" target="_blank" rel="noopener">Pearson and AWS, <span>AI Readiness: Building the Bridge from Higher Education to Work</span></a></p>
+        </section>
+
+        <figure class="section-image">
+          <img src="/field-notes-bridge-crew.png" alt="A teacher, student, and helpers work together to build a bridge from school toward the working world." />
+        </figure>
+
+        <section class="article-section">
+          <h2>The Bridge Crew</h2>
+
+          <p>Most teachers did not sign up to become AI readiness officers.</p>
+
+          <p>Yet here they are, holding the clipboard, checking the ropes, watching the bridge move while students are already trying to cross it.</p>
+
+          <p>That is a lot to ask of people who were already dealing with attendance issues, learning gaps, behavior challenges, grading piles, parent emails, district requirements, and the quiet exhaustion that comes from caring about kids inside a system that often runs on fumes.</p>
+
+          <p>So let’s be real.</p>
+
+          <p>Teachers should not have to build this bridge alone.</p>
+
+          <p>This is where I think the conversation needs to mature a bit. The question cannot stay stuck at “Should AI be allowed in school?” That question had its moment, but the genie is out of the bottle and teenagers do not typically wait for committee approval before trying new technology.</p>
+
+          <p>The better question is:</p>
+
+          <div class="pull-quote">What does education need to become now that AI is already here?</div>
+
+          <p>Lord Jim Knight’s Cambridge piece, <em>Rethinking education in the age of AI</em>, gets closer to the conversation I think we need. It points toward personalization, project-based learning, oral explanation, digital portfolios, and assessment that asks students to defend their thinking.</p>
+
+          <p>That sounds like the right direction to me.</p>
+
+          <p>Not because AI replaces teachers.</p>
+
+          <p>Lord help us if that is the takeaway.</p>
+
+          <p>AI might help with planning, feedback, examples, translation, tutoring, and seeing patterns across student work. But teachers still set the direction. Students still need to do the thinking. Families, employers, higher ed, and communities still have to help define what readiness actually means.</p>
+
+          <p>That is the bridge crew.</p>
+
+          <p>AI can be part of the crew.</p>
+
+          <p>It should not be the captain.</p>
+
+          <p class="source">Source: <a href="https://www.cambridge.org/news-and-insights/rethinking-education-in-the-age-of-ai" target="_blank" rel="noopener">Lord Jim Knight, <span>Rethinking education in the age of AI</span></a></p>
+        </section>
+
+        <figure class="section-image">
+          <img src="/field-notes-projects.png" alt="A bridge plank labeled Projects, suggesting one practical step educators can take now." />
+        </figure>
+
+        <section class="article-section">
+          <h2>Projects</h2>
+
+          <p>Here is the plank I keep coming back to:</p>
+
+          <div class="pull-quote">Projects.</div>
+
+          <p>Not giant, grant-funded, semester-long productions with matching T-shirts and a drone shot for the district website.</p>
+
+          <p>I’m talking about one assignment, already on the calendar, turned slightly toward the real world.</p>
+
+          <p>A worksheet answer becomes a guide for a younger student.</p>
+
+          <p>A history response becomes a short briefing for a mayor.</p>
+
+          <p>A math problem becomes a comparison sheet for a family choosing between two options.</p>
+
+          <p>A science explanation becomes a one-page field guide.</p>
+
+          <p>A career class research assignment becomes a first-week survival guide for someone starting that job.</p>
+
+          <p>That shift matters because AI changes the value of the final answer. If the final answer is all we care about, students will be tempted to outsource the thinking. Frankly, adults will too. We should not pretend this is only a student problem.</p>
+
+          <p>But when students have to make something for a real audience, explain their choices, and show what changed along the way, the assignment starts to reveal more than the final product.</p>
+
+          <p>In the first Field Notes issue, published through my No-Code CAIO newsletter on LinkedIn, I wrote about the difference between support and substitution.</p>
+
+          <p>Support helps the student think.</p>
+
+          <p>Substitution replaces the thinking.</p>
+
+          <p>The tricky part is that the final product can look the same.</p>
+
+          <p>A polished essay does not prove the student wrestled with the idea.</p>
+
+          <p>A clean slide deck does not prove the student understands the topic.</p>
+
+          <p>A correct answer does not prove the student can explain the process.</p>
+
+          <p>That is why projects matter.</p>
+
+          <p>They give students a reason to care, and they give teachers more places to look for evidence of learning.</p>
+
+          <p class="source">Source: <a href="https://www.linkedin.com/pulse/before-we-argue-ai-school-lets-agree-what-learning-means-padgett-m8jhc/" target="_blank" rel="noopener">School’s Out Field Notes Issue One, <span>Before We Argue About AI In School, Let’s Agree On What Learning Means</span></a></p>
+        </section>
+
+        <section class="article-section">
+          <h2>A Small Experiment</h2>
+
+          <p>Try this tomorrow.</p>
+
+          <p>Pick one assignment you already planned to give.</p>
+
+          <p>Then ask one question:</p>
+
+          <div class="pull-quote">Who could use this work outside the classroom?</div>
+
+          <p>That’s it.</p>
+
+          <p>Do not redesign the whole unit. Do not build a six-week project. Do not create a rubric that needs its own legal counsel.</p>
+
+          <p>Just give the assignment a real audience.</p>
+
+          <p>Then, if students use AI, ask for a short process note with the final work.</p>
+
+          <div class="experiment-card">
+            <strong>Five questions:</strong>
+            <ol>
+              <li>What did you ask AI to help with?</li>
+              <li>What did it give you that was useful?</li>
+              <li>What did you change, reject, or question?</li>
+              <li>What part of the thinking is still yours?</li>
+              <li>Who is this work for?</li>
+            </ol>
+          </div>
+
+          <p>That is not a full AI policy.</p>
+
+          <p>It is not a magic fix.</p>
+
+          <p>It is one plank.</p>
+
+          <p>But one plank is enough to start building.</p>
+        </section>
+
+        <section class="closing-question">
+          <h2>One Question For You</h2>
+
+          <p>Where could one assignment in your classroom, school, program, or organization become a small project with a real audience?</p>
+
+          <p>That is the question I’d love to hear educators answer.</p>
+
+          <p>Not in theory.</p>
+
+          <p>This week.</p>
+
+          <div class="pull-quote">Because students already have access. Now we have to help them build readiness.</div>
+        </section>
+
+        <nav class="article-nav" aria-label="Field Notes navigation">
+          <a class="button secondary" href="/">Back to Field Notes</a>
+          <a class="button" href="/#field-notes">Subscribe to Field Notes</a>
+        </nav>
+      </article>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-wrap">
+      <div>
+        <h2>School’s Out Field Notes</h2>
+        <p>A weekly note for educators preparing students for an AI-shaped future, with practical signals, questions, and opportunities from the edge of school and work.</p>
+        <a class="button" href="/#field-notes">Subscribe on the homepage</a>
+      </div>
+
+      <div class="footer-links">
+        <a href="/">School’s Out Saturdays</a>
+        <a href="/">Field Notes Archive</a>
+        <a href="/events">Events</a>
+        <a href="/network">AGI Podcast Network</a>
+        <a href="https://share-na2.hsforms.com/172rws_4LT7CcG4mtdk137w41aedp">Get in Touch</a>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 AGI Podcast. School’s Out Saturdays and School’s Out Field Notes are part of the AGI Podcast network.
+    </div>
+  </footer>
+</body>
+</html>
