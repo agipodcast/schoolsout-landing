@@ -1,0 +1,1495 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>School’s Out Field Notes | Issue 2</title>
+  <meta name="description" content="Shared language is not enough. Schools need shared definitions. A field guide for spotting critical thinking, communication, adaptability, and preparedness in student work." />
+  <meta property="og:title" content="School’s Out Field Notes | Shared Language Is Not Enough" />
+  <meta property="og:description" content="A field guide for teachers who are tired of big words that do not do any work." />
+  <meta property="og:type" content="article" />
+  <meta name="theme-color" content="#0b1020" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Instrument+Serif:ital@0;1&family=JetBrains+Mono:wght@400;500;700&family=Newsreader:opsz,wght@6..72,400;6..72,500;6..72,650&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --paper: #f3ede0;
+      --paper-2: #fbf6ea;
+      --ink: #1a1816;
+      --muted: #6e6258;
+      --red: #b8412e;
+      --blue: #2a5d7c;
+      --olive: #5b6332;
+      --tag: #d8a93a;
+      --rule: rgba(26, 24, 22, 0.16);
+      --shadow: rgba(55, 40, 25, 0.20);
+      --mono: "JetBrains Mono", ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      --serif: "Newsreader", Georgia, serif;
+      --display: "Instrument Serif", Georgia, serif;
+      --hand: "Caveat", "Comic Sans MS", cursive;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      color: var(--ink);
+      background:
+        linear-gradient(90deg, rgba(184, 65, 46, 0.05) 0 1px, transparent 1px 100%),
+        repeating-linear-gradient(180deg, var(--paper) 0 31px, rgba(26, 24, 22, 0.055) 31px 32px);
+      font-family: var(--serif);
+      font-size: 19px;
+      line-height: 1.55;
+    }
+
+    a { color: inherit; }
+
+    ::selection { background: rgba(216, 169, 58, 0.45); }
+
+    .skip-link {
+      position: absolute;
+      top: -100px;
+      left: 16px;
+      background: var(--ink);
+      color: var(--paper);
+      padding: 10px 14px;
+      z-index: 99;
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+
+    .skip-link:focus { top: 16px; }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      padding: 14px clamp(18px, 4vw, 54px);
+      background: rgba(243, 237, 224, 0.88);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+    }
+
+    .topbar nav {
+      display: flex;
+      gap: 18px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    .topbar a {
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+    }
+
+    .topbar a:hover { border-bottom-color: var(--red); color: var(--red); }
+
+    .brand-lockup {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      min-width: max-content;
+    }
+
+    .brand-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: var(--red);
+      box-shadow: 0 0 0 5px rgba(184, 65, 46, 0.11);
+    }
+
+    .page {
+      width: min(1180px, calc(100% - 36px));
+      margin: 0 auto;
+    }
+
+    .hero {
+      min-height: calc(100vh - 52px);
+      display: grid;
+      grid-template-columns: minmax(0, 1.06fr) minmax(320px, 0.74fr);
+      gap: clamp(30px, 5vw, 70px);
+      align-items: center;
+      padding: clamp(58px, 9vw, 110px) 0 clamp(54px, 8vw, 96px);
+    }
+
+    .eyebrow {
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.18em;
+      font-size: 12px;
+      color: var(--red);
+      margin-bottom: 18px;
+    }
+
+    h1, h2, h3 {
+      font-family: var(--display);
+      font-weight: 400;
+      line-height: 0.94;
+      margin: 0;
+      letter-spacing: -0.025em;
+    }
+
+    h1 {
+      font-size: clamp(4.2rem, 11vw, 9.6rem);
+      max-width: 820px;
+    }
+
+    h1 em, .red { color: var(--red); font-style: italic; }
+
+    .lede {
+      max-width: 720px;
+      margin: 28px 0 0;
+      font-size: clamp(1.35rem, 2.1vw, 2.05rem);
+      line-height: 1.22;
+      color: #2c2925;
+    }
+
+    .hero-actions {
+      display: flex;
+      gap: 14px;
+      flex-wrap: wrap;
+      margin-top: 34px;
+    }
+
+    .button {
+      appearance: none;
+      border: 1px solid var(--ink);
+      background: var(--ink);
+      color: var(--paper);
+      padding: 12px 16px;
+      font-family: var(--mono);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-size: 12px;
+      text-decoration: none;
+      border-radius: 999px;
+      cursor: pointer;
+      transition: transform 160ms ease, background 160ms ease, color 160ms ease;
+    }
+
+    .button:hover { transform: translateY(-2px); background: var(--red); border-color: var(--red); }
+    .button.secondary { background: transparent; color: var(--ink); }
+    .button.secondary:hover { background: var(--ink); color: var(--paper); border-color: var(--ink); }
+
+    .specimen-card {
+      position: relative;
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.46), rgba(255,255,255,0.10)),
+        var(--paper-2);
+      border: 1px solid rgba(26, 24, 22, 0.26);
+      box-shadow: 0 24px 60px var(--shadow);
+      padding: clamp(22px, 3vw, 36px);
+      transform: rotate(2.1deg);
+      max-width: 440px;
+    }
+
+    .specimen-card::before {
+      content: "";
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      width: 22px;
+      height: 22px;
+      background: var(--red);
+      border-radius: 50%;
+      transform: translateX(-50%);
+      box-shadow: 0 3px 5px rgba(0,0,0,0.25), inset 0 0 0 5px rgba(255,255,255,0.25);
+    }
+
+    .card-meta {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-bottom: 12px;
+      border-bottom: 1px solid var(--rule);
+      font-family: var(--mono);
+      font-size: 11px;
+      text-transform: uppercase;
+      letter-spacing: 0.09em;
+      color: var(--muted);
+    }
+
+    .specimen-card h2 {
+      font-size: clamp(3.2rem, 6vw, 5.5rem);
+      margin-top: 20px;
+    }
+
+    .latin {
+      font-family: var(--serif);
+      font-style: italic;
+      color: var(--muted);
+      margin: 2px 0 26px;
+    }
+
+    .field-row {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 18px;
+      padding: 12px 0;
+      border-top: 1px solid rgba(26,24,22,0.12);
+      font-size: 16px;
+      line-height: 1.38;
+    }
+
+    .field-row strong {
+      font-family: var(--mono);
+      font-size: 10.5px;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--red);
+    }
+
+    .hand-note {
+      font-family: var(--hand);
+      font-size: clamp(1.55rem, 2.5vw, 2.15rem);
+      line-height: 1;
+      color: var(--red);
+      transform: rotate(-5deg);
+      display: inline-block;
+      margin-top: 18px;
+    }
+
+    .section {
+      padding: clamp(68px, 9vw, 122px) 0;
+      border-top: 1px solid rgba(26, 24, 22, 0.18);
+    }
+
+    .section-header {
+      display: grid;
+      grid-template-columns: minmax(0, 0.75fr) minmax(280px, 0.55fr);
+      gap: clamp(24px, 5vw, 64px);
+      align-items: end;
+      margin-bottom: 42px;
+    }
+
+    .section h2 { font-size: clamp(3.2rem, 7vw, 7.2rem); }
+
+    .section-copy {
+      font-size: clamp(1.08rem, 1.5vw, 1.28rem);
+      color: #2f2b27;
+      max-width: 680px;
+    }
+
+    .note-box {
+      background: rgba(255,255,255,0.35);
+      border: 1px solid rgba(26,24,22,0.16);
+      padding: 20px 22px;
+      box-shadow: 0 10px 28px rgba(55,40,25,0.09);
+    }
+
+    .note-box p { margin: 0; }
+
+    .specimen-wall {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: clamp(18px, 3vw, 34px);
+      margin-top: 42px;
+    }
+
+    .word-cluster {
+      min-height: 330px;
+      position: relative;
+      background: rgba(255,255,255,0.22);
+      border: 1px solid rgba(26,24,22,0.14);
+      padding: 24px;
+      overflow: hidden;
+    }
+
+    .word-cluster h3 {
+      font-size: clamp(3rem, 5.2vw, 5.4rem);
+      filter: blur(1.5px);
+      opacity: 0.72;
+      transition: filter 220ms ease, opacity 220ms ease;
+    }
+
+    .word-cluster:hover h3 { filter: blur(0); opacity: 1; }
+
+    .tag {
+      position: absolute;
+      max-width: 210px;
+      padding: 9px 11px;
+      background: #f6dc83;
+      border: 1px solid rgba(26,24,22,0.18);
+      box-shadow: 0 8px 18px rgba(55,40,25,0.12);
+      font-family: var(--mono);
+      font-size: 12px;
+      line-height: 1.3;
+      transition: transform 200ms ease;
+    }
+
+    .word-cluster:hover .tag:nth-of-type(1) { transform: rotate(-2deg) translateY(-3px); }
+    .word-cluster:hover .tag:nth-of-type(2) { transform: rotate(2deg) translateY(-2px); }
+    .word-cluster:hover .tag:nth-of-type(3) { transform: rotate(-1deg) translateY(2px); }
+    .word-cluster:hover .tag:nth-of-type(4) { transform: rotate(1.5deg) translateY(-2px); }
+    .word-cluster:hover .tag:nth-of-type(5) { transform: rotate(-1deg) translateY(3px); }
+
+    .tag b { color: var(--red); display: block; text-transform: uppercase; font-size: 10px; letter-spacing: 0.12em; margin-bottom: 3px; }
+    .tag.blue { background: #cfe1e9; }
+    .tag.olive { background: #d8ddaa; }
+    .tag.paper { background: #fbf6ea; }
+    .tag.redtag { background: #f1c2b8; }
+
+    .t1 { top: 92px; left: 28px; transform: rotate(-4deg); }
+    .t2 { top: 108px; right: 24px; transform: rotate(3deg); }
+    .t3 { bottom: 78px; left: 44px; transform: rotate(2.5deg); }
+    .t4 { bottom: 32px; right: 32px; transform: rotate(-3deg); }
+    .t5 { top: 178px; left: 38%; transform: rotate(1deg); }
+
+    .decoder {
+      margin-top: 44px;
+      background: var(--ink);
+      color: var(--paper);
+      padding: clamp(18px, 3vw, 28px);
+      border-radius: 14px;
+      box-shadow: 0 20px 50px var(--shadow);
+      font-family: var(--mono);
+    }
+
+    .decoder-top {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 16px;
+    }
+
+    .decoder select, .decoder button {
+      font: inherit;
+      background: transparent;
+      color: var(--paper);
+      border: 1px solid rgba(243,237,224,0.35);
+      border-radius: 999px;
+      padding: 9px 12px;
+    }
+
+    .decoder button { cursor: pointer; }
+    .decoder button:hover { border-color: var(--tag); color: var(--tag); }
+
+    .terminal-line {
+      min-height: 88px;
+      padding: 16px;
+      background: rgba(255,255,255,0.07);
+      border: 1px solid rgba(255,255,255,0.10);
+      border-radius: 8px;
+      line-height: 1.5;
+      font-size: 14px;
+    }
+
+    .ready-strip {
+      margin: 60px 0 0;
+      padding: clamp(24px, 4vw, 42px);
+      background: rgba(184,65,46,0.09);
+      border: 1px solid rgba(184,65,46,0.22);
+      text-align: center;
+      font-size: clamp(1.55rem, 3vw, 3rem);
+      line-height: 1.18;
+      font-family: var(--display);
+    }
+
+    #readyWord { color: var(--red); font-style: italic; }
+
+    .spreads {
+      display: grid;
+      gap: clamp(38px, 7vw, 80px);
+      margin-top: 30px;
+    }
+
+    .spread {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.82fr) minmax(0, 1fr);
+      gap: clamp(26px, 5vw, 72px);
+      align-items: start;
+    }
+
+    .spread .specimen-card {
+      transform: rotate(-1deg);
+      max-width: none;
+      position: sticky;
+      top: 96px;
+    }
+
+    .spread:nth-child(even) .specimen-card { transform: rotate(1.2deg); }
+
+    .translation {
+      background: rgba(255,255,255,0.25);
+      border: 1px solid rgba(26,24,22,0.18);
+      padding: clamp(20px, 3vw, 30px);
+    }
+
+    .translation h3 { font-size: clamp(2.35rem, 4vw, 4.5rem); margin-bottom: 8px; }
+    .translation .caption { font-family: var(--mono); font-size: 12px; text-transform: uppercase; letter-spacing: 0.12em; color: var(--red); margin-bottom: 20px; }
+
+    .index-list {
+      display: grid;
+      gap: 14px;
+      margin-top: 20px;
+    }
+
+    .index-item {
+      display: grid;
+      grid-template-columns: 135px 1fr;
+      gap: 18px;
+      padding: 15px 0;
+      border-top: 1px solid rgba(26,24,22,0.14);
+    }
+
+    .index-item b {
+      font-family: var(--mono);
+      text-transform: uppercase;
+      font-size: 11px;
+      letter-spacing: 0.12em;
+      color: var(--blue);
+    }
+
+    .context-prism {
+      margin: 50px 0 0;
+      background: #1a1816;
+      color: var(--paper);
+      padding: clamp(22px, 4vw, 42px);
+      border-radius: 18px;
+      box-shadow: 0 20px 55px var(--shadow);
+    }
+
+    .prism-grid {
+      display: grid;
+      grid-template-columns: 1fr 80px 1.25fr;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .prism-word {
+      font-family: var(--display);
+      font-size: clamp(3.6rem, 6vw, 6.4rem);
+      color: var(--paper);
+      line-height: 0.9;
+    }
+
+    .prism-shape {
+      width: 0;
+      height: 0;
+      border-top: 62px solid transparent;
+      border-bottom: 62px solid transparent;
+      border-left: 80px solid rgba(216,169,58,0.85);
+      filter: drop-shadow(0 0 22px rgba(216,169,58,0.25));
+    }
+
+    .prism-outs {
+      display: grid;
+      gap: 12px;
+      font-family: var(--mono);
+      font-size: 13px;
+    }
+
+    .prism-outs button {
+      text-align: left;
+      border: 1px solid rgba(243,237,224,0.20);
+      color: var(--paper);
+      background: rgba(255,255,255,0.06);
+      padding: 12px;
+      border-radius: 10px;
+      cursor: pointer;
+      font: inherit;
+    }
+
+    .prism-outs button:hover, .prism-outs button.active {
+      background: rgba(216,169,58,0.18);
+      border-color: var(--tag);
+    }
+
+    .prism-explain {
+      margin-top: 22px;
+      color: #fff5dd;
+      font-size: clamp(1.15rem, 1.7vw, 1.42rem);
+    }
+
+    .field-test {
+      display: grid;
+      grid-template-columns: minmax(300px, 0.88fr) minmax(0, 1fr);
+      gap: clamp(30px, 6vw, 70px);
+      align-items: center;
+    }
+
+    .receipt {
+      position: relative;
+      background: #fffaf0;
+      border: 1px solid rgba(26,24,22,0.24);
+      box-shadow: 0 22px 55px var(--shadow);
+      padding: clamp(24px, 4vw, 38px);
+      font-family: var(--mono);
+      font-size: 14px;
+      transform: rotate(-1.4deg);
+    }
+
+    .receipt::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -12px;
+      height: 12px;
+      background:
+        linear-gradient(135deg, #fffaf0 35%, transparent 35%) 0 0 / 18px 18px repeat-x,
+        linear-gradient(225deg, #fffaf0 35%, transparent 35%) 0 0 / 18px 18px repeat-x;
+      filter: drop-shadow(0 6px 3px rgba(55,40,25,0.08));
+    }
+
+    .receipt h3 {
+      font-family: var(--mono);
+      line-height: 1.3;
+      font-size: 18px;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      margin-bottom: 18px;
+    }
+
+    .receipt-row {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      gap: 18px;
+      padding: 9px 0;
+      border-top: 1px dashed rgba(26,24,22,0.25);
+    }
+
+    .receipt-total {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 3px double rgba(26,24,22,0.35);
+      font-weight: 700;
+    }
+
+    .conversation-card {
+      background: rgba(255,255,255,0.35);
+      border: 1px solid rgba(26,24,22,0.16);
+      padding: clamp(24px, 4vw, 42px);
+    }
+
+    .conversation-card h3 { font-size: clamp(2.8rem, 5vw, 5.5rem); margin-bottom: 18px; }
+
+    .question-list {
+      list-style: none;
+      padding: 0;
+      margin: 24px 0 0;
+      counter-reset: qs;
+      display: grid;
+      gap: 12px;
+    }
+
+    .question-list li {
+      counter-increment: qs;
+      display: grid;
+      grid-template-columns: 42px 1fr;
+      gap: 12px;
+      align-items: start;
+      padding: 13px 0;
+      border-top: 1px solid rgba(26,24,22,0.12);
+    }
+
+    .question-list li::before {
+      content: counter(qs, decimal-leading-zero);
+      font-family: var(--mono);
+      color: var(--red);
+      font-size: 12px;
+      letter-spacing: 0.08em;
+      padding-top: 5px;
+    }
+
+    .reply {
+      padding: clamp(68px, 9vw, 110px) 0;
+      text-align: center;
+    }
+
+    .reply h2 { font-size: clamp(3.2rem, 7vw, 7.7rem); margin-bottom: 22px; }
+    .reply p { max-width: 760px; margin: 0 auto 28px; font-size: clamp(1.18rem, 1.8vw, 1.55rem); }
+
+    .chips {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 10px;
+      margin: 26px auto 0;
+      max-width: 860px;
+    }
+
+    .chip {
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      border: 1px solid rgba(26,24,22,0.28);
+      border-radius: 999px;
+      padding: 9px 12px;
+      background: rgba(255,255,255,0.24);
+    }
+
+    footer {
+      background: var(--ink);
+      color: var(--paper);
+      padding: 42px clamp(18px, 4vw, 54px);
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.04em;
+    }
+
+    footer .footer-inner {
+      max-width: 1180px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    footer a { color: var(--paper); text-decoration-thickness: 1px; text-underline-offset: 4px; }
+
+    .print-only { display: none; }
+
+    @media (max-width: 920px) {
+      .topbar { align-items: flex-start; }
+      .topbar nav { gap: 10px; font-size: 11px; }
+      .hero, .section-header, .spread, .field-test { grid-template-columns: 1fr; }
+      .hero { min-height: auto; }
+      .specimen-card, .spread .specimen-card, .receipt { transform: none; position: relative; top: auto; }
+      .specimen-wall { grid-template-columns: 1fr; }
+      .word-cluster { min-height: 360px; }
+      .prism-grid { grid-template-columns: 1fr; }
+      .prism-shape {
+        transform: rotate(90deg);
+        margin: 0 auto;
+      }
+      .index-item { grid-template-columns: 1fr; gap: 4px; }
+    }
+
+    @media (max-width: 560px) {
+      body { font-size: 17px; }
+      .topbar { position: relative; }
+      .hero-actions { flex-direction: column; align-items: flex-start; }
+      .field-row { grid-template-columns: 1fr; gap: 4px; }
+      .word-cluster h3 { font-size: 3rem; }
+      .tag { position: relative; display: block; inset: auto !important; margin: 10px 0; max-width: none; transform: none !important; }
+      .word-cluster { min-height: auto; }
+      .card-meta { flex-direction: column; gap: 4px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      *, *::before, *::after { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
+    }
+
+
+
+    /* School's Out brand pass: Issue 2 keeps the field-guide format, but wears the network skin. */
+    :root {
+      --brand-navy: #0b1020;
+      --brand-navy-2: #111827;
+      --brand-panel: #141d33;
+      --brand-panel-2: #0f172a;
+      --brand-cream: #f5f0e2;
+      --brand-cream-2: #fff8e8;
+      --brand-gold: #f6b400;
+      --brand-gold-2: #ffca28;
+      --brand-muted: #c7c1b4;
+      --brand-blue-rule: #2b3658;
+    }
+
+    body {
+      color: var(--brand-cream);
+      background:
+        radial-gradient(circle at 50% -10%, rgba(246,180,0,0.12), transparent 34rem),
+        linear-gradient(180deg, #0b1020 0%, #0d1424 42%, #0b1020 100%);
+      font-family: "Newsreader", Georgia, serif;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      z-index: -1;
+      background:
+        linear-gradient(90deg, rgba(246,180,0,0.06) 0 1px, transparent 1px 100%),
+        repeating-linear-gradient(180deg, transparent 0 31px, rgba(245,240,226,0.025) 31px 32px);
+      opacity: 0.55;
+    }
+
+    .topbar {
+      position: sticky;
+      top: 0;
+      padding: 24px clamp(20px, 4vw, 52px);
+      background: rgba(11, 16, 32, 0.96);
+      color: var(--brand-cream);
+      border-bottom: 1px solid rgba(245,240,226,0.12);
+      backdrop-filter: blur(14px);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      text-transform: none;
+      letter-spacing: 0;
+    }
+
+    .brand-lockup a {
+      display: grid;
+      gap: 2px;
+      text-decoration: none;
+      color: var(--brand-cream);
+    }
+
+    .brand-lockup strong {
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(1.25rem, 2vw, 1.75rem);
+      line-height: 1;
+      font-weight: 800;
+      letter-spacing: -0.03em;
+    }
+
+    .brand-lockup span {
+      color: var(--brand-muted);
+      font-size: clamp(0.83rem, 1.4vw, 1.08rem);
+      font-weight: 700;
+    }
+
+    .topbar nav {
+      align-items: center;
+      gap: clamp(14px, 2.2vw, 34px);
+    }
+
+    .topbar nav a {
+      color: var(--brand-cream);
+      font-weight: 800;
+      font-size: clamp(0.92rem, 1.45vw, 1.18rem);
+      text-decoration: none;
+      border: 0;
+      padding: 10px 2px;
+    }
+
+    .topbar nav a:hover { color: var(--brand-gold); border: 0; }
+
+    .topbar nav a.active {
+      color: #111827;
+      background: var(--brand-gold);
+      border-radius: 999px;
+      padding: 15px 23px;
+      box-shadow: 0 10px 28px rgba(246,180,0,0.24);
+    }
+
+    .brand-banner-wrap {
+      width: min(1120px, calc(100% - 36px));
+      margin: clamp(48px, 8vw, 86px) auto 0;
+      padding: clamp(14px, 1.8vw, 22px);
+      background: rgba(38, 47, 82, 0.72);
+      border: 1px solid rgba(245,240,226,0.14);
+      border-radius: 30px;
+      box-shadow: 0 32px 80px rgba(0,0,0,0.34);
+    }
+
+    .brand-banner {
+      position: relative;
+      min-height: 248px;
+      overflow: hidden;
+      border-radius: 22px;
+      padding: clamp(30px, 5vw, 52px);
+      background:
+        radial-gradient(circle at 74% 55%, rgba(246,180,0,0.34), transparent 18rem),
+        radial-gradient(circle at 30% 110%, rgba(246,180,0,0.11), transparent 16rem),
+        linear-gradient(135deg, #061126 0%, #0b1830 58%, #071226 100%);
+      border: 1px solid rgba(246,180,0,0.16);
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) minmax(260px, 0.45fr);
+      align-items: center;
+      gap: 20px;
+    }
+
+    .brand-banner::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      pointer-events: none;
+      background:
+        linear-gradient(90deg, rgba(246,180,0,0.10) 1px, transparent 1px) 0 0 / 64px 64px,
+        linear-gradient(180deg, rgba(246,180,0,0.05) 1px, transparent 1px) 0 0 / 64px 64px;
+      mask-image: linear-gradient(90deg, rgba(0,0,0,0.7), rgba(0,0,0,0.2));
+    }
+
+    .brand-banner-left {
+      position: relative;
+      z-index: 1;
+      display: flex;
+      align-items: center;
+      gap: clamp(20px, 3vw, 32px);
+    }
+
+    .network-mark {
+      width: clamp(54px, 8vw, 84px);
+      height: clamp(54px, 8vw, 84px);
+      position: relative;
+      flex: 0 0 auto;
+      transform: rotate(45deg);
+    }
+
+    .network-mark::before,
+    .network-mark::after,
+    .network-mark span {
+      content: "";
+      position: absolute;
+      background: var(--brand-gold);
+      border-radius: 999px;
+      box-shadow: 0 0 26px rgba(246,180,0,0.25);
+    }
+
+    .network-mark::before { width: 70%; height: 8px; top: 14px; left: 0; }
+    .network-mark::after { width: 70%; height: 8px; bottom: 14px; left: 0; }
+    .network-mark span:nth-child(1) { width: 8px; height: 70%; top: 15%; right: 12px; }
+    .network-mark span:nth-child(2) { width: 11px; height: 11px; top: 2px; right: 4px; }
+    .network-mark span:nth-child(3) { width: 11px; height: 11px; bottom: 2px; right: 4px; }
+
+    .brand-kicker {
+      margin: 0 0 4px;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-weight: 900;
+      text-transform: uppercase;
+      letter-spacing: 0.14em;
+      color: var(--brand-cream);
+      font-size: clamp(1.4rem, 3.5vw, 3.2rem);
+      line-height: 0.95;
+    }
+
+    .brand-banner h2 {
+      margin: 0;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      text-transform: uppercase;
+      font-weight: 950;
+      letter-spacing: -0.055em;
+      color: var(--brand-gold);
+      font-size: clamp(3.9rem, 10vw, 8.6rem);
+      line-height: 0.82;
+      text-shadow: 0 2px 0 rgba(0,0,0,0.18);
+    }
+
+    .brand-subtitle {
+      margin: clamp(18px, 2.6vw, 26px) 0 0;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      color: var(--brand-cream);
+      font-weight: 900;
+      font-size: clamp(1.35rem, 2.3vw, 2.1rem);
+      line-height: 1.08;
+    }
+
+    .brand-line {
+      margin: 4px 0 0;
+      color: var(--brand-cream);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-weight: 600;
+      font-size: clamp(1rem, 1.7vw, 1.35rem);
+    }
+
+    .brand-line em { color: var(--brand-gold); font-style: italic; }
+
+    .brand-banner-right {
+      position: relative;
+      z-index: 1;
+      min-height: 210px;
+    }
+
+    .scribble-note {
+      position: absolute;
+      left: 0;
+      bottom: 14px;
+      color: rgba(246,180,0,0.72);
+      font-family: var(--hand);
+      font-size: 1.45rem;
+      line-height: 1.05;
+      transform: rotate(-7deg);
+      border-bottom: 2px solid rgba(246,180,0,0.35);
+      padding-bottom: 8px;
+    }
+
+    .mini-notebook {
+      position: absolute;
+      top: 8px;
+      right: 42px;
+      width: 108px;
+      height: 126px;
+      border: 2px solid rgba(246,180,0,0.74);
+      color: var(--brand-gold);
+      border-radius: 8px;
+      transform: rotate(9deg);
+      display: grid;
+      place-items: center;
+      text-align: center;
+      font-family: var(--mono);
+      font-size: 2.2rem;
+      background: rgba(6,17,38,0.24);
+    }
+
+    .mini-notebook span { display: block; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 0.1em; color: var(--brand-cream); }
+
+    .sticky-brand {
+      position: absolute;
+      right: 0;
+      bottom: 2px;
+      background: var(--brand-gold);
+      color: #1a1816;
+      padding: 18px 16px;
+      font-family: var(--hand);
+      font-size: 1.45rem;
+      line-height: 0.95;
+      transform: rotate(-4deg);
+      box-shadow: 0 12px 30px rgba(0,0,0,0.32);
+    }
+
+    .hero {
+      min-height: auto;
+      padding-top: clamp(44px, 7vw, 74px);
+      padding-bottom: clamp(66px, 10vw, 120px);
+    }
+
+    .eyebrow {
+      color: var(--brand-gold);
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-weight: 900;
+    }
+
+    h1, h2, h3 { color: var(--brand-cream); }
+
+    h1 em, .red { color: var(--brand-gold); }
+
+    .lede,
+    .section-copy,
+    .reply p {
+      color: var(--brand-cream);
+    }
+
+    .lede { color: rgba(245,240,226,0.92); }
+
+    .button {
+      border-color: var(--brand-gold);
+      background: var(--brand-gold);
+      color: #111827;
+      font-family: Inter, ui-sans-serif, system-ui, sans-serif;
+      font-weight: 900;
+    }
+
+    .button:hover { background: var(--brand-cream); border-color: var(--brand-cream); color: #111827; }
+    .button.secondary { color: var(--brand-cream); border-color: rgba(245,240,226,0.38); background: rgba(245,240,226,0.04); }
+    .button.secondary:hover { background: var(--brand-cream); color: #111827; }
+
+    .section { border-top: 1px solid rgba(245,240,226,0.12); }
+
+    .note-box,
+    .conversation-card {
+      background: rgba(20,29,51,0.85);
+      border: 1px solid rgba(246,180,0,0.22);
+      color: var(--brand-cream);
+      box-shadow: 0 20px 55px rgba(0,0,0,0.22);
+    }
+
+    .specimen-card,
+    .translation,
+    .receipt {
+      background:
+        linear-gradient(180deg, rgba(255,255,255,0.55), rgba(255,255,255,0.06)),
+        var(--brand-cream-2);
+      color: var(--ink);
+      border-color: rgba(246,180,0,0.35);
+      box-shadow: 0 26px 70px rgba(0,0,0,0.32);
+    }
+
+    .specimen-card::before { background: var(--brand-gold); }
+    .specimen-card h2, .translation h3, .conversation-card h3 { color: var(--ink); }
+    .spread .specimen-card h2 { color: var(--ink); }
+    .field-row strong, .translation .caption, .question-list li::before { color: #a35b00; }
+    .hand-note { color: #a35b00; }
+
+    .word-cluster {
+      background: rgba(20,29,51,0.78);
+      border: 1px solid rgba(246,180,0,0.16);
+      border-radius: 22px;
+      box-shadow: 0 20px 58px rgba(0,0,0,0.22);
+    }
+
+    .word-cluster h3 {
+      color: var(--brand-cream);
+      text-shadow: 0 18px 40px rgba(0,0,0,0.35);
+    }
+
+    .tag {
+      background: var(--brand-gold);
+      color: #111827;
+      border-color: rgba(17,24,39,0.16);
+      box-shadow: 0 10px 24px rgba(0,0,0,0.24);
+    }
+
+    .tag b { color: #111827; opacity: 0.78; }
+    .tag.blue { background: #c7d8f4; }
+    .tag.olive { background: #d7df9a; }
+    .tag.paper { background: var(--brand-cream); }
+    .tag.redtag { background: #ffb28f; }
+
+    .decoder,
+    .context-prism {
+      background: linear-gradient(135deg, #061126 0%, #0b1830 100%);
+      color: var(--brand-cream);
+      border: 1px solid rgba(246,180,0,0.18);
+      box-shadow: 0 26px 70px rgba(0,0,0,0.34);
+    }
+
+    .decoder select, .decoder button, .prism-outs button {
+      color: var(--brand-cream);
+      border-color: rgba(246,180,0,0.26);
+    }
+
+    .terminal-line { background: rgba(245,240,226,0.06); border-color: rgba(246,180,0,0.12); }
+
+    .ready-strip {
+      background: rgba(246,180,0,0.11);
+      border-color: rgba(246,180,0,0.26);
+      color: var(--brand-cream);
+      border-radius: 24px;
+    }
+
+    #readyWord { color: var(--brand-gold); }
+    .prism-word { color: var(--brand-cream); }
+    .prism-shape { border-left-color: rgba(246,180,0,0.9); }
+    .prism-outs button:hover, .prism-outs button.active { border-color: var(--brand-gold); background: rgba(246,180,0,0.16); }
+    .prism-explain { color: var(--brand-cream); }
+
+    .conversation-card h3 { color: var(--brand-cream); }
+    .question-list li { border-top-color: rgba(245,240,226,0.14); }
+
+    .chip {
+      color: var(--brand-cream);
+      border-color: rgba(246,180,0,0.25);
+      background: rgba(20,29,51,0.84);
+    }
+
+    footer {
+      background: #080d1a;
+      color: var(--brand-cream);
+      border-top: 1px solid rgba(245,240,226,0.12);
+    }
+
+    @media (max-width: 920px) {
+      .topbar { gap: 20px; }
+      .brand-banner { grid-template-columns: 1fr; }
+      .brand-banner-right { display: none; }
+      .brand-banner-left { align-items: flex-start; }
+    }
+
+    @media (max-width: 560px) {
+      .topbar nav a.active { padding: 9px 13px; }
+      .brand-banner-wrap { width: min(100% - 24px, 1120px); padding: 10px; border-radius: 22px; }
+      .brand-banner { padding: 24px 20px; border-radius: 16px; }
+      .network-mark { display: none; }
+      .brand-banner h2 { font-size: clamp(3.2rem, 18vw, 5rem); }
+    }
+
+    @media print {
+      @page { margin: 0.55in; }
+      body { background: white; color: black; font-size: 12pt; }
+      .topbar, .hero-actions, .decoder, .context-prism, footer { display: none !important; }
+      .page { width: 100%; }
+      .hero, .section, .reply { padding: 0.25in 0; min-height: auto; }
+      .hero, .section-header, .spread, .field-test, .specimen-wall { display: block; }
+      .specimen-card, .translation, .receipt, .conversation-card, .word-cluster { box-shadow: none; transform: none; page-break-inside: avoid; margin-bottom: 0.25in; }
+      .specimen-card::before, .receipt::after, .hand-note { display: none; }
+      .print-only { display: block; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="topbar" aria-label="Site header">
+    <div class="brand-lockup">
+      <a href="/" aria-label="School’s Out Saturdays home"><strong>School’s Out Saturdays</strong><span>Preparing students for their future, not our past.</span></a>
+    </div>
+    <nav aria-label="Primary navigation">
+      <a href="/#listen">Listen</a>
+      <a class="active" href="/#field-notes">Field Notes</a>
+      <a href="/#events">Events</a>
+      <a href="https://agipodcast.ai">Network</a>
+      <a href="https://share-na2.hsforms.com/2rc7ZgrJeSQm9geAkrYbj6Aq51dop">Get in Touch</a>
+    </nav>
+  </header>
+
+  <main id="main">
+    <section class="brand-banner-wrap" aria-label="School’s Out Field Notes brand banner">
+      <div class="brand-banner">
+        <div class="brand-banner-left">
+          <div class="network-mark" aria-hidden="true"><span></span><span></span><span></span></div>
+          <div>
+            <p class="brand-kicker">School’s Out</p>
+            <h2>Field Notes</h2>
+            <p class="brand-subtitle">Graphic reportage for educators</p>
+            <p class="brand-line">AI, school, work, and <em>what students need next</em></p>
+          </div>
+        </div>
+        <div class="brand-banner-right" aria-hidden="true">
+          <div class="scribble-note">Observe.<br>Question.<br>Share.<br>Act.</div>
+          <div class="mini-notebook">⌁<br><span>Issue 2</span></div>
+          <div class="sticky-brand">Students deserve<br>what’s next.</div>
+        </div>
+      </div>
+    </section>
+    <section class="page hero" aria-labelledby="title">
+      <div>
+        <div class="eyebrow">Field Notes · Issue 2</div>
+        <h1 id="title">Shared <em>language</em> isn’t enough.</h1>
+        <p class="lede">Schools need shared <em class="red">definitions</em>. A field guide for spotting critical thinking, communication, adaptability, and preparedness in actual student work.</p>
+        <div class="hero-actions">
+          <a class="button" href="#seeing">Start the field guide</a>
+          <button class="button secondary" type="button" onclick="window.print()">Print the cards</button>
+        </div>
+      </div>
+
+      <aside class="specimen-card" aria-label="Hero specimen card preview">
+        <div class="card-meta"><span>Spec. No. 02 / 12</span><span>Coll. Field Notes</span></div>
+        <h2>Ready</h2>
+        <p class="latin">observed everywhere, defined almost nowhere</p>
+        <div class="field-row"><strong>Habitat</strong><span>Rubrics, strategic plans, school board meetings, career pathways, parent nights, AI policy drafts.</span></div>
+        <div class="field-row"><strong>Field marks</strong><span>Looks clear in a sentence. Gets slippery the moment five adults try to describe it.</span></div>
+        <div class="field-row"><strong>Evidence</strong><span>A student can explain the work, adapt the approach, defend the choices, and show what changed.</span></div>
+        <span class="hand-note" aria-hidden="true">catch it in the wild ✦</span>
+      </aside>
+    </section>
+
+    <section class="page section" id="opening" aria-labelledby="opening-title">
+      <div class="section-header">
+        <div>
+          <div class="eyebrow">Opening note</div>
+          <h2 id="opening-title">The words sound settled.</h2>
+        </div>
+        <div class="note-box">
+          <p>Before we say students are ready, we should probably define ready.</p>
+        </div>
+      </div>
+      <div class="section-copy">
+        <p>I keep thinking about how messy AI conversations get when people use the same word and mean different things. Consciousness. Sentience. Intelligence. Reasoning. People can argue for an hour and then realize they were not even arguing over the same object.</p>
+        <p>Schools are walking into a similar problem with words like preparedness, communication, teamwork, critical thinking, adaptability, and hands-on learning.</p>
+        <p>Everybody nods. Nobody wants to be against critical thinking. But what does it look like? What does it look like in a freshman English class compared to a healthcare internship, a manufacturing floor, a small business, or a nonprofit board room?</p>
+        <p>That is where shared language stops being enough. We need shared definitions. More than that, we need visible evidence.</p>
+      </div>
+    </section>
+
+    <section class="page section" id="seeing" aria-labelledby="seeing-title">
+      <div class="section-header">
+        <div>
+          <div class="eyebrow">I · Seeing</div>
+          <h2 id="seeing-title">The specimen wall</h2>
+        </div>
+        <div class="section-copy">
+          <p>Here is what “we already have shared language” often looks like in the wild. Four good words, surrounded by five different expectations.</p>
+        </div>
+      </div>
+
+      <div class="specimen-wall" aria-label="Competing definitions of common education words">
+        <article class="word-cluster">
+          <h3>Communication</h3>
+          <div class="tag t1"><b>Teacher</b>explains the answer clearly</div>
+          <div class="tag t2 blue"><b>Employer</b>writes so the next person can act</div>
+          <div class="tag t3 olive"><b>Parent</b>does not need a decoder ring</div>
+          <div class="tag t4 paper"><b>Student</b>sounds smart without sounding fake</div>
+          <div class="tag t5 redtag"><b>College</b>makes a claim and supports it</div>
+        </article>
+
+        <article class="word-cluster">
+          <h3>Critical Thinking</h3>
+          <div class="tag t1"><b>Teacher</b>shows the work</div>
+          <div class="tag t2 blue"><b>Employer</b>spots the risk before it becomes expensive</div>
+          <div class="tag t3 olive"><b>Parent</b>does not get fooled online</div>
+          <div class="tag t4 paper"><b>Student</b>argues without yelling</div>
+          <div class="tag t5 redtag"><b>College</b>evaluates evidence</div>
+        </article>
+
+        <article class="word-cluster">
+          <h3>Adaptability</h3>
+          <div class="tag t1"><b>Teacher</b>revises after feedback</div>
+          <div class="tag t2 blue"><b>Employer</b>changes course when conditions change</div>
+          <div class="tag t3 olive"><b>Parent</b>keeps going when the first plan fails</div>
+          <div class="tag t4 paper"><b>Student</b>does not melt when the tool breaks</div>
+          <div class="tag t5 redtag"><b>College</b>learns without being chased</div>
+        </article>
+
+        <article class="word-cluster">
+          <h3>Preparedness</h3>
+          <div class="tag t1"><b>Teacher</b>has the assignment done</div>
+          <div class="tag t2 blue"><b>Employer</b>knows the next step without a rescue mission</div>
+          <div class="tag t3 olive"><b>Parent</b>can handle what comes next</div>
+          <div class="tag t4 paper"><b>Student</b>does not feel lost</div>
+          <div class="tag t5 redtag"><b>College</b>can manage the work and ask for help</div>
+        </article>
+      </div>
+
+      <div class="decoder" aria-label="Definition decoder">
+        <div class="decoder-top">
+          <div>Definition Decoder</div>
+          <div>
+            <label for="decoderWord" class="print-only">Choose a word</label>
+            <select id="decoderWord" aria-label="Choose a word">
+              <option value="communication">communication</option>
+              <option value="critical">critical thinking</option>
+              <option value="adaptability">adaptability</option>
+              <option value="preparedness">preparedness</option>
+            </select>
+            <button type="button" id="decodeBtn">cycle voices</button>
+          </div>
+        </div>
+        <div class="terminal-line" id="decoderOutput" aria-live="polite">Teacher view: Communication means a student can explain an idea clearly enough that someone else can understand and act on it.</div>
+      </div>
+
+      <div class="ready-strip" aria-live="polite">Before we say students are “ready,” we should define <span id="readyWord">ready</span>.</div>
+    </section>
+
+    <section class="page section" id="solving" aria-labelledby="solving-title">
+      <div class="section-header">
+        <div>
+          <div class="eyebrow">II · Solving</div>
+          <h2 id="solving-title">Field marks, not fog</h2>
+        </div>
+        <div class="section-copy">
+          <p>A field guide does not say, “That bird has birdness.” It points to field marks. Shape. Color. Call. Habitat. Behavior. We can do the same with the skills schools keep naming.</p>
+        </div>
+      </div>
+
+      <div class="spreads">
+        <article class="spread" id="communication">
+          <div class="specimen-card">
+            <div class="card-meta"><span>Spec. No. 02 / A</span><span>Coll. Field Notes</span></div>
+            <h2>Communication</h2>
+            <p class="latin">message shaped for audience, purpose, and action</p>
+            <div class="field-row"><strong>Habitat</strong><span>Group projects, written drafts, teacher conferences, presentations, AI-assisted explanations.</span></div>
+            <div class="field-row"><strong>Field marks</strong><span>Tailors message to audience, cites the source, disagrees without dismissing, and writes a version a non-expert can act on.</span></div>
+            <div class="field-row"><strong>With AI</strong><span>Can name what the model gave them, what they kept, what they cut, and why.</span></div>
+            <div class="field-row"><strong>Evidence</strong><span>One artifact in three registers: peer, parent, principal, plus a 60-second walkthrough.</span></div>
+          </div>
+          <div class="translation">
+            <div class="caption">Translation index</div>
+            <h3>Same word. Different room.</h3>
+            <div class="index-list">
+              <div class="index-item"><b>Healthcare</b><span>Plain-language consent. The patient understands risk before signing.</span></div>
+              <div class="index-item"><b>Marketing</b><span>One promise, one audience, one call to action. Cuts everything else.</span></div>
+              <div class="index-item"><b>Manufacturing</b><span>A handoff log so the next shift knows what changed and why.</span></div>
+              <div class="index-item"><b>Classroom</b><span>Explains choices, asks better questions, revises for audience.</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="spread" id="critical-thinking">
+          <div class="specimen-card">
+            <div class="card-meta"><span>Spec. No. 02 / B</span><span>Coll. Field Notes</span></div>
+            <h2>Critical Thinking</h2>
+            <p class="latin">judgment under uncertainty</p>
+            <div class="field-row"><strong>Habitat</strong><span>Research projects, debates, source evaluation, AI output comparison, lab conclusions.</span></div>
+            <div class="field-row"><strong>Field marks</strong><span>Evaluates claims, questions assumptions, compares options, notices missing context, and defends a choice.</span></div>
+            <div class="field-row"><strong>With AI</strong><span>Compares outputs, challenges weak reasoning, checks sources, and explains where the tool was helpful or misleading.</span></div>
+            <div class="field-row"><strong>Evidence</strong><span>A “why we rejected this output” memo with claim, evidence, counterclaim, and final judgment.</span></div>
+          </div>
+          <div class="translation">
+            <div class="caption">Translation index</div>
+            <h3>Looks different by job.</h3>
+            <div class="index-list">
+              <div class="index-item"><b>Healthcare</b><span>“Is this the right diagnosis, or the first one that fit?”</span></div>
+              <div class="index-item"><b>Marketing</b><span>“Did the campaign work, or did the season do it?”</span></div>
+              <div class="index-item"><b>Manufacturing</b><span>“Did the part fail, or did the spec fail the part?”</span></div>
+              <div class="index-item"><b>Classroom</b><span>“What did the source prove, what did it suggest, and what did it not answer?”</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="spread" id="adaptability">
+          <div class="specimen-card">
+            <div class="card-meta"><span>Spec. No. 02 / C</span><span>Coll. Field Notes</span></div>
+            <h2>Adaptability</h2>
+            <p class="latin">useful adjustment when the plan changes</p>
+            <div class="field-row"><strong>Habitat</strong><span>Revisions, team conflict, failed prototypes, changing instructions, broken tools, new evidence.</span></div>
+            <div class="field-row"><strong>Field marks</strong><span>Changes strategy without abandoning the goal. Uses feedback. Names what changed and why.</span></div>
+            <div class="field-row"><strong>With AI</strong><span>Revises the approach when the first output fails instead of asking the same question six times and getting mad.</span></div>
+            <div class="field-row"><strong>Evidence</strong><span>A revision log with version one, what failed, what changed, and what the student learned.</span></div>
+          </div>
+          <div class="translation">
+            <div class="caption">Translation index</div>
+            <h3>Not just “be flexible.”</h3>
+            <div class="index-list">
+              <div class="index-item"><b>Healthcare</b><span>Switches protocol mid-shift when the symptoms do not match.</span></div>
+              <div class="index-item"><b>Marketing</b><span>Kills a launch when the data turns. Does not mourn it all week.</span></div>
+              <div class="index-item"><b>Manufacturing</b><span>Re-tools the line for a new run without losing tolerance.</span></div>
+              <div class="index-item"><b>Classroom</b><span>Changes the plan after feedback and explains the tradeoff.</span></div>
+            </div>
+          </div>
+        </article>
+
+        <article class="spread" id="preparedness">
+          <div class="specimen-card">
+            <div class="card-meta"><span>Spec. No. 02 / D</span><span>Coll. Field Notes</span></div>
+            <h2>Preparedness</h2>
+            <p class="latin">readiness made visible before the moment of need</p>
+            <div class="field-row"><strong>Habitat</strong><span>Internships, first jobs, college seminars, capstones, career pathways, community projects.</span></div>
+            <div class="field-row"><strong>Field marks</strong><span>Knows the purpose, gathers the right materials, anticipates likely failure points, and asks useful questions early.</span></div>
+            <div class="field-row"><strong>With AI</strong><span>Uses the tool to rehearse, check assumptions, make a plan, and prepare questions, not to outsource the whole performance.</span></div>
+            <div class="field-row"><strong>Evidence</strong><span>A pre-brief that names the audience, goal, risks, resources, and first three moves.</span></div>
+          </div>
+          <div class="translation">
+            <div class="caption">Translation index</div>
+            <h3>The receipt for ready.</h3>
+            <div class="index-list">
+              <div class="index-item"><b>Healthcare</b><span>Crash cart is stocked, checked, and someone owns it.</span></div>
+              <div class="index-item"><b>Marketing</b><span>Has a brief before the meeting, not a vibe.</span></div>
+              <div class="index-item"><b>Manufacturing</b><span>Knows the next failure mode before it happens.</span></div>
+              <div class="index-item"><b>Classroom</b><span>Can explain the goal, the materials, the audience, and the next step.</span></div>
+            </div>
+          </div>
+        </article>
+      </div>
+
+      <div class="context-prism" aria-labelledby="prism-title">
+        <div class="eyebrow" style="color:#d8a93a">Context prism</div>
+        <div class="prism-grid">
+          <div class="prism-word" id="prism-title">Communication</div>
+          <div class="prism-shape" aria-hidden="true"></div>
+          <div class="prism-outs" role="group" aria-label="Choose a context">
+            <button class="active" type="button" data-prism="Healthcare: calm explanation, plain language, accurate handoff, documented next step.">Healthcare</button>
+            <button type="button" data-prism="Manufacturing: safety instruction, process change, escalation, shift-to-shift clarity.">Manufacturing</button>
+            <button type="button" data-prism="Small business: customer clarity, vendor coordination, brand feel, fewer confused emails.">Small Business</button>
+            <button type="button" data-prism="Classroom: explain choices, ask better questions, revise for audience, defend the work.">Classroom</button>
+          </div>
+        </div>
+        <div class="prism-explain" id="prismExplain">Healthcare: calm explanation, plain language, accurate handoff, documented next step.</div>
+      </div>
+    </section>
+
+    <section class="page section" id="acting" aria-labelledby="acting-title">
+      <div class="section-header">
+        <div>
+          <div class="eyebrow">III · Acting</div>
+          <h2 id="acting-title">Bring back a receipt</h2>
+        </div>
+        <div class="section-copy">
+          <p>The point is not to define every skill forever. The point is to stop letting big words float around without evidence attached. Here is one field test worth running.</p>
+        </div>
+      </div>
+
+      <div class="field-test">
+        <div class="receipt" aria-label="Field test receipt">
+          <h3>Field Test · No. 02<br />The Three-Register Brief</h3>
+          <div class="receipt-row"><span>Peer version, Slack-length</span><span>120w</span></div>
+          <div class="receipt-row"><span>Parent version, one page</span><span>250w</span></div>
+          <div class="receipt-row"><span>Principal version, one slide</span><span>40w</span></div>
+          <div class="receipt-row"><span>60-second walkthrough</span><span>00:60</span></div>
+          <div class="receipt-row"><span>AI-use note, three lines</span><span>1 ea</span></div>
+          <div class="receipt-row receipt-total"><span>Total observable evidence</span><span>5 items</span></div>
+          <p style="margin-top:24px; font-size:12px; line-height:1.45;">Reply with one student artifact and we may feature the idea in a future Field Notes.</p>
+        </div>
+
+        <div class="conversation-card">
+          <h3>A question for your next team conversation</h3>
+          <p>Pick one word your school uses all the time. Not five words. One. Then ask:</p>
+          <ol class="question-list">
+            <li>What do we mean by it?</li>
+            <li>What would it look like in student work?</li>
+            <li>How could AI help it?</li>
+            <li>How could AI hide it?</li>
+            <li>What deliverable would make the skill visible?</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="page reply" id="reply" aria-labelledby="reply-title">
+      <div class="eyebrow">One question for you</div>
+      <h2 id="reply-title">Which word needs a field guide?</h2>
+      <p>Which word does your school use often but define poorly?</p>
+      <div class="chips" aria-label="Possible reply choices">
+        <span class="chip">Preparedness</span>
+        <span class="chip">Communication</span>
+        <span class="chip">Teamwork</span>
+        <span class="chip">Critical Thinking</span>
+        <span class="chip">Adaptability</span>
+        <span class="chip">Hands-on Learning</span>
+        <span class="chip">Something Else</span>
+      </div>
+      <p style="margin-top:30px;">If you want more of this conversation, listen to the latest <a href="/#listen">School’s Out Saturdays</a> episode or <a href="https://share-na2.hsforms.com/2rc7ZgrJeSQm9geAkrYbj6Aq51dop">subscribe to Field Notes</a>.</p>
+      <p class="hand-note" aria-hidden="true">See you in the field, Jason</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="footer-inner">
+      <div>© 2026 AGI Podcast · School’s Out Field Notes</div>
+      <div><a href="/">School’s Out Saturdays</a> · <a href="/field-notes-issue-1">Issue 1</a> · <a href="https://share-na2.hsforms.com/2rc7ZgrJeSQm9geAkrYbj6Aq51dop">Subscribe</a></div>
+    </div>
+  </footer>
+
+  <script>
+    const definitions = {
+      communication: [
+        "Teacher view: Communication means a student can explain an idea clearly enough that someone else can understand and act on it.",
+        "Employer view: Communication means the next person knows what changed, why it changed, and what to do next.",
+        "Parent view: Communication means I do not need a decoder ring to understand what my kid is saying.",
+        "Student view: Communication means I can sound like myself and still be taken seriously.",
+        "College view: Communication means a claim, support, audience awareness, and enough structure to follow the thinking."
+      ],
+      critical: [
+        "Teacher view: Critical thinking means students show their work, not just the answer.",
+        "Employer view: Critical thinking means spotting the weak assumption before it becomes an expensive mistake.",
+        "Parent view: Critical thinking means not getting fooled by the first polished thing online.",
+        "Student view: Critical thinking means I can argue without yelling and change my mind without losing face.",
+        "College view: Critical thinking means evidence, counterevidence, and judgment."
+      ],
+      adaptability: [
+        "Teacher view: Adaptability means revising after feedback instead of treating feedback like a personal attack.",
+        "Employer view: Adaptability means changing course when the conditions change.",
+        "Parent view: Adaptability means the first plan can fail without the whole day collapsing.",
+        "Student view: Adaptability means I know what to do when the tool breaks or the assignment changes.",
+        "College view: Adaptability means learning independently when the instructor is not chasing you."
+      ],
+      preparedness: [
+        "Teacher view: Preparedness means the student understands the assignment and has the materials to start.",
+        "Employer view: Preparedness means the person can make the first three moves without a rescue mission.",
+        "Parent view: Preparedness means my kid can handle what comes next.",
+        "Student view: Preparedness means I do not feel lost before I even begin.",
+        "College view: Preparedness means managing work, asking for help, and staying oriented when no one is spoon-feeding the next step."
+      ]
+    };
+
+    const decoderWord = document.getElementById('decoderWord');
+    const decodeBtn = document.getElementById('decodeBtn');
+    const decoderOutput = document.getElementById('decoderOutput');
+    let decoderIndex = 0;
+
+    function updateDecoder() {
+      const set = definitions[decoderWord.value];
+      decoderOutput.textContent = set[decoderIndex % set.length];
+      decoderIndex++;
+    }
+
+    decodeBtn.addEventListener('click', updateDecoder);
+    decoderWord.addEventListener('change', () => { decoderIndex = 0; updateDecoder(); });
+
+    const readyWords = ['ready', 'employable', 'college-ready', 'adaptable', 'prepared', 'independent', 'AI-literate'];
+    const readyEl = document.getElementById('readyWord');
+    let readyIndex = 0;
+    window.setInterval(() => {
+      readyIndex = (readyIndex + 1) % readyWords.length;
+      readyEl.textContent = readyWords[readyIndex];
+    }, 1600);
+
+    document.querySelectorAll('[data-prism]').forEach((button) => {
+      button.addEventListener('click', () => {
+        document.querySelectorAll('[data-prism]').forEach((b) => b.classList.remove('active'));
+        button.classList.add('active');
+        document.getElementById('prismExplain').textContent = button.dataset.prism;
+      });
+    });
+  </script>
+</body>
+</html>
