@@ -8,6 +8,7 @@
   <meta property="og:title" content="Field Notes | School's Out Saturdays">
   <meta property="og:description" content="A weekly companion for educators making sense of AI without turning school into a tech circus.">
   <meta property="og:type" content="website">
+  <meta property="og:image" content="https://schoolsout.agipodcast.ai/field-notes-header.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -68,39 +69,50 @@
       border-color: #f5b800;
     }
 
-    .hero {
-      padding: 80px 48px 48px;
+    .header-banner {
       max-width: 1200px;
-      margin: 0 auto;
+      margin: 48px auto 0;
+      padding: 0 48px;
     }
 
-    .hero .eyebrow {
-      color: #f5b800;
-      font-size: 13px;
-      font-weight: 600;
-      letter-spacing: 1.5px;
-      text-transform: uppercase;
-      margin-bottom: 16px;
+    .header-banner img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      border: 1px solid rgba(245, 184, 0, 0.2);
+      display: block;
     }
 
-    .hero h1 {
+    .intro {
+      max-width: 900px;
+      margin: 56px auto 64px;
+      padding: 0 48px;
+      text-align: center;
+    }
+
+    .intro p {
       font-family: 'Lora', serif;
-      font-size: 56px;
-      font-weight: 700;
-      line-height: 1.1;
-      margin-bottom: 24px;
-    }
-
-    .hero p {
-      font-size: 19px;
-      max-width: 720px;
-      color: rgba(245, 240, 225, 0.85);
+      font-size: 22px;
+      line-height: 1.5;
+      color: rgba(245, 240, 225, 0.9);
+      font-style: italic;
     }
 
     .featured {
       max-width: 1200px;
-      margin: 32px auto 64px;
+      margin: 0 auto 80px;
       padding: 0 48px;
+    }
+
+    .section-label {
+      font-family: 'Inter', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: #f5b800;
+      text-align: center;
+      margin-bottom: 32px;
     }
 
     .featured-card {
@@ -110,6 +122,18 @@
       padding: 56px;
       transition: transform 0.2s, border-color 0.2s;
       display: block;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .featured-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, #f5b800 0%, #d49a00 100%);
     }
 
     .featured-card:hover {
@@ -140,17 +164,18 @@
 
     .featured-card h2 {
       font-family: 'Lora', serif;
-      font-size: 44px;
+      font-size: 48px;
       font-weight: 700;
-      line-height: 1.15;
-      margin-bottom: 20px;
+      line-height: 1.1;
+      margin-bottom: 24px;
     }
 
     .featured-card .summary {
-      font-size: 18px;
+      font-size: 19px;
+      line-height: 1.55;
       color: rgba(245, 240, 225, 0.85);
       max-width: 720px;
-      margin-bottom: 32px;
+      margin-bottom: 36px;
     }
 
     .featured-card .read-more {
@@ -159,7 +184,16 @@
       gap: 8px;
       color: #f5b800;
       font-weight: 600;
-      font-size: 16px;
+      font-size: 17px;
+      padding: 14px 28px;
+      border: 2px solid #f5b800;
+      border-radius: 999px;
+      transition: all 0.2s;
+    }
+
+    .featured-card:hover .read-more {
+      background: #f5b800;
+      color: #0f1729;
     }
 
     .archive {
@@ -168,18 +202,9 @@
       padding: 0 48px;
     }
 
-    .archive h3 {
-      font-family: 'Lora', serif;
-      font-size: 28px;
-      font-weight: 600;
-      margin-bottom: 32px;
-      padding-bottom: 16px;
-      border-bottom: 1px solid rgba(245, 240, 225, 0.15);
-    }
-
     .archive-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
       gap: 24px;
     }
 
@@ -187,7 +212,7 @@
       background: rgba(245, 240, 225, 0.04);
       border: 1px solid rgba(245, 240, 225, 0.1);
       border-radius: 12px;
-      padding: 32px;
+      padding: 36px;
       transition: all 0.2s;
       display: block;
     }
@@ -203,21 +228,22 @@
       font-style: italic;
       color: rgba(245, 184, 0, 0.8);
       font-size: 14px;
-      margin-bottom: 8px;
+      margin-bottom: 10px;
     }
 
     .archive-card h4 {
       font-family: 'Lora', serif;
-      font-size: 24px;
+      font-size: 26px;
       font-weight: 600;
       line-height: 1.2;
-      margin-bottom: 12px;
+      margin-bottom: 14px;
     }
 
     .archive-card .summary {
       font-size: 15px;
       color: rgba(245, 240, 225, 0.75);
-      margin-bottom: 16px;
+      margin-bottom: 18px;
+      line-height: 1.55;
     }
 
     .archive-card .read-link {
@@ -246,16 +272,18 @@
         justify-content: center;
       }
 
-      .hero {
-        padding: 48px 24px 32px;
+      .header-banner {
+        margin-top: 24px;
+        padding: 0 16px;
       }
 
-      .hero h1 {
-        font-size: 36px;
+      .intro {
+        padding: 0 24px;
+        margin: 32px auto 48px;
       }
 
-      .hero p {
-        font-size: 17px;
+      .intro p {
+        font-size: 18px;
       }
 
       .featured,
@@ -264,11 +292,15 @@
       }
 
       .featured-card {
-        padding: 32px 24px;
+        padding: 36px 24px;
       }
 
       .featured-card h2 {
-        font-size: 30px;
+        font-size: 32px;
+      }
+
+      .featured-card .summary {
+        font-size: 17px;
       }
 
       .archive-grid {
@@ -292,15 +324,18 @@
     </ul>
   </nav>
 
-  <section class="hero">
-    <div class="eyebrow">Field Notes</div>
-    <h1>Graphic reportage for educators.</h1>
-    <p>A weekly companion to School's Out Saturdays. Practical signals, questions, and opportunities from the edge of school and work. Real notes you can use, better questions for the people closest to students.</p>
+  <section class="header-banner">
+    <img src="/field-notes-header.png" alt="School's Out Field Notes: Graphic reportage for educators. AI, school, work, and what students need next.">
+  </section>
+
+  <section class="intro">
+    <p>A weekly companion to School's Out Saturdays. Practical signals, questions, and opportunities from the edge of school and work.</p>
   </section>
 
   <section class="featured">
+    <div class="section-label">Latest Issue</div>
     <a href="/field-notes-issue-2" class="featured-card">
-      <span class="latest-tag">Latest Issue</span>
+      <span class="latest-tag">New</span>
       <div class="issue-number">Issue 2 · May 13, 2026</div>
       <h2>Shared language isn't enough.</h2>
       <p class="summary">Schools need shared definitions. A field guide for spotting critical thinking, communication, adaptability, and preparedness in actual student work, not just in mission statements.</p>
@@ -309,7 +344,7 @@
   </section>
 
   <section class="archive">
-    <h3>The archive</h3>
+    <div class="section-label">The Archive</div>
     <div class="archive-grid">
       <a href="/field-notes-issue-1" class="archive-card">
         <div class="issue-number">Issue 1 · May 7, 2026</div>
