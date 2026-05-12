@@ -1,0 +1,4 @@
+Contact: mailto:jason@agipodcast.ai
+Expires: 2027-05-12T00:00:00.000Z
+Preferred-Languages: en
+Canonical: https://schoolsout.agipodcast.ai/.well-known/security.txt
