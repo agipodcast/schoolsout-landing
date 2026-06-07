@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Done Being Victor Frankenstein | No-Code CAIO</title>
+  <meta name="description" content="One real week of turning copy-paste chaos into agentic workflows, no code required.">
+  <meta property="og:title" content="Done Being Victor Frankenstein">
+  <meta property="og:description" content="One real week of turning copy-paste chaos into agentic workflows, no code required.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://schoolsout.agipodcast.ai/newsletter/assets/default-feature.png">
+  <meta property="og:url" content="https://schoolsout.agipodcast.ai/newsletter/editions/edition-001.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Done Being Victor Frankenstein">
+  <meta name="twitter:description" content="One real week of turning copy-paste chaos into agentic workflows, no code required.">
+  <meta name="twitter:image" content="https://schoolsout.agipodcast.ai/newsletter/assets/default-feature.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:opsz,wght@7..72,500;7..72,650;7..72,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #182333;
+      --muted: #5d6977;
+      --soft: #f6f2ea;
+      --paper: #fffdf8;
+      --card: #ffffff;
+      --navy: #0d2438;
+      --navy-2: #132f48;
+      --gold: #c6922e;
+      --gold-soft: #f1dfba;
+      --rule: #e8dfcf;
+      --green: #476b5b;
+      --shadow: 0 18px 60px rgba(13, 36, 56, .10);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max: 1120px;
+      --article: 760px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    a {
+      color: var(--navy);
+      text-decoration-color: rgba(198, 146, 46, .55);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+    a:hover {
+      color: #000;
+      text-decoration-color: var(--gold);
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .sitebar {
+      border-bottom: 1px solid var(--rule);
+      background: rgba(255, 253, 248, .92);
+    }
+    .sitebar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand-lockup {
+      display: grid;
+      gap: 1px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .brand-lockup strong {
+      font-size: .95rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    .brand-lockup span {
+      font-size: .82rem;
+      color: var(--muted);
+    }
+    .back-link {
+      font-size: .86rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: #fff;
+      white-space: nowrap;
+    }
+    .edition-shell {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 34px 20px 64px;
+    }
+    .edition-header {
+      max-width: var(--article);
+      margin: 0 auto;
+      padding: 26px 0 22px;
+    }
+    .eyebrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .eyebrow .pill {
+      color: var(--navy);
+      background: var(--gold-soft);
+      border: 1px solid rgba(198, 146, 46, .35);
+      border-radius: 999px;
+      padding: 5px 10px;
+    }
+    h1 {
+      margin: 0;
+      font-family: Literata, Georgia, serif;
+      font-size: clamp(2.35rem, 9vw, 4.9rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+      color: var(--navy);
+    }
+    .deck {
+      margin: 20px 0 0;
+      font-size: clamp(1.08rem, 3vw, 1.34rem);
+      line-height: 1.55;
+      color: #384858;
+    }
+    .feature-image {
+      max-width: 960px;
+      margin: 20px auto 42px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--rule);
+      background: var(--soft);
+    }
+    .feature-image img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .article-body {
+      max-width: var(--article);
+      margin: 0 auto;
+      font-size: 1.06rem;
+    }
+    .article-body h2 {
+      margin: 48px 0 14px;
+      padding-top: 18px;
+      border-top: 3px solid var(--navy);
+      font-family: Literata, Georgia, serif;
+      font-size: clamp(1.75rem, 6vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+      color: var(--navy);
+    }
+    .article-body h3 {
+      margin: 32px 0 10px;
+      font-size: 1.15rem;
+      line-height: 1.25;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+    .article-body p {
+      margin: 0 0 1.15em;
+    }
+    .article-body ul,
+    .article-body ol {
+      margin: 0 0 1.3em 1.25em;
+      padding: 0;
+    }
+    .article-body li {
+      margin: .42em 0;
+      padding-left: .15em;
+    }
+    .article-body blockquote {
+      margin: 30px 0;
+      padding: 22px 24px;
+      border-left: 6px solid var(--gold);
+      background: #fbf5e8;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      color: #26384b;
+      font-family: Literata, Georgia, serif;
+      font-size: 1.22rem;
+      line-height: 1.48;
+    }
+    .article-body figure {
+      margin: 34px 0;
+    }
+    .article-body figure img,
+    .article-body > img {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--rule);
+      box-shadow: 0 12px 34px rgba(13, 36, 56, .08);
+    }
+    .article-body figcaption,
+    .article-body .caption {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.45;
+    }
+    .article-body .note-card,
+    .article-body .use-case-card {
+      margin: 28px 0;
+      padding: 22px;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 10px 36px rgba(13, 36, 56, .06);
+    }
+    .article-body .use-case-card h3:first-child,
+    .article-body .note-card h3:first-child {
+      margin-top: 0;
+    }
+    .article-body .beyond-chat-box {
+      margin: 46px calc(50% - 50vw);
+      padding: 44px 20px;
+      background:
+        radial-gradient(circle at top left, rgba(198, 146, 46, .20), transparent 30%),
+        linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: #f7efe0;
+    }
+    .article-body .beyond-chat-box-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .article-body .beyond-chat-box h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+      color: #fff7e8;
+    }
+    .article-body .beyond-chat-box h3 {
+      color: var(--gold-soft);
+    }
+    .article-body .beyond-chat-box p {
+      color: #e8edf2;
+    }
+    .article-body .beyond-chat-box a {
+      color: #fff;
+      text-decoration-color: var(--gold);
+    }
+    .article-body .visual-strip {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0 8px;
+    }
+    .article-body .visual-panel {
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, .08);
+    }
+    .article-body .visual-panel strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+    .article-body .the-question {
+      margin: 48px 0 28px;
+      padding: 26px;
+      border: 2px solid var(--navy);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(241, 223, 186, .50), rgba(255, 255, 255, .86));
+      box-shadow: 0 14px 46px rgba(13, 36, 56, .08);
+    }
+    .article-body .the-question h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+    .article-body .the-question p:last-child {
+      margin-bottom: 0;
+    }
+    .footer-injection {
+      max-width: var(--article);
+      margin: 54px auto 0;
+      padding-top: 26px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    @media (min-width: 720px) {
+      .edition-shell {
+        padding-top: 52px;
+      }
+      .sitebar-inner {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .visual-strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .article-body .beyond-chat-box {
+        padding: 58px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="sitebar">
+    <div class="sitebar-inner">
+      <a class="brand-lockup" href="../index.html" aria-label="No-Code CAIO archive">
+        <strong>No-Code CAIO</strong>
+        <span>Real-world AI for non-technical leaders</span>
+      </a>
+      <a class="back-link" href="../index.html">Back to archive</a>
+    </div>
+  </header>
+  <main class="edition-shell">
+    <article>
+      <header class="edition-header">
+        <div class="eyebrow">
+          <span class="pill">Edition 001</span>
+          <span>June 8, 2026</span>
+        </div>
+        <h1>Done Being Victor Frankenstein</h1>
+        <p class="deck">One real week of turning copy-paste chaos into agentic workflows, no code required.</p>
+      </header>
+      <figure class="feature-image">
+        <img src="../assets/default-feature.png" alt="No-Code CAIO branded feature image">
+      </figure>
+      <div class="article-body">
+        <h2>Editor's Note</h2>
+<p>Monday I got out of jury duty by accident. I was supposed to call ahead to confirm. I didn't, the case went away, and suddenly I had a week back that the county almost took from me. So I did what any reasonable person would do: covered a wall in sticky notes, told my cat she could stay in the office as long as she sat in the spot I made her, and got to work.</p>
+<p>This is the first edition of the No-Code CAIO in its new home on the web, and the week handed me the launch story. Monday I shipped a podcast episode the old way, by hand, and it cost me two hours. Friday, agents did the parts I hate while I did the parts that need me. Somewhere in between, mid-conversation with one of my agents, I finally said out loud a thing I'd been circling for months. It's below, word for word, and the whole edition hangs on it. (Thursday I also spent a day with 600 educators at an AI summit, but that story belongs to Field Notes, not here.)</p>
+<p>If you're stuck somewhere between "AI is amazing" and "why am I still doing everything by hand," this one's for you.</p>
+<h2>Main Essay</h2>
+<p>Monday morning I published a podcast episode the old way. If you've never done it, here's the glamour: copy the show notes out of one tool, paste them into Spotify, hunt down the thumbnail, screenshot the stuff that won't copy cleanly, paste it all again into YouTube, click through the "not made for kids" screen, write a third version for LinkedIn, schedule Facebook, and somewhere in the middle lose your show notes entirely and spend ten minutes interrogating your downloads folder about where it put your work. The episode went out late. It went out fine. It cost me two hours of clicking.</p>
+<p>Tuesday morning I vented to one of my agents: "Getting and staying organized takes up a ton of time. I hand-write it in my calendar. I put it on my wall. I put it in my calendars on my computer. It's just too much. Definitely need to streamline." Three calendars and a wall. A grown man with decades of work experience, negotiating between a paper planner and Google Calendar like a hostage mediator.</p>
+<p>And Monday afternoon, mid-conversation with one of my agents, the real sentence finally came out: "We're doing all of this so I can stop being Victor Frankenstein. We can actually build the DeLorean, an ecosystem that pulls us into the future and makes things easy."</p>
+<p>That's verbatim. Let me unpack it, because it describes almost every business I talk to.</p>
+<p>Victor Frankenstein stitched parts together by hand, and every one-off AI chat is a stitched-on limb. You open a chat window, you get a genuinely good answer, you copy it, you paste it somewhere, the chat dies, and tomorrow you perform the same surgery again. It works. It even looks like progress, because the monster does get up and walk around. But you are the thread holding every seam, and the day you stop stitching, the whole thing falls over on the lab floor.</p>
+<p>The DeLorean is the other thing. You build the machine once and the machine carries you. In AI terms that's a workflow: a set of instructions an agent runs the same way every time, on your files, in your tools, with you reviewing the output instead of producing it.</p>
+<p>Here's the contrast from my own week. Same guy, same tools, four days apart. Monday: two hours of copy-paste to ship one episode. Friday: I handed an agent an episode transcript and the format I wanted, and while it wrote the show notes for two platforms I clipped the audiograms. A second agent ran the follow-up play I break down in the Use Case below. The episode shipped same-day, and so did everything else.</p>
+<p>Nothing about Friday required code. It required me to stop treating AI like a vending machine and start treating it like a shop I was setting up.</p>
+<p>So here's my call, and I'll be blunt: if your company's entire AI practice is people opening a chat window, getting an answer, and pasting it into a document, that's a hobby with a subscription fee, and it serves no one past about month three. Just say'n. Build one workflow. Then build the next one. The monster walks. The DeLorean drives.</p>
+<h2>Use Case</h2>
+<div class="use-case-card">
+<h3>Friday's build: seven follow-up emails I reviewed instead of wrote.</h3>
+<p>Earlier in the week a colleague and I visited a list of organizations, the old-fashioned way, handshakes and business cards. The follow-up emails are the part everybody intends to do and nobody does, because each one needs the right contact, the right detail from the visit, and a tone that doesn't smell like a mail merge. That's an evening of work, which is exactly why it usually becomes "next week sometime," which becomes never.</p>
+<p>Here's the pattern so you can steal it.</p>
+<p><strong>Input:</strong> a plain list of the organizations we visited, plus my notes on who we met and what we talked about.</p>
+<p><strong>Tools:</strong> an AI agent connected to my email with one hard rule: it can create drafts, it cannot send anything. Ever.</p>
+<p><strong>Steps:</strong> the agent researched each organization, found the right contact, matched my notes to each visit, and wrote an individual follow-up in my voice for every single one. Each landed as a draft in my Gmail, stacked and waiting.</p>
+<p><strong>Active human time:</strong> about ten minutes. I read all seven, fixed one link, sharpened one sentence, and hit send on each.</p>
+<p><strong>Cost:</strong> nothing beyond the AI subscription I already pay for. Zero code written by me.</p>
+<p><strong>Output:</strong> seven personalized follow-ups sent the same day as the work, instead of a guilty to-do item dying on a sticky note.</p>
+<p><strong>Lesson:</strong> give the agent the research and the blank page, keep the judgment and the send button. The draft-only rule isn't a limitation, I designed it that way on purpose, and it's the single setting that makes the whole thing safe enough to actually use.</p>
+</div>
+<section class="beyond-chat-box">
+<div class="beyond-chat-box-inner">
+<h2>Beyond the Chat Box</h2>
+<p>Picture this. Early in the week I sat down with one of my AI accounts, asked for help on strategy, and it responded by asking me what my company actually does. I stared at the screen, genuinely offended. We have talked about my work hundreds of times. Different chats, same account, and here it was, blinking at me like a new hire on day one asking where the bathroom is.</p>
+<p>And then the obvious thing finally landed: it IS a new hire on day one. Every single chat. A brilliant, fast, tireless new hire with total amnesia, and I'd been re-onboarding it every morning and calling that a workflow. The fix wasn't a better prompt or a more patient explanation for the hundredth time. The fix was writing the context down once, in a place every agent I run can read it, so nobody starts from zero ever again. That's it. That's the whole trick. A shared folder and a context document, the ten-dollar adapter of office AI.</p>
+<p>I keep describing the move from chats to workflows as three panels. Panel one, you ask AI questions. Panel two, you notice you keep asking the same questions and giving the same explanations. Panel three, you write it down once, point the system at it, and stop introducing yourself to your own tools. Most businesses believe the gap between panel two and panel three is a chasm: an engineering team, an eighteen-month roadmap, money they don't have. Let's be real. Most of the time it's a document, a folder, and somebody willing to ask a dumb-sounding question out loud.</p>
+</div>
+</section>
+<section class="the-question">
+<h2>The Question</h2>
+<p>Take this one into your Monday meeting and ask it straight: what did each of us do three times this week that nobody wrote down?</p>
+<p>Not the big stuff. The stupid stuff. The copy-paste, the reformatting, the "let me find that file again," the status update you composed from scratch for the third Thursday in a row. Nobody documents those tasks because they feel beneath documenting, and that's exactly why a human is still doing them by hand. Every item on that list is a workflow waiting for an owner.</p>
+<p>You don't need permission, a budget line, or a CS degree. You need the list. Make it this week, pick the dumbest item on it, and go build your first piece of the DeLorean. GAME ON.</p>
+</section>
+      </div>
+      <div class="footer-injection">
+        <p>Work With Me CitizenAI : We help nonprofits connect people to housing, food, childcare, and transportation, faster. <br>
+AI literacy and education, consulting and speaking engagements welcome. <br>
+jason@mycitizen.ai</p>
+<p>The AGI Podcast Network Episodes, shows, newsletters, and everything else: <a href="https://agipodcast.ai/network">agipodcast.ai/network</a></p>
+<p>Connect with me: <br>
+LinkedIn: linkedin.com/in/jason-grant-padgett <br>
+X: @NoCodeCAIO <br>
+Facebook and Instagram: @AGIPodcast | @AGISchoolsout</p>
+<p>Subscribe to the No-Code CAIO: https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7399599285849346048</p>
+<p>"When we look back at this time, I think we will realize that we were standing at the foothills of the singularity. It will be a profound moment for humanity." Demis Hassabis, Google I/O May 20, 2026</p>
+<p>Ciao, Jason</p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
