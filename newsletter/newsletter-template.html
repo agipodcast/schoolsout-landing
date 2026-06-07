@@ -1,0 +1,358 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>{{TITLE}} | No-Code CAIO</title>
+  <meta name="description" content="{{DESCRIPTION}}">
+  <meta property="og:title" content="{{TITLE}}">
+  <meta property="og:description" content="{{DESCRIPTION}}">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="{{FEATURE_IMAGE}}">
+  <meta property="og:url" content="https://agipodcast.ai/editions/{{EDITION_NUMBER}}">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="{{TITLE}}">
+  <meta name="twitter:description" content="{{DESCRIPTION}}">
+  <meta name="twitter:image" content="{{FEATURE_IMAGE}}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:opsz,wght@7..72,500;7..72,650;7..72,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #182333;
+      --muted: #5d6977;
+      --soft: #f6f2ea;
+      --paper: #fffdf8;
+      --card: #ffffff;
+      --navy: #0d2438;
+      --navy-2: #132f48;
+      --gold: #c6922e;
+      --gold-soft: #f1dfba;
+      --rule: #e8dfcf;
+      --green: #476b5b;
+      --shadow: 0 18px 60px rgba(13, 36, 56, .10);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max: 1120px;
+      --article: 760px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    a {
+      color: var(--navy);
+      text-decoration-color: rgba(198, 146, 46, .55);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+    a:hover {
+      color: #000;
+      text-decoration-color: var(--gold);
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .sitebar {
+      border-bottom: 1px solid var(--rule);
+      background: rgba(255, 253, 248, .92);
+    }
+    .sitebar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand-lockup {
+      display: grid;
+      gap: 1px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .brand-lockup strong {
+      font-size: .95rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    .brand-lockup span {
+      font-size: .82rem;
+      color: var(--muted);
+    }
+    .back-link {
+      font-size: .86rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: #fff;
+      white-space: nowrap;
+    }
+    .edition-shell {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 34px 20px 64px;
+    }
+    .edition-header {
+      max-width: var(--article);
+      margin: 0 auto;
+      padding: 26px 0 22px;
+    }
+    .eyebrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .eyebrow .pill {
+      color: var(--navy);
+      background: var(--gold-soft);
+      border: 1px solid rgba(198, 146, 46, .35);
+      border-radius: 999px;
+      padding: 5px 10px;
+    }
+    h1 {
+      margin: 0;
+      font-family: Literata, Georgia, serif;
+      font-size: clamp(2.35rem, 9vw, 4.9rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+      color: var(--navy);
+    }
+    .deck {
+      margin: 20px 0 0;
+      font-size: clamp(1.08rem, 3vw, 1.34rem);
+      line-height: 1.55;
+      color: #384858;
+    }
+    .feature-image {
+      max-width: 960px;
+      margin: 20px auto 42px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--rule);
+      background: var(--soft);
+    }
+    .feature-image img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .article-body {
+      max-width: var(--article);
+      margin: 0 auto;
+      font-size: 1.06rem;
+    }
+    .article-body h2 {
+      margin: 48px 0 14px;
+      padding-top: 18px;
+      border-top: 3px solid var(--navy);
+      font-family: Literata, Georgia, serif;
+      font-size: clamp(1.75rem, 6vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+      color: var(--navy);
+    }
+    .article-body h3 {
+      margin: 32px 0 10px;
+      font-size: 1.15rem;
+      line-height: 1.25;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+    .article-body p {
+      margin: 0 0 1.15em;
+    }
+    .article-body ul,
+    .article-body ol {
+      margin: 0 0 1.3em 1.25em;
+      padding: 0;
+    }
+    .article-body li {
+      margin: .42em 0;
+      padding-left: .15em;
+    }
+    .article-body blockquote {
+      margin: 30px 0;
+      padding: 22px 24px;
+      border-left: 6px solid var(--gold);
+      background: #fbf5e8;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      color: #26384b;
+      font-family: Literata, Georgia, serif;
+      font-size: 1.22rem;
+      line-height: 1.48;
+    }
+    .article-body figure {
+      margin: 34px 0;
+    }
+    .article-body figure img,
+    .article-body > img {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--rule);
+      box-shadow: 0 12px 34px rgba(13, 36, 56, .08);
+    }
+    .article-body figcaption,
+    .article-body .caption {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.45;
+    }
+    .article-body .note-card,
+    .article-body .use-case-card {
+      margin: 28px 0;
+      padding: 22px;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 10px 36px rgba(13, 36, 56, .06);
+    }
+    .article-body .use-case-card h3:first-child,
+    .article-body .note-card h3:first-child {
+      margin-top: 0;
+    }
+    .article-body .beyond-chat-box {
+      margin: 46px calc(50% - 50vw);
+      padding: 44px 20px;
+      background:
+        radial-gradient(circle at top left, rgba(198, 146, 46, .20), transparent 30%),
+        linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: #f7efe0;
+    }
+    .article-body .beyond-chat-box-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .article-body .beyond-chat-box h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+      color: #fff7e8;
+    }
+    .article-body .beyond-chat-box h3 {
+      color: var(--gold-soft);
+    }
+    .article-body .beyond-chat-box p {
+      color: #e8edf2;
+    }
+    .article-body .beyond-chat-box a {
+      color: #fff;
+      text-decoration-color: var(--gold);
+    }
+    .article-body .visual-strip {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0 8px;
+    }
+    .article-body .visual-panel {
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, .08);
+    }
+    .article-body .visual-panel strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+    .article-body .the-question {
+      margin: 48px 0 28px;
+      padding: 26px;
+      border: 2px solid var(--navy);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(241, 223, 186, .50), rgba(255, 255, 255, .86));
+      box-shadow: 0 14px 46px rgba(13, 36, 56, .08);
+    }
+    .article-body .the-question h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+    .article-body .the-question p:last-child {
+      margin-bottom: 0;
+    }
+    .footer-injection {
+      max-width: var(--article);
+      margin: 54px auto 0;
+      padding-top: 26px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    @media (min-width: 720px) {
+      .edition-shell {
+        padding-top: 52px;
+      }
+      .sitebar-inner {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .visual-strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .article-body .beyond-chat-box {
+        padding: 58px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="sitebar">
+    <div class="sitebar-inner">
+      <a class="brand-lockup" href="../index.html" aria-label="No-Code CAIO archive">
+        <strong>No-Code CAIO</strong>
+        <span>Real-world AI for non-technical leaders</span>
+      </a>
+      <a class="back-link" href="../index.html">Back to archive</a>
+    </div>
+  </header>
+  <main class="edition-shell">
+    <article>
+      <header class="edition-header">
+        <div class="eyebrow">
+          <span class="pill">Edition {{EDITION_NUMBER}}</span>
+          <span>{{DATE}}</span>
+        </div>
+        <h1>{{TITLE}}</h1>
+        <p class="deck">{{DESCRIPTION}}</p>
+      </header>
+      <figure class="feature-image">
+        <img src="{{FEATURE_IMAGE}}" alt="{{FEATURE_IMAGE_ALT}}">
+      </figure>
+      <div class="article-body">
+        {{BODY}}
+      </div>
+      <div class="footer-injection">
+        {{FOOTER}}
+      </div>
+    </article>
+  </main>
+</body>
+</html>
