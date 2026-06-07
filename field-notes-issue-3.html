@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Greyed-Out Button | School&rsquo;s Out Field Notes</title>
+  <meta name="description" content="Six hundred educators spent the day learning AI tools most of their students are not allowed to touch." />
+
+  <meta property="og:title" content="The Greyed-Out Button | School&rsquo;s Out Field Notes" />
+  <meta property="og:description" content="Six hundred educators spent the day learning AI tools most of their students are not allowed to touch." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://schoolsout.agipodcast.ai/field-notes-issue-3" />
+  <meta property="og:image" content="https://schoolsout.agipodcast.ai/field-card-003.png" />
+  <meta property="og:site_name" content="School&rsquo;s Out Field Notes" />
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Greyed-Out Button | School&rsquo;s Out Field Notes" />
+  <meta name="twitter:description" content="Six hundred educators spent the day learning AI tools most of their students are not allowed to touch." />
+  <meta name="twitter:image" content="https://schoolsout.agipodcast.ai/field-card-003.png" />
+  <meta name="twitter:image:alt" content="Field Card No. 003: The Greyed-Out Button. Teachers this year versus students this year." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy: #0f1729;
+      --navy-soft: #17213a;
+      --navy-card: #1a2342;
+      --gold: #f5b800;
+      --gold-soft: #ffd96a;
+      --cream: #f7f0df;
+      --cream-soft: #e8deca;
+      --muted: #b8c0d4;
+      --line: rgba(247, 240, 223, 0.16);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(245, 184, 0, 0.12), transparent 34rem),
+        radial-gradient(circle at 80% 10%, rgba(255, 217, 106, 0.08), transparent 28rem),
+        var(--navy);
+      color: var(--cream);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--gold-soft);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ---------- Site header / nav ---------- */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(15, 23, 41, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      color: var(--cream);
+      text-decoration: none;
+      line-height: 1.1;
+    }
+
+    .brand strong {
+      font-family: "Lora", Georgia, serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-top: 0.15rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .nav-links a {
+      color: var(--cream-soft);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.48rem 0.68rem;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: var(--gold);
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    /* ---------- Page shell + article head ---------- */
+
+    main {
+      overflow: hidden;
+    }
+
+    .page-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 5rem;
+    }
+
+    .article-head {
+      max-width: 880px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+    }
+
+    .issue-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.45rem;
+      margin-bottom: 1rem;
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .issue-eyebrow .dot {
+      color: rgba(245, 184, 0, 0.55);
+    }
+
+    .article-head h1 {
+      margin: 0;
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(2.4rem, 7vw, 5.3rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      color: var(--cream);
+    }
+
+    .article-deck {
+      max-width: 700px;
+      margin: 1.25rem auto 0;
+      color: var(--cream-soft);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    /* ---------- Article body ---------- */
+
+    .article-body {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .article-body h2 {
+      margin: 3.5rem 0 1.1rem;
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.9rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      color: var(--cream);
+    }
+
+    .article-body h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-body h3 {
+      margin: 2.25rem 0 0.75rem;
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+      letter-spacing: -0.02em;
+      color: var(--cream);
+    }
+
+    .article-body p {
+      margin: 1rem 0;
+      color: var(--cream-soft);
+      font-size: 1.05rem;
+    }
+
+    .article-body strong {
+      color: var(--cream);
+    }
+
+    .article-body ul,
+    .article-body ol {
+      margin: 1rem 0;
+      padding-left: 1.4rem;
+      color: var(--cream-soft);
+      font-size: 1.05rem;
+    }
+
+    .article-body li {
+      margin: 0.5rem 0;
+      padding-left: 0.2rem;
+    }
+
+    .article-body li::marker {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* ---------- Teacher quote (trust anchor) ---------- */
+
+    .article-body blockquote {
+      position: relative;
+      margin: 2.25rem 0;
+      padding: 1.6rem 1.5rem 1.5rem 1.8rem;
+      border-left: 5px solid var(--gold);
+      border-radius: 0 22px 22px 0;
+      background:
+        linear-gradient(135deg, rgba(245, 184, 0, 0.12), rgba(26, 35, 66, 0.85)),
+        var(--navy-card);
+      font-family: "Lora", Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+      line-height: 1.45;
+      color: var(--cream);
+    }
+
+    .article-body blockquote::before {
+      content: "\201C";
+      position: absolute;
+      top: -0.4rem;
+      left: 0.55rem;
+      font-family: "Lora", Georgia, serif;
+      font-size: 4.5rem;
+      line-height: 1;
+      color: rgba(245, 184, 0, 0.35);
+      pointer-events: none;
+    }
+
+    .article-body blockquote p {
+      margin: 0.5rem 0;
+      color: var(--cream);
+      font-size: inherit;
+    }
+
+    .article-body blockquote cite,
+    .article-body blockquote footer {
+      display: block;
+      margin-top: 0.9rem;
+      font-family: "Inter", system-ui, sans-serif;
+      font-style: normal;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--gold-soft);
+    }
+
+    /* ---------- Go Deeper (podcast bridge) ---------- */
+
+    .article-body .go-deeper {
+      margin: 1.75rem 0;
+      padding: 1.5rem 1.4rem;
+      background:
+        linear-gradient(135deg, rgba(245, 184, 0, 0.11), rgba(26, 35, 66, 0.82)),
+        var(--navy-card);
+      border: 1px solid rgba(245, 184, 0, 0.28);
+      border-radius: 24px;
+    }
+
+    .article-body .go-deeper::before {
+      content: "From the podcast";
+      display: inline-block;
+      margin-bottom: 0.7rem;
+      padding: 0.28rem 0.7rem;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .article-body .go-deeper p {
+      margin: 0.5rem 0 0;
+      color: var(--cream-soft);
+    }
+
+    .article-body .go-deeper a {
+      color: var(--gold-soft);
+      font-weight: 700;
+    }
+
+    /* ---------- Beginner's Mind panel strip ---------- */
+
+    .article-body .bm-panels {
+      counter-reset: bm-panel;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.1rem;
+      margin: 1.75rem 0;
+    }
+
+    .article-body .bm-panel {
+      counter-increment: bm-panel;
+      background: var(--cream);
+      color: var(--navy);
+      border: 2px solid var(--navy);
+      border-radius: 12px;
+      box-shadow: 6px 6px 0 rgba(245, 184, 0, 0.85);
+      padding: 1.1rem 1.05rem 1.15rem;
+      font-size: 0.96rem;
+      line-height: 1.5;
+    }
+
+    .article-body .bm-panel::before {
+      content: "Panel " counter(bm-panel);
+      display: inline-block;
+      margin-bottom: 0.65rem;
+      padding: 0.22rem 0.6rem;
+      border-radius: 5px;
+      background: var(--navy);
+      color: var(--gold);
+      font-size: 0.68rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .article-body .bm-panel p {
+      margin: 0;
+      color: var(--navy);
+      font-size: inherit;
+    }
+
+    .article-body .bm-panel em {
+      font-family: "Lora", Georgia, serif;
+    }
+
+    .article-body img.bm-comic {
+      width: 100%;
+      margin: 1.75rem 0;
+      padding: 0.7rem;
+      background: rgba(247, 240, 223, 0.055);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    /* ---------- Field Card block ---------- */
+
+    .article-body .field-card-block {
+      max-width: 520px;
+      margin: 2.75rem auto;
+      text-align: center;
+    }
+
+    .article-body .field-card-block img {
+      width: 100%;
+      border-radius: 20px;
+      border: 1px solid rgba(245, 184, 0, 0.35);
+      box-shadow: var(--shadow);
+    }
+
+    .article-body .field-card-block figcaption,
+    .article-body .field-card-block .card-caption {
+      margin: 0.85rem 0 0;
+      color: var(--muted);
+      font-size: 0.92rem;
+      font-style: italic;
+    }
+
+    .article-body .field-card-block .card-share {
+      margin: 0.45rem 0 0;
+      color: var(--gold-soft);
+      font-size: 0.78rem;
+      font-weight: 800;
+      font-style: normal;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    /* ---------- Reply Question (closing engagement) ---------- */
+
+    .article-body .reply-question {
+      margin: 4rem 0 1rem;
+      padding: 1.5rem 1.35rem;
+      background: var(--cream);
+      color: var(--navy);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .article-body .reply-question h2 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .article-body .reply-question p {
+      color: rgba(15, 23, 41, 0.82);
+    }
+
+    .article-body .reply-question strong {
+      color: var(--navy);
+    }
+
+    .article-body .reply-question a {
+      color: #7c5a00;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .article-body .reply-question blockquote {
+      background: rgba(245, 184, 0, 0.18);
+      color: var(--navy);
+    }
+
+    .article-body .reply-question blockquote p {
+      color: var(--navy);
+    }
+
+    /* ---------- Issue nav buttons ---------- */
+
+    .article-nav {
+      max-width: 820px;
+      margin: 3rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0.75rem 1.1rem;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--gold);
+    }
+
+    .button:hover {
+      background: var(--gold-soft);
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--cream);
+      border-color: var(--line);
+    }
+
+    .button.secondary:hover {
+      background: rgba(247, 240, 223, 0.08);
+      color: var(--cream);
+    }
+
+    /* ---------- Quiet footer ---------- */
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      background: rgba(10, 16, 30, 0.52);
+    }
+
+    .footer-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 2.75rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .footer-inner p {
+      margin: 0.55rem 0;
+    }
+
+    .footer-inner a {
+      color: var(--cream-soft);
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: rgba(245, 184, 0, 0.5);
+      text-underline-offset: 4px;
+    }
+
+    .footer-inner a:hover {
+      color: var(--gold-soft);
+    }
+
+    /* ---------- Desktop ---------- */
+
+    @media (min-width: 769px) {
+      .nav-wrap {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .nav-links {
+        justify-content: flex-end;
+      }
+
+      .nav-links a {
+        font-size: 0.88rem;
+        padding: 0.55rem 0.8rem;
+      }
+
+      .page-shell {
+        padding: 3rem 1.25rem 5rem;
+      }
+
+      .article-head {
+        margin-bottom: 3rem;
+      }
+
+      .article-body .bm-panels {
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      }
+
+      .article-body .reply-question {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="https://schoolsout.agipodcast.ai/field-notes">
+        <strong>School&rsquo;s Out Saturdays</strong>
+        <span>Preparing students for their future, not our past.</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="https://schoolsout.agipodcast.ai/#listen">Listen</a>
+        <a class="active" href="https://schoolsout.agipodcast.ai/field-notes">Field Notes</a>
+        <a href="https://schoolsout.agipodcast.ai/events">Events</a>
+        <a href="https://schoolsout.agipodcast.ai/network">Network</a>
+        <a href="https://share-na2.hsforms.com/172rws_4LT7CcG4mtdk137w41aedp" target="_blank" rel="noopener noreferrer">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-shell">
+      <header class="article-head">
+        <div class="issue-eyebrow">
+          <span>Issue 3</span>
+          <span class="dot">&middot;</span>
+          <span>June 7, 2026</span>
+          <span class="dot">&middot;</span>
+          <span>4-minute read</span>
+        </div>
+        <h1>The Greyed-Out Button</h1>
+        <p class="article-deck">Six hundred educators spent the day learning AI tools most of their students are not allowed to touch.</p>
+      </header>
+
+      <article class="article-body">
+        <p>Last Thursday I spent the day at the Spark Summit, an AI in education conference with about 600 educators and more than 60 presenters in the building. I was there as the podcast guy and the dad. Both hats got a workout.</p>
+
+        <figure class="field-card-block">
+          <img src="/field-card-003.png" alt="Field Card No. 003: The Greyed-Out Button. Teachers this year versus students this year." />
+          <figcaption>Field Card No. 003: The Greyed-Out Button. Teachers this year versus students this year.</figcaption>
+        </figure>
+
+        <h2>Field One: The Public Concern</h2>
+        <p>The loudest public argument about AI in schools is the one about keeping it out. Ban the chatbots, block the sites, get back to paper, protect the kids. You have heard it at school board meetings and seen it all over TikTok. The fear underneath is sincere: if students touch this technology, they will stop thinking, and we will never be able to tell. So the safest move, the argument goes, is to wait.</p>
+
+        <h2>Field Two: The Teacher Concern</h2>
+        <p>Midday I sat in a breakout session on Google Vids, the video creation tool inside Google Workspace. The trainer leading it does professional development for Carmel Clay Schools, and she flagged something I want you to sit with:</p>
+        <blockquote>
+          <p>her district has the AI features turned off for students. Teachers have them. Students get greyed-out buttons.</p>
+        </blockquote>
+        <p>My youngest is a freshman at Carmel High School, so I asked the question any parent would: when do the kids get access? The answer was honest. The high school is the fastest track, the hope is second semester in January, and it will probably start small, likely just Gemini. She did not dodge the why, either: a lot of parties have to be on the same page, and that is what has kept things slow. To her credit, she said she would carry the feedback back to the district, and I believe her.</p>
+        <p>That is the teacher concern, and I heard versions of it all day. Nobody wants to be the educator who turned it on before everyone was ready.</p>
+
+        <h2>Field Three: The Pragmatic Answer</h2>
+        <p>Here is what I said in that room, and I will say it here. Indiana University just rolled out ChatGPT access across its entire campus. Purdue, where my two oldest earned their degrees, expects incoming students to work with these tools. And the room supplied the sharpest contrast: educators pointed out that some of the most rural counties and township districts in the state have had AI tutors in front of students for two, three, even four years. The kids with the fewest resources are getting reps. The kids in one of the best resourced districts in Indiana are getting a maybe in January.</p>
+        <p>Let's be real about what waiting buys. My daughter uses Claude and ChatGPT at home either way. The only thing the delay guarantees is that nobody at school is directing her on how to use the technology she will be expected to use in college and every working year after it. I understand that turning on tools for minors takes lawyers, parents, boards, and patience. But caution that produces zero guided practice serves the adults' comfort and serves no one else. Stop calling the delay protection. The kids are not waiting with us.</p>
+
+        <h2>Go Deeper</h2>
+        <div class="go-deeper">
+          <p>This week on School's Out Saturdays I talked with a guest from Indiana University about that campus-wide ChatGPT rollout. The episode is called <a href="https://www.youtube.com/watch?v=8K1m11N2xpA" target="_blank" rel="noopener noreferrer">You Can't Shape What You Won't Use</a>, and the title is the whole argument: IU decided its students and faculty could not build judgment about a technology they were locked out of. If this issue hit a nerve, that conversation is your next listen.</p>
+        </div>
+
+        <h2>Beginner's Mind</h2>
+        <p>This one is real, and it is sitting at my kitchen table.</p>
+        <div class="bm-panels">
+          <div class="bm-panel">
+            <p>A freshman comes home from a school where every AI button stays greyed out until at least January.</p>
+          </div>
+          <div class="bm-panel">
+            <p>She opens a chatbot on her own, because of course she does. The beginner's question nobody at school is assigned to answer: what is the right way to use this?</p>
+          </div>
+          <div class="bm-panel">
+            <p>Meanwhile her teachers spent the year in district AI trainings, building lesson plans with the same tools she taps at home, unsupervised, every night.</p>
+          </div>
+          <div class="bm-panel">
+            <p>The adult realization: students are going to learn AI somewhere. The only question we control is whether an educator is in the room when they do.</p>
+          </div>
+          <div class="bm-panel">
+            <p><strong>Try This Week.</strong> You do not need student access to teach judgment. Take one assignment you are giving this week and paste this into whatever AI tool you have teacher access to: "Here is an assignment for my [grade] [subject] class: [paste assignment]. Give me the answer a student would get by pasting this in with zero effort." Print the result, hand it out, and give your students one job: find three places where it is wrong, shallow, or generic, then beat it. Ten minutes, no student logins, and every kid in the room just practiced the exact skill the greyed-out button was supposed to protect.</p>
+          </div>
+        </div>
+
+        <div class="reply-question">
+          <h2>The Reply Question</h2>
+          <p>When does your school or district plan to give students supervised access to AI, and what is the one thing actually holding that date back? Hit reply; two sentences is plenty.</p>
+        </div>
+      </article>
+
+      <nav class="article-nav" aria-label="Field Notes navigation">
+        <a class="button secondary" href="https://schoolsout.agipodcast.ai/field-notes">Back to Field Notes</a>
+        <a class="button" href="https://schoolsout.agipodcast.ai/#subscribe">Subscribe to Field Notes</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Teacher Tuesday. Every third Tuesday, Ronda Swartz and I host Teacher Tuesday inside the AI Launch Pad community. Bring a real classroom question, leave with something to try. Join us: <a href="https://www.skool.com/ai-launch-pad/about?ref=6da44c20543646dfbd48cd032aa36886" target="_blank" rel="noopener noreferrer">https://www.skool.com/ai-launch-pad/about?ref=6da44c20543646dfbd48cd032aa36886</a></p>
+      <p>School's Out Saturdays on the AGI Podcast: the most important conversations with the people shaping tomorrow, one lesson at a time.<br>
+      📺 YouTube: <a href="https://www.youtube.com/@AGIPodcast-AI" target="_blank" rel="noopener noreferrer">https://www.youtube.com/@AGIPodcast-AI</a><br>
+      🎧 Everywhere else: <a href="https://pod.link/1812450522" target="_blank" rel="noopener noreferrer">https://pod.link/1812450522</a><br>
+      🌐 <a href="https://agipodcast.ai" target="_blank" rel="noopener noreferrer">agipodcast.ai</a></p>
+      <p>Get Field Notes in your inbox: <a href="https://share-na2.hsforms.com/2rc7ZgrJeSQm9geAkrYbj6Aq51dop" target="_blank" rel="noopener noreferrer">https://share-na2.hsforms.com/2rc7ZgrJeSQm9geAkrYbj6Aq51dop</a></p>
+      <p>P.S. New free resource: the NotebookLM Guide for Educators. Interactive version and PDF at <a href="https://schoolsout.agipodcast.ai/resources/notebooklm-guide.html">https://schoolsout.agipodcast.ai/resources/notebooklm-guide.html</a></p>
+    </div>
+  </footer>
+</body>
+</html>
