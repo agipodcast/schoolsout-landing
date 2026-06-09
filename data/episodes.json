@@ -1,0 +1,430 @@
+{
+  "show": "School's Out Saturdays",
+  "description": "A podcast for educators making sense of AI without turning school into a tech circus. Preparing students for their future, not our past. Part of the AGI Podcast network.",
+  "url": "https://schoolsout.agipodcast.ai/",
+  "host": "Jason Padgett",
+  "playlist": "https://www.youtube.com/playlist?list=PLBeGVU933EaEQeGMLi4Vk6D-bXUutguAe",
+  "updated": "2026-06-09",
+  "episodeCount": 38,
+  "episodes": [
+    {
+      "title": "You Can't Shape What You Won't Use: Anne Leftwich on AI at Indiana University",
+      "date": "2026-06-06",
+      "youtube": "https://www.youtube.com/watch?v=8K1m11N2xpA",
+      "topics": [
+        "university-ai",
+        "access",
+        "adoption"
+      ],
+      "summary": "IU's Anne Leftwich on why AI holdouts forfeit their seat at the table, GenAI 101 for everyone, and why K-12 bans fail like abstinence-only everything.",
+      "hub": "https://schoolsout.agipodcast.ai/episodes/you-cant-shape-what-you-wont-use"
+    },
+    {
+      "title": "Student-Led AI in Schools: Richmond Tech Team on MagicSchool, AI Literacy & Future Jobs",
+      "date": "2026-05-30",
+      "youtube": "https://www.youtube.com/watch?v=JhNUqT_0-S4",
+      "topics": [
+        "student-led",
+        "magicschool",
+        "ai-literacy"
+      ],
+      "summary": "Jeremy Hill's Richmond HS tech team red-teamed MagicSchool for two weeks, and now students run the district's AI rollout."
+    },
+    {
+      "title": "AI Jobs for CS Grads in 2026: Why Startups Beat Big Tech",
+      "date": "2026-05-23",
+      "youtube": "https://www.youtube.com/watch?v=sCNWK98EHag",
+      "topics": [
+        "cs-grads",
+        "startups",
+        "hiring"
+      ],
+      "summary": "Purdue CS junior Bohyeon Jang on the frozen Big Tech entry-level market and why AI-fluent grads should target startups and SMBs instead."
+    },
+    {
+      "title": "Starting AI Conversations in Elementary School",
+      "date": "2026-05-16",
+      "youtube": "https://www.youtube.com/watch?v=PQw8zRh_hrs",
+      "topics": [
+        "elementary",
+        "ai-literacy",
+        "k-8"
+      ],
+      "summary": "Zionsville digital learning coach Stevie Frank on age-appropriate AI conversations from kindergarten up, in a district that never blocked ChatGPT."
+    },
+    {
+      "title": "Resumes Are Dead. Here's What CS Students Should Do Instead",
+      "date": "2026-05-09",
+      "youtube": "https://www.youtube.com/watch?v=bQxfV3Q8UT0",
+      "topics": [
+        "resumes",
+        "portfolios",
+        "cs-students"
+      ],
+      "summary": "Purdue's Ethan Dawes, the \"Can AI do this?\" sign guy, on why mass-applying is broken and what portfolios, oral exams, and AI scaffolding fix."
+    },
+    {
+      "title": "Magic School AI vs ChatGPT: Safer AI for K-12 Classrooms",
+      "date": "2026-05-05",
+      "youtube": "https://www.youtube.com/watch?v=YhGy3TcN2f8",
+      "topics": [
+        "magicschool",
+        "teacher-pd",
+        "k-12"
+      ],
+      "summary": "CIESC's Tanika Kinartail on how vertical AI handles students differently than ChatGPT and train-the-trainer PD for districts with no budget."
+    },
+    {
+      "title": "Alpha School: Kids Learn 2X Faster in 2 Hours a Day",
+      "date": "2026-05-02",
+      "youtube": "https://www.youtube.com/watch?v=xCJo45xD6TY",
+      "topics": [
+        "alpha-school",
+        "two-hour-learning",
+        "school-model"
+      ],
+      "summary": "Alpha School's Sofia Swanson walks through the 2 Hour Learning model, top-1% MAP claims, and the selection-bias question, with co-host Ronda Swartz."
+    },
+    {
+      "title": "Grade the Prompt, Not Just the Paper: AI in College Classrooms",
+      "date": "2026-04-18",
+      "youtube": "https://www.youtube.com/watch?v=mKBg6xGgY2Y",
+      "topics": [
+        "higher-ed",
+        "grading",
+        "prompts"
+      ],
+      "summary": "Ivy Tech's Mark Lowe is piloting grading the AI prompt alongside the paper, treating AI as tutor and debate partner instead of policing it."
+    },
+    {
+      "title": "How Should Teachers Use AI Without Killing Critical Thinking?",
+      "date": "2026-04-11",
+      "youtube": "https://www.youtube.com/watch?v=6QG2gVBVQJo",
+      "topics": [
+        "critical-thinking",
+        "implementation",
+        "rural"
+      ],
+      "summary": "Hunter Hickman returns: AI makes students faster, but is it making them better thinkers, and how a rural district trains teachers either way."
+    },
+    {
+      "title": "Are Teachers Ready to Teach AI? Indiana's Answer",
+      "date": "2026-04-04",
+      "youtube": "https://www.youtube.com/watch?v=eS0aGAHy9cE",
+      "topics": [
+        "certification",
+        "teacher-training",
+        "indiana"
+      ],
+      "summary": "Ryan Murray on building Indiana's AI teacher certification from scratch and what readiness actually looks like."
+    },
+    {
+      "title": "AI Literacy Is a Workforce Requirement. Are K-12 Schools Ready?",
+      "date": "2026-03-28",
+      "youtube": "https://www.youtube.com/watch?v=J9NXn28N9y8",
+      "topics": [
+        "ai-literacy",
+        "workforce",
+        "k-12"
+      ],
+      "summary": "Kristen Kayser on what AI literacy actually means for K-12 students and why most districts are getting it wrong."
+    },
+    {
+      "title": "How Community Colleges Are Building AI Workforce Pathways in 2026",
+      "date": "2026-03-21",
+      "youtube": "https://www.youtube.com/watch?v=u0pPoiHrnjw",
+      "topics": [
+        "community-college",
+        "workforce",
+        "pathways"
+      ],
+      "summary": "Ivy Tech's Amanda Wilkerson on how community colleges are building AI workforce pathways ahead of the four-years."
+    },
+    {
+      "title": "How College Students Should Use AI to Get Hired in 2026",
+      "date": "2026-03-14",
+      "youtube": "https://www.youtube.com/watch?v=f4Awkl9hZlc",
+      "topics": [
+        "hiring",
+        "college",
+        "ai-skills"
+      ],
+      "summary": "How college students should actually use AI in the job hunt without outsourcing the thinking that gets them hired."
+    },
+    {
+      "title": "Why AI Adoption Fails Without Behavior Change",
+      "date": "2026-02-21",
+      "youtube": "https://www.youtube.com/watch?v=kfENCpCwI7o",
+      "topics": [
+        "adoption",
+        "behavior-change",
+        "training"
+      ],
+      "summary": "Nick Bonora on why AI rollouts stall for the same reason most conferences are forgettable: nobody designed for behavior change."
+    },
+    {
+      "title": "Middle School Teacher Uses AI to Save Time and Know Students Better",
+      "date": "2026-02-14",
+      "youtube": "https://www.youtube.com/watch?v=1VCA6dXp5lM",
+      "topics": [
+        "middle-school",
+        "teacher-workflow",
+        "personalization"
+      ],
+      "summary": "Language arts teacher Patty Oshier on using AI to build better lessons, claw back time, and actually know her students better."
+    },
+    {
+      "title": "ChatGPT in Paramedic School: How One EMT Stopped Reading Textbooks",
+      "date": "2026-02-07",
+      "youtube": "https://www.youtube.com/watch?v=MSFFV1HhRqk",
+      "topics": [
+        "paramedic",
+        "chatgpt",
+        "vocational"
+      ],
+      "summary": "Jordan Meyers on trading the textbook grind for ChatGPT study workflows in paramedic school."
+    },
+    {
+      "title": "AI Can't Replace Your Music Teacher (But It Should Help)",
+      "date": "2026-01-31",
+      "youtube": "https://www.youtube.com/watch?v=IKqwaX9PWqQ",
+      "topics": [
+        "music-education",
+        "edtech",
+        "creativity"
+      ],
+      "summary": "Future Proof Music School founder John von Seggern on where AI belongs in music education and where the human teacher stays."
+    },
+    {
+      "title": "What Employers Actually Want: AI Skills + People Skills",
+      "date": "2026-01-24",
+      "youtube": "https://www.youtube.com/watch?v=S3QX08r4mJA",
+      "topics": [
+        "employability",
+        "soft-skills",
+        "ai-skills"
+      ],
+      "summary": "Transformation coach Lena Morris on pairing AI fluency with the people skills employers keep saying they can't find."
+    },
+    {
+      "title": "Why This Is AI's 1980s Garage Moment for Students",
+      "date": "2026-01-17",
+      "youtube": "https://www.youtube.com/watch?v=5FpjK6qEYAM",
+      "topics": [
+        "entrepreneurship",
+        "opportunity",
+        "digital-literacy"
+      ],
+      "summary": "A Columbia grad turned Wall Street quant turned AI entrepreneur on why students are living the 1980s garage moment and need digital literacy first."
+    },
+    {
+      "title": "Not Your Granny's Approach to AI Literacy",
+      "date": "2026-01-09",
+      "youtube": "https://www.youtube.com/watch?v=vgFrgUNuLrY",
+      "topics": [
+        "writing",
+        "ai-literacy",
+        "grammar"
+      ],
+      "summary": "Patty McGee brings 31 years of classroom experience to AI and writing instruction, testing tools with students and pushing back on detection."
+    },
+    {
+      "title": "Paramedics, Prompts, and High School Healthcare",
+      "date": "2026-01-03",
+      "youtube": "https://www.youtube.com/watch?v=bUE8ktB01Vg",
+      "topics": [
+        "healthcare",
+        "prompts",
+        "high-school"
+      ],
+      "summary": "Teaching Tulsa high schoolers to run real healthcare scenarios through ChatGPT, with paramedic instructor Rebekah Dearing."
+    },
+    {
+      "title": "Navigating AI in Education: Insights from MIT",
+      "date": "2025-12-27",
+      "youtube": "https://www.youtube.com/watch?v=wGjNtiA0R6c",
+      "topics": [
+        "mit",
+        "skepticism",
+        "policy"
+      ],
+      "summary": "MIT PhD candidate BreAnne Fleer on curious skepticism over blind adoption, what the Luddites actually opposed, and why coding literacy still matters."
+    },
+    {
+      "title": "The Good, The Bad, and The Ugly Truth",
+      "date": "2025-12-20",
+      "youtube": "https://www.youtube.com/watch?v=M4xCg0sP-2w",
+      "topics": [
+        "chatbots",
+        "k-5",
+        "implementation"
+      ],
+      "summary": "Courtney Bock trained AI chatbots in 2010, became a K-5 educator, and now leads district-wide AI implementation with no illusions."
+    },
+    {
+      "title": "Skills, Schools, and the Pace of AI",
+      "date": "2025-12-13",
+      "youtube": "https://www.youtube.com/watch?v=xL-1H_HT_U4",
+      "topics": [
+        "civic",
+        "workforce",
+        "indiana"
+      ],
+      "summary": "Carmel Mayor Sue Finkam and Invest Hamilton County's Mike Thibideau get pressed on whether schools are keeping pace with AI's job shifts."
+    },
+    {
+      "title": "The Data Skills Gap: Why Healthcare and Education Need Data Science Grads Now",
+      "date": "2025-12-06",
+      "youtube": "https://www.youtube.com/watch?v=umefW4wzhMo",
+      "topics": [
+        "data-skills",
+        "healthcare",
+        "workforce"
+      ],
+      "summary": "Julian Yoon explains data lakes with laundry baskets and why healthcare and education need data science grads now."
+    },
+    {
+      "title": "Is the Current Education System Useless?",
+      "date": "2025-11-29",
+      "youtube": "https://www.youtube.com/watch?v=Kc19OKeBppU",
+      "topics": [
+        "mental-health",
+        "system-critique",
+        "isolation"
+      ],
+      "summary": "Dr. KaT Zarychta on the global student mental-health crisis, 1 in 3 young adults feeling isolated, and AI as ally rather than threat."
+    },
+    {
+      "title": "\"He Hates Those Other Models!\"",
+      "date": "2025-11-22",
+      "youtube": "https://www.youtube.com/watch?v=qGmDN69TRN0",
+      "topics": [
+        "eduaide",
+        "teacher-tools",
+        "edtech"
+      ],
+      "summary": "Eduaide.ai founder Thomas Hummel on building a teacher AI tool from a Title I classroom to a million educators in 130+ countries."
+    },
+    {
+      "title": "Dr. Bubbles Blueprint for Tomorrow's Schools",
+      "date": "2025-11-15",
+      "youtube": "https://www.youtube.com/watch?v=9gj7i335oro",
+      "topics": [
+        "school-leadership",
+        "schoolai",
+        "project-based"
+      ],
+      "summary": "\"Dr. Bubbles\" Ronda Swartz on rolling out School AI to hesitant teachers and why Catholic schools may be positioned for the AI era."
+    },
+    {
+      "title": "Rural AI Success: How a Small Indiana School District Actually Implemented Khanmigo",
+      "date": "2025-11-08",
+      "youtube": "https://www.youtube.com/watch?v=gokvt4tQJx8",
+      "topics": [
+        "rural",
+        "khanmigo",
+        "implementation"
+      ],
+      "summary": "Hunter Hickman on how Rensselaer Central hit 92% student activation with Khanmigo while big districts were still debating policy."
+    },
+    {
+      "title": "Why This 21-Year-Old Isn't Worried About Robots Taking Her Job",
+      "date": "2025-11-01",
+      "youtube": "https://www.youtube.com/watch?v=ptz_9rKN8sU",
+      "topics": [
+        "networking",
+        "students",
+        "careers"
+      ],
+      "summary": "A Purdue industrial engineering senior on landing offers through networking and why complacency, not automation, is the real career threat."
+    },
+    {
+      "title": "Teachers Who Drink and Whine",
+      "date": "2025-10-25",
+      "youtube": "https://www.youtube.com/watch?v=4niYBM2lB64",
+      "topics": [
+        "special-ed",
+        "facilitators",
+        "teacher-voice"
+      ],
+      "summary": "Former elementary and special-ed teacher Mary Dougherty on AI turning teachers into facilitators and opening doors for special-needs students."
+    },
+    {
+      "title": "The TikTok Generation's AI Problem: Climate Myths and Career Reality",
+      "date": "2025-10-18",
+      "youtube": "https://www.youtube.com/watch?v=swWyETCm_h0",
+      "topics": [
+        "gen-z",
+        "myths",
+        "climate"
+      ],
+      "summary": "Kimba Rund returns to debunk the viral AI water-bottle myth and explain what her generation actually thinks about AI careers."
+    },
+    {
+      "title": "\"I Didn't Know a Fourth Grader Could Change the World\": AI in K-12",
+      "date": "2025-10-11",
+      "youtube": "https://www.youtube.com/watch?v=UWLU1lSlchQ",
+      "topics": [
+        "k-12",
+        "teacher-growth",
+        "empowerment"
+      ],
+      "summary": "Solutions architect Karisa Schwanekamp on the pandemic moment that changed her teaching and learning alongside students with AI."
+    },
+    {
+      "title": "Boiler Up for the Future of Education with Purdue Professor of Practice Dr. Kathryn Dilworth",
+      "date": "2025-10-04",
+      "youtube": "https://www.youtube.com/watch?v=CUHA5r5YPBc",
+      "topics": [
+        "higher-ed",
+        "quiz-method",
+        "purdue"
+      ],
+      "summary": "Purdue's Kathryn Dilworth on her QUIZ methodology for teaching students to control AI instead of being controlled by it."
+    },
+    {
+      "title": "Raising AI: Why We Need to Parent Our Artificial Children",
+      "date": "2025-09-27",
+      "youtube": "https://www.youtube.com/watch?v=4tQEAIWCJgk",
+      "topics": [
+        "ai-ethics",
+        "parenting-metaphor",
+        "society"
+      ],
+      "summary": "AI pioneer De Kai argues we should stop treating AI as machines and start parenting them as artificial children."
+    },
+    {
+      "title": "The Entrepreneurial Professor: Bridging Academia and Business Reality",
+      "date": "2025-09-20",
+      "youtube": "https://www.youtube.com/watch?v=1N4b7fnP_D8",
+      "topics": [
+        "academia",
+        "adoption",
+        "generations"
+      ],
+      "summary": "Susan Woods on AI adoption across generations and why human oversight and critical thinking stay non-negotiable."
+    },
+    {
+      "title": "Future-Proofing Education with Brooklyn Burton",
+      "date": "2025-09-13",
+      "youtube": "https://www.youtube.com/watch?v=EnvFxBCKxAk",
+      "topics": [
+        "workforce",
+        "ivy-tech",
+        "future-proofing"
+      ],
+      "summary": "Launch episode: Ivy Tech Lafayette Vice Chancellor Brooklyn Burton on AI-driven workforce and economic development."
+    },
+    {
+      "title": "AGI - School's Out Saturdays PRE-LAUNCH PEP-RALLY (Episode 25)",
+      "date": "2025-08-30",
+      "youtube": "https://www.youtube.com/watch?v=BJ9VPZggdbI",
+      "topics": [
+        "pre-launch",
+        "behavior-change",
+        "coaching"
+      ],
+      "summary": "Pre-launch special with transformation coach Lena Morris on AI adoption and human behavioral change in education."
+    }
+  ]
+}
