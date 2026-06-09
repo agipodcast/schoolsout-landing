@@ -18,10 +18,17 @@ School's Out Saturdays is a podcast for educators making sense of AI without tur
 - [School's Out playlist on YouTube](https://www.youtube.com/playlist?list=PLBeGVU933EaEQeGMLi4Vk6D-bXUutguAe)
 - [AGI Podcast network](https://schoolsout.agipodcast.ai/network)
 
+## Episode hubs
+
+Per-episode pages with player, summary, guest, and a companion Field Note. More are being added; the full catalog is in the episodes JSON below.
+
+- [You Can't Shape What You Won't Use: Anne Leftwich on AI at Indiana University](https://schoolsout.agipodcast.ai/episodes/you-cant-shape-what-you-wont-use): Indiana University's campus-wide ChatGPT rollout, why AI holdouts forfeit their seat at the table, and why K-12 bans fail like abstinence-only everything.
+
 ## Machine-readable data
 
 - [Newsletter editions, JSON](https://schoolsout.agipodcast.ai/data/editions.json): Every No-Code CAIO edition with title, url, date, description, and read time.
 - [Field Notes issues, JSON](https://schoolsout.agipodcast.ai/data/field-notes.json): Every School's Out Field Notes issue with title, url, date, description, and read time.
+- [Podcast episodes, JSON](https://schoolsout.agipodcast.ai/data/episodes.json): Every School's Out Saturdays episode with title, date, YouTube link, topics, summary, and an episode-hub url where one exists.
 - [Sitemap](https://schoolsout.agipodcast.ai/sitemap.xml): All public pages.
 
 ## Resources
