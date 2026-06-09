@@ -19,4 +19,5 @@ Allow: /
 User-agent: anthropic-ai
 Allow: /
 
+# AI agents: see /llms.txt for a map of canonical URLs and machine-readable data.
 Sitemap: https://schoolsout.agipodcast.ai/sitemap.xml

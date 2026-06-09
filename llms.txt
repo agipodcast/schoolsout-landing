@@ -1,0 +1,29 @@
+# School's Out Saturdays and the AGI Podcast
+
+> Public home for School's Out Saturdays, a podcast about AI in education, and its companion publications: the No-Code CAIO newsletter and School's Out Field Notes. Part of the AGI Podcast network. This file maps the canonical URLs and machine-readable data so agents can read the site without parsing HTML.
+
+## About
+
+School's Out Saturdays is a podcast for educators making sense of AI without turning school into a tech circus. Its tagline is "preparing students for their future, not our past." It is part of the AGI Podcast network: Advance, Grow, and Innovate with AI. Two written publications extend the show: the No-Code CAIO newsletter for non-technical leaders, and School's Out Field Notes for educators.
+
+## Publications
+
+- [No-Code CAIO newsletter](https://schoolsout.agipodcast.ai/newsletter/): The weekly pulse on real AI work for managers, small-business owners, and nonprofit leaders moving AI from demos into working workflows.
+- [School's Out Field Notes](https://schoolsout.agipodcast.ai/field-notes): A weekly companion to School's Out Saturdays. Practical signals, questions, and opportunities from the edge of school and work.
+
+## Podcast
+
+- [School's Out Saturdays on Apple Podcasts](https://podcasts.apple.com/us/podcast/agi-advance-grow-innovate-with-ai/id1812450522)
+- [School's Out Saturdays on Spotify](https://open.spotify.com/show/6mijpuwWNrXYvMgRazLfUN)
+- [School's Out playlist on YouTube](https://www.youtube.com/playlist?list=PLBeGVU933EaEQeGMLi4Vk6D-bXUutguAe)
+- [AGI Podcast network](https://schoolsout.agipodcast.ai/network)
+
+## Machine-readable data
+
+- [Newsletter editions, JSON](https://schoolsout.agipodcast.ai/data/editions.json): Every No-Code CAIO edition with title, url, date, description, and read time.
+- [Field Notes issues, JSON](https://schoolsout.agipodcast.ai/data/field-notes.json): Every School's Out Field Notes issue with title, url, date, description, and read time.
+- [Sitemap](https://schoolsout.agipodcast.ai/sitemap.xml): All public pages.
+
+## Resources
+
+- [NotebookLM Guide for Educators](https://schoolsout.agipodcast.ai/resources/notebooklm-guide.html): A free guide for educators getting started with NotebookLM.
