@@ -1,0 +1,33 @@
+{
+  "publication": "School's Out Field Notes",
+  "description": "A weekly companion to School's Out Saturdays. Practical signals, questions, and opportunities from the edge of school and work.",
+  "url": "https://schoolsout.agipodcast.ai/field-notes",
+  "author": "Jason Padgett",
+  "updated": "2026-06-09",
+  "issues": [
+    {
+      "number": 3,
+      "title": "The Greyed-Out Button",
+      "url": "https://schoolsout.agipodcast.ai/field-notes-issue-3",
+      "date": "2026-06-07",
+      "description": "Six hundred educators spent the day learning AI tools most of their students are not allowed to touch.",
+      "readTime": "4 min"
+    },
+    {
+      "number": 2,
+      "title": "Shared Language Is Not Enough",
+      "url": "https://schoolsout.agipodcast.ai/field-notes-issue-2",
+      "date": "2026-05-13",
+      "description": "Schools need shared definitions. A field guide for spotting critical thinking, communication, adaptability, and preparedness in actual student work, not just in mission statements.",
+      "readTime": "6 min"
+    },
+    {
+      "number": 1,
+      "title": "The Bridge Is the Assignment",
+      "url": "https://schoolsout.agipodcast.ai/field-notes-issue-1",
+      "date": "2026-05-07",
+      "description": "Access to AI is spreading fast. Readiness is something else. Students do not become ready because they can open a chatbot.",
+      "readTime": "7 min"
+    }
+  ]
+}
