@@ -322,6 +322,53 @@
       }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "{{TITLE}}",
+    "description": "{{DESCRIPTION}}",
+    "image": "{{FEATURE_IMAGE}}",
+    "datePublished": "{{DATE_ISO}}",
+    "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-{{EDITION_NUMBER}}.html",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "Jason Padgett",
+      "url": "https://www.linkedin.com/in/jason-grant-padgett/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "No-Code CAIO",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/"
+    },
+    "isPartOf": {
+      "@type": "Periodical",
+      "name": "No-Code CAIO",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "No-Code CAIO",
+        "item": "https://schoolsout.agipodcast.ai/newsletter/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "{{TITLE}}",
+        "item": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-{{EDITION_NUMBER}}.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
   <header class="sitebar">
