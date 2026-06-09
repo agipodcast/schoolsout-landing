@@ -1,0 +1,746 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Episodes | School's Out Saturdays</title>
+  <meta name="description" content="Every episode of School's Out Saturdays, a podcast for educators making sense of AI without turning school into a tech circus. Preparing students for their future, not our past." />
+
+  <link rel="canonical" href="https://schoolsout.agipodcast.ai/episodes/" />
+
+  <meta property="og:title" content="Episodes | School's Out Saturdays" />
+  <meta property="og:description" content="Every episode of School's Out Saturdays, conversations with educators, students, and builders on AI in education." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://schoolsout.agipodcast.ai/episodes/" />
+  <meta property="og:site_name" content="School's Out Saturdays" />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy: #0f1729;
+      --navy-soft: #17213a;
+      --navy-card: #1a2342;
+      --gold: #f5b800;
+      --gold-soft: #ffd96a;
+      --cream: #f7f0df;
+      --cream-soft: #e8deca;
+      --muted: #b8c0d4;
+      --line: rgba(247, 240, 223, 0.16);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(245, 184, 0, 0.12), transparent 34rem),
+        radial-gradient(circle at 80% 10%, rgba(255, 217, 106, 0.08), transparent 28rem),
+        var(--navy);
+      color: var(--cream);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+    a { color: var(--gold-soft); text-decoration: none; }
+    a:hover { color: var(--gold); }
+
+    .site-header {
+      position: sticky; top: 0; z-index: 20;
+      background: rgba(15, 23, 41, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+    .nav-wrap {
+      max-width: 1120px; margin: 0 auto; padding: 1rem 1.25rem;
+      display: flex; align-items: flex-start; flex-direction: column;
+      justify-content: space-between; gap: 0.75rem;
+    }
+    .brand { display: flex; flex-direction: column; color: var(--cream); text-decoration: none; line-height: 1.1; }
+    .brand strong { font-family: "Lora", Georgia, serif; font-size: 1.05rem; letter-spacing: 0.02em; }
+    .brand span { color: var(--muted); font-size: 0.78rem; margin-top: 0.15rem; }
+    .nav-links { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+    .nav-links a { color: var(--cream-soft); font-size: 0.82rem; font-weight: 700; padding: 0.48rem 0.68rem; border-radius: 999px; }
+    .nav-links a:hover, .nav-links a.active { background: var(--gold); color: var(--navy); }
+
+    main { overflow: hidden; }
+    .page-shell { max-width: 1120px; margin: 0 auto; padding: 2.5rem 1.25rem 5rem; }
+
+    .page-head { max-width: 720px; margin: 0 auto 2.5rem; text-align: center; }
+    .page-head .kicker { color: var(--gold); font-size: 0.82rem; font-weight: 800; letter-spacing: 0.12em; text-transform: uppercase; }
+    .page-head h1 { margin: 0.75rem 0 0; font-family: "Lora", Georgia, serif; font-size: clamp(2.4rem, 6vw, 4rem); line-height: 1.02; letter-spacing: -0.04em; color: var(--cream); }
+    .page-head p { margin: 1rem auto 0; color: var(--cream-soft); font-size: 1.1rem; max-width: 620px; }
+
+    .section-label { font-size: 0.78rem; font-weight: 800; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); margin: 0 0 1.1rem; }
+
+    .ep-grid { display: grid; grid-template-columns: 1fr; gap: 1.1rem; }
+
+    .ep-card {
+      background: rgba(247, 240, 223, 0.04);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1.5rem 1.5rem 1.35rem;
+      transition: border-color 0.2s, transform 0.2s;
+    }
+    .ep-card:hover { border-color: rgba(245, 184, 0, 0.45); transform: translateY(-2px); }
+
+    .ep-card.featured {
+      background: linear-gradient(135deg, rgba(245, 184, 0, 0.10), rgba(26, 35, 66, 0.85)), var(--navy-card);
+      border-color: rgba(245, 184, 0, 0.35);
+      margin-bottom: 2.5rem;
+    }
+
+    .ep-meta { display: flex; flex-wrap: wrap; gap: 0.4rem 0.9rem; font-size: 0.8rem; color: var(--muted); margin-bottom: 0.6rem; }
+    .ep-date { color: var(--gold-soft); font-weight: 700; }
+    .ep-topics { text-transform: uppercase; letter-spacing: 0.05em; font-size: 0.72rem; }
+
+    .ep-title { margin: 0 0 0.5rem; font-family: "Lora", Georgia, serif; font-size: 1.35rem; line-height: 1.18; color: var(--cream); }
+    .featured .ep-title { font-size: clamp(1.6rem, 3vw, 2.1rem); }
+    .ep-summary { margin: 0 0 1rem; color: var(--cream-soft); font-size: 0.98rem; }
+
+    .ep-links { display: flex; flex-wrap: wrap; gap: 0.5rem; }
+    .card-link {
+      display: inline-flex; align-items: center;
+      padding: 0.5rem 0.95rem; border-radius: 999px;
+      border: 1px solid var(--line); background: rgba(247, 240, 223, 0.05);
+      color: var(--cream); font-size: 0.85rem; font-weight: 700;
+    }
+    .card-link:hover { border-color: rgba(245, 184, 0, 0.55); color: var(--gold-soft); }
+    .card-link.primary { background: var(--gold); color: var(--navy); border-color: var(--gold); }
+    .card-link.primary:hover { background: var(--gold-soft); color: var(--navy); }
+
+    .site-footer { border-top: 1px solid var(--line); background: rgba(10, 16, 30, 0.52); }
+    .footer-inner { max-width: 880px; margin: 0 auto; padding: 2.5rem 1.25rem 2.75rem; color: var(--muted); font-size: 0.92rem; line-height: 1.65; text-align: center; }
+    .footer-inner p { margin: 0.55rem 0; }
+    .footer-inner a { color: var(--cream-soft); font-weight: 700; }
+
+    @media (min-width: 769px) {
+      .nav-wrap { flex-direction: row; align-items: center; }
+      .nav-links a { font-size: 0.88rem; padding: 0.55rem 0.8rem; }
+      .ep-grid { grid-template-columns: 1fr 1fr; }
+      .ep-card.featured { grid-column: 1 / -1; }
+    }
+  </style>
+
+  <script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "CollectionPage",
+      "name": "Episodes | School's Out Saturdays",
+      "url": "https://schoolsout.agipodcast.ai/episodes/",
+      "description": "Every episode of School's Out Saturdays, a podcast for educators making sense of AI without turning school into a tech circus.",
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "School's Out Saturdays",
+        "url": "https://schoolsout.agipodcast.ai/"
+      }
+    },
+    {
+      "@type": "ItemList",
+      "itemListOrder": "https://schema.org/ItemListOrderDescending",
+      "numberOfItems": 38,
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "url": "https://schoolsout.agipodcast.ai/episodes/you-cant-shape-what-you-wont-use",
+          "name": "You Can't Shape What You Won't Use: Anne Leftwich on AI at Indiana University"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "url": "https://www.youtube.com/watch?v=JhNUqT_0-S4",
+          "name": "Student-Led AI in Schools: Richmond Tech Team on MagicSchool, AI Literacy & Future Jobs"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "url": "https://www.youtube.com/watch?v=sCNWK98EHag",
+          "name": "AI Jobs for CS Grads in 2026: Why Startups Beat Big Tech"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "url": "https://www.youtube.com/watch?v=PQw8zRh_hrs",
+          "name": "Starting AI Conversations in Elementary School"
+        },
+        {
+          "@type": "ListItem",
+          "position": 5,
+          "url": "https://www.youtube.com/watch?v=bQxfV3Q8UT0",
+          "name": "Resumes Are Dead. Here's What CS Students Should Do Instead"
+        },
+        {
+          "@type": "ListItem",
+          "position": 6,
+          "url": "https://www.youtube.com/watch?v=YhGy3TcN2f8",
+          "name": "Magic School AI vs ChatGPT: Safer AI for K-12 Classrooms"
+        },
+        {
+          "@type": "ListItem",
+          "position": 7,
+          "url": "https://www.youtube.com/watch?v=xCJo45xD6TY",
+          "name": "Alpha School: Kids Learn 2X Faster in 2 Hours a Day"
+        },
+        {
+          "@type": "ListItem",
+          "position": 8,
+          "url": "https://www.youtube.com/watch?v=mKBg6xGgY2Y",
+          "name": "Grade the Prompt, Not Just the Paper: AI in College Classrooms"
+        },
+        {
+          "@type": "ListItem",
+          "position": 9,
+          "url": "https://www.youtube.com/watch?v=6QG2gVBVQJo",
+          "name": "How Should Teachers Use AI Without Killing Critical Thinking?"
+        },
+        {
+          "@type": "ListItem",
+          "position": 10,
+          "url": "https://www.youtube.com/watch?v=eS0aGAHy9cE",
+          "name": "Are Teachers Ready to Teach AI? Indiana's Answer"
+        },
+        {
+          "@type": "ListItem",
+          "position": 11,
+          "url": "https://www.youtube.com/watch?v=J9NXn28N9y8",
+          "name": "AI Literacy Is a Workforce Requirement. Are K-12 Schools Ready?"
+        },
+        {
+          "@type": "ListItem",
+          "position": 12,
+          "url": "https://www.youtube.com/watch?v=u0pPoiHrnjw",
+          "name": "How Community Colleges Are Building AI Workforce Pathways in 2026"
+        },
+        {
+          "@type": "ListItem",
+          "position": 13,
+          "url": "https://www.youtube.com/watch?v=f4Awkl9hZlc",
+          "name": "How College Students Should Use AI to Get Hired in 2026"
+        },
+        {
+          "@type": "ListItem",
+          "position": 14,
+          "url": "https://www.youtube.com/watch?v=kfENCpCwI7o",
+          "name": "Why AI Adoption Fails Without Behavior Change"
+        },
+        {
+          "@type": "ListItem",
+          "position": 15,
+          "url": "https://www.youtube.com/watch?v=1VCA6dXp5lM",
+          "name": "Middle School Teacher Uses AI to Save Time and Know Students Better"
+        },
+        {
+          "@type": "ListItem",
+          "position": 16,
+          "url": "https://www.youtube.com/watch?v=MSFFV1HhRqk",
+          "name": "ChatGPT in Paramedic School: How One EMT Stopped Reading Textbooks"
+        },
+        {
+          "@type": "ListItem",
+          "position": 17,
+          "url": "https://www.youtube.com/watch?v=IKqwaX9PWqQ",
+          "name": "AI Can't Replace Your Music Teacher (But It Should Help)"
+        },
+        {
+          "@type": "ListItem",
+          "position": 18,
+          "url": "https://www.youtube.com/watch?v=S3QX08r4mJA",
+          "name": "What Employers Actually Want: AI Skills + People Skills"
+        },
+        {
+          "@type": "ListItem",
+          "position": 19,
+          "url": "https://www.youtube.com/watch?v=5FpjK6qEYAM",
+          "name": "Why This Is AI's 1980s Garage Moment for Students"
+        },
+        {
+          "@type": "ListItem",
+          "position": 20,
+          "url": "https://www.youtube.com/watch?v=vgFrgUNuLrY",
+          "name": "Not Your Granny's Approach to AI Literacy"
+        },
+        {
+          "@type": "ListItem",
+          "position": 21,
+          "url": "https://www.youtube.com/watch?v=bUE8ktB01Vg",
+          "name": "Paramedics, Prompts, and High School Healthcare"
+        },
+        {
+          "@type": "ListItem",
+          "position": 22,
+          "url": "https://www.youtube.com/watch?v=wGjNtiA0R6c",
+          "name": "Navigating AI in Education: Insights from MIT"
+        },
+        {
+          "@type": "ListItem",
+          "position": 23,
+          "url": "https://www.youtube.com/watch?v=M4xCg0sP-2w",
+          "name": "The Good, The Bad, and The Ugly Truth"
+        },
+        {
+          "@type": "ListItem",
+          "position": 24,
+          "url": "https://www.youtube.com/watch?v=xL-1H_HT_U4",
+          "name": "Skills, Schools, and the Pace of AI"
+        },
+        {
+          "@type": "ListItem",
+          "position": 25,
+          "url": "https://www.youtube.com/watch?v=umefW4wzhMo",
+          "name": "The Data Skills Gap: Why Healthcare and Education Need Data Science Grads Now"
+        },
+        {
+          "@type": "ListItem",
+          "position": 26,
+          "url": "https://www.youtube.com/watch?v=Kc19OKeBppU",
+          "name": "Is the Current Education System Useless?"
+        },
+        {
+          "@type": "ListItem",
+          "position": 27,
+          "url": "https://www.youtube.com/watch?v=qGmDN69TRN0",
+          "name": "\"He Hates Those Other Models!\""
+        },
+        {
+          "@type": "ListItem",
+          "position": 28,
+          "url": "https://www.youtube.com/watch?v=9gj7i335oro",
+          "name": "Dr. Bubbles Blueprint for Tomorrow's Schools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 29,
+          "url": "https://www.youtube.com/watch?v=gokvt4tQJx8",
+          "name": "Rural AI Success: How a Small Indiana School District Actually Implemented Khanmigo"
+        },
+        {
+          "@type": "ListItem",
+          "position": 30,
+          "url": "https://www.youtube.com/watch?v=ptz_9rKN8sU",
+          "name": "Why This 21-Year-Old Isn't Worried About Robots Taking Her Job"
+        },
+        {
+          "@type": "ListItem",
+          "position": 31,
+          "url": "https://www.youtube.com/watch?v=4niYBM2lB64",
+          "name": "Teachers Who Drink and Whine"
+        },
+        {
+          "@type": "ListItem",
+          "position": 32,
+          "url": "https://www.youtube.com/watch?v=swWyETCm_h0",
+          "name": "The TikTok Generation's AI Problem: Climate Myths and Career Reality"
+        },
+        {
+          "@type": "ListItem",
+          "position": 33,
+          "url": "https://www.youtube.com/watch?v=UWLU1lSlchQ",
+          "name": "\"I Didn't Know a Fourth Grader Could Change the World\": AI in K-12"
+        },
+        {
+          "@type": "ListItem",
+          "position": 34,
+          "url": "https://www.youtube.com/watch?v=CUHA5r5YPBc",
+          "name": "Boiler Up for the Future of Education with Purdue Professor of Practice Dr. Kathryn Dilworth"
+        },
+        {
+          "@type": "ListItem",
+          "position": 35,
+          "url": "https://www.youtube.com/watch?v=4tQEAIWCJgk",
+          "name": "Raising AI: Why We Need to Parent Our Artificial Children"
+        },
+        {
+          "@type": "ListItem",
+          "position": 36,
+          "url": "https://www.youtube.com/watch?v=1N4b7fnP_D8",
+          "name": "The Entrepreneurial Professor: Bridging Academia and Business Reality"
+        },
+        {
+          "@type": "ListItem",
+          "position": 37,
+          "url": "https://www.youtube.com/watch?v=EnvFxBCKxAk",
+          "name": "Future-Proofing Education with Brooklyn Burton"
+        },
+        {
+          "@type": "ListItem",
+          "position": 38,
+          "url": "https://www.youtube.com/watch?v=BJ9VPZggdbI",
+          "name": "AGI - School's Out Saturdays PRE-LAUNCH PEP-RALLY (Episode 25)"
+        }
+      ]
+    },
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "School's Out Saturdays",
+          "item": "https://schoolsout.agipodcast.ai/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Episodes",
+          "item": "https://schoolsout.agipodcast.ai/episodes/"
+        }
+      ]
+    }
+  ]
+}
+  </script>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="https://schoolsout.agipodcast.ai/">
+        <strong>School's Out Saturdays</strong>
+        <span>Preparing students for their future, not our past.</span>
+      </a>
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="https://schoolsout.agipodcast.ai/#listen">Listen</a>
+        <a class="active" href="https://schoolsout.agipodcast.ai/episodes/">Episodes</a>
+        <a href="https://schoolsout.agipodcast.ai/field-notes">Field Notes</a>
+        <a href="https://schoolsout.agipodcast.ai/newsletter/">No-Code CAIO</a>
+        <a href="https://schoolsout.agipodcast.ai/events">Events</a>
+        <a href="https://schoolsout.agipodcast.ai/network">Network</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-shell">
+      <div class="page-head">
+        <div class="kicker">School's Out Saturdays</div>
+        <h1>Episodes</h1>
+        <p>Conversations with educators, students, administrators, and builders on what AI is doing to school and work, and what students need next.</p>
+      </div>
+
+      <p class="section-label">Latest</p>
+      <article class="ep-card featured">
+        <div class="ep-meta"><span class="ep-date">June 6, 2026</span><span class="ep-topics">university-ai &middot; access &middot; adoption</span></div>
+        <h3 class="ep-title">You Can&#x27;t Shape What You Won&#x27;t Use: Anne Leftwich on AI at Indiana University</h3>
+        <p class="ep-summary">IU&#x27;s Anne Leftwich on why AI holdouts forfeit their seat at the table, GenAI 101 for everyone, and why K-12 bans fail like abstinence-only everything.</p>
+        <div class="ep-links">
+          <a class="card-link primary" href="https://schoolsout.agipodcast.ai/episodes/you-cant-shape-what-you-wont-use">Episode page &rarr;</a>
+          <a class="card-link" href="https://www.youtube.com/watch?v=8K1m11N2xpA" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+
+      <p class="section-label">All episodes</p>
+      <div class="ep-grid">
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">May 30, 2026</span><span class="ep-topics">student-led &middot; magicschool &middot; ai-literacy</span></div>
+        <h3 class="ep-title">Student-Led AI in Schools: Richmond Tech Team on MagicSchool, AI Literacy &amp; Future Jobs</h3>
+        <p class="ep-summary">Jeremy Hill&#x27;s Richmond HS tech team red-teamed MagicSchool for two weeks, and now students run the district&#x27;s AI rollout.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=JhNUqT_0-S4" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">May 23, 2026</span><span class="ep-topics">cs-grads &middot; startups &middot; hiring</span></div>
+        <h3 class="ep-title">AI Jobs for CS Grads in 2026: Why Startups Beat Big Tech</h3>
+        <p class="ep-summary">Purdue CS junior Bohyeon Jang on the frozen Big Tech entry-level market and why AI-fluent grads should target startups and SMBs instead.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=sCNWK98EHag" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">May 16, 2026</span><span class="ep-topics">elementary &middot; ai-literacy &middot; k-8</span></div>
+        <h3 class="ep-title">Starting AI Conversations in Elementary School</h3>
+        <p class="ep-summary">Zionsville digital learning coach Stevie Frank on age-appropriate AI conversations from kindergarten up, in a district that never blocked ChatGPT.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=PQw8zRh_hrs" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">May 9, 2026</span><span class="ep-topics">resumes &middot; portfolios &middot; cs-students</span></div>
+        <h3 class="ep-title">Resumes Are Dead. Here&#x27;s What CS Students Should Do Instead</h3>
+        <p class="ep-summary">Purdue&#x27;s Ethan Dawes, the &quot;Can AI do this?&quot; sign guy, on why mass-applying is broken and what portfolios, oral exams, and AI scaffolding fix.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=bQxfV3Q8UT0" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">May 5, 2026</span><span class="ep-topics">magicschool &middot; teacher-pd &middot; k-12</span></div>
+        <h3 class="ep-title">Magic School AI vs ChatGPT: Safer AI for K-12 Classrooms</h3>
+        <p class="ep-summary">CIESC&#x27;s Tanika Kinartail on how vertical AI handles students differently than ChatGPT and train-the-trainer PD for districts with no budget.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=YhGy3TcN2f8" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">May 2, 2026</span><span class="ep-topics">alpha-school &middot; two-hour-learning &middot; school-model</span></div>
+        <h3 class="ep-title">Alpha School: Kids Learn 2X Faster in 2 Hours a Day</h3>
+        <p class="ep-summary">Alpha School&#x27;s Sofia Swanson walks through the 2 Hour Learning model, top-1% MAP claims, and the selection-bias question, with co-host Ronda Swartz.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=xCJo45xD6TY" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">April 18, 2026</span><span class="ep-topics">higher-ed &middot; grading &middot; prompts</span></div>
+        <h3 class="ep-title">Grade the Prompt, Not Just the Paper: AI in College Classrooms</h3>
+        <p class="ep-summary">Ivy Tech&#x27;s Mark Lowe is piloting grading the AI prompt alongside the paper, treating AI as tutor and debate partner instead of policing it.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=mKBg6xGgY2Y" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">April 11, 2026</span><span class="ep-topics">critical-thinking &middot; implementation &middot; rural</span></div>
+        <h3 class="ep-title">How Should Teachers Use AI Without Killing Critical Thinking?</h3>
+        <p class="ep-summary">Hunter Hickman returns: AI makes students faster, but is it making them better thinkers, and how a rural district trains teachers either way.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=6QG2gVBVQJo" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">April 4, 2026</span><span class="ep-topics">certification &middot; teacher-training &middot; indiana</span></div>
+        <h3 class="ep-title">Are Teachers Ready to Teach AI? Indiana&#x27;s Answer</h3>
+        <p class="ep-summary">Ryan Murray on building Indiana&#x27;s AI teacher certification from scratch and what readiness actually looks like.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=eS0aGAHy9cE" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">March 28, 2026</span><span class="ep-topics">ai-literacy &middot; workforce &middot; k-12</span></div>
+        <h3 class="ep-title">AI Literacy Is a Workforce Requirement. Are K-12 Schools Ready?</h3>
+        <p class="ep-summary">Kristen Kayser on what AI literacy actually means for K-12 students and why most districts are getting it wrong.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=J9NXn28N9y8" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">March 21, 2026</span><span class="ep-topics">community-college &middot; workforce &middot; pathways</span></div>
+        <h3 class="ep-title">How Community Colleges Are Building AI Workforce Pathways in 2026</h3>
+        <p class="ep-summary">Ivy Tech&#x27;s Amanda Wilkerson on how community colleges are building AI workforce pathways ahead of the four-years.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=u0pPoiHrnjw" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">March 14, 2026</span><span class="ep-topics">hiring &middot; college &middot; ai-skills</span></div>
+        <h3 class="ep-title">How College Students Should Use AI to Get Hired in 2026</h3>
+        <p class="ep-summary">How college students should actually use AI in the job hunt without outsourcing the thinking that gets them hired.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=f4Awkl9hZlc" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">February 21, 2026</span><span class="ep-topics">adoption &middot; behavior-change &middot; training</span></div>
+        <h3 class="ep-title">Why AI Adoption Fails Without Behavior Change</h3>
+        <p class="ep-summary">Nick Bonora on why AI rollouts stall for the same reason most conferences are forgettable: nobody designed for behavior change.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=kfENCpCwI7o" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">February 14, 2026</span><span class="ep-topics">middle-school &middot; teacher-workflow &middot; personalization</span></div>
+        <h3 class="ep-title">Middle School Teacher Uses AI to Save Time and Know Students Better</h3>
+        <p class="ep-summary">Language arts teacher Patty Oshier on using AI to build better lessons, claw back time, and actually know her students better.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=1VCA6dXp5lM" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">February 7, 2026</span><span class="ep-topics">paramedic &middot; chatgpt &middot; vocational</span></div>
+        <h3 class="ep-title">ChatGPT in Paramedic School: How One EMT Stopped Reading Textbooks</h3>
+        <p class="ep-summary">Jordan Meyers on trading the textbook grind for ChatGPT study workflows in paramedic school.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=MSFFV1HhRqk" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">January 31, 2026</span><span class="ep-topics">music-education &middot; edtech &middot; creativity</span></div>
+        <h3 class="ep-title">AI Can&#x27;t Replace Your Music Teacher (But It Should Help)</h3>
+        <p class="ep-summary">Future Proof Music School founder John von Seggern on where AI belongs in music education and where the human teacher stays.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=IKqwaX9PWqQ" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">January 24, 2026</span><span class="ep-topics">employability &middot; soft-skills &middot; ai-skills</span></div>
+        <h3 class="ep-title">What Employers Actually Want: AI Skills + People Skills</h3>
+        <p class="ep-summary">Transformation coach Lena Morris on pairing AI fluency with the people skills employers keep saying they can&#x27;t find.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=S3QX08r4mJA" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">January 17, 2026</span><span class="ep-topics">entrepreneurship &middot; opportunity &middot; digital-literacy</span></div>
+        <h3 class="ep-title">Why This Is AI&#x27;s 1980s Garage Moment for Students</h3>
+        <p class="ep-summary">A Columbia grad turned Wall Street quant turned AI entrepreneur on why students are living the 1980s garage moment and need digital literacy first.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=5FpjK6qEYAM" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">January 9, 2026</span><span class="ep-topics">writing &middot; ai-literacy &middot; grammar</span></div>
+        <h3 class="ep-title">Not Your Granny&#x27;s Approach to AI Literacy</h3>
+        <p class="ep-summary">Patty McGee brings 31 years of classroom experience to AI and writing instruction, testing tools with students and pushing back on detection.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=vgFrgUNuLrY" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">January 3, 2026</span><span class="ep-topics">healthcare &middot; prompts &middot; high-school</span></div>
+        <h3 class="ep-title">Paramedics, Prompts, and High School Healthcare</h3>
+        <p class="ep-summary">Teaching Tulsa high schoolers to run real healthcare scenarios through ChatGPT, with paramedic instructor Rebekah Dearing.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=bUE8ktB01Vg" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">December 27, 2025</span><span class="ep-topics">mit &middot; skepticism &middot; policy</span></div>
+        <h3 class="ep-title">Navigating AI in Education: Insights from MIT</h3>
+        <p class="ep-summary">MIT PhD candidate BreAnne Fleer on curious skepticism over blind adoption, what the Luddites actually opposed, and why coding literacy still matters.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=wGjNtiA0R6c" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">December 20, 2025</span><span class="ep-topics">chatbots &middot; k-5 &middot; implementation</span></div>
+        <h3 class="ep-title">The Good, The Bad, and The Ugly Truth</h3>
+        <p class="ep-summary">Courtney Bock trained AI chatbots in 2010, became a K-5 educator, and now leads district-wide AI implementation with no illusions.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=M4xCg0sP-2w" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">December 13, 2025</span><span class="ep-topics">civic &middot; workforce &middot; indiana</span></div>
+        <h3 class="ep-title">Skills, Schools, and the Pace of AI</h3>
+        <p class="ep-summary">Carmel Mayor Sue Finkam and Invest Hamilton County&#x27;s Mike Thibideau get pressed on whether schools are keeping pace with AI&#x27;s job shifts.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=xL-1H_HT_U4" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">December 6, 2025</span><span class="ep-topics">data-skills &middot; healthcare &middot; workforce</span></div>
+        <h3 class="ep-title">The Data Skills Gap: Why Healthcare and Education Need Data Science Grads Now</h3>
+        <p class="ep-summary">Julian Yoon explains data lakes with laundry baskets and why healthcare and education need data science grads now.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=umefW4wzhMo" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">November 29, 2025</span><span class="ep-topics">mental-health &middot; system-critique &middot; isolation</span></div>
+        <h3 class="ep-title">Is the Current Education System Useless?</h3>
+        <p class="ep-summary">Dr. KaT Zarychta on the global student mental-health crisis, 1 in 3 young adults feeling isolated, and AI as ally rather than threat.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=Kc19OKeBppU" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">November 22, 2025</span><span class="ep-topics">eduaide &middot; teacher-tools &middot; edtech</span></div>
+        <h3 class="ep-title">&quot;He Hates Those Other Models!&quot;</h3>
+        <p class="ep-summary">Eduaide.ai founder Thomas Hummel on building a teacher AI tool from a Title I classroom to a million educators in 130+ countries.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=qGmDN69TRN0" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">November 15, 2025</span><span class="ep-topics">school-leadership &middot; schoolai &middot; project-based</span></div>
+        <h3 class="ep-title">Dr. Bubbles Blueprint for Tomorrow&#x27;s Schools</h3>
+        <p class="ep-summary">&quot;Dr. Bubbles&quot; Ronda Swartz on rolling out School AI to hesitant teachers and why Catholic schools may be positioned for the AI era.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=9gj7i335oro" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">November 8, 2025</span><span class="ep-topics">rural &middot; khanmigo &middot; implementation</span></div>
+        <h3 class="ep-title">Rural AI Success: How a Small Indiana School District Actually Implemented Khanmigo</h3>
+        <p class="ep-summary">Hunter Hickman on how Rensselaer Central hit 92% student activation with Khanmigo while big districts were still debating policy.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=gokvt4tQJx8" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">November 1, 2025</span><span class="ep-topics">networking &middot; students &middot; careers</span></div>
+        <h3 class="ep-title">Why This 21-Year-Old Isn&#x27;t Worried About Robots Taking Her Job</h3>
+        <p class="ep-summary">A Purdue industrial engineering senior on landing offers through networking and why complacency, not automation, is the real career threat.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=ptz_9rKN8sU" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">October 25, 2025</span><span class="ep-topics">special-ed &middot; facilitators &middot; teacher-voice</span></div>
+        <h3 class="ep-title">Teachers Who Drink and Whine</h3>
+        <p class="ep-summary">Former elementary and special-ed teacher Mary Dougherty on AI turning teachers into facilitators and opening doors for special-needs students.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=4niYBM2lB64" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">October 18, 2025</span><span class="ep-topics">gen-z &middot; myths &middot; climate</span></div>
+        <h3 class="ep-title">The TikTok Generation&#x27;s AI Problem: Climate Myths and Career Reality</h3>
+        <p class="ep-summary">Kimba Rund returns to debunk the viral AI water-bottle myth and explain what her generation actually thinks about AI careers.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=swWyETCm_h0" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">October 11, 2025</span><span class="ep-topics">k-12 &middot; teacher-growth &middot; empowerment</span></div>
+        <h3 class="ep-title">&quot;I Didn&#x27;t Know a Fourth Grader Could Change the World&quot;: AI in K-12</h3>
+        <p class="ep-summary">Solutions architect Karisa Schwanekamp on the pandemic moment that changed her teaching and learning alongside students with AI.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=UWLU1lSlchQ" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">October 4, 2025</span><span class="ep-topics">higher-ed &middot; quiz-method &middot; purdue</span></div>
+        <h3 class="ep-title">Boiler Up for the Future of Education with Purdue Professor of Practice Dr. Kathryn Dilworth</h3>
+        <p class="ep-summary">Purdue&#x27;s Kathryn Dilworth on her QUIZ methodology for teaching students to control AI instead of being controlled by it.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=CUHA5r5YPBc" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">September 27, 2025</span><span class="ep-topics">ai-ethics &middot; parenting-metaphor &middot; society</span></div>
+        <h3 class="ep-title">Raising AI: Why We Need to Parent Our Artificial Children</h3>
+        <p class="ep-summary">AI pioneer De Kai argues we should stop treating AI as machines and start parenting them as artificial children.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=4tQEAIWCJgk" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">September 20, 2025</span><span class="ep-topics">academia &middot; adoption &middot; generations</span></div>
+        <h3 class="ep-title">The Entrepreneurial Professor: Bridging Academia and Business Reality</h3>
+        <p class="ep-summary">Susan Woods on AI adoption across generations and why human oversight and critical thinking stay non-negotiable.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=1N4b7fnP_D8" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">September 13, 2025</span><span class="ep-topics">workforce &middot; ivy-tech &middot; future-proofing</span></div>
+        <h3 class="ep-title">Future-Proofing Education with Brooklyn Burton</h3>
+        <p class="ep-summary">Launch episode: Ivy Tech Lafayette Vice Chancellor Brooklyn Burton on AI-driven workforce and economic development.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=EnvFxBCKxAk" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      <article class="ep-card">
+        <div class="ep-meta"><span class="ep-date">August 30, 2025</span><span class="ep-topics">pre-launch &middot; behavior-change &middot; coaching</span></div>
+        <h3 class="ep-title">AGI - School&#x27;s Out Saturdays PRE-LAUNCH PEP-RALLY (Episode 25)</h3>
+        <p class="ep-summary">Pre-launch special with transformation coach Lena Morris on AI adoption and human behavioral change in education.</p>
+        <div class="ep-links">
+          <a class="card-link" href="https://www.youtube.com/watch?v=BJ9VPZggdbI" target="_blank" rel="noopener noreferrer">Watch on YouTube</a>
+        </div>
+      </article>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>School's Out Saturdays on the AGI Podcast: the most important conversations with the people shaping tomorrow, one lesson at a time.<br>
+      YouTube: <a href="https://www.youtube.com/@AGIPodcast-AI" target="_blank" rel="noopener noreferrer">youtube.com/@AGIPodcast-AI</a> &middot; Everywhere else: <a href="https://pod.link/1812450522" target="_blank" rel="noopener noreferrer">pod.link/1812450522</a></p>
+      <p>Part of the AGI Podcast network &middot; <a href="https://agipodcast.ai" target="_blank" rel="noopener noreferrer">agipodcast.ai</a></p>
+    </div>
+  </footer>
+</body>
+</html>
