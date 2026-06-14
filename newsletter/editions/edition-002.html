@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Don't Marry the Model | No-Code CAIO</title>
+  <meta name="description" content="The government switched off two of Anthropic's most powerful AIs overnight. If your business quietly runs on one model, here's the risk nobody put in the sales pitch.">
+  <meta property="og:title" content="Don't Marry the Model">
+  <meta property="og:description" content="The government switched off two of Anthropic's most powerful AIs overnight. If your business quietly runs on one model, here's the risk nobody put in the sales pitch.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://schoolsout.agipodcast.ai/newsletter/assets/default-feature.png">
+  <meta property="og:url" content="https://schoolsout.agipodcast.ai/newsletter/editions/edition-002.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Don't Marry the Model">
+  <meta name="twitter:description" content="The government switched off two of Anthropic's most powerful AIs overnight. If your business quietly runs on one model, here's the risk nobody put in the sales pitch.">
+  <meta name="twitter:image" content="https://schoolsout.agipodcast.ai/newsletter/assets/default-feature.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:opsz,wght@7..72,500;7..72,650;7..72,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #182333;
+      --muted: #5d6977;
+      --soft: #f6f2ea;
+      --paper: #fffdf8;
+      --card: #ffffff;
+      --navy: #0d2438;
+      --navy-2: #132f48;
+      --gold: #c6922e;
+      --gold-soft: #f1dfba;
+      --rule: #e8dfcf;
+      --green: #476b5b;
+      --shadow: 0 18px 60px rgba(13, 36, 56, .10);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max: 1120px;
+      --article: 760px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    a {
+      color: var(--navy);
+      text-decoration-color: rgba(198, 146, 46, .55);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+    a:hover {
+      color: #000;
+      text-decoration-color: var(--gold);
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .sitebar {
+      border-bottom: 1px solid var(--rule);
+      background: rgba(255, 253, 248, .92);
+    }
+    .sitebar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand-lockup {
+      display: grid;
+      gap: 1px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .brand-lockup strong {
+      font-size: .95rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    .brand-lockup span {
+      font-size: .82rem;
+      color: var(--muted);
+    }
+    .back-link {
+      font-size: .86rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: #fff;
+      white-space: nowrap;
+    }
+    .edition-shell {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 34px 20px 64px;
+    }
+    .edition-header {
+      max-width: var(--article);
+      margin: 0 auto;
+      padding: 26px 0 22px;
+    }
+    .eyebrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .eyebrow .pill {
+      color: var(--navy);
+      background: var(--gold-soft);
+      border: 1px solid rgba(198, 146, 46, .35);
+      border-radius: 999px;
+      padding: 5px 10px;
+    }
+    h1 {
+      margin: 0;
+      font-family: Literata, Georgia, serif;
+      font-size: clamp(2.35rem, 9vw, 4.9rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+      color: var(--navy);
+    }
+    .deck {
+      margin: 20px 0 0;
+      font-size: clamp(1.08rem, 3vw, 1.34rem);
+      line-height: 1.55;
+      color: #384858;
+    }
+    .feature-image {
+      max-width: 960px;
+      margin: 20px auto 42px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--rule);
+      background: var(--soft);
+    }
+    .feature-image img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .article-body {
+      max-width: var(--article);
+      margin: 0 auto;
+      font-size: 1.06rem;
+    }
+    .article-body h2 {
+      margin: 48px 0 14px;
+      padding-top: 18px;
+      border-top: 3px solid var(--navy);
+      font-family: Literata, Georgia, serif;
+      font-size: clamp(1.75rem, 6vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+      color: var(--navy);
+    }
+    .article-body h3 {
+      margin: 32px 0 10px;
+      font-size: 1.15rem;
+      line-height: 1.25;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+    .article-body p {
+      margin: 0 0 1.15em;
+    }
+    .article-body ul,
+    .article-body ol {
+      margin: 0 0 1.3em 1.25em;
+      padding: 0;
+    }
+    .article-body li {
+      margin: .42em 0;
+      padding-left: .15em;
+    }
+    .article-body blockquote {
+      margin: 30px 0;
+      padding: 22px 24px;
+      border-left: 6px solid var(--gold);
+      background: #fbf5e8;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      color: #26384b;
+      font-family: Literata, Georgia, serif;
+      font-size: 1.22rem;
+      line-height: 1.48;
+    }
+    .article-body figure {
+      margin: 34px 0;
+    }
+    .article-body figure img,
+    .article-body > img {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--rule);
+      box-shadow: 0 12px 34px rgba(13, 36, 56, .08);
+    }
+    .article-body figcaption,
+    .article-body .caption {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.45;
+    }
+    .article-body .note-card,
+    .article-body .use-case-card {
+      margin: 28px 0;
+      padding: 22px;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 10px 36px rgba(13, 36, 56, .06);
+    }
+    .article-body .use-case-card h3:first-child,
+    .article-body .note-card h3:first-child {
+      margin-top: 0;
+    }
+    .article-body .beyond-chat-box {
+      margin: 46px calc(50% - 50vw);
+      padding: 44px 20px;
+      background:
+        radial-gradient(circle at top left, rgba(198, 146, 46, .20), transparent 30%),
+        linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: #f7efe0;
+    }
+    .article-body .beyond-chat-box-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .article-body .beyond-chat-box h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+      color: #fff7e8;
+    }
+    .article-body .beyond-chat-box h3 {
+      color: var(--gold-soft);
+    }
+    .article-body .beyond-chat-box p {
+      color: #e8edf2;
+    }
+    .article-body .beyond-chat-box a {
+      color: #fff;
+      text-decoration-color: var(--gold);
+    }
+    .article-body .visual-strip {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0 8px;
+    }
+    .article-body .visual-panel {
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, .08);
+    }
+    .article-body .visual-panel strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+    .article-body .the-question {
+      margin: 48px 0 28px;
+      padding: 26px;
+      border: 2px solid var(--navy);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(241, 223, 186, .50), rgba(255, 255, 255, .86));
+      box-shadow: 0 14px 46px rgba(13, 36, 56, .08);
+    }
+    .article-body .the-question h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+    .article-body .the-question p:last-child {
+      margin-bottom: 0;
+    }
+    .footer-injection {
+      max-width: var(--article);
+      margin: 54px auto 0;
+      padding-top: 26px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    @media (min-width: 720px) {
+      .edition-shell {
+        padding-top: 52px;
+      }
+      .sitebar-inner {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .visual-strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .article-body .beyond-chat-box {
+        padding: 58px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="sitebar">
+    <div class="sitebar-inner">
+      <a class="brand-lockup" href="../index.html" aria-label="No-Code CAIO archive">
+        <strong>No-Code CAIO</strong>
+        <span>Real-world AI for non-technical leaders</span>
+      </a>
+      <a class="back-link" href="../index.html">Back to archive</a>
+    </div>
+  </header>
+  <main class="edition-shell">
+    <article>
+      <header class="edition-header">
+        <div class="eyebrow">
+          <span class="pill">Edition 002</span>
+          <span>June 15, 2026</span>
+        </div>
+        <h1>Don't Marry the Model</h1>
+        <p class="deck">The government switched off two of Anthropic's most powerful AIs overnight. If your business quietly runs on one model, here's the risk nobody put in the sales pitch.</p>
+      </header>
+      <figure class="feature-image">
+        <img src="../assets/default-feature.png" alt="No-Code CAIO branded feature image">
+      </figure>
+      <div class="article-body">
+        <h2>Editor's Note</h2>
+<p>Friday afternoon I was deep in a plan with one of my AI accounts, mapping the next upgrade to my own setup, when the news crossed my desk and stopped me cold. The U.S. government had ordered Anthropic to shut off its two most powerful models, Fable 5 and Mythos 5, for everybody. Not throttle them, not gate them behind a waitlist. Off. Anthropic complied the same day, even while it argued the order was a mistake.</p>
+<p>I'd been circling this exact problem for months without a headline to hang it on, and Washington handed me one. So this week's edition is not the one I had written. That one keeps until next week. This is the one that matters today.</p>
+<p>If your business has quietly gone all-in on a single AI, and most have without ever deciding to, read this before Monday.</p>
+<h2>Main Essay</h2>
+<p>Here's what happened, in plain English. The government told Anthropic to cut off access to Fable 5 and Mythos 5, citing national security and a trick someone found for getting around the models' safety rules. The order was aimed at foreign nationals, but to comply Anthropic switched the models off for everyone, here and abroad. The company disputes the whole thing and warns that the same logic would freeze new AI releases across the entire industry. You can sort out your politics on that later. The lesson for a business owner lands the same either way: a tool your company leans on can go dark overnight, and the call can be made by people who have never heard your company's name.</p>
+<p>You might be thinking that's a Silicon Valley problem, not a problem for your shop. Stay with me, because a quieter version of it is coming for everyone, and it shows up every time the AI behind your work gets swapped for a different one.</p>
+<p>The big AI companies, and plenty of mid-size ones, are starting to use something called a model router. Think of it as a switchboard operator. A request comes in, and the operator decides which AI answers it: a cheap, fast model for the easy jobs, an expensive, powerful one for the hard ones. It saves real money, because you stop paying Cadillac prices for bicycle work. This is going to become as normal as swiping a credit card, and most owners will never see it running.</p>
+<p>Here's the catch nobody prints on the brochure. Every time that switchboard sends your work to a different model, you have quietly changed who is doing the job. And AI models, even excellent ones, do not all do the job the same way.</p>
+<p>Picture your front-desk person. Pearl ran your calendar for thirty years. She knew that when an email came in with a meeting buried three paragraphs down, it went on your calendar with a fifteen-minute buffer and a note about where to park. You never thought about it once, because Pearl never missed it. Now Pearl retires on a Friday and Sharon starts on Monday. Sharon is sharp, faster than Pearl ever was, and she does things her own way. Most of it is fine. For a few weeks, though, you would be a fool not to check her work, because "her own way" includes a hundred little things Pearl did that nobody ever wrote down. Swapping one AI model for another is hiring Sharon, except it happens in a second and nobody sends a memo announcing it.</p>
+<p>Now run the same story at the top of the building. Say the model that got swapped wasn't the front desk. Say it was the one your whole operation leans on, the one touching the customer emails, the proposals, the call summaries, the decisions you have slowly stopped double-checking. Losing that one isn't replacing the secretary, it's replacing the CEO with no notice. Anybody who has lived through a CEO change can tell you what comes next. You don't hand the new boss the keys and walk away. You look at the entire operation through fresh eyes, because the new boss runs things differently, and the parts that used to be automatic aren't automatic anymore.</p>
+<p>So here's the uncomfortable question sitting under all of this. If the AI quietly running a piece of your business changed tomorrow, by your choice or somebody else's, would you even know? And how long until you found out the hard way, from a customer, from a missed meeting, from a proposal that went out the door sounding like a stranger wrote it? Most owners can't answer that, because they never hired the AI on purpose in the first place. It just sort of moved in.</p>
+<h2>What It Looked Like Friday Morning</h2>
+<div class="use-case-card">
+<h3>The 9 a.m. nobody put on the calendar</h3>
+<p>Picture a twelve-person company that, over the last year, wired one AI model into the boring middle of the day. It reads the overnight email and drafts the replies. It turns sales calls into clean CRM notes. It writes the first pass of every proposal. Nobody ever declared this mission-critical. It just got reliable, so people stopped watching it.</p>
+<p>Now it's Friday, 9 a.m. The model they built on is gone, switched off to satisfy a government order they read about on the news like everybody else. The drafts don't generate. The notes stop. The proposal due at noon has no first pass sitting in the folder where it always sits.</p>
+<p>The fix exists, and it isn't even that hard: point everything at a different model, an Opus, a ChatGPT, an open-source model they host themselves. The switch takes an afternoon. The part that bites is everything after the switch, because the new model writes proposals in a slightly different voice, files the calendar invites a little differently, and decides a call's "important parts" are not quite the parts the old one flagged. Nothing throws an error. It breaks the way a new hire "breaks" for a month, technically doing the job while quietly not doing it your way. That is the cost no one budgets for, and it is the entire point of this issue.</p>
+</div>
+<section class="beyond-chat-box">
+<div class="beyond-chat-box-inner">
+<h2>Beyond the Chat Box</h2>
+<p>Here's the reframe that changed how I think about my own setup. Stop picturing your AI as software you bought, like a stapler or a spreadsheet that sits there and does one thing forever. Picture it as staff you are renting. Smart, fast, tireless staff, and not one of them is on your payroll or under your roof. The company that makes them can change them, upgrade them, or have them taken away, and you find out when the work changes, not before.</p>
+<p>Once you see your AI as staff, the whole thing organizes itself like an org chart. Some models are doing entry-level work where a swap barely registers. Some are sitting in senior chairs where a swap is a genuine event. The routers that are coming, and they are coming, will be reshuffling that org chart constantly in the background to save you money, which is honestly good news for your bill. The thing to hold onto is that a smaller invoice and a silently reshuffled staff are the same event seen from two sides. One side shows up in your accounting this month. The other shows up in your work, and a good while later.</p>
+<p>None of this is a reason to be afraid of routing, or to swear off AI, or to go back to doing it all by hand. It's a reason to know who's actually working for you, and to notice when the staff changes. That's a management problem, and you already know how to manage. You've just never had an employee who could be replaced mid-sentence without anyone telling you.</p>
+</div>
+</section>
+<section class="the-question">
+<h2>The Question</h2>
+<p>Take this one into your Monday meeting and ask it out loud: if the AI doing our most important job vanished this morning, what breaks, and how long until we notice?</p>
+<p>Then make the list real. Which tasks have you handed to AI and quietly stopped checking? Who feels it first if the model changes, you or your customer? You don't need a technical answer yet. You need the list, the same way you'd want to know which people could walk out the door tomorrow and leave a hole you wouldn't see until it cost you. That list is the whole job this week. Next week I'll get into what you actually do with it. GAME ON.</p>
+</section>
+      </div>
+      <div class="footer-injection">
+        <p>Work With Me CitizenAI : We help nonprofits connect people to housing, food, childcare, and transportation, faster. <br>
+AI literacy and education, consulting and speaking engagements welcome. <br>
+jason@mycitizen.ai</p>
+<p>The AGI Podcast Network Episodes, shows, newsletters, and everything else: <a href="https://agipodcast.ai/network">agipodcast.ai/network</a></p>
+<p>Connect with me: <br>
+LinkedIn: linkedin.com/in/jason-grant-padgett <br>
+X: @NoCodeCAIO <br>
+Facebook and Instagram: @AGIPodcast | @AGISchoolsout</p>
+<p>Subscribe to the No-Code CAIO: https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7399599285849346048</p>
+<p>"When we look back at this time, I think we will realize that we were standing at the foothills of the singularity. It will be a profound moment for humanity." Demis Hassabis, Google I/O May 20, 2026</p>
+<p>Ciao, Jason</p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
