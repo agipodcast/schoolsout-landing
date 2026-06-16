@@ -1,0 +1,835 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>The Receipt Is the Learning | School&rsquo;s Out Field Notes</title>
+  <meta name="description" content="AI can help students finish the work. That does not mean it helped them learn the thing. A field guide to Agentivism and the AI receipt." />
+
+  <meta property="og:title" content="The Receipt Is the Learning | School&rsquo;s Out Field Notes" />
+  <meta property="og:description" content="AI can help students finish the work. That does not mean it helped them learn the thing." />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="https://schoolsout.agipodcast.ai/field-notes-issue-4" />
+  <meta property="og:image" content="https://schoolsout.agipodcast.ai/field-notes-header.png" />
+  <meta property="og:site_name" content="School&rsquo;s Out Field Notes" />
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"NewsArticle","headline":"The Receipt Is the Learning","description":"AI can help students finish the work. That does not mean it helped them learn the thing.","image":"https://schoolsout.agipodcast.ai/field-notes-header.png","datePublished":"2026-06-14","url":"https://schoolsout.agipodcast.ai/field-notes-issue-4","inLanguage":"en","isPartOf":{"@type":"Periodical","name":"School's Out Field Notes","url":"https://schoolsout.agipodcast.ai/field-notes"},"author":{"@type":"Person","name":"Jason Padgett","url":"https://www.linkedin.com/in/jason-grant-padgett/"},"publisher":{"@type":"Organization","name":"AGI Podcast","url":"https://agipodcast.ai"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"School's Out Saturdays","item":"https://schoolsout.agipodcast.ai/"},{"@type":"ListItem","position":2,"name":"Field Notes","item":"https://schoolsout.agipodcast.ai/field-notes"},{"@type":"ListItem","position":3,"name":"The Receipt Is the Learning","item":"https://schoolsout.agipodcast.ai/field-notes-issue-4"}]}]}</script>
+
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="The Receipt Is the Learning | School&rsquo;s Out Field Notes" />
+  <meta name="twitter:description" content="AI can help students finish the work. That does not mean it helped them learn the thing." />
+  <meta name="twitter:image" content="https://schoolsout.agipodcast.ai/field-notes-header.png" />
+  <meta name="twitter:image:alt" content="School's Out Field Notes Issue 4: The Receipt Is the Learning." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Lora:ital,wght@0,500;0,600;0,700;1,500&display=swap" rel="stylesheet" />
+
+  <style>
+    :root {
+      --navy: #0f1729;
+      --navy-soft: #17213a;
+      --navy-card: #1a2342;
+      --gold: #f5b800;
+      --gold-soft: #ffd96a;
+      --cream: #f7f0df;
+      --cream-soft: #e8deca;
+      --muted: #b8c0d4;
+      --line: rgba(247, 240, 223, 0.16);
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.32);
+    }
+
+    * {
+      box-sizing: border-box;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      margin: 0;
+      background:
+        radial-gradient(circle at top left, rgba(245, 184, 0, 0.12), transparent 34rem),
+        radial-gradient(circle at 80% 10%, rgba(255, 217, 106, 0.08), transparent 28rem),
+        var(--navy);
+      color: var(--cream);
+      font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.7;
+    }
+
+    a {
+      color: var(--gold-soft);
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: var(--gold);
+      text-decoration: underline;
+      text-underline-offset: 4px;
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+    }
+
+    /* ---------- Site header / nav ---------- */
+
+    .site-header {
+      position: sticky;
+      top: 0;
+      z-index: 20;
+      background: rgba(15, 23, 41, 0.88);
+      backdrop-filter: blur(16px);
+      border-bottom: 1px solid var(--line);
+    }
+
+    .nav-wrap {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 1rem 1.25rem;
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 0.75rem;
+    }
+
+    .brand {
+      display: flex;
+      flex-direction: column;
+      color: var(--cream);
+      text-decoration: none;
+      line-height: 1.1;
+    }
+
+    .brand strong {
+      font-family: "Lora", Georgia, serif;
+      font-size: 1.05rem;
+      letter-spacing: 0.02em;
+    }
+
+    .brand span {
+      color: var(--muted);
+      font-size: 0.78rem;
+      margin-top: 0.15rem;
+    }
+
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+      justify-content: flex-start;
+    }
+
+    .nav-links a {
+      color: var(--cream-soft);
+      font-size: 0.82rem;
+      font-weight: 700;
+      padding: 0.48rem 0.68rem;
+      border-radius: 999px;
+      text-decoration: none;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background: var(--gold);
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    /* ---------- Page shell + article head ---------- */
+
+    main {
+      overflow: hidden;
+    }
+
+    .page-shell {
+      max-width: 1120px;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 5rem;
+    }
+
+    .article-head {
+      max-width: 880px;
+      margin: 0 auto 2.5rem;
+      text-align: center;
+    }
+
+    .issue-eyebrow {
+      display: inline-flex;
+      align-items: center;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.45rem;
+      margin-bottom: 1rem;
+      color: var(--gold);
+      font-size: 0.82rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .issue-eyebrow .dot {
+      color: rgba(245, 184, 0, 0.55);
+    }
+
+    .article-head h1 {
+      margin: 0;
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(2.4rem, 7vw, 5.3rem);
+      line-height: 0.98;
+      letter-spacing: -0.05em;
+      color: var(--cream);
+    }
+
+    .article-deck {
+      max-width: 700px;
+      margin: 1.25rem auto 0;
+      color: var(--cream-soft);
+      font-size: clamp(1rem, 2vw, 1.2rem);
+    }
+
+    /* ---------- Article body ---------- */
+
+    .article-body {
+      max-width: 820px;
+      margin: 0 auto;
+    }
+
+    .article-body h2 {
+      margin: 3.5rem 0 1.1rem;
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.9rem);
+      line-height: 1.08;
+      letter-spacing: -0.035em;
+      color: var(--cream);
+    }
+
+    .article-body h2:first-child {
+      margin-top: 0;
+    }
+
+    .article-body h3 {
+      margin: 2.25rem 0 0.75rem;
+      font-family: "Lora", Georgia, serif;
+      font-size: clamp(1.3rem, 2.6vw, 1.7rem);
+      letter-spacing: -0.02em;
+      color: var(--cream);
+    }
+
+    .article-body p {
+      margin: 1rem 0;
+      color: var(--cream-soft);
+      font-size: 1.05rem;
+    }
+
+    .article-body strong {
+      color: var(--cream);
+    }
+
+    .article-body ul,
+    .article-body ol {
+      margin: 1rem 0;
+      padding-left: 1.4rem;
+      color: var(--cream-soft);
+      font-size: 1.05rem;
+    }
+
+    .article-body li {
+      margin: 0.5rem 0;
+      padding-left: 0.2rem;
+    }
+
+    .article-body li::marker {
+      color: var(--gold);
+      font-weight: 700;
+    }
+
+    /* ---------- Teacher quote (trust anchor) ---------- */
+
+    .article-body blockquote {
+      position: relative;
+      margin: 2.25rem 0;
+      padding: 1.6rem 1.5rem 1.5rem 1.8rem;
+      border-left: 5px solid var(--gold);
+      border-radius: 0 22px 22px 0;
+      background:
+        linear-gradient(135deg, rgba(245, 184, 0, 0.12), rgba(26, 35, 66, 0.85)),
+        var(--navy-card);
+      font-family: "Lora", Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.15rem, 2.4vw, 1.4rem);
+      line-height: 1.45;
+      color: var(--cream);
+    }
+
+    .article-body blockquote::before {
+      content: "\201C";
+      position: absolute;
+      top: -0.4rem;
+      left: 0.55rem;
+      font-family: "Lora", Georgia, serif;
+      font-size: 4.5rem;
+      line-height: 1;
+      color: rgba(245, 184, 0, 0.35);
+      pointer-events: none;
+    }
+
+    .article-body blockquote p {
+      margin: 0.5rem 0;
+      color: var(--cream);
+      font-size: inherit;
+    }
+
+    .article-body blockquote cite,
+    .article-body blockquote footer {
+      display: block;
+      margin-top: 0.9rem;
+      font-family: "Inter", system-ui, sans-serif;
+      font-style: normal;
+      font-size: 0.88rem;
+      font-weight: 700;
+      letter-spacing: 0.04em;
+      color: var(--gold-soft);
+    }
+
+    /* ---------- Teacher Tuesday invite ---------- */
+
+    .tt-invite {
+      margin: 2.25rem 0;
+      padding: 1.6rem 1.5rem;
+      background:
+        linear-gradient(135deg, rgba(245, 184, 0, 0.16), rgba(26, 35, 66, 0.9)),
+        var(--navy-card);
+      border: 1px solid rgba(245, 184, 0, 0.4);
+      border-radius: 22px;
+      text-align: center;
+    }
+
+    .tt-invite .tt-kicker {
+      display: inline-block;
+      margin-bottom: 0.6rem;
+      padding: 0.28rem 0.7rem;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .tt-invite h3 {
+      margin: 0.4rem 0 0.3rem;
+      font-family: "Lora", Georgia, serif;
+      color: var(--cream);
+      font-size: clamp(1.3rem, 3vw, 1.8rem);
+    }
+
+    .tt-invite p {
+      margin: 0.35rem 0;
+      color: var(--cream-soft);
+      font-size: 1rem;
+    }
+
+    .tt-invite .tt-when {
+      color: var(--gold-soft);
+      font-weight: 700;
+    }
+
+    /* ---------- Go Deeper (podcast bridge) ---------- */
+
+    .article-body .go-deeper {
+      margin: 1.75rem 0;
+      padding: 1.5rem 1.4rem;
+      background:
+        linear-gradient(135deg, rgba(245, 184, 0, 0.11), rgba(26, 35, 66, 0.82)),
+        var(--navy-card);
+      border: 1px solid rgba(245, 184, 0, 0.28);
+      border-radius: 24px;
+    }
+
+    .article-body .go-deeper::before {
+      content: "From the podcast";
+      display: inline-block;
+      margin-bottom: 0.7rem;
+      padding: 0.28rem 0.7rem;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--navy);
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+    }
+
+    .article-body .go-deeper p {
+      margin: 0.5rem 0 0;
+      color: var(--cream-soft);
+    }
+
+    .article-body .go-deeper a {
+      color: var(--gold-soft);
+      font-weight: 700;
+    }
+
+    /* ---------- Field Card callout (text) ---------- */
+
+    .article-body .field-card-callout {
+      margin: 2.25rem 0;
+      padding: 1.5rem 1.5rem 1.6rem;
+      background:
+        linear-gradient(135deg, rgba(245, 184, 0, 0.1), rgba(26, 35, 66, 0.85)),
+        var(--navy-card);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+    }
+
+    .article-body .field-card-callout .card-kicker {
+      display: inline-block;
+      margin-bottom: 0.6rem;
+      color: var(--gold);
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .article-body .field-card-callout h3 {
+      margin: 0 0 0.4rem;
+      color: var(--cream);
+    }
+
+    .article-body .field-card-callout p {
+      margin: 0.3rem 0 0;
+    }
+
+    /* ---------- Receipt grid ---------- */
+
+    .article-body .receipt-grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1rem;
+      margin: 1.75rem 0;
+    }
+
+    .article-body .receipt-item {
+      background: rgba(247, 240, 223, 0.05);
+      border: 1px solid var(--line);
+      border-radius: 16px;
+      padding: 1.2rem 1.25rem;
+    }
+
+    .article-body .receipt-item h3 {
+      margin: 0 0 0.35rem;
+      color: var(--gold-soft);
+      font-size: 1.2rem;
+    }
+
+    .article-body .receipt-item p {
+      margin: 0;
+    }
+
+    /* ---------- Try This Week ---------- */
+
+    .article-body .try-box {
+      margin: 2.5rem 0;
+      padding: 1.6rem 1.5rem;
+      background: var(--cream);
+      color: var(--navy);
+      border-radius: 24px;
+      box-shadow: var(--shadow);
+    }
+
+    .article-body .try-box .card-kicker {
+      display: inline-block;
+      margin-bottom: 0.5rem;
+      color: #7c5a00;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+    }
+
+    .article-body .try-box h2 {
+      margin: 0.2rem 0 0.8rem;
+      color: var(--navy);
+    }
+
+    .article-body .try-box p {
+      color: rgba(15, 23, 41, 0.82);
+    }
+
+    .article-body .try-box .mini-template {
+      margin: 1.1rem 0;
+      padding: 1.1rem 1.2rem;
+      background: rgba(245, 184, 0, 0.14);
+      border: 1px solid rgba(15, 23, 41, 0.15);
+      border-radius: 14px;
+    }
+
+    .article-body .try-box .mini-template p {
+      margin: 0 0 0.5rem;
+      color: var(--navy);
+      font-weight: 700;
+    }
+
+    .article-body .try-box ol {
+      margin: 0;
+      color: var(--navy);
+    }
+
+    .article-body .try-box li {
+      color: var(--navy);
+    }
+
+    .article-body .try-box li::marker {
+      color: #7c5a00;
+    }
+
+    /* ---------- Beginner's Mind comic ---------- */
+
+    .article-body img.bm-comic {
+      width: 100%;
+      margin: 1.75rem 0;
+      padding: 0.7rem;
+      background: rgba(247, 240, 223, 0.055);
+      border: 1px solid var(--line);
+      border-radius: 22px;
+      box-shadow: var(--shadow);
+    }
+
+    .article-body .comic-caption {
+      margin: -0.6rem 0 1.75rem;
+      text-align: center;
+      color: var(--muted);
+      font-size: 0.88rem;
+      font-style: italic;
+    }
+
+    /* ---------- Reply Question (closing engagement) ---------- */
+
+    .article-body .reply-question {
+      margin: 4rem 0 1rem;
+      padding: 1.5rem 1.35rem;
+      background: var(--cream);
+      color: var(--navy);
+      border-radius: 26px;
+      box-shadow: var(--shadow);
+    }
+
+    .article-body .reply-question h2 {
+      margin-top: 0;
+      color: var(--navy);
+    }
+
+    .article-body .reply-question p {
+      color: rgba(15, 23, 41, 0.82);
+    }
+
+    .article-body .reply-question strong {
+      color: var(--navy);
+    }
+
+    .article-body .reply-question a {
+      color: #7c5a00;
+      font-weight: 700;
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    /* ---------- Issue nav buttons ---------- */
+
+    .article-nav {
+      max-width: 820px;
+      margin: 3rem auto 0;
+      padding-top: 2rem;
+      border-top: 1px solid var(--line);
+      display: flex;
+      justify-content: space-between;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 46px;
+      padding: 0.75rem 1.1rem;
+      border-radius: 999px;
+      background: var(--gold);
+      color: var(--navy);
+      font-weight: 800;
+      text-decoration: none;
+      border: 1px solid var(--gold);
+    }
+
+    .button:hover {
+      background: var(--gold-soft);
+      color: var(--navy);
+      text-decoration: none;
+    }
+
+    .button.secondary {
+      background: transparent;
+      color: var(--cream);
+      border-color: var(--line);
+    }
+
+    .button.secondary:hover {
+      background: rgba(247, 240, 223, 0.08);
+      color: var(--cream);
+    }
+
+    /* ---------- Quiet footer ---------- */
+
+    .site-footer {
+      border-top: 1px solid var(--line);
+      background: rgba(10, 16, 30, 0.52);
+    }
+
+    .footer-inner {
+      max-width: 820px;
+      margin: 0 auto;
+      padding: 2.5rem 1.25rem 2.75rem;
+      color: var(--muted);
+      font-size: 0.92rem;
+      line-height: 1.65;
+      text-align: center;
+    }
+
+    .footer-inner p {
+      margin: 0.55rem 0;
+    }
+
+    .footer-inner a {
+      color: var(--cream-soft);
+      font-weight: 700;
+      text-decoration: underline;
+      text-decoration-color: rgba(245, 184, 0, 0.5);
+      text-underline-offset: 4px;
+    }
+
+    .footer-inner a:hover {
+      color: var(--gold-soft);
+    }
+
+    /* ---------- Desktop ---------- */
+
+    @media (min-width: 769px) {
+      .nav-wrap {
+        flex-direction: row;
+        align-items: center;
+      }
+
+      .nav-links {
+        justify-content: flex-end;
+      }
+
+      .nav-links a {
+        font-size: 0.88rem;
+        padding: 0.55rem 0.8rem;
+      }
+
+      .page-shell {
+        padding: 3rem 1.25rem 5rem;
+      }
+
+      .article-head {
+        margin-bottom: 3rem;
+      }
+
+      .article-body .receipt-grid {
+        grid-template-columns: 1fr 1fr;
+      }
+
+      .article-body .reply-question {
+        padding: 2rem;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="nav-wrap">
+      <a class="brand" href="https://schoolsout.agipodcast.ai/field-notes">
+        <strong>School&rsquo;s Out Saturdays</strong>
+        <span>Preparing students for their future, not our past.</span>
+      </a>
+
+      <nav class="nav-links" aria-label="Main navigation">
+        <a href="https://schoolsout.agipodcast.ai/#listen">Listen</a>
+        <a class="active" href="https://schoolsout.agipodcast.ai/field-notes">Field Notes</a>
+        <a href="https://schoolsout.agipodcast.ai/episodes/">Episodes</a>
+        <a href="https://schoolsout.agipodcast.ai/events">Events</a>
+        <a href="https://schoolsout.agipodcast.ai/network">Network</a>
+        <a href="https://share-na2.hsforms.com/172rws_4LT7CcG4mtdk137w41aedp" target="_blank" rel="noopener noreferrer">Get in Touch</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <div class="page-shell">
+      <header class="article-head">
+        <div class="issue-eyebrow">
+          <span>Issue 4</span>
+          <span class="dot">&middot;</span>
+          <span>June 14, 2026</span>
+          <span class="dot">&middot;</span>
+          <span>5-minute read</span>
+        </div>
+        <h1>The Receipt Is the Learning</h1>
+        <p class="article-deck">AI can help students finish the work. That does not mean it helped them learn the thing.</p>
+      </header>
+
+      <article class="article-body">
+        <p>We are getting very good at asking the wrong AI question in schools.</p>
+        <p>The question usually sounds like this: <em>Did the student use AI?</em></p>
+        <p>And I get it. That question feels clean. It fits inside a policy. It gives adults something to enforce. It lets us put work into one of two buckets: allowed or not allowed, honest or dishonest, student work or robot work.</p>
+        <p>The problem is that learning does not fit neatly in those buckets anymore.</p>
+        <p>A student can use AI and think deeply. A student can use AI and think almost not at all. A student can write every word by hand and still not understand the idea. A student can use a chatbot for feedback, tear half of it apart, rebuild the answer, defend the choices, and walk away more capable than when they started.</p>
+        <p>Same tool. Very different learning.</p>
+        <p>That is the door.</p>
+
+        <div class="tt-invite">
+          <span class="tt-kicker">Live Tomorrow &middot; Teacher Tuesday</span>
+          <h3>Intro to NotebookLM, live with Jason &amp; Ronda</h3>
+          <p class="tt-when">Tuesday, June 16 &middot; 7:00 PM Eastern &middot; inside the AI Launch Pad</p>
+          <p>The same walk-through Ronda Swartz and I gave at the Fever Conference this month: how to turn your own sources into a research assistant you can actually trust. Bring a real classroom question.</p>
+          <p><a href="https://www.skool.com/ai-launch-pad/about?ref=6da44c20543646dfbd48cd032aa36886" target="_blank" rel="noopener noreferrer"><strong>Join us on the AI Launch Pad &rarr;</strong></a></p>
+        </div>
+
+        <div class="field-card-callout">
+          <span class="card-kicker">Field Card No. 004</span>
+          <h3>Agentivism</h3>
+          <p>A new learning theory for the age of AI. Not &ldquo;students used AI.&rdquo; Not &ldquo;students did not use AI.&rdquo; The better question is whether AI helped build durable human capability.</p>
+        </div>
+
+        <h2>The merit badge has the right instinct.</h2>
+        <p>This week on School&rsquo;s Out Saturdays, I talked with Bryon Haverstick from Sagamore Council about Scouting&rsquo;s new AI Merit Badge.</p>
+        <p>And the more I sat with that conversation, the more I kept thinking about something schools already know but sometimes forget when technology enters the room:</p>
+        <blockquote>
+          <p>A badge is not awarded because a kid watched a tool work. A badge is awarded because the kid can show something.</p>
+        </blockquote>
+        <p>That is a very different lens.</p>
+        <p>The badge model is not perfect, and I am not saying every classroom should suddenly become Scouts with Chromebooks. Please don&rsquo;t make that your plan. But there is a useful signal here.</p>
+        <p>Scouting does not usually stop at exposure. It asks for evidence. Demonstrate the knot. Explain the safety rule. Complete the project. Teach someone else. Show the skill in the wild.</p>
+        <p>Schools need the same instinct with AI.</p>
+        <p>Because the final product is getting less trustworthy as evidence of learning. A clean essay does not prove the student wrestled with the argument. A perfect slide deck does not prove the student understands the content. A correct answer does not prove the student can reason through the process.</p>
+        <p>AI did not create that problem. It just put a spotlight on it and handed it a microphone.</p>
+
+        <h2>The theory has a name now.</h2>
+        <p>Lixiang Yan and Dragan Ga&scaron;evi&cacute; recently proposed a learning theory called <strong>Agentivism</strong>. The plain-English version is this:</p>
+        <blockquote>
+          <p>Learning in the AI age means students build durable human capability while using AI selectively, checking its work, rebuilding the output into their own understanding, and eventually doing more with less help.</p>
+        </blockquote>
+        <p>That lands for me.</p>
+        <p>Not because schools need one more academic term floating around a committee room. We have plenty of fog already. It lands because Agentivism names the thing educators are trying to protect.</p>
+        <p>The goal is not AI-free schoolwork. The goal is not AI-polished schoolwork. The goal is a student who can use the tool without disappearing inside it.</p>
+        <p>That means the student still knows what was delegated. The student can verify what came back. The student can reconstruct the idea in their own words. The student can transfer the skill when the support is reduced.</p>
+        <p>That is the receipt.</p>
+
+        <h3>The Agentivism Receipt: four things worth asking students to show</h3>
+        <div class="receipt-grid">
+          <div class="receipt-item">
+            <h3>1. Delegation</h3>
+            <p>What did you ask AI to do, and why was that the right part to hand off?</p>
+          </div>
+          <div class="receipt-item">
+            <h3>2. Verification</h3>
+            <p>What did you check, compare, question, correct, or reject?</p>
+          </div>
+          <div class="receipt-item">
+            <h3>3. Reconstruction</h3>
+            <p>How did you rebuild the answer so it became your understanding, not just the tool&rsquo;s output?</p>
+          </div>
+          <div class="receipt-item">
+            <h3>4. Transfer</h3>
+            <p>What can you do now with less help than you needed at the beginning?</p>
+          </div>
+        </div>
+
+        <h2>This changes the school AI argument.</h2>
+        <p>A lot of schools are still stuck in the permission stage.</p>
+        <p>Can students use AI for brainstorming? Can they use it for outlines? Can they use it for grammar? Can they use it for research? Can they use it at home if the district tool is blocked? Can they use it if they cite it? Can they use it if everyone pretends they didn&rsquo;t?</p>
+        <p>Those questions matter. But they are not enough. Agentivism pushes us toward a better question:</p>
+        <blockquote>
+          <p>What part of the assignment is supposed to grow inside the student?</p>
+        </blockquote>
+        <p>Once you ask that, the AI decision gets clearer.</p>
+        <p>If the assignment is supposed to help students practice claim-evidence-reasoning, then maybe AI can help them generate bad examples to critique, but it should not quietly build the entire argument for them.</p>
+        <p>If the assignment is supposed to help students understand slope, then maybe AI can explain the concept three different ways, but the student still needs to solve, explain, and transfer the pattern.</p>
+        <p>If the assignment is supposed to help students prepare for a healthcare internship, then AI might help them rehearse patient communication, but the student still needs to speak clearly, notice risk, and adapt when the script breaks.</p>
+        <p>The tool can support the practice. It cannot be allowed to quietly steal the rep.</p>
+
+        <h2>Beginner&rsquo;s Mind</h2>
+        <p>Imagine a student uses AI to write a beautiful paragraph about photosynthesis.</p>
+        <p>Looks great. Vocabulary is strong. Sentence flow is better than usual. The paragraph has that slightly too-smooth chatbot shine, like a hotel lobby where nobody has ever spilled coffee.</p>
+        <img class="bm-comic" src="/field-notes-agentivism-comic.png" alt="A five-panel Beginner's Mind comic strip: a teacher helps a student turn an AI-polished photosynthesis paragraph into their own understanding." />
+        <p class="comic-caption">Beginner&rsquo;s Mind &middot; Issue 4 &middot; The receipt is the learning.</p>
+        <p>That is not a gotcha. That is a learning check.</p>
+        <p>If the student can explain it, revise it, apply it to a plant in the school garden, and answer a follow-up question, great. AI may have helped. The student still grew.</p>
+        <p>If the student cannot explain it at all, then the work is not evidence of learning. It is evidence of access.</p>
+        <p>Access matters. But access is not readiness. We already covered that bridge. Now we need receipts.</p>
+
+        <div class="try-box">
+          <span class="card-kicker">Try This Week</span>
+          <h2>Add one AI receipt to one assignment.</h2>
+          <p>Do not rewrite the unit. Do not summon a task force. Do not make a rubric that needs its own assistant principal.</p>
+          <p>Take one assignment you already have and add this at the bottom:</p>
+          <div class="mini-template">
+            <p>AI Use Receipt</p>
+            <ol>
+              <li>What did AI help you do?</li>
+              <li>What did you check or verify?</li>
+              <li>What did you change, reject, or rewrite?</li>
+              <li>What can you now explain or do without the tool?</li>
+            </ol>
+          </div>
+          <p>Four questions. Five minutes. Nothing fancy.</p>
+          <p>But now the student has to bring back more than a finished answer. They have to bring back evidence that learning happened.</p>
+        </div>
+
+        <h2>The adult move</h2>
+        <p>The adult move is not to panic every time a student opens a chatbot. The adult move is also not to clap because the chatbot made the work prettier. The adult move is to ask where the thinking went.</p>
+        <p>Did the student keep the goal? Did the student set the criteria? Did the student notice the weak answer? Did the student check the claim? Did the student rebuild the idea? Did the student transfer the skill when the training wheels came off?</p>
+        <p>That is where AI readiness starts to look less like a tool policy and more like education.</p>
+        <p>Just say&rsquo;n.</p>
+
+        <h2>Go Deeper</h2>
+        <div class="go-deeper">
+          <p>This week on School&rsquo;s Out Saturdays I talked with Bryon Haverstick from Sagamore Council about Scouting&rsquo;s new AI Merit Badge and what it looks like when youth organizations start treating AI literacy as something students can practice, demonstrate, and teach. Watch it here: <a href="https://www.youtube.com/watch?v=D9LRY0QUjac" target="_blank" rel="noopener noreferrer">Scouting&rsquo;s New AI Merit Badge</a>.</p>
+        </div>
+
+        <div class="reply-question">
+          <h2>The Reply Question</h2>
+          <p>What is one assignment where the final product looks fine, but you are not sure it proves the student learned anything? Hit reply with the assignment. Two sentences is plenty.</p>
+        </div>
+      </article>
+
+      <nav class="article-nav" aria-label="Field Notes navigation">
+        <a class="button secondary" href="https://schoolsout.agipodcast.ai/field-notes">Back to Field Notes</a>
+        <a class="button" href="https://schoolsout.agipodcast.ai/#subscribe">Subscribe to Field Notes</a>
+      </nav>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <p>Teacher Tuesday. This month it is Tuesday, June 16 at 7:00 PM Eastern: Ronda Swartz and I are doing a live intro to NotebookLM inside the AI Launch Pad, the same walk-through we gave at the Fever Conference. Join us: <a href="https://www.skool.com/ai-launch-pad/about?ref=6da44c20543646dfbd48cd032aa36886" target="_blank" rel="noopener noreferrer">https://www.skool.com/ai-launch-pad/about?ref=6da44c20543646dfbd48cd032aa36886</a></p>
+      <p>School&rsquo;s Out Saturdays on the AGI Podcast: the most important conversations with the people shaping tomorrow, one lesson at a time.<br>
+      &#128250; YouTube: <a href="https://www.youtube.com/@AGIPodcast-AI" target="_blank" rel="noopener noreferrer">https://www.youtube.com/@AGIPodcast-AI</a><br>
+      &#127911; Everywhere else: <a href="https://pod.link/1812450522" target="_blank" rel="noopener noreferrer">https://pod.link/1812450522</a><br>
+      &#127760; <a href="https://agipodcast.ai" target="_blank" rel="noopener noreferrer">agipodcast.ai</a></p>
+      <p>Get Field Notes in your inbox: <a href="https://share-na2.hsforms.com/2rc7ZgrJeSQm9geAkrYbj6Aq51dop" target="_blank" rel="noopener noreferrer">https://share-na2.hsforms.com/2rc7ZgrJeSQm9geAkrYbj6Aq51dop</a></p>
+      <p>P.S. New free resource: the NotebookLM Guide for Educators. Interactive version and PDF at <a href="https://schoolsout.agipodcast.ai/resources/notebooklm-guide.html">https://schoolsout.agipodcast.ai/resources/notebooklm-guide.html</a></p>
+    </div>
+  </footer>
+</body>
+</html>
