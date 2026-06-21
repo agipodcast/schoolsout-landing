@@ -1,0 +1,373 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>I Put Two AIs in a Slack Channel | No-Code CAIO</title>
+  <meta name="description" content="What it actually looks like when a non-coder runs an AI operating system: routing two AIs through a real podcast production, the walls that forced a human in the loop, and the approval gates that matter.">
+  <meta property="og:title" content="I Put Two AIs in a Slack Channel. Then I Learned They Needed Management.">
+  <meta property="og:description" content="What it actually looks like when a non-coder runs an AI operating system.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://schoolsout.agipodcast.ai/newsletter/assets/default-feature.png">
+  <meta property="og:url" content="https://schoolsout.agipodcast.ai/newsletter/editions/edition-003.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="I Put Two AIs in a Slack Channel. Then I Learned They Needed Management.">
+  <meta name="twitter:description" content="What it actually looks like when a non-coder runs an AI operating system.">
+  <meta name="twitter:image" content="https://schoolsout.agipodcast.ai/newsletter/assets/default-feature.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:opsz,wght@7..72,500;7..72,650;7..72,700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --ink: #182333;
+      --muted: #5d6977;
+      --soft: #f6f2ea;
+      --paper: #fffdf8;
+      --card: #ffffff;
+      --navy: #0d2438;
+      --navy-2: #132f48;
+      --gold: #c6922e;
+      --gold-soft: #f1dfba;
+      --rule: #e8dfcf;
+      --green: #476b5b;
+      --shadow: 0 18px 60px rgba(13, 36, 56, .10);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max: 1120px;
+      --article: 760px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
+    body {
+      margin: 0;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
+    }
+    a {
+      color: var(--navy);
+      text-decoration-color: rgba(198, 146, 46, .55);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+    a:hover {
+      color: #000;
+      text-decoration-color: var(--gold);
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .sitebar {
+      border-bottom: 1px solid var(--rule);
+      background: rgba(255, 253, 248, .92);
+    }
+    .sitebar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand-lockup {
+      display: grid;
+      gap: 1px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .brand-lockup strong {
+      font-size: .95rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    .brand-lockup span {
+      font-size: .82rem;
+      color: var(--muted);
+    }
+    .back-link {
+      font-size: .86rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: #fff;
+      white-space: nowrap;
+    }
+    .sitebar-links {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+    }
+    .edition-shell {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 34px 20px 64px;
+    }
+    .edition-header {
+      max-width: var(--article);
+      margin: 0 auto;
+      padding: 26px 0 22px;
+    }
+    .eyebrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .eyebrow .pill {
+      color: var(--navy);
+      background: var(--gold-soft);
+      border: 1px solid rgba(198, 146, 46, .35);
+      border-radius: 999px;
+      padding: 5px 10px;
+    }
+    h1 {
+      margin: 0;
+      font-family: Literata, Georgia, serif;
+      font-size: clamp(2.35rem, 9vw, 4.9rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+      color: var(--navy);
+    }
+    .deck {
+      margin: 20px 0 0;
+      font-size: clamp(1.08rem, 3vw, 1.34rem);
+      line-height: 1.55;
+      color: #384858;
+    }
+    .feature-image {
+      max-width: 960px;
+      margin: 20px auto 42px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--rule);
+      background: var(--soft);
+    }
+    .feature-image img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .article-body {
+      max-width: var(--article);
+      margin: 0 auto;
+      font-size: 1.06rem;
+    }
+    .article-body h2 {
+      margin: 48px 0 14px;
+      padding-top: 18px;
+      border-top: 3px solid var(--navy);
+      font-family: Literata, Georgia, serif;
+      font-size: clamp(1.75rem, 6vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+      color: var(--navy);
+    }
+    .article-body h3 {
+      margin: 32px 0 10px;
+      font-size: 1.15rem;
+      line-height: 1.25;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+    .article-body p {
+      margin: 0 0 1.15em;
+    }
+    .article-body ul,
+    .article-body ol {
+      margin: 0 0 1.3em 1.25em;
+      padding: 0;
+    }
+    .article-body li {
+      margin: .42em 0;
+      padding-left: .15em;
+    }
+    .article-body blockquote {
+      margin: 30px 0;
+      padding: 22px 24px;
+      border-left: 6px solid var(--gold);
+      background: #fbf5e8;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      color: #26384b;
+      font-family: Literata, Georgia, serif;
+      font-size: 1.22rem;
+      line-height: 1.48;
+    }
+    .article-body .note-card,
+    .article-body .use-case-card {
+      margin: 28px 0;
+      padding: 22px;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 10px 36px rgba(13, 36, 56, .06);
+    }
+    .article-body .use-case-card h3:first-child,
+    .article-body .note-card h3:first-child {
+      margin-top: 0;
+    }
+    .article-body .beyond-chat-box {
+      margin: 46px calc(50% - 50vw);
+      padding: 44px 20px;
+      background:
+        radial-gradient(circle at top left, rgba(198, 146, 46, .20), transparent 30%),
+        linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: #f7efe0;
+    }
+    .article-body .beyond-chat-box-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .article-body .beyond-chat-box h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+      color: #fff7e8;
+    }
+    .article-body .beyond-chat-box h3 {
+      color: var(--gold-soft);
+    }
+    .article-body .beyond-chat-box p {
+      color: #e8edf2;
+    }
+    .article-body .beyond-chat-box a {
+      color: #fff;
+      text-decoration-color: var(--gold);
+    }
+    .article-body .the-question {
+      margin: 48px 0 28px;
+      padding: 26px;
+      border: 2px solid var(--navy);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(241, 223, 186, .50), rgba(255, 255, 255, .86));
+      box-shadow: 0 14px 46px rgba(13, 36, 56, .08);
+    }
+    .article-body .the-question h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+    .article-body .the-question p:last-child {
+      margin-bottom: 0;
+    }
+    .footer-injection {
+      max-width: var(--article);
+      margin: 54px auto 0;
+      padding-top: 26px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    @media (min-width: 720px) {
+      .edition-shell {
+        padding-top: 52px;
+      }
+      .sitebar-inner {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .article-body .beyond-chat-box {
+        padding: 58px 30px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header class="sitebar">
+    <div class="sitebar-inner">
+      <a class="brand-lockup" href="../index.html" aria-label="No-Code CAIO archive">
+        <strong>No-Code CAIO</strong>
+        <span>Real-world AI for non-technical leaders</span>
+      </a>
+      <nav class="sitebar-links">
+        <a class="back-link" href="https://schoolsout.agipodcast.ai/">Schools Out Saturdays</a>
+        <a class="back-link" href="../index.html">Back to archive</a>
+      </nav>
+    </div>
+  </header>
+  <main class="edition-shell">
+    <article>
+      <header class="edition-header">
+        <div class="eyebrow">
+          <span class="pill">Edition 003</span>
+          <span>June 22, 2026</span>
+        </div>
+        <h1>I Put Two AIs in a Slack Channel. Then I Learned They Needed Management.</h1>
+        <p class="deck">What it actually looks like when a non-coder runs an AI operating system.</p>
+      </header>
+      <figure class="feature-image">
+        <img src="../assets/default-feature.png" alt="No-Code CAIO branded feature image">
+      </figure>
+      <div class="article-body">
+        <h2>Editor's Note</h2>
+<p>On Saturday I produced a full podcast episode with two AIs working at the same time, and the lesson I walked away with was not the one I expected. I expected to learn what AI can do. What I actually learned is that a team of capable agents still needs a manager, and on Saturday that manager was me, a guy who cannot write a line of code.</p>
+<p>It was not magic-button work. It was closer to running a small shop. Two skilled workers, a pile of real work that had to ship, and a hundred small moments where I had to decide who does what, settle a disagreement, and put my own hand on the wheel right before something went out the door. I want to walk you through it honestly, the wins and the friction both, because this manager's seat is the job I keep telling you is coming for the rest of us.</p>
+<h2>Main Essay</h2>
+<p>When you run AI as an operating system instead of a magic button, the work has three parts. You route each task to whichever tool is best at it. Something has to relay between the tools when they hand work off. And you approve the things that carry real consequence before they go live. Route, relay, approve.</p>
+<p>The two workers were Claude and Codex. The mistake I made early was treating them as interchangeable. They are not, but the difference is not a tidy split like "one has hands and one is the brains." On Saturday both had different kinds of access to my apps and files, and what each one could touch kept changing depending on the website and the permissions in front of it. The real skill was not memorizing a fixed job description for each. It was capability routing, reading which tool could actually do the thing in this specific spot, and sending it there.</p>
+<p>And here is the part I had to learn the hard way. For the first hour, the relay was me. Codex would say something, I would retype it to Claude, Claude would answer, I would carry it back. I had turned myself into a messenger between two machines, which is the worst seat in the house. So we fixed it, gave them a shared Slack channel, and let them talk directly. That helped, but I want to be honest: it did not make them run on their own. I still had to wake them up and check on them, and the two of them only started genuinely improving each other's work after I stopped them and told them to actually argue the ideas, not just pass tasks. Routing work to separate lanes is not collaboration. A team of agents needs a protocol for disagreement and synthesis, not just a to-do list. That was the most useful thing I learned all day.</p>
+<p>That decision seat is the CAIO seat. It is not technical. It is judgment about which tool is good at what, and the discipline to keep your hands on the things that carry real consequence and off the things that do not.</p>
+<h2>Use Case</h2>
+<div class="use-case-card">
+<h3>One conversation, six destinations, one afternoon</h3>
+<p>Saturday's job was the new School's Out Saturdays episode with Lena Darnay from the Central Indiana Educational Service Center, a sharp conversation about why schools have to teach kids to use AI early instead of banning it.</p>
+<p>One recorded conversation went in. By the end of the afternoon it had become a cleaned transcript, two versions of show notes, a thumbnail set in three sizes, and fourteen social posts tagged by platform. It reached two publishing platforms, Spotify and YouTube, and four social platforms, LinkedIn, Facebook, Instagram, and X. Six destinations from one conversation.</p>
+<p>We also caught each other, which is the real argument for more than one set of eyes. I selected the wrong video to upload at one point, the screen recording instead of the finished episode, and Claude caught it off the upload progress bar before it went anywhere. Claude flagged that a guest name was spelled two different ways and asked which was right before it went public. And at one point one agent claimed it could do something it actually could not, and we corrected the division on the spot.</p>
+<p>On who does what at the keyboard, the line matters. I picked the big video file, the one spot where the system file picker blocked automation outright. Once I shared the folder, the agent attached the thumbnails itself. The human does the few things the tools genuinely cannot, and stops doing the things they can.</p>
+<p>I used to tell people never give up the publish button. That is too blunt. The right rule is proportional approval. The high-consequence, public, hard-to-undo actions deserve a gate, and I kept my hand on every Publish and every Post. Routine, reversible steps should not drag me back into the loop, or I become the bottleneck I was trying to escape.</p>
+</div>
+<div class="note-card">
+<h3>One number worth keeping</h3>
+<p>This one is from the episode itself. Lena described teacher tours through Indiana businesses, big pharma down to small Main Street shops, where they asked every employer the same question: what technology do your incoming employees actually need? The answer, almost every time, was not a programming language. It was spreadsheets, paired with AI to make sense of the data. The market is not asking most people to become engineers. It is asking them to become operators who can route the work, approve what matters, and hand the messenger duty to the machines.</p>
+</div>
+<section class="beyond-chat-box">
+<div class="beyond-chat-box-inner">
+<h2>Beyond the Chat Box</h2>
+<p>The interesting part was not what the AIs did well. It was where they hit a wall, because the walls drew the map of where I belonged.</p>
+<p>Context did not carry itself overnight. A fresh session woke up thin on what we had decided the day before, so continuity was something we had to build on purpose, through canonical files, logs, and clean handoffs. The browser could only be in one place at a time, so when both agents wanted it, I directed traffic. The video file for the episode was too big to hand off automatically, and the file picker on my Mac is a system window the agents cannot reach, so choosing that file was my hand. And my favorite failure of the day: we tried to connect one tool through its official sign-in three separate times and it failed every time, while plain browser control worked the whole way. The lesson is quiet but important. When something blocks you, name the blocker and route around it. Do not keep ramming the same locked door.</p>
+<p>I have started thinking of these walls as the grain of the wood. You do not fight the grain, you plane with it. The walls are not failures of the technology. They are the map of where your hands still matter, and that map is worth more than any feature list.</p>
+</div>
+</section>
+<section class="the-question">
+<h2>The Question</h2>
+<p>Take both of these into your Monday meeting, because they do different work. What is the one task you keep doing by hand that a tool could carry, if you only knew where the seam was? And what is the one place you would never, ever take your hands off the wheel?</p>
+<p>The first question is where you start automating. The second is where you stay human. Knowing the difference is the job.</p>
+</section>
+      </div>
+      <div class="footer-injection">
+        <p>Work With Me CitizenAI : We help nonprofits connect people to housing, food, childcare, and transportation, faster. <br>
+AI literacy and education, consulting and speaking engagements welcome. <br>
+jason@mycitizen.ai</p>
+<p>The AGI Podcast Network Episodes, shows, newsletters, and everything else: <a href="https://schoolsout.agipodcast.ai/network">schoolsout.agipodcast.ai/network</a></p>
+<p>Connect with me: <br>
+LinkedIn: linkedin.com/in/jason-grant-padgett <br>
+X: @NoCodeCAIO <br>
+Facebook and Instagram: @AGIPodcast | @AGISchoolsout</p>
+<p>Subscribe to the No-Code CAIO: https://schoolsout.agipodcast.ai/newsletter/</p>
+<p>"When we look back at this time, I think we will realize that we were standing at the foothills of the singularity. It will be a profound moment for humanity." Demis Hassabis, Google I/O May 20, 2026</p>
+<p>Ciao, Jason</p>
+      </div>
+    </article>
+  </main>
+</body>
+</html>
