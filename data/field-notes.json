@@ -3,8 +3,24 @@
   "description": "A weekly companion to School's Out Saturdays. Practical signals, questions, and opportunities from the edge of school and work.",
   "url": "https://schoolsout.agipodcast.ai/field-notes",
   "author": "Jason Padgett",
-  "updated": "2026-06-09",
+  "updated": "2026-06-24",
   "issues": [
+    {
+      "number": 5,
+      "title": "The Ants Are Tired",
+      "url": "https://schoolsout.agipodcast.ai/field-notes-issue-5",
+      "date": "2026-06-24",
+      "description": "A Bug's Life is accidentally a pretty good AI implementation movie. Not because AI is the villain. Because teachers are living inside the pressure system.",
+      "readTime": "5 min"
+    },
+    {
+      "number": 4,
+      "title": "The Receipt Is the Learning",
+      "url": "https://schoolsout.agipodcast.ai/field-notes-issue-4",
+      "date": "2026-06-14",
+      "description": "AI can help students finish the work. That does not mean it helped them learn the thing.",
+      "readTime": "5 min"
+    },
     {
       "number": 3,
       "title": "The Greyed-Out Button",

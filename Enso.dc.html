@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+<x-dc>
+  <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+    <svg viewBox="0 0 120 120" role="img" aria-label="Field Notes Enso guide" style="width:100%;height:100%;display:block;overflow:visible;">
+      <path d="M78 13 C101 23 112 50 103 75 C94 101 64 114 37 102 C11 90 3 61 15 36 C27 11 56 4 78 13 Z" fill="none" stroke="{{ ink }}" stroke-width="8" stroke-linecap="round" stroke-linejoin="round" opacity=".94"></path>
+      <path d="M85 17 C99 27 105 44 103 59" fill="none" stroke="{{ ink }}" stroke-width="4" stroke-linecap="round" opacity=".45"></path>
+      <sc-if value="{{ point }}">
+        <path d="M88 64 C105 57 111 45 113 32" fill="none" stroke="{{ accent }}" stroke-width="4.5" stroke-linecap="round"></path>
+        <path d="M108 32 L114 27 L116 35" fill="none" stroke="{{ accent }}" stroke-width="4.5" stroke-linecap="round" stroke-linejoin="round"></path>
+      </sc-if>
+      <circle cx="45" cy="55" r="4.3" fill="{{ ink }}"></circle>
+      <sc-if value="{{ wink }}">
+        <path d="M70 54 C75 49 81 49 86 54" fill="none" stroke="{{ ink }}" stroke-width="4.3" stroke-linecap="round"></path>
+      </sc-if>
+      <sc-if value="{{ openEye }}">
+        <circle cx="78" cy="55" r="4.3" fill="{{ ink }}"></circle>
+      </sc-if>
+      <path d="M43 75 C51 85 72 88 83 74" fill="none" stroke="{{ ink }}" stroke-width="4.4" stroke-linecap="round"></path>
+      <path d="M33 86 C42 96 61 101 79 94" fill="none" stroke="{{ accent }}" stroke-width="2.6" stroke-linecap="round" opacity=".62"></path>
+    </svg>
+  </div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{}">
+class Component extends DCLogic {
+  renderVals() {
+    const props = this.props || {};
+    const mood = props.mood || "serene";
+    const ink = props.ink || "#1c2230";
+    return {
+      ink,
+      mood,
+      accent: props.accent || "#F59E0B",
+      point: mood === "point",
+      wink: mood === "wink",
+      openEye: mood !== "wink"
+    };
+  }
+}
+</script>
+</body>
+</html>

@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html><head>
+
+  <title>The Ants Are Tired · Field Notes · Issue 5</title>
+  <meta name="description" content="A Bug's Life is accidentally a pretty good AI implementation movie. Not because AI is the villain. Because teachers are living inside the pressure system.">
+  <link rel="canonical" href="https://schoolsout.agipodcast.ai/field-notes-issue-5">
+  <meta property="og:title" content="The Ants Are Tired · Field Notes · Issue 5">
+  <meta property="og:description" content="Why A Bug's Life is secretly about AI in schools.">
+  <meta property="og:type" content="article">
+  <meta property="og:url" content="https://schoolsout.agipodcast.ai/field-notes-issue-5">
+  <meta property="og:image" content="https://schoolsout.agipodcast.ai/field-notes-issue-5-banner.png">
+  <meta property="og:site_name" content="School's Out Field Notes">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="The Ants Are Tired · Field Notes · Issue 5">
+  <meta name="twitter:description" content="Why A Bug's Life is secretly about AI in schools.">
+  <meta name="twitter:image" content="https://schoolsout.agipodcast.ai/field-notes-issue-5-banner.png">
+  <script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"NewsArticle","headline":"The Ants Are Tired","description":"A Bug's Life is accidentally a pretty good AI implementation movie. Not because AI is the villain. Because teachers are living inside the pressure system.","image":"https://schoolsout.agipodcast.ai/field-notes-issue-5-banner.png","datePublished":"2026-06-24","url":"https://schoolsout.agipodcast.ai/field-notes-issue-5","inLanguage":"en","isPartOf":{"@type":"Periodical","name":"School's Out Field Notes","url":"https://schoolsout.agipodcast.ai/field-notes"},"author":{"@type":"Person","name":"Jason Padgett","url":"https://www.linkedin.com/in/jason-grant-padgett/"},"publisher":{"@type":"Organization","name":"AGI Podcast","url":"https://agipodcast.ai"}},{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"School's Out Saturdays","item":"https://schoolsout.agipodcast.ai/"},{"@type":"ListItem","position":2,"name":"Field Notes","item":"https://schoolsout.agipodcast.ai/field-notes"},{"@type":"ListItem","position":3,"name":"The Ants Are Tired","item":"https://schoolsout.agipodcast.ai/field-notes-issue-5"}]}]}</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="/field-notes-issue-5-assets/runtime.js"></script>
+</head>
+<body>
+
+<x-dc>
+<helmet>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<style>/* cyrillic-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-01.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-02.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-03.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-04.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-01.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-02.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-03.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Caveat';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-04.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-05.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-06.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-07.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-08.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-09.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-10.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-11.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-05.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-06.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-07.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-08.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-09.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-10.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-11.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-05.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-06.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-07.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-08.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-09.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-10.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-11.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-05.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-06.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* greek-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-07.woff2") format('woff2');
+  unicode-range: U+1F00-1FFF;
+}
+/* greek */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-08.woff2") format('woff2');
+  unicode-range: U+0370-0377, U+037A-037F, U+0384-038A, U+038C, U+038E-03A1, U+03A3-03FF;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-09.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-10.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-11.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-12.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-13.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-14.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-15.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-16.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-12.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-13.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-14.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-15.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 500;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-16.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-12.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-13.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-14.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-15.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 600;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-16.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+/* cyrillic-ext */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-12.woff2") format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C8A, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}
+/* cyrillic */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-13.woff2") format('woff2');
+  unicode-range: U+0301, U+0400-045F, U+0490-0491, U+04B0-04B1, U+2116;
+}
+/* vietnamese */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-14.woff2") format('woff2');
+  unicode-range: U+0102-0103, U+0110-0111, U+0128-0129, U+0168-0169, U+01A0-01A1, U+01AF-01B0, U+0300-0301, U+0303-0304, U+0308-0309, U+0323, U+0329, U+1EA0-1EF9, U+20AB;
+}
+/* latin-ext */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-15.woff2") format('woff2');
+  unicode-range: U+0100-02BA, U+02BD-02C5, U+02C7-02CC, U+02CE-02D7, U+02DD-02FF, U+0304, U+0308, U+0329, U+1D00-1DBF, U+1E00-1E9F, U+1EF2-1EFF, U+2020, U+20A0-20AB, U+20AD-20C0, U+2113, U+2C60-2C7F, U+A720-A7FF;
+}
+/* latin */
+@font-face {
+  font-family: 'Shantell Sans';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src: url("/field-notes-issue-5-assets/font-16.woff2") format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+0304, U+0308, U+0329, U+2000-206F, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+</style>
+<style>
+  * { box-sizing: border-box; }
+  html, body { margin: 0; padding: 0; background: #0B1020; }
+  @keyframes sceneIn { from { transform: scale(1.012); } to { transform: scale(1); } }
+  @keyframes riseIn { from { transform: translateY(13px); } to { transform: translateY(0); } }
+  @keyframes fadeIn { from { transform: translateY(12px); } to { transform: translateY(0); } }
+  @keyframes popIn { 0% { transform: scale(.55); } 70% { transform: scale(1.08); } 100% { transform: scale(1); } }
+  @keyframes floatBob { 0%,100% { transform: translateY(0); } 50% { transform: translateY(-10px); } }
+  @keyframes drift { 0% { transform: translateX(-12px); } 100% { transform: translateX(18px); } }
+  @keyframes sway { 0%,100% { transform: rotate(-4deg); } 50% { transform: rotate(4deg); } }
+  @keyframes wobble { 0%,100% { transform: rotate(-3.5deg); } 50% { transform: rotate(3.5deg); } }
+  @keyframes jitter { 0%,100% { transform: translate(0,0) rotate(0); } 25% { transform: translate(-2px,1px) rotate(-2deg); } 75% { transform: translate(2px,-1px) rotate(2deg); } }
+  @keyframes stampIn { 0% { transform: scale(1.14) rotate(-3deg); } 55% { transform: scale(.97) rotate(1deg); } 100% { transform: scale(1) rotate(0deg); } }
+  @keyframes growUp { from { transform: translateY(36px) scale(.9); } to { transform: translateY(0) scale(1); } }
+  @keyframes hintPulse { 0%,100% { opacity: .35; transform: translateX(0); } 50% { opacity: 1; transform: translateX(5px); } }
+  @keyframes standUp { 0% { transform: translateY(38px) scale(.6); } 60% { transform: translateY(-7px) scale(1.06); } 100% { transform: translateY(0) scale(1); } }
+  @keyframes flyL { from { transform: translateX(-46px) rotate(-6deg); } to { transform: translateX(0) rotate(-3deg); } }
+  @keyframes flyR { from { transform: translateX(46px) rotate(6deg); } to { transform: translateX(0) rotate(3deg); } }
+  @keyframes fallRain { 0% { transform: translateY(-24px) rotate(var(--rot,0deg)); } 100% { transform: translateY(0) rotate(var(--rot,0deg)); } }
+  @keyframes birdBob { 0%,100% { transform: translateY(0) rotate(-1deg); } 50% { transform: translateY(-13px) rotate(1deg); } }
+  @keyframes spark { 0%,100% { opacity: .2; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.25); } }
+  @keyframes breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+  @keyframes underdraw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+</style>
+</helmet>
+
+<div onclick="{{ stageClick }}" style="position:fixed;inset:0;overflow:hidden;background:#0B1020;font-family:'Shantell Sans',system-ui,sans-serif;cursor:pointer;user-select:none;">
+
+  <!-- ===================== SCENE 0 — COVER ===================== -->
+  <sc-if value="{{ s0 }}" hint-placeholder-val="{{ true }}">
+  <div data-screen-label="00 Cover" style="position:absolute;inset:0;background:#0B1020;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:5vw;overflow:hidden;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;top:0;left:0;right:0;height:46%;background:linear-gradient(160deg, rgba(245,158,11,0.13), transparent 62%);pointer-events:none;"></div>
+    <svg viewBox="0 0 1200 700" preserveAspectRatio="xMidYMid slice" style="position:absolute;inset:0;width:100%;height:100%;opacity:.45;pointer-events:none;">
+      <g stroke="#F59E0B" stroke-width="1.4" fill="none" opacity="0.7">
+        <path d="M90 70 L210 130 L150 250 L40 200 Z"></path>
+        <path d="M210 130 L330 90 L380 210"></path>
+        <path d="M1120 90 L1010 150 L1070 270 L1170 220"></path>
+        <path d="M1010 150 L900 120"></path>
+      </g>
+      <g fill="#F59E0B">
+        <circle cx="90" cy="70" r="4"></circle><circle cx="210" cy="130" r="5"></circle><circle cx="150" cy="250" r="4"></circle>
+        <circle cx="330" cy="90" r="4"></circle><circle cx="380" cy="210" r="3"></circle>
+        <circle cx="1120" cy="90" r="4"></circle><circle cx="1010" cy="150" r="5"></circle><circle cx="1070" cy="270" r="4"></circle><circle cx="900" cy="120" r="3"></circle>
+      </g>
+    </svg>
+
+    <img src="/field-notes-issue-5-banner.png" alt="School's Out Field Notes" style="width:min(660px,84vw);height:auto;border-radius:14px;box-shadow:0 24px 70px rgba(0,0,0,.55);position:relative;animation:riseIn .7s ease both;">
+
+    <div style="font-family:Inter;font-weight:600;font-size:clamp(11px,1.3vw,14px);letter-spacing:.24em;color:#F59E0B;text-transform:uppercase;margin-top:32px;position:relative;animation:fadeIn .8s ease .2s both;">Field Notes · Issue 5 · June 2026</div>
+
+    <h1 style="font-family:'Caveat',cursive;font-weight:700;font-size:clamp(56px,9.5vw,120px);line-height:1.06;color:#F5F7FA;margin:8px 0 0;text-align:center;position:relative;animation:riseIn .7s ease .25s both;">The Ants Are Tired</h1>
+
+    <p style="font-family:'Shantell Sans';font-size:clamp(16px,2vw,23px);color:#AAB4C0;max-width:600px;text-align:center;line-height:1.55;margin:18px 0 0;position:relative;animation:fadeIn .9s ease .45s both;">A Bug's Life is accidentally a pretty good movie about putting AI in schools. Not because AI is the villain. Because teachers are living inside the pressure system.</p>
+
+    <div style="position:absolute;right:clamp(20px,6vw,90px);bottom:6vh;width:clamp(96px,12vw,150px);height:clamp(96px,12vw,150px);animation:floatBob 5s ease-in-out infinite;">
+      <dc-import name="Enso" mood="wink" ink="#F5F7FA" hint-size="100%,100%"></dc-import>
+    </div>
+    <div style="position:absolute;left:clamp(20px,6vw,90px);bottom:7vh;font-family:'Caveat';font-size:clamp(20px,2.4vw,30px);color:#F59E0B;transform:rotate(-4deg);animation:fadeIn 1s ease .7s both;">No. 005</div>
+  </div>
+  </sc-if>
+
+  <!-- ===================== SCENE 1 — CONTENTS ===================== -->
+  <sc-if value="{{ s1 }}">
+  <div data-screen-label="01 Contents" style="position:absolute;inset:0;background:#F4EEDF;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(28px,5vw,70px);overflow:hidden;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:#e6b450;opacity:.55;"></div>
+    <div style="width:100%;max-width:900px;position:relative;">
+      <div style="font-family:Inter;font-weight:600;font-size:13px;letter-spacing:.22em;color:#B07414;text-transform:uppercase;animation:fadeIn .6s ease both;">In this issue</div>
+      <h2 style="font-family:'Caveat';font-weight:700;font-size:clamp(48px,8vw,92px);color:#1c2230;line-height:1.12;margin:2px 0 6px;animation:riseIn .6s ease .05s both;">Contents</h2>
+      <div style="height:7px;width:130px;background:#e6b450;border-radius:6px;transform-origin:left;animation:underdraw .6s ease .2s both;"></div>
+
+      <div style="display:flex;flex-direction:column;gap:clamp(6px,1.1vh,12px);margin-top:clamp(16px,3vh,34px);">
+        <sc-for list="{{ chapters }}" as="ch" hint-placeholder-count="9">
+          <div data-stop="" onclick="{{ ch.onClick }}" style="display:flex;align-items:baseline;gap:18px;padding:8px 6px;border-bottom:1.5px dotted rgba(28,34,48,.28);cursor:pointer;animation:riseIn .5s ease both;animation-delay:{{ ch.delay }};">
+            <span style="font-family:Inter;font-weight:700;font-size:clamp(13px,1.4vw,16px);color:#B07414;min-width:34px;">{{ ch.n }}</span>
+            <span style="font-family:'Shantell Sans';font-weight:600;font-size:clamp(17px,2.3vw,27px);color:#2a3140;flex:1;">{{ ch.t }}</span>
+            <span style="font-family:'Caveat';font-size:clamp(18px,2vw,26px);color:#c08b22;">read</span>
+          </div>
+        </sc-for>
+      </div>
+    </div>
+    <div style="position:absolute;right:clamp(18px,4vw,60px);bottom:clamp(18px,4vh,52px);width:clamp(86px,10vw,128px);height:clamp(86px,10vw,128px);animation:floatBob 4.6s ease-in-out infinite;">
+      <dc-import name="Enso" mood="point" hint-size="100%,100%"></dc-import>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ===================== SCENE 2 — THE GRASSHOPPER SPEECH ===================== -->
+  <sc-if value="{{ s2 }}">
+  <div data-screen-label="02 Grasshopper speech" style="position:absolute;inset:0;background:#F4EEDF;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:clamp(20px,3.4vw,42px) clamp(20px,4vw,60px) clamp(86px,13vh,110px);overflow:hidden;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:#e6b450;opacity:.55;"></div>
+    <div style="text-align:center;animation:riseIn .55s ease both;flex:none;max-width:840px;">
+      <div style="font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.22em;color:#B07414;text-transform:uppercase;">Chapter 01</div>
+      <h2 style="font-family:'Caveat';font-weight:700;font-size:clamp(30px,4.6vw,56px);color:#1c2230;line-height:1.12;margin:2px 0 0;">It starts as a grasshopper speech.</h2>
+    </div>
+
+    <div style="position:relative;width:100%;max-width:980px;flex:1;min-height:0;">
+      <!-- tired ant center -->
+      <div style="position:absolute;left:50%;top:56%;transform:translate(-50%,-50%);width:clamp(150px,20vw,240px);animation:wobble 2.6s ease-in-out infinite;transform-origin:50% 90%;">
+        <dc-import name="Ant" mood="tired" hint-size="100%,100%"></dc-import>
+      </div>
+      <!-- chaos bubbles, kept inside bounds -->
+      <div style="position:absolute;left:3%;top:10%;font-family:'Shantell Sans';font-weight:600;font-size:clamp(13px,1.6vw,19px);color:#2a3140;background:#fffdf6;border:2px solid #1c2230;border-radius:16px;padding:8px 14px;box-shadow:3px 4px 0 rgba(28,34,48,.18);animation:flyL .5s ease both, jitter 3.4s ease-in-out .6s infinite;">Do this now.</div>
+      <div style="position:absolute;right:3%;top:6%;font-family:'Shantell Sans';font-weight:600;font-size:clamp(13px,1.6vw,19px);color:#2a3140;background:#fffdf6;border:2px solid #1c2230;border-radius:16px;padding:8px 14px;box-shadow:3px 4px 0 rgba(28,34,48,.18);animation:flyR .5s ease .08s both, jitter 3.8s ease-in-out .7s infinite;">Don't do this yet.</div>
+      <div style="position:absolute;left:1%;top:46%;font-family:'Shantell Sans';font-weight:600;font-size:clamp(13px,1.6vw,19px);color:#2a3140;background:#fffdf6;border:2px solid #1c2230;border-radius:16px;padding:8px 14px;box-shadow:3px 4px 0 rgba(28,34,48,.18);animation:flyL .5s ease .16s both, jitter 3.1s ease-in-out .9s infinite;">Let students use it.</div>
+      <div style="position:absolute;right:4%;top:42%;max-width:230px;font-family:'Shantell Sans';font-weight:600;font-size:clamp(13px,1.6vw,19px);color:#2a3140;background:#fffdf6;border:2px solid #1c2230;border-radius:16px;padding:8px 14px;box-shadow:3px 4px 0 rgba(28,34,48,.18);animation:flyR .5s ease .24s both, jitter 3.6s ease-in-out 1s infinite;">Ban it before it ruins everything.</div>
+      <div style="position:absolute;left:9%;bottom:4%;font-family:'Shantell Sans';font-weight:600;font-size:clamp(13px,1.6vw,19px);color:#2a3140;background:#fffdf6;border:2px solid #1c2230;border-radius:16px;padding:8px 14px;box-shadow:3px 4px 0 rgba(28,34,48,.18);animation:riseIn .5s ease .32s both;">Move faster.</div>
+      <div style="position:absolute;right:12%;bottom:2%;font-family:'Shantell Sans';font-weight:600;font-size:clamp(13px,1.6vw,19px);color:#2a3140;background:#fffdf6;border:2px solid #1c2230;border-radius:16px;padding:8px 14px;box-shadow:3px 4px 0 rgba(28,34,48,.18);animation:riseIn .5s ease .4s both;">Be careful.</div>
+    </div>
+
+    <p style="font-family:'Shantell Sans';font-weight:500;font-size:clamp(15px,1.9vw,23px);color:#3a3f4a;max-width:620px;text-align:center;line-height:1.45;margin:6px 0 0;flex:none;animation:fadeIn .6s ease .6s both;">Somewhere in the middle of all that noise is a teacher, trying to carry the grain.</p>
+  </div>
+  </sc-if>
+
+  <!-- ===================== SCENE 3 — THE GRAIN ===================== -->
+  <sc-if value="{{ s3 }}">
+  <div data-screen-label="03 The grain" style="position:absolute;inset:0;background:#F4EEDF;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:clamp(20px,4vw,70px);padding:clamp(24px,4vw,56px) clamp(24px,5vw,70px) clamp(92px,13vh,112px);overflow:hidden;flex-wrap:wrap;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:#e6b450;opacity:.55;"></div>
+    <!-- left: copy -->
+    <div style="max-width:440px;flex:1 1 320px;animation:riseIn .55s ease both;">
+      <div style="font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.22em;color:#B07414;text-transform:uppercase;">The grain</div>
+      <h2 style="font-family:'Caveat';font-weight:700;font-size:clamp(28px,4.2vw,50px);color:#1c2230;line-height:1.12;margin:2px 0 28px;">And the pile keeps growing.</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:8px;">
+        <sc-for list="{{ grainList }}" as="g" hint-placeholder-count="8">
+          <span style="font-family:'Shantell Sans';font-weight:500;font-size:clamp(13px,1.5vw,17px);color:#3a3f4a;background:#fffdf6;border:1.5px solid rgba(28,34,48,.4);border-radius:999px;padding:5px 13px;animation:popIn .4s ease both;animation-delay:{{ g.delay }};">{{ g.t }}</span>
+        </sc-for>
+      </div>
+      <p style="font-family:'Shantell Sans';font-weight:600;font-size:clamp(16px,2vw,23px);color:#1c2230;line-height:1.45;margin:18px 0 0;animation:fadeIn .6s ease .9s both;">Teachers are not tired because they lack character. They are tired because everyone keeps adding weight and calling it transformation.</p>
+    </div>
+    <!-- right: ant under teetering stack -->
+    <div style="position:relative;width:clamp(220px,28vw,340px);height:clamp(260px,40vh,420px);flex:0 0 auto;">
+      <div style="position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:clamp(190px,24vw,300px);animation:wobble 2.2s ease-in-out infinite;transform-origin:50% 95%;">
+        <dc-import name="Ant" mood="tired" hint-size="100%,100%"></dc-import>
+      </div>
+      <div style="position:absolute;left:50%;bottom:38%;transform:translateX(-52%);display:flex;flex-direction:column;align-items:center;gap:3px;animation:wobble 2.2s ease-in-out infinite;transform-origin:50% 100%;">
+        <div style="width:54px;height:30px;background:#e0a93b;border:2px solid #a9781f;border-radius:7px;transform:rotate(-6deg);animation:growUp .5s ease .5s both;"></div>
+        <div style="width:64px;height:32px;background:#d99a2c;border:2px solid #a9781f;border-radius:7px;transform:rotate(4deg);animation:growUp .5s ease .35s both;"></div>
+        <div style="width:58px;height:32px;background:#e0a93b;border:2px solid #a9781f;border-radius:7px;transform:rotate(-3deg);animation:growUp .5s ease .2s both;"></div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ===================== SCENE 4 — AI IS THE WEATHER ===================== -->
+  <sc-if value="{{ s4 }}">
+  <div data-screen-label="04 AI is the weather" style="position:absolute;inset:0;background:#F4EEDF;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:clamp(20px,3.4vw,42px) clamp(20px,4vw,60px) clamp(86px,13vh,110px);overflow:hidden;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:#e6b450;opacity:.55;"></div>
+    <div style="text-align:center;flex:none;animation:riseIn .55s ease both;max-width:820px;">
+      <div style="font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.22em;color:#B07414;text-transform:uppercase;">Chapter 02</div>
+      <h2 style="font-family:'Caveat';font-weight:700;font-size:clamp(30px,4.8vw,58px);color:#1c2230;line-height:1.12;margin:2px 0 0;">AI is the weather. Not the villain.</h2>
+    </div>
+
+    <div style="position:relative;width:100%;max-width:920px;flex:1;min-height:0;margin-top:10px;">
+      <!-- drifting weather cloud -->
+      <div style="position:absolute;left:50%;top:6%;transform:translateX(-50%);animation:drift 6s ease-in-out infinite alternate;">
+        <svg viewBox="0 0 240 120" width="clamp(190px,26vw,300px)" height="auto" style="overflow:visible;">
+          <g fill="#9aa6b4">
+            <ellipse cx="80" cy="70" rx="56" ry="34"></ellipse>
+            <ellipse cx="140" cy="58" rx="50" ry="40"></ellipse>
+            <ellipse cx="180" cy="74" rx="44" ry="28"></ellipse>
+            <ellipse cx="118" cy="84" rx="70" ry="26"></ellipse>
+          </g>
+          <g stroke="#5aa9e6" stroke-width="4" stroke-linecap="round">
+            <path d="M70 100 L62 116"></path><path d="M110 102 L102 120"></path><path d="M150 100 L142 116"></path>
+          </g>
+        </svg>
+      </div>
+      <!-- grasshoppers yelling, around the cloud -->
+      <div style="position:absolute;left:5%;bottom:7%;width:clamp(100px,13vw,150px);animation:flyL .5s ease .2s both;">
+        <svg viewBox="0 0 160 120" width="100%" height="auto" style="overflow:visible;animation:sway 2.4s ease-in-out infinite;transform-origin:50% 100%;">
+          <ellipse cx="78" cy="60" rx="46" ry="22" fill="#8a9a4a" transform="rotate(-12 78 60)"></ellipse>
+          <circle cx="118" cy="44" r="18" fill="#9aab55"></circle>
+          <circle cx="124" cy="40" r="3.4" fill="#16181d"></circle>
+          <path d="M120 52 q6 4 12 1" stroke="#16181d" stroke-width="2.4" fill="none" stroke-linecap="round"></path>
+          <path d="M128 30 q14 -10 26 -6 M132 34 q14 -4 24 4" stroke="#6f7d39" stroke-width="2.6" fill="none" stroke-linecap="round"></path>
+          <path d="M60 70 L36 112 L70 96 M84 72 L98 116" stroke="#6f7d39" stroke-width="5" fill="none" stroke-linecap="round"></path>
+        </svg>
+      </div>
+      <div style="position:absolute;right:4%;bottom:11%;width:clamp(94px,12vw,140px);transform:scaleX(-1);animation:flyR .5s ease .34s both;">
+        <svg viewBox="0 0 160 120" width="100%" height="auto" style="overflow:visible;animation:sway 2.8s ease-in-out infinite;transform-origin:50% 100%;">
+          <ellipse cx="78" cy="60" rx="46" ry="22" fill="#7d8c41" transform="rotate(-12 78 60)"></ellipse>
+          <circle cx="118" cy="44" r="18" fill="#8a9a4a"></circle>
+          <circle cx="124" cy="40" r="3.4" fill="#16181d"></circle>
+          <path d="M120 52 q6 4 12 1" stroke="#16181d" stroke-width="2.4" fill="none" stroke-linecap="round"></path>
+          <path d="M128 30 q14 -10 26 -6 M132 34 q14 -4 24 4" stroke="#5e6b31" stroke-width="2.6" fill="none" stroke-linecap="round"></path>
+          <path d="M60 70 L36 112 L70 96 M84 72 L98 116" stroke="#5e6b31" stroke-width="5" fill="none" stroke-linecap="round"></path>
+        </svg>
+      </div>
+      <!-- pressure labels -->
+      <div style="position:absolute;left:50%;top:48%;transform:translate(-50%,-50%);display:flex;flex-wrap:wrap;gap:7px;justify-content:center;max-width:440px;">
+        <sc-for list="{{ pressureList }}" as="p" hint-placeholder-count="6">
+          <span style="font-family:Inter;font-weight:600;font-size:clamp(11px,1.3vw,14px);letter-spacing:.04em;color:#7a4a12;background:rgba(230,180,80,.28);border:1.5px solid rgba(176,116,20,.5);border-radius:999px;padding:4px 11px;animation:popIn .4s ease both;animation-delay:{{ p.delay }};">{{ p.t }}</span>
+        </sc-for>
+      </div>
+    </div>
+
+    <p style="font-family:'Shantell Sans';font-weight:600;font-size:clamp(16px,2.1vw,24px);color:#1c2230;max-width:680px;text-align:center;line-height:1.45;margin:0;flex:none;animation:fadeIn .6s ease .6s both;">The grasshoppers are the people yelling about the weather, like yelling is a plan.</p>
+  </div>
+  </sc-if>
+
+  <!--MORE-->
+
+  <!-- ===================== SCENE 5 — FIELD CARD No. 005 ===================== -->
+  <sc-if value="{{ s5 }}">
+  <div data-screen-label="05 Field card" style="position:absolute;inset:0;background:#F4EEDF;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(24px,4vw,52px) clamp(20px,4vw,60px) clamp(92px,14vh,116px);overflow:hidden;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:#e6b450;opacity:.55;"></div>
+    <div style="position:relative;width:min(720px,92vw);background:#fbf6e9;border:2.5px solid #1c2230;border-radius:18px;box-shadow:12px 14px 0 rgba(28,34,48,.1),0 24px 50px rgba(0,0,0,.13);padding:clamp(26px,4vw,50px);animation:stampIn .7s cubic-bezier(.2,.85,.3,1) both;">
+      <div style="position:absolute;inset:9px;border:1.5px solid rgba(28,34,48,.3);border-radius:12px;pointer-events:none;"></div>
+      <div style="font-family:Inter;font-weight:700;letter-spacing:.2em;font-size:12px;color:#B07414;text-transform:uppercase;">Field Card No. 005</div>
+      <h2 style="font-family:'Caveat';font-weight:700;font-size:clamp(38px,6.4vw,78px);color:#1c2230;line-height:1.12;margin:6px 0 14px;max-width:520px;">The colony is school.</h2>
+      <p style="font-family:'Shantell Sans';font-weight:500;font-size:clamp(15px,1.85vw,22px);color:#3a3f4a;line-height:1.55;margin:0;max-width:580px;">The ants are not lazy. They carry the whole system on their backs while something louder keeps demanding tribute. In 2026, that louder thing is not AI. It is the pressure system around it.</p>
+      <div style="position:absolute;right:clamp(16px,3vw,28px);top:clamp(16px,3vw,28px);width:78px;height:78px;border:2.5px solid #a9781f;border-radius:50%;display:flex;align-items:center;justify-content:center;transform:rotate(-13deg);color:#a9781f;font-family:'Caveat';font-weight:700;font-size:25px;text-align:center;line-height:.82;opacity:.85;">No.<br>005</div>
+      <div style="position:absolute;left:0;right:0;bottom:-24px;display:flex;justify-content:center;gap:6px;">
+        <div style="width:52px;height:40px;"><dc-import name="Ant" mood="march" hint-size="100%,100%"></dc-import></div>
+        <div style="width:52px;height:40px;"><dc-import name="Ant" mood="march" hint-size="100%,100%"></dc-import></div>
+        <div style="width:52px;height:40px;"><dc-import name="Ant" mood="tired" hint-size="100%,100%"></dc-import></div>
+        <div style="width:52px;height:40px;"><dc-import name="Ant" mood="march" hint-size="100%,100%"></dc-import></div>
+      </div>
+    </div>
+    <div style="position:absolute;left:clamp(16px,5vw,80px);bottom:clamp(14px,5vh,60px);width:clamp(78px,9vw,116px);height:clamp(78px,9vw,116px);animation:floatBob 4.8s ease-in-out infinite;">
+      <dc-import name="Enso" mood="serene" hint-size="100%,100%"></dc-import>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ===================== SCENE 6 — PAYING TRIBUTE ===================== -->
+  <sc-if value="{{ s6 }}">
+  <div data-screen-label="06 Paying tribute" style="position:absolute;inset:0;background:#F4EEDF;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:clamp(18px,3vw,56px);padding:clamp(20px,3.4vw,44px) clamp(24px,5vw,70px) clamp(96px,15vh,118px);overflow:hidden;flex-wrap:wrap;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:#e6b450;opacity:.55;"></div>
+    <div style="max-width:430px;flex:1 1 300px;animation:riseIn .55s ease both;">
+      <div style="font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.22em;color:#B07414;text-transform:uppercase;">Tribute</div>
+      <h2 style="font-family:'Caveat';font-weight:700;font-size:clamp(28px,4.2vw,50px);color:#1c2230;line-height:1.12;margin:2px 0 13px;">And the colony keeps paying it.</h2>
+      <div style="display:flex;flex-direction:column;gap:6px;">
+        <sc-for list="{{ tributeList }}" as="t" hint-placeholder-count="5">
+          <div style="font-family:'Shantell Sans';font-weight:500;font-size:clamp(13px,1.45vw,17px);color:#3a3f4a;background:#fffdf6;border:1.5px solid rgba(28,34,48,.4);border-radius:9px;padding:5px 12px;box-shadow:2px 2px 0 rgba(28,34,48,.1);animation:flyL .45s ease both;animation-delay:{{ t.delay }};">{{ t.t }}</div>
+        </sc-for>
+      </div>
+      <p style="font-family:'Shantell Sans';font-weight:600;font-size:clamp(14px,1.7vw,20px);color:#1c2230;line-height:1.4;margin:13px 0 0;animation:fadeIn .6s ease .8s both;">Some of it matters. But when compliance becomes the only move, the pile gets bigger and nobody gets stronger.</p>
+    </div>
+    <div style="position:relative;width:clamp(200px,24vw,300px);height:clamp(280px,42vh,420px);flex:0 0 auto;">
+      <div style="position:absolute;left:50%;bottom:0;transform:translateX(-50%);width:clamp(160px,20vw,250px);animation:wobble 2s ease-in-out infinite;transform-origin:50% 95%;">
+        <dc-import name="Ant" mood="tired" hint-size="100%,100%"></dc-import>
+      </div>
+      <div style="position:absolute;left:50%;bottom:34%;transform:translateX(-50%);display:flex;flex-direction:column-reverse;align-items:center;gap:-2px;">
+        <div style="width:78px;height:34px;background:#fff;border:2px solid #1c2230;border-radius:5px;--rot:-5deg;margin-top:-8px;box-shadow:2px 2px 0 rgba(28,34,48,.12);animation:fallRain .5s ease .15s both;"></div>
+        <div style="width:84px;height:34px;background:#fff;border:2px solid #1c2230;border-radius:5px;--rot:4deg;margin-top:-8px;box-shadow:2px 2px 0 rgba(28,34,48,.12);animation:fallRain .5s ease .3s both;"></div>
+        <div style="width:74px;height:34px;background:#fff;border:2px solid #1c2230;border-radius:5px;--rot:-3deg;margin-top:-8px;box-shadow:2px 2px 0 rgba(28,34,48,.12);animation:fallRain .5s ease .45s both;"></div>
+        <div style="width:88px;height:36px;background:#fff;border:2px solid #1c2230;border-radius:5px;--rot:3deg;box-shadow:2px 2px 0 rgba(28,34,48,.12);animation:fallRain .5s ease .6s both;"></div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ===================== SCENE 7 — THE TEACHER IS FLIK ===================== -->
+  <sc-if value="{{ s7 }}">
+  <div data-screen-label="07 The teacher is Flik" style="position:absolute;inset:0;background:#F4EEDF;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:clamp(20px,3.2vw,42px) clamp(20px,4vw,60px) clamp(100px,15vh,120px);overflow:hidden;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:#e6b450;opacity:.55;"></div>
+    <div style="text-align:center;flex:none;animation:riseIn .55s ease both;">
+      <div style="font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.22em;color:#B07414;text-transform:uppercase;">Chapter 04</div>
+      <h2 style="font-family:'Caveat';font-weight:700;font-size:clamp(30px,4.8vw,58px);color:#1c2230;line-height:1.12;margin:2px 0 0;">The teacher is Flik. With bus duty.</h2>
+    </div>
+
+    <div style="display:flex;align-items:center;justify-content:center;gap:clamp(16px,3vw,46px);flex-wrap:wrap;flex:1;min-height:0;width:100%;max-width:980px;">
+      <!-- Flik the inventor ant -->
+      <div style="position:relative;width:clamp(160px,20vw,250px);flex:0 0 auto;animation:popIn .55s ease .1s both;">
+        <div style="position:absolute;left:50%;top:-6%;transform:translateX(-30%);width:54px;height:54px;animation:floatBob 3s ease-in-out infinite;">
+          <svg viewBox="0 0 60 60" width="100%" height="100%" style="overflow:visible;">
+            <circle cx="30" cy="26" r="16" fill="#ffd23f" stroke="#1c2230" stroke-width="2.5"></circle>
+            <rect x="23" y="40" width="14" height="9" rx="2" fill="#cbb27a" stroke="#1c2230" stroke-width="2"></rect>
+            <path d="M26 49 h8" stroke="#1c2230" stroke-width="2"></path>
+            <path d="M30 16 v-7 M44 26 h7 M9 26 h7 M40 14 l5 -5 M20 14 l-5 -5" stroke="#e0a93b" stroke-width="2.6" stroke-linecap="round" style="animation:spark 1.4s ease-in-out infinite;"></path>
+          </svg>
+        </div>
+        <dc-import name="Ant" mood="march" hint-size="100%,100%"></dc-import>
+      </div>
+      <!-- reframed question -->
+      <div style="max-width:480px;flex:1 1 320px;animation:fadeIn .6s ease .3s both;">
+        <p style="font-family:'Shantell Sans';font-weight:500;font-size:clamp(15px,1.8vw,21px);color:#3a3f4a;line-height:1.5;margin:0 0 12px;">The teacher who tries a weird little protocol before anyone has named it. Who stops asking <em style="color:#1c2230;font-style:italic;">"Did you use it?"</em> and starts asking:</p>
+        <div style="background:#fffdf6;border:2px solid #1c2230;border-left:6px solid #e6b450;border-radius:10px;padding:14px 18px;box-shadow:3px 4px 0 rgba(28,34,48,.14);">
+          <div style="font-family:'Caveat';font-weight:700;font-size:clamp(20px,2.6vw,32px);color:#1c2230;line-height:1.15;">What did you delegate? What did you check? What can you explain without it?</div>
+        </div>
+      </div>
+    </div>
+
+    <div style="position:relative;flex:none;margin-top:2px;font-family:'Shantell Sans';font-weight:600;font-size:clamp(13px,1.6vw,19px);color:#2a3140;background:#fff;border:2px solid #1c2230;border-radius:16px;padding:8px 15px;box-shadow:3px 4px 0 rgba(28,34,48,.16);max-width:90%;text-align:center;animation:riseIn .5s ease .5s both;">"Could you not make this harder right now? We have testing next week."&nbsp; <span style="color:#9a7a3a;font-style:italic;">Also fair.</span></div>
+  </div>
+  </sc-if>
+
+  <!-- ===================== SCENE 8 — THE CAST (interactive) ===================== -->
+  <sc-if value="{{ s8 }}">
+  <div data-screen-label="08 The cast" style="position:absolute;inset:0;background:#F4EEDF;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:clamp(20px,3.2vw,42px) clamp(18px,3.5vw,52px) clamp(92px,14vh,116px);overflow:hidden;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:#e6b450;opacity:.55;"></div>
+    <div style="text-align:center;flex:none;animation:riseIn .55s ease both;">
+      <div style="font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.22em;color:#B07414;text-transform:uppercase;">Chapter 04</div>
+      <h2 style="font-family:'Caveat';font-weight:700;font-size:clamp(30px,4.8vw,58px);color:#1c2230;line-height:1.12;margin:2px 0 0;">The cast is already here.</h2>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(8px,1.4vw,16px);max-width:980px;margin-top:clamp(22px,4.5vh,38px);flex:none;">
+      <!-- colony -->
+      <div data-stop="" onclick="{{ open_colony }}" style="width:clamp(98px,12vw,142px);border:2px solid {{ bc_colony }};border-radius:14px;padding:8px 6px 6px;cursor:pointer;text-align:center;transition:all .2s ease;background:{{ bg_colony }};transform:{{ tr_colony }};box-shadow:{{ sh_colony }}">
+        <div style="height:clamp(54px,7vw,80px);"><dc-import name="Ant" mood="march" hint-size="100%,100%"></dc-import></div>
+        <div style="font-family:Inter;font-weight:700;font-size:clamp(10px,1.1vw,12px);color:#2a3140;letter-spacing:.02em;">The colony</div>
+      </div>
+      <!-- grasshoppers -->
+      <div data-stop="" onclick="{{ open_grass }}" style="width:clamp(98px,12vw,142px);border:2px solid {{ bc_grass }};border-radius:14px;padding:8px 6px 6px;cursor:pointer;text-align:center;transition:all .2s ease;background:{{ bg_grass }};transform:{{ tr_grass }};box-shadow:{{ sh_grass }}">
+        <div style="height:clamp(54px,7vw,80px);display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 120 90" width="78%" height="100%" style="overflow:visible;">
+            <ellipse cx="58" cy="50" rx="34" ry="15" fill="#8a9a4a" transform="rotate(-10 58 50)"></ellipse>
+            <circle cx="88" cy="38" r="13" fill="#9aab55"></circle><circle cx="93" cy="35" r="2.4" fill="#16181d"></circle>
+            <path d="M90 44 q5 3 10 1" stroke="#16181d" stroke-width="2" fill="none" stroke-linecap="round"></path>
+            <path d="M95 26 q12 -8 22 -4 M98 30 q11 -3 20 4" stroke="#6f7d39" stroke-width="2.2" fill="none" stroke-linecap="round"></path>
+            <path d="M44 58 L24 86 L52 74 M64 60 L74 88" stroke="#6f7d39" stroke-width="4.2" fill="none" stroke-linecap="round"></path>
+          </svg>
+        </div>
+        <div style="font-family:Inter;font-weight:700;font-size:clamp(10px,1.1vw,12px);color:#2a3140;">Grasshoppers</div>
+      </div>
+      <!-- flik -->
+      <div data-stop="" onclick="{{ open_flik }}" style="width:clamp(98px,12vw,142px);border:2px solid {{ bc_flik }};border-radius:14px;padding:8px 6px 6px;cursor:pointer;text-align:center;transition:all .2s ease;background:{{ bg_flik }};transform:{{ tr_flik }};box-shadow:{{ sh_flik }}">
+        <div style="height:clamp(54px,7vw,80px);position:relative;">
+          <div style="position:absolute;left:54%;top:-2px;width:24px;height:24px;"><svg viewBox="0 0 60 60" width="100%" height="100%"><circle cx="30" cy="28" r="15" fill="#ffd23f" stroke="#1c2230" stroke-width="2.5"></circle><rect x="24" y="41" width="12" height="8" rx="2" fill="#cbb27a" stroke="#1c2230" stroke-width="2"></rect></svg></div>
+          <dc-import name="Ant" mood="march" hint-size="100%,100%"></dc-import>
+        </div>
+        <div style="font-family:Inter;font-weight:700;font-size:clamp(10px,1.1vw,12px);color:#2a3140;">Flik</div>
+      </div>
+      <!-- dot -->
+      <div data-stop="" onclick="{{ open_dot }}" style="width:clamp(98px,12vw,142px);border:2px solid {{ bc_dot }};border-radius:14px;padding:8px 6px 6px;cursor:pointer;text-align:center;transition:all .2s ease;background:{{ bg_dot }};transform:{{ tr_dot }};box-shadow:{{ sh_dot }}">
+        <div style="height:clamp(54px,7vw,80px);display:flex;align-items:center;justify-content:center;"><div style="width:74%;"><dc-import name="Ant" mood="cheer" hint-size="100%,100%"></dc-import></div></div>
+        <div style="font-family:Inter;font-weight:700;font-size:clamp(10px,1.1vw,12px);color:#2a3140;">Dot</div>
+      </div>
+      <!-- circus bugs -->
+      <div data-stop="" onclick="{{ open_bugs }}" style="width:clamp(98px,12vw,142px);border:2px solid {{ bc_bugs }};border-radius:14px;padding:8px 6px 6px;cursor:pointer;text-align:center;transition:all .2s ease;background:{{ bg_bugs }};transform:{{ tr_bugs }};box-shadow:{{ sh_bugs }}">
+        <div style="height:clamp(54px,7vw,80px);display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 100 90" width="68%" height="100%" style="overflow:visible;">
+            <circle cx="50" cy="12" r="4" fill="#d68a18"></circle><path d="M50 16 L50 24" stroke="#1c2230" stroke-width="3"></path>
+            <path d="M14 82 L50 24 L86 82 Z" fill="#fffdf6" stroke="#1c2230" stroke-width="3"></path>
+            <path d="M50 24 L33 82 Z M50 24 L67 82 Z" fill="#e6b450" opacity=".75"></path>
+            <path d="M50 24 L33 82 M50 24 L67 82" stroke="#1c2230" stroke-width="2"></path>
+          </svg>
+        </div>
+        <div style="font-family:Inter;font-weight:700;font-size:clamp(10px,1.1vw,12px);color:#2a3140;">Circus bugs</div>
+      </div>
+      <!-- fake bird -->
+      <div data-stop="" onclick="{{ open_bird }}" style="width:clamp(98px,12vw,142px);border:2px solid {{ bc_bird }};border-radius:14px;padding:8px 6px 6px;cursor:pointer;text-align:center;transition:all .2s ease;background:{{ bg_bird }};transform:{{ tr_bird }};box-shadow:{{ sh_bird }}">
+        <div style="height:clamp(54px,7vw,80px);display:flex;align-items:center;justify-content:center;">
+          <svg viewBox="0 0 120 90" width="84%" height="100%" style="overflow:visible;">
+            <path d="M60 44 C34 22 18 28 10 44 C30 42 40 52 52 60 C42 60 36 66 34 74 C50 64 64 60 62 66 Z" fill="#26303f"></path>
+            <path d="M60 44 C86 22 102 28 110 44 C90 42 80 52 68 60 C78 60 84 66 86 74 C70 64 56 60 58 66 Z" fill="#26303f"></path>
+            <ellipse cx="60" cy="52" rx="11" ry="18" fill="#26303f"></ellipse>
+            <circle cx="60" cy="30" r="9" fill="#26303f"></circle>
+            <path d="M60 24 L60 17 L67 26 Z" fill="#e0a93b"></path>
+          </svg>
+        </div>
+        <div style="font-family:Inter;font-weight:700;font-size:clamp(10px,1.1vw,12px);color:#2a3140;">The fake bird</div>
+      </div>
+    </div>
+
+    <!-- description panel -->
+    <div style="margin-top:clamp(12px,2.4vh,26px);width:min(640px,92vw);min-height:96px;background:#fffdf6;border:2px solid #1c2230;border-radius:14px;padding:clamp(14px,2vw,20px) clamp(16px,2.4vw,24px);box-shadow:4px 5px 0 rgba(28,34,48,.12);text-align:center;flex:none;animation:riseIn .5s ease .2s both;">
+      <sc-if value="{{ castHasSel }}" hint-placeholder-val="{{ true }}">
+        <div style="font-family:'Caveat';font-weight:700;font-size:clamp(26px,3.2vw,40px);color:#1c2230;line-height:1.12;">{{ castName }}</div>
+      </sc-if>
+      <div style="font-family:'Shantell Sans';font-weight:500;font-size:clamp(14px,1.7vw,20px);color:#3a3f4a;line-height:1.45;margin-top:6px;">{{ castDesc }}</div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ===================== SCENE 9 — THE FAKE BIRD ===================== -->
+  <sc-if value="{{ s9 }}">
+  <div data-screen-label="09 The fake bird" style="position:absolute;inset:0;background:#F4EEDF;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:clamp(20px,3.2vw,42px) clamp(20px,4vw,60px) clamp(92px,14vh,116px);overflow:hidden;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:#e6b450;opacity:.55;"></div>
+    <div style="text-align:center;flex:none;animation:riseIn .55s ease both;">
+      <div style="font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.22em;color:#B07414;text-transform:uppercase;">Chapter 05</div>
+      <h2 style="font-family:'Caveat';font-weight:700;font-size:clamp(26px,4.2vw,52px);color:#1c2230;line-height:1.12;margin:2px 0 0;">Schools can build a fake bird.</h2>
+    </div>
+
+    <div style="position:relative;flex:1;min-height:0;width:100%;max-width:560px;display:flex;align-items:center;justify-content:center;">
+      <!-- STATE A: majestic -->
+      <sc-if value="{{ hideBird }}" hint-placeholder-val="{{ true }}">
+        <div style="position:relative;width:100%;display:flex;flex-direction:column;align-items:center;">
+          <div style="position:absolute;width:clamp(220px,30vw,360px);height:clamp(220px,30vw,360px);border-radius:50%;background:radial-gradient(circle, rgba(245,158,11,.4), transparent 66%);top:-6%;"></div>
+          <div style="position:relative;width:clamp(190px,26vw,300px);animation:birdBob 4s ease-in-out infinite;">
+            <svg viewBox="0 0 420 300" width="100%" height="auto" style="overflow:visible;filter:drop-shadow(0 12px 20px rgba(0,0,0,.22));">
+              <g fill="#222b3a">
+                <path d="M205 120 C120 60 60 70 28 110 C80 108 110 130 150 150 C120 150 100 168 96 188 C140 168 180 160 205 165 Z"></path>
+                <path d="M215 120 C300 60 360 70 392 110 C340 108 310 130 270 150 C300 150 320 168 324 188 C280 168 240 160 215 165 Z"></path>
+                <ellipse cx="210" cy="150" rx="34" ry="52"></ellipse>
+                <circle cx="210" cy="92" r="24"></circle>
+                <path d="M196 196 L172 282 L210 248 L248 282 L224 196 Z"></path>
+              </g>
+              <path d="M210 78 L210 62 L224 80 Z" fill="#e0a93b"></path>
+              <path d="M210 70 Q216 50 230 46 Q218 60 220 74" fill="#e0a93b"></path>
+              <circle cx="219" cy="88" r="3.4" fill="#fffdf6"></circle>
+            </svg>
+          </div>
+          <div style="position:relative;font-family:'Shantell Sans';font-weight:600;font-size:clamp(15px,1.9vw,22px);color:#3a3f4a;text-align:center;margin-top:6px;">From a distance, it looks like movement.</div>
+          <button data-stop="" onclick="{{ flipBird }}" style="margin-top:12px;border:2px solid #1c2230;background:#e6b450;color:#1c2230;font-family:Inter;font-weight:700;font-size:clamp(13px,1.5vw,16px);letter-spacing:.02em;border-radius:999px;padding:9px 22px;cursor:pointer;box-shadow:3px 4px 0 rgba(28,34,48,.2);">Look closer</button>
+        </div>
+      </sc-if>
+      <!-- STATE B: cardboard + string -->
+      <sc-if value="{{ revealBird }}">
+        <div style="position:relative;width:100%;display:flex;flex-direction:column;align-items:center;">
+          <div style="position:relative;width:clamp(200px,27vw,300px);animation:wobble 3s ease-in-out infinite;transform-origin:50% 0;">
+            <svg viewBox="0 0 420 340" width="100%" height="auto" style="overflow:visible;">
+              <!-- strings -->
+              <g stroke="#9c8a5e" stroke-width="1.6">
+                <path d="M150 150 L150 40"></path><path d="M210 96 L210 36"></path><path d="M270 150 L270 40"></path><path d="M224 200 L250 44"></path>
+              </g>
+              <!-- control bar -->
+              <rect x="116" y="30" width="188" height="10" rx="3" fill="#9c7b3e"></rect>
+              <rect x="205" y="12" width="10" height="22" rx="3" fill="#9c7b3e"></rect>
+              <!-- cardboard bird -->
+              <g fill="#cda572" stroke="#9c7b3e" stroke-width="2.4">
+                <path d="M205 160 C120 100 60 110 28 150 C80 148 110 170 150 190 C120 190 100 208 96 228 C140 208 180 200 205 205 Z"></path>
+                <path d="M215 160 C300 100 360 110 392 150 C340 148 310 170 270 190 C300 190 320 208 324 228 C280 208 240 200 215 205 Z"></path>
+                <ellipse cx="210" cy="190" rx="34" ry="50"></ellipse>
+                <circle cx="210" cy="132" r="22"></circle>
+                <path d="M196 234 L172 318 L210 286 L248 318 L224 234 Z"></path>
+              </g>
+              <!-- corrugation seams -->
+              <g stroke="#a9885078" stroke-width="1.4" fill="none">
+                <path d="M150 175 q40 8 80 0 M150 200 q40 8 80 0"></path>
+                <path d="M70 150 l50 26 M330 150 l-50 26"></path>
+              </g>
+              <!-- tape -->
+              <rect x="188" y="150" width="44" height="16" rx="2" fill="rgba(236,222,170,.7)" stroke="#b09a5e" stroke-width="1" transform="rotate(-8 210 158)"></rect>
+              <rect x="120" y="186" width="38" height="14" rx="2" fill="rgba(236,222,170,.7)" stroke="#b09a5e" stroke-width="1" transform="rotate(6 139 193)"></rect>
+              <!-- grasshopper puppeteer -->
+              <g transform="translate(286 -8) scale(.62)">
+                <ellipse cx="58" cy="50" rx="32" ry="14" fill="#8a9a4a" transform="rotate(-12 58 50)"></ellipse>
+                <circle cx="86" cy="38" r="12" fill="#9aab55"></circle><circle cx="91" cy="35" r="2.2" fill="#16181d"></circle>
+                <path d="M93 26 q11 -8 20 -4 M96 30 q10 -3 18 4" stroke="#6f7d39" stroke-width="2.2" fill="none" stroke-linecap="round"></path>
+                <path d="M44 56 L26 84 L50 74 M40 50 Q20 36 -6 46" stroke="#6f7d39" stroke-width="4" fill="none" stroke-linecap="round"></path>
+              </g>
+            </svg>
+          </div>
+          <div style="position:relative;font-family:'Shantell Sans';font-weight:600;font-size:clamp(15px,1.9vw,22px);color:#1c2230;text-align:center;margin-top:4px;">Up close, it is cardboard and string.</div>
+          <button data-stop="" onclick="{{ flipBird }}" style="margin-top:10px;border:2px solid #1c2230;background:#fffdf6;color:#1c2230;font-family:Inter;font-weight:700;font-size:clamp(13px,1.5vw,16px);border-radius:999px;padding:8px 20px;cursor:pointer;box-shadow:3px 4px 0 rgba(28,34,48,.16);">Back</button>
+        </div>
+      </sc-if>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ===================== SCENE 10 — THE HARVEST ===================== -->
+  <sc-if value="{{ s10 }}">
+  <div data-screen-label="10 The harvest" style="position:absolute;inset:0;background:#F4EEDF;display:flex;flex-direction:row;align-items:center;justify-content:center;gap:clamp(18px,3.5vw,60px);padding:clamp(22px,3.6vw,46px) clamp(24px,5vw,70px) clamp(94px,14vh,116px);overflow:hidden;flex-wrap:wrap;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:#e6b450;opacity:.55;"></div>
+    <div style="max-width:480px;flex:1 1 320px;animation:riseIn .55s ease both;">
+      <div style="font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.22em;color:#B07414;text-transform:uppercase;">Chapter 06</div>
+      <h2 style="font-family:'Caveat';font-weight:700;font-size:clamp(30px,4.8vw,58px);color:#1c2230;line-height:1.12;margin:2px 0 12px;">The harvest is durable human capability.</h2>
+      <div style="display:flex;flex-wrap:wrap;gap:7px;margin-bottom:14px;">
+        <sc-for list="{{ notHarvest }}" as="n" hint-placeholder-count="3">
+          <span style="font-family:'Shantell Sans';font-weight:500;font-size:clamp(12px,1.4vw,16px);color:#9a8e78;background:rgba(28,34,48,.05);border:1.5px dashed rgba(28,34,48,.3);border-radius:999px;padding:4px 12px;text-decoration:line-through;text-decoration-color:#c0392b;animation:popIn .4s ease both;animation-delay:{{ n.delay }};">{{ n.t }}</span>
+        </sc-for>
+      </div>
+      <p style="font-family:'Shantell Sans';font-weight:600;font-size:clamp(15px,1.85vw,22px);color:#1c2230;line-height:1.45;margin:0;animation:fadeIn .6s ease .5s both;">The harvest is what the student can still do. Can they explain it? Check it? Rebuild it? Use the tool without disappearing inside it?</p>
+    </div>
+    <div style="position:relative;width:clamp(180px,22vw,280px);height:clamp(240px,40vh,380px);flex:0 0 auto;display:flex;align-items:flex-end;justify-content:center;">
+      <div style="position:absolute;width:clamp(200px,26vw,320px);height:clamp(200px,26vw,320px);border-radius:50%;background:radial-gradient(circle, rgba(245,158,11,.34), transparent 64%);top:6%;"></div>
+      <!-- glowing wheat sheaf -->
+      <div style="position:relative;width:clamp(120px,15vw,190px);animation:floatBob 4.4s ease-in-out infinite;">
+        <svg viewBox="0 0 200 280" width="100%" height="auto" style="overflow:visible;filter:drop-shadow(0 10px 16px rgba(176,116,20,.3));">
+          <g stroke="#b9831f" stroke-width="3" fill="none" stroke-linecap="round">
+            <path d="M100 270 C60 200 50 140 70 70"></path>
+            <path d="M100 270 C100 200 100 140 100 60"></path>
+            <path d="M100 270 C140 200 150 140 130 70"></path>
+            <path d="M100 270 C40 210 30 170 44 110"></path>
+            <path d="M100 270 C160 210 170 170 156 110"></path>
+          </g>
+          <g fill="#e0a93b" stroke="#b9831f" stroke-width="2">
+            <ellipse cx="70" cy="58" rx="11" ry="22" transform="rotate(-14 70 58)"></ellipse>
+            <ellipse cx="100" cy="48" rx="11" ry="24"></ellipse>
+            <ellipse cx="130" cy="58" rx="11" ry="22" transform="rotate(14 130 58)"></ellipse>
+            <ellipse cx="44" cy="98" rx="10" ry="20" transform="rotate(-26 44 98)"></ellipse>
+            <ellipse cx="156" cy="98" rx="10" ry="20" transform="rotate(26 156 98)"></ellipse>
+          </g>
+          <path d="M70 196 q30 14 60 0" stroke="#9c6f1a" stroke-width="6" fill="none" stroke-linecap="round"></path>
+        </svg>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ===================== SCENE 11 — THE COLONY REMEMBERS ITS LEGS ===================== -->
+  <sc-if value="{{ s11 }}">
+  <div data-screen-label="11 Remembers its legs" style="position:absolute;inset:0;background:#F4EEDF;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:clamp(20px,3.4vw,44px) clamp(20px,4vw,60px) clamp(92px,14vh,116px);overflow:hidden;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:#e6b450;opacity:.55;"></div>
+    <div style="text-align:center;flex:none;animation:riseIn .55s ease both;max-width:760px;">
+      <div style="font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.22em;color:#B07414;text-transform:uppercase;">Chapter 07</div>
+      <h2 style="font-family:'Caveat';font-weight:700;font-size:clamp(30px,4.8vw,58px);color:#1c2230;line-height:1.12;margin:2px 0 6px;">Then the colony remembers it has legs.</h2>
+      <p style="font-family:'Shantell Sans';font-weight:500;font-size:clamp(14px,1.7vw,20px);color:#3a3f4a;line-height:1.45;margin:0;">The grasshoppers only have power because the ants believe they have no choice.</p>
+    </div>
+
+    <div style="position:relative;flex:1;min-height:0;width:100%;max-width:820px;display:flex;align-items:flex-end;justify-content:center;gap:clamp(2px,1vw,16px);padding-bottom:6px;">
+      <!-- fleeing grasshopper -->
+      <div style="position:absolute;right:2%;top:6%;width:clamp(70px,9vw,110px);transform:scaleX(-1);animation:floatBob 2.2s ease-in-out infinite;opacity:.8;">
+        <svg viewBox="0 0 120 90" width="100%" height="auto" style="overflow:visible;">
+          <ellipse cx="58" cy="50" rx="32" ry="14" fill="#8a9a4a" transform="rotate(-14 58 50)"></ellipse>
+          <circle cx="86" cy="36" r="12" fill="#9aab55"></circle><circle cx="91" cy="33" r="2.2" fill="#16181d"></circle>
+          <path d="M93 26 q11 -8 20 -4" stroke="#6f7d39" stroke-width="2.2" fill="none" stroke-linecap="round"></path>
+          <path d="M44 56 L24 84 L50 74 M64 58 L74 86" stroke="#6f7d39" stroke-width="4.2" fill="none" stroke-linecap="round"></path>
+        </svg>
+      </div>
+      <!-- standing ant crowd -->
+      <div style="width:clamp(88px,11vw,140px);animation:standUp .55s ease .1s both;"><dc-import name="Ant" mood="cheer" hint-size="100%,100%"></dc-import></div>
+      <div style="width:clamp(96px,12vw,152px);animation:standUp .55s ease .22s both;"><dc-import name="Ant" mood="cheer" hint-size="100%,100%"></dc-import></div>
+      <div style="width:clamp(104px,13vw,166px);animation:standUp .55s ease 0s both;"><dc-import name="Ant" mood="cheer" hint-size="100%,100%"></dc-import></div>
+      <div style="width:clamp(96px,12vw,152px);animation:standUp .55s ease .28s both;"><dc-import name="Ant" mood="cheer" hint-size="100%,100%"></dc-import></div>
+      <div style="width:clamp(88px,11vw,140px);animation:standUp .55s ease .16s both;"><dc-import name="Ant" mood="cheer" hint-size="100%,100%"></dc-import></div>
+    </div>
+
+    <div style="flex:none;font-family:'Caveat';font-weight:700;font-size:clamp(24px,3.4vw,44px);color:#1c2230;text-align:center;margin-top:2px;animation:fadeIn .6s ease .6s both;">The move is not panic. The move is agency.</div>
+  </div>
+  </sc-if>
+
+  <!-- ===================== SCENE 12 — THE SMALL BIRD CHECK (interactive) ===================== -->
+  <sc-if value="{{ s12 }}">
+  <div data-screen-label="12 Small Bird Check" style="position:absolute;inset:0;background:#F4EEDF;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:clamp(18px,3vw,40px) clamp(20px,4vw,60px) clamp(90px,14vh,112px);overflow:hidden;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:#e6b450;opacity:.55;"></div>
+    <div style="text-align:center;flex:none;animation:riseIn .55s ease both;">
+      <div style="font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.22em;color:#B07414;text-transform:uppercase;">Chapter 08 · Try this week</div>
+      <h2 style="font-family:'Caveat';font-weight:700;font-size:clamp(30px,4.8vw,58px);color:#1c2230;line-height:1.12;margin:2px 0 0;">The Small Bird Check</h2>
+      <p style="font-family:'Shantell Sans';font-weight:500;font-size:clamp(13px,1.6vw,18px);color:#3a3f4a;margin:4px 0 0;">One small move that makes the learning visible. Tap each card.</p>
+    </div>
+
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:clamp(10px,1.6vw,18px);width:min(700px,94vw);margin-top:clamp(12px,2.4vh,24px);flex:none;">
+      <!-- card 1 -->
+      <div data-stop="" onclick="{{ flipQ1 }}" style="perspective:1100px;cursor:pointer;height:clamp(104px,16vh,148px);">
+        <div style="position:relative;width:100%;height:100%;transition:transform .55s cubic-bezier(.4,.15,.2,1);transform-style:preserve-3d;{{ q1Style }}">
+          <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fffdf6;border:2px solid #1c2230;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:3px 4px 0 rgba(28,34,48,.14);">
+            <div style="font-family:'Caveat';font-weight:700;font-size:26px;color:#d68a18;line-height:1;">1</div>
+            <div style="font-family:'Shantell Sans';font-weight:600;font-size:clamp(14px,1.7vw,19px);color:#1c2230;line-height:1.25;">What part of this task did AI help with?</div>
+            <div style="font-family:Inter;font-weight:600;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9a8e78;">Tap to flip</div>
+          </div>
+          <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);background:#1c2230;border-radius:14px;padding:14px 18px;display:flex;align-items:center;justify-content:center;text-align:center;">
+            <div style="font-family:'Caveat';font-weight:700;font-size:clamp(19px,2.4vw,28px);color:#e6b450;line-height:1.1;">Name the assist. Honesty beats hiding it.</div>
+          </div>
+        </div>
+      </div>
+      <!-- card 2 -->
+      <div data-stop="" onclick="{{ flipQ2 }}" style="perspective:1100px;cursor:pointer;height:clamp(104px,16vh,148px);">
+        <div style="position:relative;width:100%;height:100%;transition:transform .55s cubic-bezier(.4,.15,.2,1);transform-style:preserve-3d;{{ q2Style }}">
+          <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fffdf6;border:2px solid #1c2230;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:3px 4px 0 rgba(28,34,48,.14);">
+            <div style="font-family:'Caveat';font-weight:700;font-size:26px;color:#d68a18;line-height:1;">2</div>
+            <div style="font-family:'Shantell Sans';font-weight:600;font-size:clamp(14px,1.7vw,19px);color:#1c2230;line-height:1.25;">What part did you keep as your own thinking?</div>
+            <div style="font-family:Inter;font-weight:600;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9a8e78;">Tap to flip</div>
+          </div>
+          <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);background:#1c2230;border-radius:14px;padding:14px 18px;display:flex;align-items:center;justify-content:center;text-align:center;">
+            <div style="font-family:'Caveat';font-weight:700;font-size:clamp(19px,2.4vw,28px);color:#e6b450;line-height:1.1;">Protect the thinking. That is the part that grows.</div>
+          </div>
+        </div>
+      </div>
+      <!-- card 3 -->
+      <div data-stop="" onclick="{{ flipQ3 }}" style="perspective:1100px;cursor:pointer;height:clamp(104px,16vh,148px);">
+        <div style="position:relative;width:100%;height:100%;transition:transform .55s cubic-bezier(.4,.15,.2,1);transform-style:preserve-3d;{{ q3Style }}">
+          <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fffdf6;border:2px solid #1c2230;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:3px 4px 0 rgba(28,34,48,.14);">
+            <div style="font-family:'Caveat';font-weight:700;font-size:26px;color:#d68a18;line-height:1;">3</div>
+            <div style="font-family:'Shantell Sans';font-weight:600;font-size:clamp(14px,1.7vw,19px);color:#1c2230;line-height:1.25;">What did you verify or correct?</div>
+            <div style="font-family:Inter;font-weight:600;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9a8e78;">Tap to flip</div>
+          </div>
+          <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);background:#1c2230;border-radius:14px;padding:14px 18px;display:flex;align-items:center;justify-content:center;text-align:center;">
+            <div style="font-family:'Caveat';font-weight:700;font-size:clamp(19px,2.4vw,28px);color:#e6b450;line-height:1.1;">Checking is a skill. Reward it out loud.</div>
+          </div>
+        </div>
+      </div>
+      <!-- card 4 -->
+      <div data-stop="" onclick="{{ flipQ4 }}" style="perspective:1100px;cursor:pointer;height:clamp(104px,16vh,148px);">
+        <div style="position:relative;width:100%;height:100%;transition:transform .55s cubic-bezier(.4,.15,.2,1);transform-style:preserve-3d;{{ q4Style }}">
+          <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;background:#fffdf6;border:2px solid #1c2230;border-radius:14px;padding:14px 16px;display:flex;flex-direction:column;justify-content:space-between;box-shadow:3px 4px 0 rgba(28,34,48,.14);">
+            <div style="font-family:'Caveat';font-weight:700;font-size:26px;color:#d68a18;line-height:1;">4</div>
+            <div style="font-family:'Shantell Sans';font-weight:600;font-size:clamp(14px,1.7vw,19px);color:#1c2230;line-height:1.25;">Show me one thing you can now do without AI.</div>
+            <div style="font-family:Inter;font-weight:600;font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:#9a8e78;">Tap to flip</div>
+          </div>
+          <div style="position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;transform:rotateY(180deg);background:#1c2230;border-radius:14px;padding:14px 18px;display:flex;align-items:center;justify-content:center;text-align:center;">
+            <div style="font-family:'Caveat';font-weight:700;font-size:clamp(19px,2.4vw,28px);color:#e6b450;line-height:1.1;">Capability is the harvest. Prove it.</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ===================== SCENE 13 — PROTECT THE HARVEST ===================== -->
+  <sc-if value="{{ s13 }}">
+  <div data-screen-label="13 Protect the harvest" style="position:absolute;inset:0;background:#F4EEDF;display:flex;flex-direction:column;align-items:center;justify-content:flex-start;padding:clamp(20px,3.4vw,44px) clamp(20px,4vw,60px) clamp(92px,14vh,116px);overflow:hidden;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;left:0;top:0;bottom:0;width:6px;background:#e6b450;opacity:.55;"></div>
+    <div style="text-align:center;flex:none;animation:riseIn .55s ease both;">
+      <div style="font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.22em;color:#B07414;text-transform:uppercase;">Chapter 09 · The adult move</div>
+      <h2 style="font-family:'Caveat';font-weight:700;font-size:clamp(30px,4.8vw,58px);color:#1c2230;line-height:1.12;margin:2px 0 0;">Protect the harvest.</h2>
+    </div>
+
+    <div style="display:flex;flex-wrap:wrap;justify-content:center;gap:clamp(8px,1.4vw,14px);max-width:840px;margin-top:clamp(22px,4.5vh,36px);flex:none;">
+      <sc-for list="{{ gives }}" as="g" hint-placeholder-count="4">
+        <div style="font-family:'Shantell Sans';font-weight:600;font-size:clamp(13px,1.5vw,18px);color:#2a3140;background:#fffdf6;border:1.5px solid rgba(28,34,48,.4);border-radius:10px;padding:9px 15px;box-shadow:2px 3px 0 rgba(28,34,48,.1);animation:popIn .4s ease both;animation-delay:{{ g.delay }};">{{ g.t }}</div>
+      </sc-for>
+    </div>
+
+    <div style="position:relative;width:min(720px,94vw);margin-top:clamp(14px,2.6vh,26px);background:#fffdf6;border:2.5px solid #1c2230;border-left:8px solid #e6b450;border-radius:14px;padding:clamp(18px,2.6vw,28px) clamp(20px,3vw,34px);box-shadow:5px 6px 0 rgba(28,34,48,.12);flex:none;animation:riseIn .55s ease .35s both;">
+      <div style="font-family:Inter;font-weight:700;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:#B07414;margin-bottom:6px;">A better question than "are we allowing AI?"</div>
+      <div style="font-family:'Caveat';font-weight:700;font-size:clamp(24px,3.4vw,42px);color:#1c2230;line-height:1.16;">Where is AI helping students become more capable, and where is it quietly carrying the thing they were supposed to learn?</div>
+    </div>
+
+    <div style="position:absolute;right:clamp(14px,4vw,60px);bottom:clamp(14px,5vh,58px);width:clamp(72px,9vw,112px);height:clamp(72px,9vw,112px);animation:floatBob 4.8s ease-in-out infinite;">
+      <dc-import name="Enso" mood="serene" hint-size="100%,100%"></dc-import>
+    </div>
+  </div>
+  </sc-if>
+
+  <!-- ===================== SCENE 14 — REPLY + SIGN-OFF ===================== -->
+  <sc-if value="{{ s14 }}">
+  <div data-screen-label="14 Reply and sign-off" style="position:absolute;inset:0;background:#0B1020;display:flex;flex-direction:column;align-items:center;justify-content:center;padding:clamp(24px,4vw,56px) clamp(20px,4vw,60px) clamp(86px,13vh,108px);overflow:hidden;animation:sceneIn .6s ease both;">
+    <div style="position:absolute;top:0;left:0;right:0;height:42%;background:linear-gradient(160deg, rgba(245,158,11,0.12), transparent 62%);pointer-events:none;"></div>
+    <div style="position:relative;width:min(680px,94vw);text-align:center;">
+      <div style="font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.22em;color:#F59E0B;text-transform:uppercase;animation:fadeIn .6s ease both;">The reply question</div>
+      <h2 style="font-family:'Caveat';font-weight:700;font-size:clamp(30px,5vw,62px);color:#F5F7FA;line-height:1.12;margin:8px 0 0;animation:riseIn .6s ease .1s both;">What is one fake bird you are seeing right now?</h2>
+      <p style="font-family:'Shantell Sans';font-weight:500;font-size:clamp(15px,1.9vw,22px);color:#AAB4C0;line-height:1.5;margin:14px auto 0;max-width:540px;animation:fadeIn .7s ease .25s both;">Something that looks impressive from a distance but may not actually build student capability. Hit reply with the example. No names needed. The pattern is the point.</p>
+      <div style="width:120px;height:1px;background:rgba(245,247,250,.18);margin:clamp(20px,3.4vh,32px) auto;animation:fadeIn .8s ease .4s both;"></div>
+      <div style="font-family:'Shantell Sans';font-weight:500;font-size:clamp(15px,1.9vw,21px);color:#AAB4C0;animation:fadeIn .8s ease .45s both;">See you in the field,</div>
+      <div style="font-family:'Caveat';font-weight:700;font-size:clamp(40px,6vw,76px);color:#F59E0B;line-height:.9;margin-top:2px;animation:riseIn .6s ease .5s both;">Jason</div>
+      <div style="font-family:Inter;font-weight:500;font-size:clamp(11px,1.3vw,14px);color:#6B7280;letter-spacing:.04em;margin-top:14px;animation:fadeIn .9s ease .6s both;">Teacher Tuesday: bring one real classroom task. We will keep turning panic into practice.</div>
+    </div>
+    <div style="position:absolute;left:clamp(18px,6vw,90px);bottom:7vh;width:clamp(86px,11vw,140px);height:clamp(86px,11vw,140px);animation:floatBob 5s ease-in-out infinite;">
+      <dc-import name="Enso" mood="wink" ink="#F5F7FA" hint-size="100%,100%"></dc-import>
+    </div>
+    <div style="position:absolute;right:clamp(18px,6vw,90px);bottom:8vh;font-family:'Caveat';font-size:clamp(20px,2.4vw,30px);color:#F59E0B;transform:rotate(4deg);animation:fadeIn 1s ease .7s both;">No. 005</div>
+  </div>
+  </sc-if>
+
+  <!-- ===================== NAV ===================== -->
+  <div data-stop="" onclick="{{ stop }}" style="position:fixed;left:50%;bottom:clamp(14px,2.6vh,26px);transform:translateX(-50%);display:flex;align-items:center;gap:14px;background:rgba(26,32,48,.9);border:1px solid rgba(245,158,11,.32);border-radius:999px;padding:8px 12px;box-shadow:0 12px 34px rgba(0,0,0,.34);backdrop-filter:blur(8px);z-index:40;cursor:default;">
+    <button onclick="{{ prev }}" style="border:none;background:transparent;color:#F5F7FA;font-family:Inter;font-size:20px;font-weight:600;cursor:pointer;width:30px;height:30px;border-radius:50%;line-height:1;">‹</button>
+    <div style="display:flex;align-items:center;gap:6px;">
+      <sc-for list="{{ dots }}" as="d" hint-placeholder-count="15">
+        <span onclick="{{ d.onClick }}" style="{{ d.style }}"></span>
+      </sc-for>
+    </div>
+    <span style="font-family:Inter;font-weight:600;font-size:12px;color:#AAB4C0;letter-spacing:.06em;min-width:54px;text-align:center;">{{ sceneNum }} / {{ totalStr }}</span>
+    <button onclick="{{ next }}" style="border:none;background:transparent;color:#F5F7FA;font-family:Inter;font-size:20px;font-weight:600;cursor:pointer;width:30px;height:30px;border-radius:50%;line-height:1;">›</button>
+  </div>
+
+  <sc-if value="{{ showHint }}">
+    <div style="position:fixed;right:clamp(16px,3vw,40px);bottom:clamp(60px,9vh,90px);font-family:Inter;font-weight:600;font-size:12px;letter-spacing:.12em;text-transform:uppercase;color:{{ hintColor }};z-index:40;animation:hintPulse 1.8s ease-in-out infinite;pointer-events:none;">tap to continue ›</div>
+  </sc-if>
+
+</div>
+
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{}">
+class Component extends DCLogic {
+  constructor(props){ super(props); this.state = { active: 0, flips: {}, cast: null }; this.TOTAL = 15; this.KEY = 'sout_fieldnotes_i5_scene'; }
+  componentDidMount(){
+    try { const v = parseInt(localStorage.getItem(this.KEY)); if(!isNaN(v) && v>=0 && v<this.TOTAL) this.setState({ active: v }); } catch(e){}
+    this._kb = (e)=>{
+      if(e.key==='ArrowRight'||e.key==='PageDown'){ this.next(); }
+      else if(e.key==='ArrowLeft'||e.key==='PageUp'){ this.prev(); }
+      else if(e.key===' '){ e.preventDefault(); this.next(); }
+    };
+    window.addEventListener('keydown', this._kb);
+  }
+  componentWillUnmount(){ if(this._kb) window.removeEventListener('keydown', this._kb); }
+  persist(n){ try { localStorage.setItem(this.KEY, String(n)); } catch(e){} }
+  go(n){ const a = Math.max(0, Math.min(this.TOTAL-1, n)); this.persist(a); this.setState({ active: a, cast: null }); }
+  next(){ this.setState(st => { const a = Math.min(this.TOTAL-1, st.active + 1); this.persist(a); return { active: a, cast: null }; }); }
+  prev(){ this.setState(st => { const a = Math.max(0, st.active - 1); this.persist(a); return { active: a, cast: null }; }); }
+  renderVals(){
+    const a = this.state.active;
+    const out = {};
+    for(let i=0;i<this.TOTAL;i++) out['s'+i] = (a===i);
+    const chapInfo = [
+      ['01','The grasshopper speech',2],
+      ['02','AI is the weather, not the villain',4],
+      ['03','The colony is school',5],
+      ['04','Meet Flik, and the cast',7],
+      ['05','The fake bird',9],
+      ['06','The harvest',10],
+      ['07','The colony remembers its legs',11],
+      ['08','The Small Bird Check',12],
+      ['09','Protect the harvest',13],
+    ];
+    const chapters = chapInfo.map((c,idx)=>({ n:c[0], t:c[1], delay:(0.12+idx*0.07).toFixed(2)+'s', onClick:(e)=>{ if(e&&e.stopPropagation)e.stopPropagation(); this.go(c[2]); } }));
+    const dots = [];
+    for(let i=0;i<this.TOTAL;i++){
+      const on = i===a;
+      dots.push({ i, onClick:(e)=>{ if(e&&e.stopPropagation)e.stopPropagation(); this.go(i); },
+        style:`display:inline-block;width:${on?'22px':'8px'};height:8px;border-radius:999px;background:${on?'#F59E0B':'rgba(245,247,250,.32)'};transition:all .25s ease;cursor:pointer;` });
+    }
+    const grainWords = ['Lesson plans','IEP meetings','The parent email','Attendance','The kid who hasn\u2019t eaten','Curriculum maps','The Chromebook cart','Fire drills','New district guidance'];
+    const grainList = grainWords.map((t,i)=>({ t, delay:(0.15+i*0.08).toFixed(2)+'s' }));
+    const pressureWords = ['Vendors','Headlines','Board anxiety','Parent panic','One more webinar','One more platform'];
+    const pressureList = pressureWords.map((t,i)=>({ t, delay:(0.5+i*0.09).toFixed(2)+'s' }));
+    const tributeWords = ['New forms.','New committees.','New syllabus statements.','New tool-approval steps.','New \u201clet\u2019s talk about AI\u201d meetings.'];
+    const tributeList = tributeWords.map((t,i)=>({ t, delay:(0.2+i*0.1).toFixed(2)+'s' }));
+    const notHarvest = ['A clean essay.','A correct answer.','A slide deck with nice icons.'].map((t,i)=>({ t, delay:(0.2+i*0.12).toFixed(2)+'s' }));
+    const gives = ['Give teachers time to test small routines.','Give students clear boundaries.','Give families honest language.','Give boards a better question.'].map((t,i)=>({ t, delay:(0.15+i*0.1).toFixed(2)+'s' }));
+    const flips = this.state.flips;
+    const mkFlip = (id)=>(e)=>{ if(e&&e.stopPropagation)e.stopPropagation(); this.setState(st=>({ flips: { ...st.flips, [id]: !st.flips[id] } })); };
+    const castData = {
+      colony: { n:'The colony', d:'The school system. Moving fast, carrying too much, running on routines built for survival.' },
+      grass:  { n:'The grasshoppers', d:'The pressure system around AI: fear, hype, vendors, headlines, urgency, and impossible expectations.' },
+      flik:   { n:'Flik', d:'The teacher trying a small classroom invention because the old way is not quite enough anymore.' },
+      dot:    { n:'Dot', d:'The student who notices possibility before the adults have language for it.' },
+      bugs:   { n:'The circus bugs', d:'The early AI tools: impressive, weird, uneven, occasionally useful, and not always what the poster promised.' },
+      bird:   { n:'The fake bird', d:'The shiny AI initiative that looks powerful from a distance but has no durable student capability underneath.' },
+    };
+    const sel = this.state.cast;
+    const castIds = Object.keys(castData);
+    const castTiles = {}; const castOpen = {};
+    castIds.forEach(id => {
+      const on = sel===id;
+      castTiles['bg_'+id] = on ? '#fff7e6' : '#fffdf6';
+      castTiles['bc_'+id] = on ? '#d68a18' : 'rgba(28,34,48,.28)';
+      castTiles['tr_'+id] = on ? 'translateY(-5px)' : 'translateY(0)';
+      castTiles['sh_'+id] = on ? '0 9px 0 rgba(214,138,24,.2)' : '3px 4px 0 rgba(28,34,48,.1)';
+      castOpen['open_'+id] = (e)=>{ if(e&&e.stopPropagation)e.stopPropagation(); this.setState(st=>({ cast: st.cast===id?null:id })); };
+    });
+    const mkCast = (id)=>(e)=>{ if(e&&e.stopPropagation)e.stopPropagation(); this.setState(st=>({ cast: st.cast===id?null:id })); };
+    return Object.assign(out, {
+      active: a, total: this.TOTAL,
+      sceneNum: String(a+1).padStart(2,'0'),
+      totalStr: String(this.TOTAL).padStart(2,'0'),
+      stageClick: (e)=>{ try { if (e && e.target && e.target.closest && e.target.closest('[data-stop]')) return; } catch(_){} this.next(); },
+      stop: (e)=>{ if(e&&e.stopPropagation) e.stopPropagation(); },
+      next: (e)=>{ if(e&&e.stopPropagation)e.stopPropagation(); this.next(); },
+      prev: (e)=>{ if(e&&e.stopPropagation)e.stopPropagation(); this.prev(); },
+      dots, chapters, grainList, pressureList, tributeList, notHarvest, gives,
+      showHint: a < this.TOTAL-1,
+      hintColor: (a===0 || a===this.TOTAL-1) ? '#AAB4C0' : '#9a7a3a',
+      flipBird: mkFlip('bird'), revealBird: !!flips.bird, hideBird: !flips.bird,
+      flipQ1: mkFlip('q1'), flipQ2: mkFlip('q2'), flipQ3: mkFlip('q3'), flipQ4: mkFlip('q4'),
+      q1Style: flips.q1 ? 'transform:rotateY(180deg);' : '',
+      q2Style: flips.q2 ? 'transform:rotateY(180deg);' : '',
+      q3Style: flips.q3 ? 'transform:rotateY(180deg);' : '',
+      q4Style: flips.q4 ? 'transform:rotateY(180deg);' : '',
+      cast: sel,
+      castHasSel: !!sel,
+      castName: sel ? castData[sel].n : '',
+      castDesc: sel ? castData[sel].d : 'Tap a character to meet them.',
+      ...castTiles, ...castOpen,
+    });
+  }
+}
+</script>
+
+
+</body></html>

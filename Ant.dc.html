@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+</head>
+<body>
+<x-dc>
+  <div style="width:100%;height:100%;display:flex;align-items:center;justify-content:center;">
+    <svg viewBox="0 0 180 110" role="img" aria-label="Field Notes ant" style="width:100%;height:100%;display:block;overflow:visible;">
+      <g fill="none" stroke="{{ leg }}" stroke-width="5" stroke-linecap="round" stroke-linejoin="round">
+        <path d="M72 67 C54 78 43 91 31 101"></path>
+        <path d="M82 70 C74 88 69 96 62 106"></path>
+        <path d="M102 69 C112 86 118 96 126 106"></path>
+        <path d="M113 65 C132 75 144 88 154 101"></path>
+        <path d="M76 50 C58 42 45 34 34 24"></path>
+        <path d="M112 48 C130 39 143 30 154 19"></path>
+      </g>
+      <ellipse cx="118" cy="56" rx="37" ry="27" fill="{{ shell }}" stroke="{{ outline }}" stroke-width="5"></ellipse>
+      <ellipse cx="76" cy="57" rx="31" ry="24" fill="{{ body }}" stroke="{{ outline }}" stroke-width="5"></ellipse>
+      <circle cx="43" cy="54" r="24" fill="{{ head }}" stroke="{{ outline }}" stroke-width="5"></circle>
+      <path d="M33 31 C25 17 14 13 6 10" fill="none" stroke="{{ outline }}" stroke-width="4.5" stroke-linecap="round"></path>
+      <path d="M48 30 C51 15 61 8 70 5" fill="none" stroke="{{ outline }}" stroke-width="4.5" stroke-linecap="round"></path>
+      <circle cx="6" cy="10" r="4.5" fill="{{ accent }}"></circle>
+      <circle cx="70" cy="5" r="4.5" fill="{{ accent }}"></circle>
+      <circle cx="34" cy="50" r="4" fill="#F5F7FA"></circle>
+      <circle cx="52" cy="50" r="4" fill="#F5F7FA"></circle>
+      <circle cx="35" cy="51" r="2" fill="{{ outline }}"></circle>
+      <circle cx="53" cy="51" r="2" fill="{{ outline }}"></circle>
+      <sc-if value="{{ tired }}">
+        <path d="M31 44 L40 48" stroke="{{ outline }}" stroke-width="3.8" stroke-linecap="round"></path>
+        <path d="M49 48 L58 44" stroke="{{ outline }}" stroke-width="3.8" stroke-linecap="round"></path>
+        <path d="M34 67 C39 63 47 63 53 67" fill="none" stroke="{{ outline }}" stroke-width="4" stroke-linecap="round"></path>
+        <path d="M128 28 C142 21 154 20 166 26" fill="none" stroke="{{ accent }}" stroke-width="4" stroke-linecap="round" opacity=".62"></path>
+      </sc-if>
+      <sc-if value="{{ cheerful }}">
+        <path d="M34 64 C40 72 50 72 57 64" fill="none" stroke="{{ outline }}" stroke-width="4" stroke-linecap="round"></path>
+        <path d="M139 34 L158 19" stroke="{{ accent }}" stroke-width="5" stroke-linecap="round"></path>
+        <path d="M146 36 L169 31" stroke="{{ accent }}" stroke-width="5" stroke-linecap="round"></path>
+      </sc-if>
+      <sc-if value="{{ marching }}">
+        <path d="M34 64 C40 69 49 69 56 64" fill="none" stroke="{{ outline }}" stroke-width="4" stroke-linecap="round"></path>
+        <path d="M120 28 C132 22 143 20 154 22" fill="none" stroke="{{ accent }}" stroke-width="4" stroke-linecap="round" opacity=".56"></path>
+      </sc-if>
+    </svg>
+  </div>
+</x-dc>
+<script type="text/x-dc" data-dc-script="" data-props="{}">
+class Component extends DCLogic {
+  renderVals() {
+    const props = this.props || {};
+    const mood = props.mood || "march";
+    return {
+      mood,
+      tired: mood === "tired",
+      cheerful: mood === "cheer",
+      marching: mood !== "tired" && mood !== "cheer",
+      outline: props.outline || "#1c2230",
+      shell: props.shell || "#7A4E16",
+      body: props.body || "#B07414",
+      head: props.head || "#F59E0B",
+      leg: props.leg || "#1c2230",
+      accent: props.accent || "#F59E0B"
+    };
+  }
+}
+</script>
+</body>
+</html>
