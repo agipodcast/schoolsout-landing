@@ -554,10 +554,49 @@
   @keyframes spark { 0%,100% { opacity: .2; transform: scale(.8); } 50% { opacity: 1; transform: scale(1.25); } }
   @keyframes breathe { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
   @keyframes underdraw { from { transform: scaleX(0); } to { transform: scaleX(1); } }
+  .field-notes-back {
+    position: fixed;
+    top: max(16px, env(safe-area-inset-top));
+    left: max(16px, env(safe-area-inset-left));
+    z-index: 50;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 42px;
+    padding: 10px 14px;
+    border: 1px solid rgba(245,247,250,.28);
+    border-radius: 999px;
+    background: rgba(11,16,32,.72);
+    color: #F5F7FA;
+    box-shadow: 0 10px 30px rgba(0,0,0,.24);
+    font-family: Inter, system-ui, sans-serif;
+    font-size: 14px;
+    font-weight: 700;
+    line-height: 1;
+    text-decoration: none;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+  }
+  .field-notes-back:hover,
+  .field-notes-back:focus-visible {
+    border-color: rgba(245,158,11,.72);
+    color: #F59E0B;
+    outline: none;
+  }
+  @media (max-width: 560px) {
+    .field-notes-back {
+      top: max(10px, env(safe-area-inset-top));
+      left: max(10px, env(safe-area-inset-left));
+      min-height: 38px;
+      padding: 9px 11px;
+      font-size: 13px;
+    }
+  }
 </style>
 </helmet>
 
 <div onclick="{{ stageClick }}" style="position:fixed;inset:0;overflow:hidden;background:#0B1020;font-family:'Shantell Sans',system-ui,sans-serif;cursor:pointer;user-select:none;">
+  <a data-stop="" class="field-notes-back" href="/field-notes" aria-label="Back to Field Notes">← Field Notes</a>
 
   <!-- ===================== SCENE 0 — COVER ===================== -->
   <sc-if value="{{ s0 }}" hint-placeholder-val="{{ true }}">
