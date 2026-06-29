@@ -1,0 +1,31 @@
+Subject: Your AI Agents Need an Org Chart
+Preview: One AI agent feels like magic. Three AI agents need management.
+List: No-Code CAIO newsletter list only. Do not send to the Field Notes newsletter list.
+Send target: Monday, June 29, 2026, after Jason approval in HubSpot
+CTA: https://schoolsout.agipodcast.ai/newsletter/editions/edition-004.html
+
+Important HubSpot note:
+There may be an older incorrect pre-draft for Edition 004 in HubSpot. Do not send or schedule that draft. This file and the live GitHub version are the source of truth for the send.
+
+Teaser copy:
+I spent part of this weekend trying to get multiple AI agents to collaborate in one shared room.
+
+Here is the thing I learned fast:
+
+One AI agent feels like magic.
+
+Three AI agents feel like management.
+
+The issue was not whether the models were smart. They were.
+
+The issue was ownership.
+
+Who decides?
+Where is the record?
+What counts as done?
+Who gets to touch the browser?
+What receipt proves the work happened?
+
+That is the part the demos skip.
+
+Button: Read Edition 004

@@ -3,8 +3,32 @@
   "description": "The weekly pulse on real AI work for managers, small-business owners, and nonprofit leaders.",
   "url": "https://schoolsout.agipodcast.ai/newsletter/",
   "author": "Jason Padgett",
-  "updated": "2026-06-09",
+  "updated": "2026-06-29",
   "editions": [
+    {
+      "number": 4,
+      "title": "Your AI Agents Need an Org Chart",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-004.html",
+      "date": "2026-06-29",
+      "description": "One AI agent feels like magic. Three AI agents need management, governance, a shared record, and receipts.",
+      "readTime": "7 min"
+    },
+    {
+      "number": 3,
+      "title": "I Put Two AIs in a Slack Channel",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-003.html",
+      "date": "2026-06-22",
+      "description": "What it looks like when a non-coder runs an AI operating system, using one real Saturday of three-agent podcast production as the case.",
+      "readTime": "8 min"
+    },
+    {
+      "number": 2,
+      "title": "Don't Marry the Model",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-002.html",
+      "date": "2026-06-15",
+      "description": "What the overnight shutdown of Anthropic's Fable 5 and Mythos 5 teaches every business that quietly runs on a single AI model.",
+      "readTime": "7 min"
+    },
     {
       "number": 1,
       "title": "Done Being Victor Frankenstein",

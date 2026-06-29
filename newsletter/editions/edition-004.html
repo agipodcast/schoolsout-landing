@@ -3,35 +3,542 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="robots" content="noindex, nofollow">
-  <title>Edition Unavailable | No-Code CAIO</title>
-  <link rel="canonical" href="https://schoolsout.agipodcast.ai/newsletter/">
-  <meta http-equiv="refresh" content="0; url=/newsletter/">
+  <title>Your AI Agents Need an Org Chart | No-Code CAIO</title>
+  <meta name="description" content="I put multiple AI agents in one shared room with a real job. The lesson showed up fast: one agent is a tool. A crew is an organization.">
+  <meta property="og:title" content="Your AI Agents Need an Org Chart">
+  <meta property="og:description" content="I put multiple AI agents in one shared room with a real job. The lesson showed up fast: one agent is a tool. A crew is an organization.">
+  <meta property="og:type" content="article">
+  <meta property="og:image" content="https://schoolsout.agipodcast.ai/newsletter/assets/no-code-caio-edition-004-banner.png">
+  <meta property="og:url" content="https://schoolsout.agipodcast.ai/newsletter/editions/edition-004.html">
+  <link rel="canonical" href="https://schoolsout.agipodcast.ai/newsletter/editions/edition-004.html">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Your AI Agents Need an Org Chart">
+  <meta name="twitter:description" content="I put multiple AI agents in one shared room with a real job. The lesson showed up fast: one agent is a tool. A crew is an organization.">
+  <meta name="twitter:image" content="https://schoolsout.agipodcast.ai/newsletter/assets/no-code-caio-edition-004-banner.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Literata:opsz,wght@7..72,500;7..72,650;7..72,700&display=swap" rel="stylesheet">
   <style>
+    :root {
+      --ink: #182333;
+      --muted: #5d6977;
+      --soft: #f6f2ea;
+      --paper: #fffdf8;
+      --card: #ffffff;
+      --navy: #0d2438;
+      --navy-2: #132f48;
+      --gold: #c6922e;
+      --gold-soft: #f1dfba;
+      --rule: #e8dfcf;
+      --green: #476b5b;
+      --shadow: 0 18px 60px rgba(13, 36, 56, .10);
+      --radius: 22px;
+      --radius-sm: 14px;
+      --max: 1120px;
+      --article: 760px;
+    }
+    * {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+    }
     body {
       margin: 0;
-      min-height: 100vh;
-      display: grid;
-      place-items: center;
-      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-      background: #0f1729;
-      color: #f7f0df;
-    }
-    main {
-      max-width: 34rem;
-      padding: 2rem;
-      text-align: center;
+      background: var(--paper);
+      color: var(--ink);
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      line-height: 1.6;
     }
     a {
-      color: #ffd96a;
+      color: var(--navy);
+      text-decoration-color: rgba(198, 146, 46, .55);
+      text-decoration-thickness: 2px;
+      text-underline-offset: 3px;
+    }
+    a:hover {
+      color: #000;
+      text-decoration-color: var(--gold);
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+      display: block;
+    }
+    .sitebar {
+      border-bottom: 1px solid var(--rule);
+      background: rgba(255, 253, 248, .92);
+    }
+    .sitebar-inner {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 15px 20px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 18px;
+    }
+    .brand-lockup {
+      display: grid;
+      gap: 1px;
+      text-decoration: none;
+      color: var(--ink);
+    }
+    .brand-lockup strong {
+      font-size: .95rem;
+      letter-spacing: .06em;
+      text-transform: uppercase;
+      color: var(--navy);
+    }
+    .brand-lockup span {
+      font-size: .82rem;
+      color: var(--muted);
+    }
+    .back-link {
+      font-size: .86rem;
+      font-weight: 700;
+      color: var(--navy);
+      text-decoration: none;
+      border: 1px solid var(--rule);
+      border-radius: 999px;
+      padding: 8px 12px;
+      background: #fff;
+      white-space: nowrap;
+    }
+    .edition-shell {
+      max-width: var(--max);
+      margin: 0 auto;
+      padding: 34px 20px 64px;
+    }
+    .edition-header {
+      max-width: var(--article);
+      margin: 0 auto;
+      padding: 26px 0 22px;
+    }
+    .eyebrow {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+      margin-bottom: 16px;
+      color: var(--muted);
+      font-size: .82rem;
+      font-weight: 700;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+    .eyebrow .pill {
+      color: var(--navy);
+      background: var(--gold-soft);
+      border: 1px solid rgba(198, 146, 46, .35);
+      border-radius: 999px;
+      padding: 5px 10px;
+    }
+    h1 {
+      margin: 0;
+      font-family: Literata, Georgia, serif;
+      font-size: clamp(2.35rem, 9vw, 4.9rem);
+      line-height: .98;
+      letter-spacing: -.055em;
+      color: var(--navy);
+    }
+    .deck {
+      margin: 20px 0 0;
+      font-size: clamp(1.08rem, 3vw, 1.34rem);
+      line-height: 1.55;
+      color: #384858;
+    }
+    .feature-image {
+      max-width: 960px;
+      margin: 20px auto 42px;
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      border: 1px solid var(--rule);
+      background: var(--soft);
+    }
+    .feature-image img {
+      width: 100%;
+      aspect-ratio: 16 / 9;
+      object-fit: cover;
+    }
+    .article-body {
+      max-width: var(--article);
+      margin: 0 auto;
+      font-size: 1.06rem;
+    }
+    .article-body h2 {
+      margin: 48px 0 14px;
+      padding-top: 18px;
+      border-top: 3px solid var(--navy);
+      font-family: Literata, Georgia, serif;
+      font-size: clamp(1.75rem, 6vw, 2.7rem);
+      line-height: 1.08;
+      letter-spacing: -.035em;
+      color: var(--navy);
+    }
+    .article-body h3 {
+      margin: 32px 0 10px;
+      font-size: 1.15rem;
+      line-height: 1.25;
+      letter-spacing: .02em;
+      text-transform: uppercase;
+      color: var(--green);
+    }
+    .article-body p {
+      margin: 0 0 1.15em;
+    }
+    .article-body ul,
+    .article-body ol {
+      margin: 0 0 1.3em 1.25em;
+      padding: 0;
+    }
+    .article-body li {
+      margin: .42em 0;
+      padding-left: .15em;
+    }
+    .article-body blockquote {
+      margin: 30px 0;
+      padding: 22px 24px;
+      border-left: 6px solid var(--gold);
+      background: #fbf5e8;
+      border-radius: 0 var(--radius-sm) var(--radius-sm) 0;
+      color: #26384b;
+      font-family: Literata, Georgia, serif;
+      font-size: 1.22rem;
+      line-height: 1.48;
+    }
+    .article-body figure {
+      margin: 34px 0;
+    }
+    .article-body figure img,
+    .article-body > img {
+      width: 100%;
+      border-radius: var(--radius-sm);
+      border: 1px solid var(--rule);
+      box-shadow: 0 12px 34px rgba(13, 36, 56, .08);
+    }
+    .article-body figcaption,
+    .article-body .caption {
+      margin-top: 9px;
+      color: var(--muted);
+      font-size: .88rem;
+      line-height: 1.45;
+    }
+    .article-body .note-card,
+    .article-body .use-case-card {
+      margin: 28px 0;
+      padding: 22px;
+      border: 1px solid var(--rule);
+      border-radius: var(--radius);
+      background: #fff;
+      box-shadow: 0 10px 36px rgba(13, 36, 56, .06);
+    }
+    .article-body .use-case-card h3:first-child,
+    .article-body .note-card h3:first-child {
+      margin-top: 0;
+    }
+    .article-body .beyond-chat-box {
+      margin: 46px calc(50% - 50vw);
+      padding: 44px 20px;
+      background:
+        radial-gradient(circle at top left, rgba(198, 146, 46, .20), transparent 30%),
+        linear-gradient(135deg, var(--navy), var(--navy-2));
+      color: #f7efe0;
+    }
+    .article-body .beyond-chat-box-inner {
+      max-width: 960px;
+      margin: 0 auto;
+    }
+    .article-body .beyond-chat-box h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+      color: #fff7e8;
+    }
+    .article-body .beyond-chat-box h3 {
+      color: var(--gold-soft);
+    }
+    .article-body .beyond-chat-box p {
+      color: #e8edf2;
+    }
+    .article-body .beyond-chat-box a {
+      color: #fff;
+      text-decoration-color: var(--gold);
+    }
+    .article-body .visual-strip {
+      display: grid;
+      gap: 14px;
+      margin: 24px 0 8px;
+    }
+    .article-body .visual-panel {
+      padding: 18px;
+      border: 1px solid rgba(255, 255, 255, .18);
+      border-radius: var(--radius-sm);
+      background: rgba(255, 255, 255, .08);
+    }
+    .article-body .visual-panel strong {
+      display: block;
+      margin-bottom: 6px;
+      color: #fff;
+    }
+    .article-body .the-question {
+      margin: 48px 0 28px;
+      padding: 26px;
+      border: 2px solid var(--navy);
+      border-radius: var(--radius);
+      background:
+        linear-gradient(180deg, rgba(241, 223, 186, .50), rgba(255, 255, 255, .86));
+      box-shadow: 0 14px 46px rgba(13, 36, 56, .08);
+    }
+    .article-body .the-question h2 {
+      margin-top: 0;
+      padding-top: 0;
+      border-top: 0;
+    }
+    .article-body .the-question p:last-child {
+      margin-bottom: 0;
+    }
+    .footer-injection {
+      max-width: var(--article);
+      margin: 54px auto 0;
+      padding-top: 26px;
+      border-top: 1px solid var(--rule);
+      color: var(--muted);
+      font-size: .95rem;
+    }
+    @media (min-width: 720px) {
+      .edition-shell {
+        padding-top: 52px;
+      }
+      .sitebar-inner {
+        padding-left: 30px;
+        padding-right: 30px;
+      }
+      .visual-strip {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      .article-body .beyond-chat-box {
+        padding: 58px 30px;
+      }
     }
   </style>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "NewsArticle",
+    "headline": "Your AI Agents Need an Org Chart",
+    "description": "I put multiple AI agents in one shared room with a real job. The lesson showed up fast: one agent is a tool. A crew is an organization.",
+    "image": "https://schoolsout.agipodcast.ai/newsletter/assets/no-code-caio-edition-004-banner.png",
+    "datePublished": "2026-06-29",
+    "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-004.html",
+    "inLanguage": "en",
+    "author": {
+      "@type": "Person",
+      "name": "Jason Padgett",
+      "url": "https://www.linkedin.com/in/jason-grant-padgett/"
+    },
+    "publisher": {
+      "@type": "Organization",
+      "name": "No-Code CAIO",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/"
+    },
+    "isPartOf": {
+      "@type": "Periodical",
+      "name": "No-Code CAIO",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/"
+    }
+  }
+  </script>
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      {
+        "@type": "ListItem",
+        "position": 1,
+        "name": "No-Code CAIO",
+        "item": "https://schoolsout.agipodcast.ai/newsletter/"
+      },
+      {
+        "@type": "ListItem",
+        "position": 2,
+        "name": "Your AI Agents Need an Org Chart",
+        "item": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-004.html"
+      }
+    ]
+  }
+  </script>
 </head>
 <body>
-  <main>
-    <h1>Edition unavailable</h1>
-    <p>This edition is offline while it is being revised.</p>
-    <p><a href="/newsletter/">Return to the No-Code CAIO archive</a></p>
+  <header class="sitebar">
+    <div class="sitebar-inner">
+      <a class="brand-lockup" href="../index.html" aria-label="No-Code CAIO archive">
+        <strong>No-Code CAIO</strong>
+        <span>Real-world AI for non-technical leaders</span>
+      </a>
+      <a class="back-link" href="../index.html">Back to archive</a>
+    </div>
+  </header>
+  <main class="edition-shell">
+    <article>
+      <header class="edition-header">
+        <div class="eyebrow">
+          <span class="pill">Edition 004</span>
+          <span>June 29, 2026</span>
+        </div>
+        <h1>Your AI Agents Need an Org Chart</h1>
+        <p class="deck">I put multiple AI agents in one shared room with a real job. The lesson showed up fast: one agent is a tool. A crew is an organization.</p>
+      </header>
+      <figure class="feature-image">
+        <img src="../assets/no-code-caio-edition-004-banner.png" alt="No-Code CAIO branded banner for Edition 004">
+      </figure>
+      <div class="article-body">
+        <p>I spent part of this weekend trying to get a small crew of AI agents to do real work together in one shared space.</p>
+<p>This was not a clean little demo where one chatbot helps me write a paragraph and everyone claps.</p>
+<p>This was a room. Multiple agents. Different strengths. A real deliverable. One shared channel. Me trying very hard not to become the human USB cable moving context from one tool to another.</p>
+<p>The cleanest version of the lesson is this:</p>
+<p>One AI agent feels like magic.</p>
+<p>Three AI agents feel like management.</p>
+<p>And I do mean management in the very normal human sense.</p>
+<p>The models were smart enough. The writing was good enough. The reasoning was good enough.</p>
+<p>What I had accidentally built was a meeting with no chair, no agenda, no decision rule, no shared files, and no definition of done.</p>
+<p>Which, now that I type it out, sounds exactly like every bad Tuesday meeting you have ever survived.</p>
+<h2>The Demo Version Is Too Clean</h2>
+<p>The demo version of AI agents is seductive because it skips the boring parts.</p>
+<p>&quot;Put agents in your workflow and let them collaborate.&quot;</p>
+<p>Yes. In theory.</p>
+<p>Then you try it with actual tools and actual permissions and actual work.</p>
+<p>The first lesson shows up fast: your agents do not automatically live in the same world.</p>
+<p>One can see the shared channel.</p>
+<p>Another can see it only when you manually tell it to look.</p>
+<p>One has access to a local file.</p>
+<p>Another lives in the cloud and has no idea that file exists.</p>
+<p>One can open the browser.</p>
+<p>Another can use a connector.</p>
+<p>A third reacts with a little acknowledgement and then, bless it, contributes absolutely nothing unless you go tap it on the shoulder.</p>
+<p>That is where the hype gets people in trouble.</p>
+<p>The gap between &quot;AI can do this&quot; and &quot;my organization can run this&quot; is where the real work lives.</p>
+<p>Not the shiny futuristic work. The ordinary work.</p>
+<p>Who owns the task?</p>
+<p>Where is the record?</p>
+<p>What counts as done?</p>
+<p>Who is allowed to touch the browser?</p>
+<p>Which system is the source of truth?</p>
+<p>What happens when two agents disagree?</p>
+<p>How do we know whether anything actually shipped?</p>
+<p>Those questions will never trend on LinkedIn.</p>
+<p>They are also the only questions that matter after the first five minutes.</p>
+<h2>The Rule That Changed Everything</h2>
+<p>The most useful rule was the simplest one:</p>
+<p><strong>One room, one record.</strong></p>
+<p>No side quests.</p>
+<p>No private instructions.</p>
+<p>No &quot;I will ask Jason over here and report back.&quot;</p>
+<p>If the work mattered, it had to happen in the shared room where everyone could see it.</p>
+<p>If there was a decision, it had to be written down.</p>
+<p>If there was a blocker, it had to name the blocker and the owner.</p>
+<p>If somebody claimed something was done, they had to bring a receipt.</p>
+<p>Link. Commit. Screenshot. Row written. Draft created. Whatever proof fit the work.</p>
+<p>Receipts over vibes.</p>
+<p>The wild part is how quickly the behavior changed once the rule existed.</p>
+<p>Before the rule, the agents drifted. After the rule, the room started to behave like a room.</p>
+<p>That is when the real lesson landed for me:</p>
+<p>AI agent collaboration is a governance problem before it is a model shopping problem.</p>
+<h2>Give Them Jobs Before You Give Them Work</h2>
+<p>The second fix was stealing from something humans already figured out: basic team roles.</p>
+<p>You need a human Product Owner.</p>
+<p>That person owns priorities, risk, and final acceptance. Always. The AI does not get to decide what the business values.</p>
+<p>You need a Domain Lead.</p>
+<p>That role can rotate depending on the work. If the task is technical, the technical agent leads. If the task is editorial, the writing agent leads. If the task is research, the research agent leads.</p>
+<p>And you need a process keeper.</p>
+<p>Call it Scrum Master, referee, traffic controller, whatever language your team can tolerate without rolling their eyes.</p>
+<p>The job is not to do the work.</p>
+<p>The job is to keep the work from turning into six smart entities wandering around with six slightly different definitions of success.</p>
+<p>This sounds obvious because it is obvious.</p>
+<p>That is what makes it useful.</p>
+<p>Most AI failure inside organizations will not look like science fiction. It will look like unclear ownership, invisible assumptions, and three tools all doing technically correct work toward slightly different goals.</p>
+<p>Just say&#x27;n.</p>
+<h2>Define Done Before the Agent Starts</h2>
+<p>This is where I would start with any team trying to use AI beyond the chat box.</p>
+<p>Before the agent does anything, write the acceptance criteria.</p>
+<p>A paragraph of hope is not acceptance criteria.</p>
+<p>For example:</p>
+<ul>
+<li>Draft is in Jason&#x27;s voice</li>
+<li>No claims about work with a specific organization unless the source says it and I approve it</li>
+<li>No unsupported names, numbers, or tools</li>
+<li>No tool names unless needed</li>
+<li>All links checked</li>
+<li>Final answer includes a receipt</li>
+<li>Human approves before anything is published or sent</li>
+</ul>
+<p>That last one matters.</p>
+<p>I love moving fast with AI.</p>
+<p>I also do not want an agent publishing, emailing, spending money, or touching anything security-sensitive without a human explicitly saying yes.</p>
+<p>Speed is great.</p>
+<p>Ungoverned speed is just a faster way to make a mess.</p>
+<h2>The Browser Is the Fallback</h2>
+<p>Another practical lesson: go connector-first, not browser-first.</p>
+<p>The browser feels natural because it is what we use.</p>
+<p>But for agents, a browser can become a single steering wheel everyone wants to grab at the same time.</p>
+<p>If a tool has a real API or connector, use that first. Save the browser for the handful of surfaces where there is no better option.</p>
+<p>That one change lowers friction fast.</p>
+<p>The browser should be the fallback, not the foundation.</p>
+<h2>Do Not Fire the Awkward Agent Too Fast</h2>
+<p>One more thing surprised me.</p>
+<p>The agent that looked weakest was not necessarily useless.</p>
+<p>It was misassigned.</p>
+<p>One agent was not great at the connector work, but it was a good fit for a controlled browser role because the constraint became clear:</p>
+<p>One set of hands on the glass at a time.</p>
+<p>That is a very human management lesson.</p>
+<p>Sometimes the person who looks wrong for the team is actually in the wrong seat.</p>
+<p>AI agents are the same way.</p>
+<p>You do not just ask, &quot;Is this model good?&quot;</p>
+<p>You ask:</p>
+<ul>
+<li>What is it good at?</li>
+<li>What does it reliably avoid?</li>
+<li>Where is it too aggressive?</li>
+<li>Where is it appropriately cautious?</li>
+<li>What level of risk should I assign to it?</li>
+</ul>
+<p>Put the aggressive agent where you own the environment and can see the work. Put the cautious one where the cost of a mistake is higher. Match temperament to risk.</p>
+<p>That is management applied to synthetic coworkers.</p>
+<h2>The Question For This Week</h2>
+<p>If your organization is starting to use AI agents, ask this before you buy anything else:</p>
+<p><strong>Where will the work live, who decides what done means, and what receipt proves it happened?</strong></p>
+<p>That is the whole game.</p>
+<p>Not forever.</p>
+<p>The tools will get better. The plumbing will improve. More agents will hear the room automatically. More systems will share context without us duct-taping the middle.</p>
+<p>But today, right now, most teams do not need a grand AI transformation plan.</p>
+<p>They need one governed workflow.</p>
+<p>One room.</p>
+<p>One record.</p>
+<p>One human owner.</p>
+<p>One clear definition of done.</p>
+<p>One receipt at the end.</p>
+<p>Start there.</p>
+<p>Because one agent is a tool.</p>
+<p>A crew is an organization.</p>
+<p>And organizations run on governance, not vibes.</p>
+<p>GAME ON.</p>
+      </div>
+      <div class="footer-injection">
+        <p>Work With Me CitizenAI : We help nonprofits connect people to housing, food, childcare, and transportation, faster. <br>
+AI literacy and education, consulting and speaking engagements welcome. <br>
+jason@mycitizen.ai</p>
+<p>The AGI Podcast Network Episodes, shows, newsletters, and everything else: <a href="https://schoolsout.agipodcast.ai/network">schoolsout.agipodcast.ai/network</a></p>
+<p>Connect with me: <br>
+LinkedIn: linkedin.com/in/jason-grant-padgett <br>
+X: @NoCodeCAIO <br>
+Facebook and Instagram: @AGIPodcast | @AGISchoolsout</p>
+<p>Subscribe to the No-Code CAIO: <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7399599285849346048">https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7399599285849346048</a></p>
+<p>&quot;When we look back at this time, I think we will realize that we were standing at the foothills of the singularity. It will be a profound moment for humanity.&quot; Demis Hassabis, Google I/O May 20, 2026 </p>
+<p>Ciao, Jason</p>
+      </div>
+    </article>
   </main>
 </body>
 </html>
