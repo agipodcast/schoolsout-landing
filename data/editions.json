@@ -3,8 +3,17 @@
   "description": "The weekly pulse on real AI work for managers, small-business owners, and nonprofit leaders.",
   "url": "https://schoolsout.agipodcast.ai/newsletter/",
   "author": "Jason Padgett",
-  "updated": "2026-06-29",
+  "updated": "2026-07-07",
   "editions": [
+    {
+      "number": 5,
+      "label": "Episode 002",
+      "title": "From Org Chart to Operating System",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-005.html",
+      "date": "2026-07-07",
+      "description": "Nine days ago I held a constitutional convention with my AI agents. This is what got built, what is honestly still a demo, and why the gates are the part worth copying.",
+      "readTime": "4 min"
+    },
     {
       "number": 4,
       "title": "Your AI Agents Need an Org Chart",
