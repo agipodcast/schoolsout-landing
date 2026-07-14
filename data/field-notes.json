@@ -1,14 +1,22 @@
 {
   "publication": "School's Out Field Notes",
   "description": "A weekly companion to School's Out Saturdays. Practical signals, questions, and opportunities from the edge of school and work.",
-  "url": "https://schoolsout.agipodcast.ai/field-notes",
+  "url": "https://agipodcast.ai/field-notes",
   "author": "Jason Padgett",
-  "updated": "2026-06-24",
+  "updated": "2026-07-13",
   "issues": [
+    {
+      "number": 6,
+      "title": "The Staff-Room AI Test",
+      "url": "https://agipodcast.ai/field-notes-issue-6",
+      "date": "2026-07-13",
+      "description": "Give AI one job, one boundary, and one receipt. Then compare notes with another teacher.",
+      "readTime": "3 min"
+    },
     {
       "number": 5,
       "title": "The Ants Are Tired",
-      "url": "https://schoolsout.agipodcast.ai/field-notes-issue-5",
+      "url": "https://agipodcast.ai/field-notes-issue-5",
       "date": "2026-06-24",
       "description": "A Bug's Life is accidentally a pretty good AI implementation movie. Not because AI is the villain. Because teachers are living inside the pressure system.",
       "readTime": "5 min"
@@ -16,7 +24,7 @@
     {
       "number": 4,
       "title": "The Receipt Is the Learning",
-      "url": "https://schoolsout.agipodcast.ai/field-notes-issue-4",
+      "url": "https://agipodcast.ai/field-notes-issue-4",
       "date": "2026-06-14",
       "description": "AI can help students finish the work. That does not mean it helped them learn the thing.",
       "readTime": "5 min"
@@ -24,7 +32,7 @@
     {
       "number": 3,
       "title": "The Greyed-Out Button",
-      "url": "https://schoolsout.agipodcast.ai/field-notes-issue-3",
+      "url": "https://agipodcast.ai/field-notes-issue-3",
       "date": "2026-06-07",
       "description": "Six hundred educators spent the day learning AI tools most of their students are not allowed to touch.",
       "readTime": "4 min"
@@ -32,7 +40,7 @@
     {
       "number": 2,
       "title": "Shared Language Is Not Enough",
-      "url": "https://schoolsout.agipodcast.ai/field-notes-issue-2",
+      "url": "https://agipodcast.ai/field-notes-issue-2",
       "date": "2026-05-13",
       "description": "Schools need shared definitions. A field guide for spotting critical thinking, communication, adaptability, and preparedness in actual student work, not just in mission statements.",
       "readTime": "6 min"
@@ -40,7 +48,7 @@
     {
       "number": 1,
       "title": "The Bridge Is the Assignment",
-      "url": "https://schoolsout.agipodcast.ai/field-notes-issue-1",
+      "url": "https://agipodcast.ai/field-notes-issue-1",
       "date": "2026-05-07",
       "description": "Access to AI is spreading fast. Readiness is something else. Students do not become ready because they can open a chatbot.",
       "readTime": "7 min"
