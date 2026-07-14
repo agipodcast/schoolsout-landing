@@ -8,8 +8,9 @@
   <meta property="og:title" content="Resources | Schools Out Saturdays">
   <meta property="og:description" content="Free, practical AI resources for educators from Schools Out Saturdays and the AGI Podcast network. No login, no cost, ready for Monday morning.">
   <meta property="og:type" content="website">
-  <meta property="og:url" content="https://schoolsout.agipodcast.ai/resources/">
-  <meta property="og:image" content="https://schoolsout.agipodcast.ai/schools-out-logo.png">
+  <meta property="og:url" content="https://agipodcast.ai/resources/">
+  <meta property="og:image" content="https://agipodcast.ai/schools-out-logo.png">
+  <link rel="canonical" href="https://agipodcast.ai/resources/">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -234,14 +235,21 @@
       background: rgba(247, 240, 223, 0.08);
     }
 
+    .resource-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 22px;
+      margin-top: 34px;
+    }
+
     .resource-card {
       padding: 40px;
       border: 1px solid var(--line);
       border-radius: 30px;
       background: rgba(247, 240, 223, 0.06);
       box-shadow: var(--shadow);
-      max-width: 820px;
-      margin-top: 34px;
+      display: flex;
+      flex-direction: column;
     }
 
     .resource-tag {
@@ -258,6 +266,7 @@
       color: var(--cream-soft);
       font-size: 18px;
       line-height: 1.65;
+      flex: 1;
     }
 
     .subscribe-box {
@@ -354,6 +363,10 @@
         border-radius: 26px;
       }
 
+      .resource-grid {
+        grid-template-columns: 1fr;
+      }
+
       .subscribe-box {
         grid-template-columns: 1fr;
         padding: 26px;
@@ -403,15 +416,39 @@
         <div class="section-kicker">Available now</div>
         <h2 id="resources-title">Start here.</h2>
 
-        <div class="resource-card">
-          <span class="resource-tag">Guide</span>
-          <h3>NotebookLM Guide for Educators</h3>
-          <p class="resource-description">
-            A Monday-morning guide to NotebookLM: pick a goal, add focused sources, copy a starter prompt, and review before you share. Comes as an interactive page you can work through in one sitting, plus a printable PDF for the teachers' lounge.
-          </p>
-          <div class="button-row">
-            <a class="button button-primary" href="/resources/notebooklm-guide.html">Open the interactive guide</a>
-            <a class="button button-secondary" href="/resources/notebooklm-guide.pdf">Download the PDF</a>
+        <div class="resource-grid">
+          <div class="resource-card">
+            <span class="resource-tag">Guide</span>
+            <h3>NotebookLM Guide for Educators</h3>
+            <p class="resource-description">
+              A Monday-morning guide to NotebookLM: pick a goal, add focused sources, copy a starter prompt, and review before you share. Includes an interactive guide and a printable PDF.
+            </p>
+            <div class="button-row">
+              <a class="button button-primary" href="/resources/notebooklm-guide.html">Open the guide</a>
+              <a class="button button-secondary" href="/resources/notebooklm-guide.pdf">Download PDF</a>
+            </div>
+          </div>
+
+          <div class="resource-card">
+            <span class="resource-tag">Indiana implementation series</span>
+            <h3>AI District Implementation Spotlights</h3>
+            <p class="resource-description">
+              Practical examples and implementation lessons from Indiana school districts moving AI policy, planning, and educator support into practice.
+            </p>
+            <div class="button-row">
+              <a class="button button-primary" href="https://inlearninglab.com/collections/artificial-intelligence-ai-district-implementation-spotlight-series" target="_blank" rel="noopener noreferrer">Explore the series</a>
+            </div>
+          </div>
+
+          <div class="resource-card">
+            <span class="resource-tag">District spotlight</span>
+            <h3>Richmond Community Schools</h3>
+            <p class="resource-description">
+              See how one Indiana district is approaching AI implementation, planning, and support for educators.
+            </p>
+            <div class="button-row">
+              <a class="button button-primary" href="https://inlearninglab.com/resources/artificial-intelligence-ai-spotlight-richmond-community-schools?collection=artificial-intelligence-ai-district-implementation-spotlight-series" target="_blank" rel="noopener noreferrer">Read the spotlight</a>
+            </div>
           </div>
         </div>
       </div>
