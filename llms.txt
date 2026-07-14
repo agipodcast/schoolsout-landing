@@ -36,4 +36,4 @@ Per-episode pages with player, summary, guest, and a companion Field Note. More 
 
 - [NotebookLM Guide for Educators](https://agipodcast.ai/resources/notebooklm-guide.html): A free guide for educators getting started with NotebookLM.
 - [AI District Implementation Spotlight Series](https://inlearninglab.com/collections/artificial-intelligence-ai-district-implementation-spotlight-series): Indiana Learning Lab collection on district AI implementation.
-- [Richmond Community Schools AI Spotlight](https://inlearninglab.com/resources/artificial-intelligence-ai-spotlight-richmond-community-schools?collection=artificial-intelligence-ai-district-implementation-spotlight-series): A district-level implementation example from Indiana.
+- [Indiana Learning Lab AI Resource](https://inlearninglab.com/resources/artificial-intelligence-ai-spotlight-richmond-community-schools?collection=artificial-intelligence-ai-district-implementation-spotlight-series): A Learning Lab resource for Indiana educators exploring district AI implementation. Login may be required.
