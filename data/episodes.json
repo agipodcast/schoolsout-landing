@@ -4,9 +4,64 @@
   "url": "https://schoolsout.agipodcast.ai/",
   "host": "Jason Padgett",
   "playlist": "https://www.youtube.com/playlist?list=PLBeGVU933EaEQeGMLi4Vk6D-bXUutguAe",
-  "updated": "2026-06-09",
-  "episodeCount": 38,
+  "updated": "2026-07-18",
+  "episodeCount": 43,
   "episodes": [
+    {
+      "title": "AI in Catholic Education: What K-12 Schools Owe Their Students",
+      "date": "2026-07-18",
+      "youtube": "https://www.youtube.com/watch?v=cVXXAMGRa1M",
+      "topics": [
+        "catholic-education",
+        "ai-literacy",
+        "student-guardrails"
+      ],
+      "summary": "Lewis Poché of Notre Dame's Alliance for Catholic Education on AI literacy, student guardrails, protecting the learning process, and what schools can offer that the digital world cannot."
+    },
+    {
+      "title": "Protecting Our Kids in the Age of AI With Former DOJ Prosecutor Tiffany Preston",
+      "date": "2026-07-04",
+      "youtube": "https://www.youtube.com/watch?v=YJFLpBCNi0o",
+      "topics": [
+        "student-safety",
+        "deepfakes",
+        "sextortion"
+      ],
+      "summary": "Former federal prosecutor Tiffany Preston on AI-enabled sextortion, deepfakes, family safe words, and the specific steps parents and children should take when targeted."
+    },
+    {
+      "title": "AI in Early Childhood Education with Morgan Mason",
+      "date": "2026-06-25",
+      "youtube": "https://www.youtube.com/watch?v=rk8kmnv-NDM",
+      "topics": [
+        "early-childhood",
+        "ai-literacy",
+        "educator-support"
+      ],
+      "summary": "Keep Indiana Learning's Morgan Mason on AI around young children, the risks of anthropomorphism and sycophancy, and ways educators can use AI for family communication, early literacy, lesson planning, and time back."
+    },
+    {
+      "title": "AI Literacy in K-12 and the Workforce Gap with CIESC's Lena Darnay",
+      "date": "2026-06-20",
+      "youtube": "https://www.youtube.com/watch?v=rA85Svnho2c",
+      "topics": [
+        "ai-literacy",
+        "workforce-readiness",
+        "k-12"
+      ],
+      "summary": "CIESC's Lena Darnay on early AI exposure, workforce readiness, SAIL leadership, Indiana diploma seals, and why K-12, higher ed, and employers need a shared response."
+    },
+    {
+      "title": "Scouting's New AI Merit Badge with Sagamore Council's Bryon Haverstick",
+      "date": "2026-06-13",
+      "youtube": "https://www.youtube.com/watch?v=D9LRY0QUjac",
+      "topics": [
+        "scouting",
+        "ai-literacy",
+        "ethics"
+      ],
+      "summary": "Sagamore Council's Bryon Haverstick on Scouting America's new AI merit badge, deepfakes, ethics, and teaching scouts to design and explain an AI lesson."
+    },
     {
       "title": "You Can't Shape What You Won't Use: Anne Leftwich on AI at Indiana University",
       "date": "2026-06-06",
