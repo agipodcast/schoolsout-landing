@@ -3,8 +3,16 @@
   "description": "A weekly companion to School's Out Saturdays. Practical signals, questions, and opportunities from the edge of school and work.",
   "url": "https://agipodcast.ai/field-notes",
   "author": "Jason Padgett",
-  "updated": "2026-07-13",
+  "updated": "2026-07-30",
   "issues": [
+    {
+      "number": 7,
+      "title": "The Age of Intelligence",
+      "url": "https://schoolsout.agipodcast.ai/field-notes-issue-7",
+      "date": "2026-07-30",
+      "description": "Two years of AI implementation conversations in education keep sorting into four buckets. The curriculum is missing from all four.",
+      "readTime": "7 min"
+    },
     {
       "number": 6,
       "title": "The Staff-Room AI Test",
