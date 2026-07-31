@@ -87,8 +87,8 @@
     }
     .banner img {
       width: 100%;
-      aspect-ratio: 1920 / 920;
-      object-fit: cover;
+      height: auto;
+      display: block;
     }
     .hero {
       display: grid;
@@ -183,11 +183,12 @@
     }
     .latest-image {
       background: var(--soft);
+      align-self: start;
     }
     .latest-image img {
       width: 100%;
-      aspect-ratio: 16 / 10;
-      object-fit: cover;
+      height: auto;
+      display: block;
     }
     .latest-content {
       padding: 24px;
@@ -416,8 +417,7 @@
         align-items: stretch;
       }
       .latest-image img {
-        height: 100%;
-        aspect-ratio: auto;
+        height: auto;
       }
       .subscribe {
         grid-template-columns: minmax(0, 1fr) 360px;
