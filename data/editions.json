@@ -3,8 +3,17 @@
   "description": "The weekly pulse on real AI work for managers, small-business owners, and nonprofit leaders.",
   "url": "https://agipodcast.ai/newsletter/",
   "author": "Jason Padgett",
-  "updated": "2026-07-14",
+  "updated": "2026-08-03",
   "editions": [
+    {
+      "number": 7,
+      "label": "Session 001",
+      "title": "The Night We Gave AI Agents a Room",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-007.html",
+      "date": "2026-08-03",
+      "description": "Two AI agents finally shared a dependable room, survived a restart, challenged each other's work, and printed the failures beside the wins.",
+      "readTime": "6 min"
+    },
     {
       "number": 6,
       "label": "Countdown 6",
