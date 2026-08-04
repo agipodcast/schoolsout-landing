@@ -22,7 +22,6 @@ const canonical = "https://schoolsout.agipodcast.ai/newsletter/editions/edition-
 const image = "https://schoolsout.agipodcast.ai/newsletter/assets/no-code-caio-square.png";
 
 const metadata = [
-  `<title>${title} | No-Code CAIO</title>`,
   `<meta name="description" content="${description}">`,
   `<link rel="canonical" href="${canonical}">`,
   '<meta property="og:type" content="article">',
@@ -41,7 +40,7 @@ template = template
   .replace("<html>", '<html lang="en">')
   .replace(
     '<meta name="viewport" content="width=device-width, initial-scale=1">',
-    `<meta name="viewport" content="width=device-width, initial-scale=1">\n${metadata}`
+    `<meta name="viewport" content="width=device-width, initial-scale=1">\n<title>${title} | No-Code CAIO</title>\n${metadata}`
   )
   .replace(
     '<image-slot id="caio-portrait" style="width:132px;height:158px;flex:none" shape="rounded" radius="8" fit="cover" placeholder="Your portrait"></image-slot>',
@@ -63,8 +62,8 @@ const output = source
   )
   .replace("<title>Bundled Page</title>", `<title>${title} | No-Code CAIO</title>`)
   .replace(
-    '<meta name="viewport" content="width=device-width, initial-scale=1">',
-    `<meta name="viewport" content="width=device-width, initial-scale=1">\n${metadata}`
+    '<meta charset="utf-8">',
+    `<meta charset="utf-8">\n<meta name="viewport" content="width=device-width, initial-scale=1">\n${metadata}`
   )
   .replace(/[ \t]+$/gm, "");
 
