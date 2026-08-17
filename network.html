@@ -3,8 +3,8 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>The Network | Schools Out Saturdays</title>
-  <meta name="description" content="The AGI Podcast network of shows from Schools Out Saturdays, including The Weekly Blitz, The Vibe, Data Bytes, and Capacity Overload.">
+  <title>The Network | School's Out Saturdays</title>
+  <meta name="description" content="Explore the three AGI Podcast shows: School's Out Saturdays, The Weekly Blitz, and AI &amp; the Humans in the Loop.">
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -269,19 +269,44 @@
       background: #ffc826;
     }
 
-    .shows-grid {
-      display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      gap: 26px;
-      margin-top: 34px;
+    .button-secondary {
+      color: var(--cream);
+      border: 1px solid rgba(247, 240, 223, 0.34);
+      background: rgba(247, 240, 223, 0.06);
     }
 
-    .other-grid {
+    .button-secondary:hover {
+      border-color: rgba(245, 184, 0, 0.62);
+      background: rgba(247, 240, 223, 0.1);
+    }
+
+    .flagship-actions,
+    .show-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+
+    .flagship-actions {
+      max-width: 440px;
+      justify-content: flex-end;
+    }
+
+    .show-actions {
+      margin-top: 24px;
+    }
+
+    .show-actions .button {
+      min-height: 44px;
+      padding: 10px 16px;
+      font-size: 14px;
+    }
+
+    .shows-grid {
       display: grid;
-      grid-template-columns: minmax(0, 1fr);
+      grid-template-columns: repeat(2, minmax(0, 1fr));
       gap: 26px;
       margin-top: 34px;
-      max-width: 720px;
     }
 
     .show-card {
@@ -416,8 +441,7 @@
       }
 
       .flagship-card,
-      .shows-grid,
-      .other-grid {
+      .shows-grid {
         grid-template-columns: 1fr;
       }
 
@@ -438,6 +462,10 @@
       .button {
         width: 100%;
       }
+
+      .flagship-actions {
+        max-width: none;
+      }
     }
   </style>
 </head>
@@ -445,7 +473,7 @@
 <body>
   <header>
     <div class="wrap nav">
-      <a class="brand" href="/" aria-label="Schools Out Saturdays home">Schools Out Saturdays</a>
+      <a class="brand" href="/" aria-label="School's Out Saturdays home">School's Out Saturdays</a>
       <div class="nav-links">
         <a class="nav-link" href="/#listen">Listen</a>
         <a class="nav-link" href="/#subscribe">Field Notes</a>
@@ -461,14 +489,14 @@
   <main>
     <section class="top-section" aria-labelledby="page-title">
       <div class="wrap top-grid">
-        <div class="mark" aria-label="Schools Out Saturdays network mark">
-          <div class="mark-kicker">Schools Out Saturdays presents</div>
+        <div class="mark" aria-label="School's Out Saturdays network mark">
+          <div class="mark-kicker">School's Out Saturdays presents</div>
           <h1 class="mark-title" id="page-title">The Network</h1>
-          <div class="mark-subtitle">Four shows. One curiosity. Real conversations about AI.</div>
+          <div class="mark-subtitle">Three shows. One curiosity. Real conversations about AI.</div>
         </div>
 
         <p class="intro-copy">
-          AGI Podcast is a small network of shows for people who want practical, honest conversations about AI. Some shows are for educators. Some are for builders. Some are for the quiet infrastructure underneath all of it. Find the one that fits.
+          AGI Podcast is a small network for people who want practical, honest conversations about AI. One show is built for educators. One follows the weekly rush of AI news. One follows people learning to turn AI into useful work outside the traditional technical path. Find the one that fits.
         </p>
       </div>
     </section>
@@ -478,13 +506,16 @@
         <div class="flagship-card">
           <div>
             <div class="flagship-kicker">Flagship show</div>
-            <h2 id="flagship-title">Schools Out Saturdays</h2>
+            <h2 id="flagship-title">School's Out Saturdays</h2>
             <p class="flagship-copy">
               AI in education, minus the theater. School's Out Saturdays is the home of the AGI Podcast Network. A weekly conversation about how AI is changing what students need, what teachers face, and what schools are being asked to do.
             </p>
           </div>
 
-          <a class="button button-primary" href="/">Visit Schools Out Saturdays</a>
+          <div class="flagship-actions" aria-label="School's Out Saturdays destinations">
+            <a class="button button-primary" href="/">Visit School's Out Saturdays</a>
+            <a class="button button-secondary" href="https://www.youtube.com/playlist?list=PLBeGVU933EaEQeGMLi4Vk6D-bXUutguAe" target="_blank" rel="noopener noreferrer">YouTube</a>
+          </div>
         </div>
       </div>
     </section>
@@ -495,7 +526,7 @@
         <h2 id="network-title">More from AGI Podcast.</h2>
 
         <div class="shows-grid">
-          <a class="show-card" href="https://www.youtube.com/playlist?list=PLBeGVU933EaEH3AGEpGy2s3yi8zKDRkvT" target="_blank" rel="noopener noreferrer">
+          <article class="show-card">
             <div class="show-image">
               <img src="weekly-blitz.png" alt="The Weekly Blitz show artwork">
             </div>
@@ -504,65 +535,30 @@
               <h3>The Weekly Blitz</h3>
               <div class="show-meta">Co-hosted with Julie Koehrer · Lafayette's Q106.7</div>
               <p class="show-description">
-                A fast, practical Monday recap of what changed in AI, what matters, and what might hit your workweek next.
+                A practical Monday conversation about what changed in AI, what matters, and what might hit your workweek next. Jason and Julie do not agree on politics, but they still like each other and geek out about how fast this stuff is moving.
               </p>
-              <span class="show-link-note">Watch the playlist</span>
+              <div class="show-actions" aria-label="The Weekly Blitz destinations">
+                <a class="button button-primary" href="https://www.youtube.com/playlist?list=PLBeGVU933EaEH3AGEpGy2s3yi8zKDRkvT" target="_blank" rel="noopener noreferrer">YouTube</a>
+              </div>
             </div>
-          </a>
+          </article>
 
-          <a class="show-card" href="https://www.youtube.com/playlist?list=PLBeGVU933EaFBQG98zL8nmtyTUSr39QTe" target="_blank" rel="noopener noreferrer">
+          <article class="show-card">
             <div class="show-image">
-              <img src="the-vibe.png" alt="The Vibe show artwork">
+              <img src="ai-humans-in-the-loop.png" alt="AI and the Humans in the Loop show artwork">
             </div>
 
             <div class="show-body">
-              <h3>The Vibe</h3>
-              <div class="show-meta">Monthly · Long-form conversations</div>
+              <h3>AI &amp; the Humans in the Loop</h3>
+              <div class="show-meta">Biweekly · Beginner's mind, useful work</div>
               <p class="show-description">
-                No code. No clock. No BS. Jason sits down with educators, builders, leaders, and deep thinkers for unscripted conversations about what AI is making possible, what it is making complicated, and what we owe each other as the tools get more powerful.
+                A conversation with people who did not come up through traditional software engineering or developer roles, but are learning to use modern AI tools to build surprisingly powerful real-world software and systems.
               </p>
-              <span class="show-link-note">Watch the playlist</span>
+              <div class="show-actions" aria-label="AI and the Humans in the Loop destinations">
+                <a class="button button-primary" href="https://www.youtube.com/playlist?list=PLB74U2VNoyJU" target="_blank" rel="noopener noreferrer">YouTube</a>
+              </div>
             </div>
-          </a>
-
-          <a class="show-card" href="https://www.youtube.com/playlist?list=PLBeGVU933EaFNK_Em851U6ZRGCPgQjL-k" target="_blank" rel="noopener noreferrer">
-            <div class="show-image">
-              <img src="data-bytes.png" alt="Data Bytes show artwork">
-            </div>
-
-            <div class="show-body">
-              <h3>Data Bytes</h3>
-              <div class="show-meta">Short-form clip series · Published when worth it</div>
-              <p class="show-description">
-                Data explained like the work actually depends on it. Data Bytes pulls the data conversations worth amplifying out of The Vibe, Weekly Blitz, and Schools Out Saturdays. Hygiene, governance, semantics, literacy, and the quiet infrastructure behind useful AI.
-              </p>
-              <span class="show-link-note">Watch the playlist</span>
-            </div>
-          </a>
-        </div>
-      </div>
-    </section>
-
-    <section aria-labelledby="beyond-title">
-      <div class="wrap">
-        <div class="section-kicker">Beyond the network</div>
-        <h2 id="beyond-title">Jason's other shows.</h2>
-
-        <div class="other-grid">
-          <a class="show-card" href="https://www.youtube.com/watch?v=WkwIdRatRCY" target="_blank" rel="noopener noreferrer">
-            <div class="show-image">
-              <img src="capacity-overload.png" alt="Capacity Overload: AI for Social Work show artwork">
-            </div>
-
-            <div class="show-body">
-              <h3>Capacity Overload: AI for Social Work</h3>
-              <div class="show-meta">From CitizenAI · Co-hosted with Oliver Belanger</div>
-              <p class="show-description">
-                Real stories from the front lines of social work, and honest conversations about the tools that might help. Each episode brings real conversations about service delivery, burnout, data, trust, and where technology can support the people doing the work without pretending to replace them.
-              </p>
-              <span class="show-link-note">Watch the episode</span>
-            </div>
-          </a>
+          </article>
         </div>
       </div>
     </section>
@@ -574,7 +570,10 @@
         <span class="footer-brand">AGI Podcast</span>
         <span> © 2026</span>
       </div>
-      <a class="footer-link" href="https://agipodcast.ai">agipodcast.ai</a>
+      <div class="footer-row">
+        <a class="footer-link" href="mailto:jason@agipodcast.ai">jason@agipodcast.ai</a>
+        <a class="footer-link" href="https://agipodcast.ai">agipodcast.ai</a>
+      </div>
     </div>
   </footer>
 </body>
