@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Now Make It Useful | No-Code CAIO</title>
+  <meta name="description" content="A No-Code CAIO field report on using AI to turn messy work into clear views, smaller decisions, and checkable next steps.">
+  <link rel="canonical" href="https://schoolsout.agipodcast.ai/newsletter/editions/edition-009.html">
+  <meta property="og:type" content="article">
+  <meta property="og:title" content="Now Make It Useful | No-Code CAIO">
+  <meta property="og:description" content="AI can organize and explain. People still decide what is true, important, and safe.">
+  <meta property="og:url" content="https://schoolsout.agipodcast.ai/newsletter/editions/edition-009.html">
+  <meta property="og:image" content="https://schoolsout.agipodcast.ai/newsletter/assets/no-code-caio-square.png">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Now Make It Useful | No-Code CAIO">
+  <meta name="twitter:description" content="AI can organize and explain. People still decide what is true, important, and safe.">
+  <meta name="twitter:image" content="https://schoolsout.agipodcast.ai/newsletter/assets/no-code-caio-square.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #05070d;
+      --panel: #0d1320;
+      --panel-2: #121b2c;
+      --ink: #f2f4f7;
+      --muted: #aeb8c8;
+      --dim: #77849a;
+      --amber: #f5b518;
+      --teal: #20c7bd;
+      --blue: #4f8cff;
+      --line: rgba(242, 244, 247, .14);
+      --max: 980px;
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; }
+    body {
+      margin: 0;
+      background: var(--bg);
+      color: var(--ink);
+      font-family: "Inter", Arial, sans-serif;
+      line-height: 1.65;
+    }
+    a { color: inherit; }
+    img { display: block; max-width: 100%; }
+    .shell { width: min(var(--max), calc(100% - 32px)); margin: 0 auto; }
+    .hero {
+      padding: 58px 0 64px;
+      background:
+        radial-gradient(circle at 78% 14%, rgba(79, 140, 255, .2), transparent 32%),
+        radial-gradient(circle at 12% 80%, rgba(32, 199, 189, .12), transparent 28%);
+      border-bottom: 1px solid var(--line);
+    }
+    .hero-lockup {
+      display: grid;
+      grid-template-columns: minmax(0, 760px) clamp(170px, 24vw, 280px);
+      gap: clamp(28px, 5vw, 72px);
+      align-items: center;
+      justify-content: space-between;
+    }
+    .hero-art {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      box-shadow: 0 24px 64px rgba(0, 0, 0, .35);
+    }
+    .eyebrow, .kicker, .label {
+      font-family: "IBM Plex Mono", monospace;
+      text-transform: uppercase;
+      letter-spacing: .12em;
+      font-size: 12px;
+      font-weight: 600;
+    }
+    .eyebrow, .kicker { color: var(--teal); }
+    h1, h2, h3 {
+      margin: 0;
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      text-transform: uppercase;
+      line-height: .98;
+      letter-spacing: .01em;
+    }
+    h1 { max-width: 760px; margin-top: 14px; font-size: clamp(58px, 11vw, 112px); }
+    h2 { font-size: clamp(40px, 6vw, 68px); }
+    h3 { font-size: clamp(28px, 4vw, 38px); }
+    .dek { max-width: 720px; margin: 24px 0 0; color: var(--muted); font-size: clamp(19px, 2.4vw, 25px); line-height: 1.45; }
+    .byline { margin-top: 26px; color: var(--dim); font-size: 14px; }
+    .signal-strip {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1px;
+      margin-top: 42px;
+      border: 1px solid var(--line);
+      background: var(--line);
+    }
+    .signal-strip div { padding: 18px; background: rgba(13, 19, 32, .92); }
+    .signal-strip strong { display: block; margin-top: 7px; font-size: 16px; }
+    .section { padding: 72px 0; border-bottom: 1px solid var(--line); }
+    .lead-grid { display: grid; grid-template-columns: .8fr 1.5fr; gap: 48px; align-items: start; }
+    .lead-copy p { margin: 0 0 22px; color: #d8dee8; font-size: 19px; }
+    .thesis {
+      margin-top: 34px;
+      padding: 26px 28px;
+      border-left: 5px solid var(--amber);
+      background: linear-gradient(90deg, rgba(245, 181, 24, .13), rgba(245, 181, 24, .03));
+      font-size: clamp(22px, 3vw, 30px);
+      font-weight: 700;
+      line-height: 1.35;
+    }
+    .section-head { display: grid; grid-template-columns: 1.1fr .8fr; gap: 32px; align-items: end; margin-bottom: 34px; }
+    .section-head p { margin: 0; color: var(--muted); }
+    .steps { display: grid; gap: 16px; }
+    .step {
+      display: grid;
+      grid-template-columns: 92px 1fr;
+      gap: 0;
+      border: 1px solid var(--line);
+      background: var(--panel);
+    }
+    .step-number {
+      display: flex;
+      align-items: flex-start;
+      justify-content: center;
+      padding: 26px 12px;
+      color: var(--amber);
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-size: 42px;
+      font-weight: 800;
+      border-right: 1px solid var(--line);
+    }
+    .step-body { padding: 27px 30px 30px; }
+    .step-body h3 { margin-bottom: 12px; }
+    .step-body p { margin: 0; color: var(--muted); font-size: 17px; }
+    .evidence {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 14px;
+      margin-top: 22px;
+    }
+    .evidence div { padding: 17px 18px; border: 1px solid var(--line); background: var(--panel-2); }
+    .evidence .label { color: var(--blue); }
+    .evidence p { margin-top: 7px; color: #cbd3df; font-size: 15px; }
+    .reality-card {
+      display: grid;
+      grid-template-columns: 1.2fr .8fr;
+      border: 1px solid rgba(245, 181, 24, .45);
+      background: linear-gradient(135deg, rgba(245, 181, 24, .12), rgba(13, 19, 32, .95));
+    }
+    .reality-copy { padding: 38px; }
+    .reality-copy p { margin: 18px 0 0; color: #dbe1ea; font-size: 18px; }
+    .checklist { padding: 38px; border-left: 1px solid var(--line); background: rgba(5, 7, 13, .45); }
+    .checklist ol { margin: 18px 0 0; padding-left: 22px; }
+    .checklist li { margin: 12px 0; color: var(--muted); }
+    .takeaway {
+      padding: 54px;
+      text-align: center;
+      border: 1px solid rgba(32, 199, 189, .45);
+      background:
+        radial-gradient(circle at 50% 0, rgba(32, 199, 189, .16), transparent 48%),
+        var(--panel);
+    }
+    .takeaway blockquote {
+      max-width: 780px;
+      margin: 20px auto 0;
+      font-family: "Barlow Condensed", Impact, sans-serif;
+      font-size: clamp(36px, 6vw, 68px);
+      font-weight: 700;
+      line-height: 1.02;
+      text-transform: uppercase;
+    }
+    .experiment { display: grid; grid-template-columns: .9fr 1.1fr; gap: 44px; }
+    .experiment ol { margin: 0; padding: 0; list-style: none; counter-reset: move; }
+    .experiment li { counter-increment: move; margin-bottom: 14px; padding: 18px 18px 18px 58px; position: relative; border: 1px solid var(--line); background: var(--panel); color: var(--muted); }
+    .experiment li::before { content: "0" counter(move); position: absolute; left: 18px; color: var(--amber); font-family: "IBM Plex Mono", monospace; font-weight: 600; }
+    .question { margin-top: 34px; color: var(--ink); font-size: 22px; font-weight: 700; }
+    footer { padding: 50px 0 60px; background: #03050a; }
+    .footer-grid { display: grid; grid-template-columns: 1.1fr .9fr; gap: 38px; }
+    .footer-name { font-family: "Barlow Condensed", Impact, sans-serif; font-size: 34px; font-weight: 700; text-transform: uppercase; }
+    .footer-copy, .footer-links { margin-top: 12px; color: var(--muted); font-size: 14px; }
+    .footer-links { display: grid; gap: 10px; }
+    .footer-links a { color: #dbe1ea; text-decoration-color: rgba(32, 199, 189, .65); text-underline-offset: 4px; }
+    .signoff { margin-top: 30px; color: var(--ink); }
+    @media (max-width: 720px) {
+      .hero-lockup { grid-template-columns: 1fr; }
+      .hero-art { width: min(62vw, 240px); margin-top: 8px; }
+      .lead-grid, .section-head, .reality-card, .experiment, .footer-grid { grid-template-columns: 1fr; }
+      .signal-strip { grid-template-columns: 1fr; }
+      .step { grid-template-columns: 64px 1fr; }
+      .step-number { font-size: 32px; }
+      .step-body { padding: 22px; }
+      .evidence { grid-template-columns: 1fr; }
+      .checklist { border-left: 0; border-top: 1px solid var(--line); }
+      .takeaway { padding: 38px 22px; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <section class="hero">
+      <div class="shell">
+        <p class="eyebrow">No-Code CAIO · Session 003 · August 16, 2026</p>
+        <div class="hero-lockup">
+          <h1>Now Make It Useful</h1>
+          <img class="hero-art" src="../assets/no-code-caio-square.png" alt="No-Code CAIO square artwork">
+        </div>
+        <p class="dek">Seeing AI clearly is the first move. The next move is turning a messy workday into smaller decisions a person can actually use, check, and own.</p>
+        <p class="byline">By Jason Padgett</p>
+        <div class="signal-strip" aria-label="Edition summary">
+          <div><span class="label">Source</span><strong>An end-of-day workflow</strong></div>
+          <div><span class="label">Pattern</span><strong>Big work becomes small decisions</strong></div>
+          <div><span class="label">Human role</span><strong>Truth, importance, and safety</strong></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell lead-grid">
+        <div>
+          <p class="kicker">The workday</p>
+          <h2>One messy pile. Several useful things.</h2>
+        </div>
+        <div class="lead-copy">
+          <p>I have built a habit of saving my end-of-day workflows as simple HTML pages. I call them Sophomore build records because I want them clear enough that my high-school sophomore daughter could open one, understand what happened, and use it to present the work to a class.</p>
+          <p>That standard forces me to explain the work instead of hiding behind a polished output. On August 15, the page had to make sense of competing plans, training notes, a large to-do list, project records, and several decisions hiding inside all of it. That is what I mean when I say, “We turned a messy workday into things people could use.”</p>
+          <p>AI helped sort the pile. The useful outputs were modest: two follow-up pages, a few audience-specific views, clearer project tickets, and one short page with three questions.</p>
+          <p>Let’s be real. Nobody needs another forty-page AI answer sitting beside the other forty-page AI answers. People need to know what is true, what matters now, and what decision unlocks the next piece of work.</p>
+          <div class="thesis">AI earns its place in the workday when it makes the next human decision easier without pretending to make that decision for us.</div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell">
+        <div class="section-head">
+          <div><p class="kicker">Four moves from the record</p><h2>How the pile got smaller.</h2></div>
+          <p>Each move created something a real person could open, question, and use.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step">
+            <div class="step-number">01</div>
+            <div class="step-body">
+              <h3>Compare the plans before choosing one.</h3>
+              <p>Several AI agents were collaborating in a Slack channel, looking at the same work, and producing different plans for it. The disagreement was useful because it exposed the choices. A polished plan is still a proposal. The human job is to compare the plans, question their assumptions, correct the facts, and choose what matters.</p>
+              <div class="evidence">
+                <div><span class="label">Evidence</span><p>The build record preserved the competing plans instead of treating the first one as the answer.</p></div>
+                <div><span class="label">Useful move</span><p>Ask the AI to label assumptions, unknowns, tradeoffs, and the decisions only a person can make.</p></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-number">02</div>
+            <div class="step-body">
+              <h3>Make training useful after everyone leaves.</h3>
+              <p>A two-day workshop could have disappeared into a folder full of notes. Instead, the material became two simple review pages: one explained the larger model, and one helped people practice the conversation they would need to have next.</p>
+              <p>The team’s feedback was straightforward. The two pages made the workshop material easier to understand and gave them something useful to return to after the session.</p>
+              <div class="evidence">
+                <div><span class="label">Evidence</span><p>Two shareable HTML pages turned a completed session into something people could revisit.</p></div>
+                <div><span class="label">Useful move</span><p>End training with one reference page and one practice page built around the work people will actually do.</p></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-number">03</div>
+            <div class="step-body">
+              <h3>Give different people different views.</h3>
+              <p>In K-12 education, differentiation starts with a simple truth: one presentation does not help every student in the same way. Adults deserve the same consideration at work. A complete project board helps the people steering the work, while an individual path helps one person see the next move without sorting through everything else.</p>
+              <div class="evidence">
+                <div><span class="label">Evidence</span><p>The same source material produced a project view, a personal path, and a smaller decision page.</p></div>
+                <div><span class="label">Useful move</span><p>Ask who will use the information, what they need to decide, and what can safely stay out of their view.</p></div>
+              </div>
+            </div>
+          </article>
+
+          <article class="step">
+            <div class="step-number">04</div>
+            <div class="step-body">
+              <h3>Check the confident answer against today.</h3>
+              <p><strong>Problem:</strong> One AI plan described tools and workflows that sounded completely reasonable but were no longer being used. The answer was organized. It was also out of date.</p>
+              <p><strong>Solution:</strong> Run a reality check that compares the confident answer against current evidence. Notice when an answer sounds complete, then verify it against the way the work is actually done today.</p>
+              <div class="evidence">
+                <div><span class="label">What the check caught</span><p>Human review found the outdated tools and workflows before the plan became an instruction.</p></div>
+                <div><span class="label">Useful move</span><p>Mark the facts that can expire, then verify the important ones against today’s evidence and with the person who owns the work.</p></div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell reality-card">
+        <div class="reality-copy">
+          <p class="kicker">Reality check</p>
+          <h2>Organized can still be wrong.</h2>
+          <p>This is the skill I want more people to practice. Notice when an answer sounds complete but does not match the room, the system, or the work as it exists today. Give the AI better context. Keep unknowns visible. Put a human checkpoint where a wrong assumption could waste time, money, or trust.</p>
+        </div>
+        <div class="checklist">
+          <p class="label">Before you use the output</p>
+          <ol>
+            <li>Which facts could have changed?</li>
+            <li>Who owns those facts now?</li>
+            <li>What decision will this output influence?</li>
+            <li>What happens if the answer is wrong?</li>
+          </ol>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell takeaway">
+        <p class="kicker">The human takeaway</p>
+        <blockquote>AI organizes and explains. People decide what is true, important, and safe.</blockquote>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell experiment">
+        <div>
+          <p class="kicker">Try this tomorrow</p>
+          <h2>Give AI a smaller job.</h2>
+          <p class="question">What messy part of your workday would become easier if AI returned three small decisions instead of one giant answer?</p>
+        </div>
+        <ol>
+          <li>Choose one pile of notes, tasks, or plans that is slowing you down.</li>
+          <li>Name the person who will use the result and the decision they need to make.</li>
+          <li>Ask AI for the smallest useful view, page, or question set that supports that decision.</li>
+          <li>Check every important claim against current reality before anyone acts.</li>
+        </ol>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="shell footer-grid">
+      <div>
+        <div class="footer-name">Jason Padgett</div>
+        <p class="footer-copy">AI Solutions Architect | Co-Founder, Wooden Boy Industries | Host, AGI Podcast | AI Adoption, LLM Systems &amp; Human-AI Workflows</p>
+        <p class="signoff">Ciao, Jason</p>
+      </div>
+      <div class="footer-links">
+        <a href="https://woodenboyindustriesai.com/">Wooden Boy Industries</a>
+        <a href="https://woodenboyindustriesai.com/sprite/">Sprite</a>
+        <span>Practical AI capability for solopreneurs who want to learn the tools and use them well themselves.</span>
+        <a href="https://schoolsout.agipodcast.ai/">AGI Podcast Network</a>
+        <span>Advance, Grow, and Innovate with AI.</span>
+        <a href="https://chakrasolutions.ai/">Chakra AI Solutions</a>
+        <span>Chief Solutions Architect</span>
+        <a href="mailto:jason@agipodcast.ai">jason@agipodcast.ai</a>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

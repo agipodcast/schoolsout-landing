@@ -3,8 +3,26 @@
   "description": "The weekly pulse on real AI work for managers, small-business owners, and nonprofit leaders.",
   "url": "https://agipodcast.ai/newsletter/",
   "author": "Jason Padgett",
-  "updated": "2026-08-03",
+  "updated": "2026-08-16",
   "editions": [
+    {
+      "number": 9,
+      "label": "Session 003",
+      "title": "Now Make It Useful",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-009.html",
+      "date": "2026-08-16",
+      "description": "AI can organize a messy workday into useful pages, smaller decisions, and clearer next steps. People still decide what is true, important, and safe.",
+      "readTime": "6 min"
+    },
+    {
+      "number": 8,
+      "label": "Session 002",
+      "title": "Turn Your Glasses Around",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-008.html",
+      "date": "2026-08-09",
+      "description": "A practical conversation about the AI-infused future, the questions worth asking, and the rooms where people can work through what comes next together.",
+      "readTime": "5 min"
+    },
     {
       "number": 7,
       "label": "Session 001",

@@ -4,9 +4,42 @@
   "url": "https://schoolsout.agipodcast.ai/",
   "host": "Jason Padgett",
   "playlist": "https://www.youtube.com/playlist?list=PLBeGVU933EaEQeGMLi4Vk6D-bXUutguAe",
-  "updated": "2026-07-18",
-  "episodeCount": 43,
+  "updated": "2026-08-15",
+  "episodeCount": 46,
   "episodes": [
+    {
+      "title": "AI Is Already Here: What K-12 Teachers and Students Need Now",
+      "date": "2026-08-15",
+      "youtube": "https://www.youtube.com/watch?v=_tf1jWoa_BM",
+      "topics": [
+        "teacher-time",
+        "student-judgment",
+        "data-privacy"
+      ],
+      "summary": "Indianapolis Catholic school principal Ronda Swartz on returning time to teachers, building student AI judgment, setting practical guardrails, and protecting student data across school-managed and personal accounts."
+    },
+    {
+      "title": "How to Grade Student Work When AI Can Write It",
+      "date": "2026-08-08",
+      "youtube": "https://www.youtube.com/watch?v=ffwkVBd6X1s",
+      "topics": [
+        "assessment",
+        "ai-literacy",
+        "equity"
+      ],
+      "summary": "Mike Jones on moving assessment beyond the finished artifact, using HUMAN and HEART to label AI use and grade the process, and the equity risks of both bans and unstructured access."
+    },
+    {
+      "title": "Rural Schools, Real AI: A Teacher’s Blueprint for K-12 AI Literacy",
+      "date": "2026-07-31",
+      "youtube": "https://www.youtube.com/watch?v=WB_rDsRKFic",
+      "topics": [
+        "rural-schools",
+        "ai-literacy",
+        "student-writing"
+      ],
+      "summary": "Rensselaer Central teacher and district AI lead Hunter Hickman on action research in student writing, AI policy and data discipline, and where he and Jason disagree about expertise before AI use."
+    },
     {
       "title": "AI in Catholic Education: What K-12 Schools Owe Their Students",
       "date": "2026-07-18",
