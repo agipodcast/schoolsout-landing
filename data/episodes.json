@@ -4,9 +4,20 @@
   "url": "https://schoolsout.agipodcast.ai/",
   "host": "Jason Padgett",
   "playlist": "https://www.youtube.com/playlist?list=PLBeGVU933EaEQeGMLi4Vk6D-bXUutguAe",
-  "updated": "2026-08-15",
-  "episodeCount": 46,
+  "updated": "2026-08-22",
+  "episodeCount": 47,
   "episodes": [
+    {
+      "title": "When AI Cuts Entry-Level Jobs, Who Builds the Senior Workforce?",
+      "date": "2026-08-22",
+      "youtube": "https://www.youtube.com/watch?v=ZF__kFu-DZg",
+      "topics": [
+        "workforce-pathways",
+        "entry-level-jobs",
+        "ai-education"
+      ],
+      "summary": "Ivy Tech's Shabbir Qutbuddin joins Jason to examine the shrinking entry-level job market, AI pathways and apprenticeships, project-based learning, small-business opportunities, and why students need to understand what happens under the hood of an AI model."
+    },
     {
       "title": "AI Is Already Here: What K-12 Teachers and Students Need Now",
       "date": "2026-08-15",
