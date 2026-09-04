@@ -39,6 +39,7 @@
       font-size: 22px;
       font-weight: 600;
       color: #f5f0e1;
+      flex: 0 0 auto;
     }
 
     nav .brand small {
@@ -53,14 +54,24 @@
     nav ul {
       list-style: none;
       display: flex;
+      align-items: center;
       gap: 12px;
+      flex-wrap: wrap;
+      justify-content: flex-end;
+    }
+
+    nav ul li {
+      flex: 0 0 auto;
     }
 
     nav ul a {
+      display: block;
       padding: 10px 20px;
       border: 1px solid rgba(245, 240, 225, 0.2);
       border-radius: 999px;
       font-size: 14px;
+      line-height: 1.2;
+      white-space: nowrap;
       transition: all 0.2s;
     }
 
@@ -335,10 +346,22 @@
       font-size: 14px;
     }
 
+    @media (max-width: 1300px) {
+      nav {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 18px;
+      }
+
+      nav ul {
+        width: 100%;
+        justify-content: flex-start;
+      }
+    }
+
     @media (max-width: 768px) {
       nav {
         padding: 20px 24px;
-        flex-direction: column;
         gap: 16px;
       }
 
