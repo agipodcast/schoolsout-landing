@@ -4,9 +4,23 @@
   "url": "https://schoolsout.agipodcast.ai/",
   "host": "Jason Padgett",
   "playlist": "https://www.youtube.com/playlist?list=PLBeGVU933EaEQeGMLi4Vk6D-bXUutguAe",
-  "updated": "2026-09-05",
-  "episodeCount": 48,
+  "updated": "2026-09-12",
+  "episodeCount": 50,
   "episodes": [
+    {
+      "title": "From Tech Consumers to Creators: AI, Agency, and Student Work with Alexander Kutulas",
+      "date": "2026-09-12",
+      "youtube": "https://www.youtube.com/watch?v=2YEZHy4azUA",
+      "spotify": "https://open.spotify.com/episode/4jnBJtgSq11BzQcP2Df6or",
+      "apple": "https://podcasts.apple.com/us/podcast/from-tech-consumers-to-creators-ai-agency-and-student/id1812450522?i=1000789169565",
+      "topics": [
+        "student-agency",
+        "ai-literacy",
+        "student-work"
+      ],
+      "summary": "Alexander Kutulas and Jason Padgett dig into agency, real-world experience, student creativity, and the skills that matter when the technical floor keeps rising.",
+      "hub": "https://schoolsout.agipodcast.ai/episodes/from-tech-consumers-to-creators"
+    },
     {
       "title": "Marketing in an AI World: The Skills Students Still Need to Build",
       "date": "2026-09-05",
@@ -18,6 +32,19 @@
       ],
       "summary": "David LaCombe joins Jason Padgett to discuss marketing in an AI world and the skills students still need to build.",
       "spotify": "https://open.spotify.com/episode/4SYKTKspF3afyePCbjceWA"
+    },
+    {
+      "title": "AI in Education: Will Students Build the Future or Just Consume It?",
+      "date": "2026-08-29",
+      "youtube": "https://www.youtube.com/watch?v=dXq50pvht_Q",
+      "spotify": "https://open.spotify.com/episode/6BP82yPpjAuT2tu3WgmJBK",
+      "apple": "https://podcasts.apple.com/us/podcast/ai-in-education-will-students-build-the-future-or/id1812450522?i=1000786636777",
+      "topics": [
+        "ai-education",
+        "student-creators",
+        "future-of-work"
+      ],
+      "summary": "Purdue computer science student Nishad Patel joins Jason with a perspective shaped by growing up in Abu Dhabi and studying in Indiana."
     },
     {
       "title": "When AI Cuts Entry-Level Jobs, Who Builds the Senior Workforce?",
