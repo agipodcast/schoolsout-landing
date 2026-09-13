@@ -1,7 +1,7 @@
 {
   "publication": "No-Code CAIO",
   "description": "The weekly pulse on real AI work for managers, small-business owners, and nonprofit leaders.",
-  "url": "https://agipodcast.ai/newsletter/",
+  "url": "https://schoolsout.agipodcast.ai/newsletter/",
   "author": "Jason Padgett",
   "updated": "2026-09-11",
   "editions": [
@@ -9,7 +9,7 @@
       "number": 10,
       "label": "Working artifact 001",
       "title": "Stop reading about AI. Make it do something.",
-      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/working-artifact-001.html",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/working-artifact-001",
       "date": "2026-09-04",
       "description": "A working AI artifact you can click, question, save, share, and use to decide your next move.",
       "readTime": "Interactive"
@@ -18,7 +18,7 @@
       "number": 9,
       "label": "Session 003",
       "title": "Now Make It Useful",
-      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-009.html",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-009",
       "date": "2026-08-16",
       "description": "AI can organize a messy workday into useful pages, smaller decisions, and clearer next steps. People still decide what is true, important, and safe.",
       "readTime": "6 min"
@@ -27,7 +27,7 @@
       "number": 8,
       "label": "Session 002",
       "title": "Turn Your Glasses Around",
-      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-008.html",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-008",
       "date": "2026-08-09",
       "description": "A practical conversation about the AI-infused future, the questions worth asking, and the rooms where people can work through what comes next together.",
       "readTime": "5 min"
@@ -36,7 +36,7 @@
       "number": 7,
       "label": "Session 001",
       "title": "The Night We Gave AI Agents a Room",
-      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-007.html",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-007",
       "date": "2026-08-03",
       "description": "Two AI agents finally shared a dependable room, survived a restart, challenged each other's work, and printed the failures beside the wins.",
       "readTime": "6 min"
@@ -45,7 +45,7 @@
       "number": 6,
       "label": "Countdown 6",
       "title": "Eighty Hours of Work. Ninety Minutes.",
-      "url": "https://agipodcast.ai/newsletter/editions/edition-006.html",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-006",
       "date": "2026-07-14",
       "description": "Seven AI agents did what Jason figures was eighty to a hundred hours of work in ninety minutes, plus the setup that keeps a business running when the models change.",
       "readTime": "6 min"
@@ -54,7 +54,7 @@
       "number": 5,
       "label": "Episode 002",
       "title": "From Org Chart to Operating System",
-      "url": "https://agipodcast.ai/newsletter/editions/edition-005.html",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-005",
       "date": "2026-07-07",
       "description": "Nine days ago I held a constitutional convention with my AI agents. This is what got built, what is honestly still a demo, and why the gates are the part worth copying.",
       "readTime": "4 min"
@@ -62,7 +62,7 @@
     {
       "number": 4,
       "title": "Your AI Agents Need an Org Chart",
-      "url": "https://agipodcast.ai/newsletter/editions/edition-004.html",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-004",
       "date": "2026-06-29",
       "description": "One AI agent feels like magic. Three AI agents need management, governance, a shared record, and receipts.",
       "readTime": "7 min"
@@ -70,7 +70,7 @@
     {
       "number": 3,
       "title": "I Put Two AIs in a Slack Channel",
-      "url": "https://agipodcast.ai/newsletter/editions/edition-003.html",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-003",
       "date": "2026-06-22",
       "description": "What it looks like when a non-coder runs an AI operating system, using one real Saturday of three-agent podcast production as the case.",
       "readTime": "8 min"
@@ -78,7 +78,7 @@
     {
       "number": 2,
       "title": "Don't Marry the Model",
-      "url": "https://agipodcast.ai/newsletter/editions/edition-002.html",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-002",
       "date": "2026-06-15",
       "description": "What the overnight shutdown of Anthropic's Fable 5 and Mythos 5 teaches every business that quietly runs on a single AI model.",
       "readTime": "7 min"
@@ -86,7 +86,7 @@
     {
       "number": 1,
       "title": "Done Being Victor Frankenstein",
-      "url": "https://agipodcast.ai/newsletter/editions/edition-001.html",
+      "url": "https://schoolsout.agipodcast.ai/newsletter/editions/edition-001",
       "date": "2026-06-08",
       "description": "One real week of turning copy-paste chaos into agentic workflows, no code required.",
       "readTime": "7 min"
