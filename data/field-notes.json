@@ -3,8 +3,16 @@
   "description": "A weekly companion to School's Out Saturdays. Practical signals, questions, and opportunities from the edge of school and work.",
   "url": "https://schoolsout.agipodcast.ai/field-notes",
   "author": "Jason Padgett",
-  "updated": "2026-09-02",
+  "updated": "2026-09-13",
   "issues": [
+    {
+      "number": 9,
+      "title": "Education 2040",
+      "url": "https://schoolsout.agipodcast.ai/field-notes-issue-9",
+      "date": "2026-09-13",
+      "description": "Four interactive classroom decision labs about AI, learning, governance and teacher judgment. Build a lesson experiment you can take back to school.",
+      "readTime": "Interactive"
+    },
     {
       "number": 8,
       "title": "When Tier 2 Is Full, Look Upstream",
