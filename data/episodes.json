@@ -4,9 +4,22 @@
   "url": "https://schoolsout.agipodcast.ai/",
   "host": "Jason Padgett",
   "playlist": "https://www.youtube.com/playlist?list=PLBeGVU933EaEQeGMLi4Vk6D-bXUutguAe",
-  "updated": "2026-09-12",
-  "episodeCount": 50,
+  "updated": "2026-09-19",
+  "episodeCount": 51,
   "episodes": [
+    {
+      "title": "The Future Has No Fixed Path | Toni Holcombe on AI, Learning and the Courage to Pivot",
+      "date": "2026-09-19",
+      "youtube": "https://www.youtube.com/watch?v=Vye9FJTyq4Q",
+      "spotify": "https://open.spotify.com/episode/2cNbrIT0VclfAr2Msmpc5P",
+      "apple": "https://podcasts.apple.com/us/podcast/the-future-has-no-fixed-path-toni-holcombe-on-ai/id1812450522?i=1000790661453",
+      "topics": [
+        "education",
+        "learning",
+        "career-pathways"
+      ],
+      "summary": "Jason Padgett and Toni move from data careers and AI hiring to education, trust, creativity, learning differences and the ability to change direction when a path no longer serves you."
+    },
     {
       "title": "From Tech Consumers to Creators: AI, Agency, and Student Work with Alexander Kutulas",
       "date": "2026-09-12",
