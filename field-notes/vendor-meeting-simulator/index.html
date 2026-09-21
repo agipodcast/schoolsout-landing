@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>The Vendor Meeting Simulator | Field Notes</title>
+<link rel="canonical" href="https://schoolsout.agipodcast.ai/field-notes/vendor-meeting-simulator/">
+<meta name="description" content="Practice five school AI vendor questions in a fictional meeting and take away a printable checklist.">
+<style>
+  :root{
+    --ink:#22301f; --paper:#f4f6ef; --accent:#3f6c33; --accent2:#b25b12;
+    --card:#ffffff; --muted:#6d7466; --good:#2b8a3e; --warn:#c9662a;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--paper); color:var(--ink); font-family:Georgia,'Times New Roman',serif; line-height:1.6;}
+  .wrap{max-width:680px; margin:0 auto; padding:32px 16px 64px;}
+  header{text-align:center; padding:24px 0 16px;}
+  .kicker{font-family:Helvetica,Arial,sans-serif; text-transform:uppercase; letter-spacing:.18em; font-size:12px; color:var(--accent2);}
+  h1{font-size:42px; line-height:1.1; margin:10px 0 6px;}
+  .dek{color:var(--muted); font-size:18px;}
+  .agenda{position:sticky; top:0; background:var(--paper); z-index:5; border-bottom:1px solid #dde2d2; padding:12px 0; font-family:Helvetica,Arial,sans-serif; font-size:12px; display:flex; gap:6px; justify-content:center; flex-wrap:wrap;}
+  .agenda span{padding:4px 10px; border-radius:12px; background:#e6eadb; color:var(--muted);}
+  .agenda span.now{background:var(--accent); color:#fff;}
+  .agenda span.done{background:var(--good); color:#fff;}
+  .card{background:var(--card); border:1px solid #dde2d2; border-radius:12px; padding:24px; margin:24px 0; box-shadow:0 2px 8px rgba(34,48,31,.06);}
+  .scene{font-size:17px; margin-bottom:16px;}
+  .scene em{color:var(--muted);}
+  .opt{display:block; width:100%; text-align:left; font-family:Georgia,serif; font-size:16px; background:var(--paper); border:1px solid #cdd4bf; border-radius:8px; padding:12px 16px; margin:8px 0; cursor:pointer; transition:all .15s;}
+  .opt:hover{border-color:var(--accent); transform:translateX(4px);}
+  .outcome{display:none; margin-top:16px; padding:14px 18px; border-radius:8px; font-size:16px;}
+  .outcome.good{display:block; background:#e9f5e4; border-left:4px solid var(--good);}
+  .outcome.warn{display:block; background:#fbeee0; border-left:4px solid var(--warn);}
+  .nextbtn{display:none; font-family:Helvetica,Arial,sans-serif; font-size:15px; background:var(--accent); color:#fff; border:none; border-radius:8px; padding:12px 22px; cursor:pointer; margin-top:14px;}
+  .nextbtn.show{display:inline-block;}
+  h2{font-size:26px; margin:36px 0 12px; border-bottom:3px solid var(--accent2); display:inline-block; padding-bottom:4px;}
+  p{margin-bottom:14px; font-size:17px;}
+  #checklist,#after{display:none;}
+  #checklist.show,#after.show{display:block;}
+  .check{background:#fffdf4; border:2px dashed var(--accent2); border-radius:12px; padding:24px;}
+  .check ol{margin:10px 0 16px 22px;}
+  .check li{margin-bottom:10px; font-size:17px;}
+  .btn{font-family:Helvetica,Arial,sans-serif; font-size:15px; background:var(--accent2); color:#fff; border:none; border-radius:8px; padding:12px 22px; cursor:pointer;}
+  .cta{background:var(--accent); color:#fff; border-radius:12px; padding:24px; text-align:center; margin-top:32px;}
+  .cta a{color:#fff; font-weight:bold;}
+  footer{margin-top:48px; border-top:1px solid #cdd4bf; padding-top:20px; font-size:14px; color:var(--muted); text-align:center;}
+  @media print{ .agenda,.cta,button,header,#sim,#after,footer{display:none!important;} #checklist{display:block!important;} .check{border:none;} }
+
+  button:focus-visible,a:focus-visible{outline:3px solid #075985;outline-offset:4px;}
+  footer pre{overflow-wrap:anywhere;}
+  @media(max-width:430px){h1{font-size:34px;}.card{padding:18px;}}
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">Field Notes · Interactive Edition</div>
+    <h1>The Vendor Meeting Simulator</h1>
+    <p class="dek">You're the principal. The AI vendor just plugged in the projector. Practice five questions before a real meeting. This fictional scenario is a discussion exercise, not a legal or compliance assessment.</p>
+  </header>
+
+  <div class="agenda" id="agenda">
+    <span id="a0">1 · The Demo</span><span id="a1">2 · The Price</span><span id="a2">3 · The Data</span><span id="a3">4 · The Teachers</span><span id="a4">5 · The Exit</span>
+  </div>
+
+  <noscript><p>The simulator needs JavaScript. The printable checklist is available below.</p><style>#checklist{display:block;}</style></noscript><div id="sim"></div>
+
+  <div id="checklist" class="check" tabindex="-1">
+    <h2 style="border:none;">Your Printable Checklist</h2>
+    <p>Every path through this meeting ends here, because these five questions are the meeting. Print this, fold it, bring it.</p>
+    <ol>
+      <li><strong>Show me this working with representative synthetic or properly anonymized data.</strong> Agree on realistic test cases. Do not share identifiable student records before the appropriate reviews and agreements.</li>
+      <li><strong>What does this cost in year two, at full enrollment?</strong> Get the number in writing before you fall in love.</li>
+      <li><strong>Where does our student data live, who can see it, and what happens to it if we leave?</strong> Ask for written terms and have the appropriate privacy and technology staff review them. A fast answer is not proof of compliance.</li>
+      <li><strong>What does teacher onboarding actually require, in hours, from people who have none to spare?</strong> A tool teachers don't use is a subscription, not a solution.</li>
+      <li><strong>If we cancel, what do we keep and how do we get it out?</strong> Ask about the divorce before the wedding.</li>
+    </ol>
+    <button class="btn" onclick="window.print()">Print The Checklist</button>
+  </div>
+
+  <div id="after">
+    <h2>One Classroom-Ready Idea</h2>
+    <p>Run this simulator with your students. Seriously. Put them in the buyer's chair for any product pitch, sneakers, apps, colleges, and have them build their own five questions. Evaluating a persuasive pitch is the literacy, AI just made the stakes obvious.</p>
+
+    <h2>One Thing To Stop Worrying About</h2>
+    <p>Stop worrying that you need to understand the technology before you can question it. You question bus contracts without being a mechanic. Same skill, same you, new vendor at the door.</p>
+
+    <div class="cta">
+      <p style="font-size:19px; margin-bottom:8px;"><strong>Get Field Notes In Your Inbox</strong></p>
+      <p style="margin-bottom:12px;">Practical AI guidance for educators, because our job is to prepare students for their future, not our past.</p>
+      <p><a href="https://woodenboyindustriesai.com/#field-notes">Subscribe at woodenboyindustriesai.com</a></p>
+    </div>
+  </div>
+
+  <footer>
+    <p>Field Notes is written by Jason Padgett with Wooden Boy Industries · woodenboyindustriesai.com</p>
+  </footer>
+</div>
+
+<script>
+const STAGES = [
+ {scene:"The sales rep opens with a flawless demo. Grades entered by voice, reports written in seconds, a teacher on the slide smiling like it's June. <em>\"Any questions before I continue?\"</em>",
+  opts:[
+   ["That looks incredible. Continue.", "warn","Six months later: the demo data was hand-polished. Your gradebook has 14 years of quirks, and the voice entry chokes on hyphenated last names. The question you didn't ask cost a semester.","But now you know: demos are movies."],
+   ["Can you run that feature on representative synthetic or properly anonymized data?", "good","Agree on realistic test cases and document what works. Keep identifiable student records out of the demo unless the appropriate reviews and agreements permit their use. A pause alone proves nothing.",""],
+   ["How many districts our size use this daily?", "good","Also strong. \"Daily\" is the word doing the work: purchased and used are different numbers, and the gap between them is where budgets go to die.",""]]},
+ {scene:"The price appears: $4 per student. Reasonable. The rep moves quickly to the next slide. <em>Something about the speed of that transition...</em>",
+  opts:[
+   ["Fair price. Next slide.", "warn","Year two arrives: $4 was the pilot rate. Full price is $11, the board asks why the line item tripled, and your name is on the recommendation.","The lesson survived even if the budget didn't."],
+   ["Is that the year-two price at full enrollment, in writing?", "good","The rep smiles differently now. You've just saved future-you a very uncomfortable board meeting.",""],
+   ["What did our neighboring district actually pay?", "good","Prices are negotiable, and vendors know superintendents talk to each other. So should you.",""]]},
+ {scene:"You ask about student data. The rep says <em>\"We take privacy very seriously, it's all encrypted and FERPA compliant.\"</em> That sentence took four seconds. Your move.",
+  opts:[
+   ["Good enough. Encryption, FERPA, boxes checked.", "warn","A year later a parent asks where exactly their kid's essays are stored and who trains models on them. \"The vendor said it was compliant\" is not the sentence you want to say into a microphone.","Now you ask the second question first."],
+   ["Where does it live, who can access it, is it used for training, and what happens when we leave?", "good","Ask for written answers, data terms and supporting evidence. Have your privacy and technology staff review them. A confident response or a compliance label is not verification.",""],
+   ["Can our tech coordinator review the data agreement before anything is signed?", "good","The right instinct: slow the paper down. Documented review is the next step; this exercise does not determine legal compliance.",""]]},
+ {scene:"The rep says teachers will love it. You glance at the clock: your teachers have 43 minutes of prep and a sub shortage. <em>\"Onboarding is easy,\"</em> the rep adds.",
+  opts:[
+   ["Teachers adapt. They always do.", "warn","They do adapt: by ignoring it. Spring survey says 9 percent weekly usage. The tool wasn't bad, the time it demanded didn't exist.","Adoption is a time budget, not an attitude."],
+   ["Show me the onboarding in hours, per teacher, and who covers their class during it.", "good","The rep has never been asked this precisely. The honest answer reshapes the whole rollout, and possibly the whole decision.",""],
+   ["Can three of my teachers pilot it first and report back?", "good","The pilot is the truth serum. Three real teachers in three real classrooms beat every slide in this deck.",""]]},
+ {scene:"Final slide. The rep slides the contract across: three-year term, auto-renewal. <em>\"Most districts sign today to lock in the pilot rate.\"</em>",
+  opts:[
+   ["Lock it in. Three years, done.", "warn","Eighteen months in, a better tool exists at half the price, and you're paying for both. The urgency was theirs, not yours.","Deadlines that expire today were built to."],
+   ["If we cancel, what do we keep, and how do we export it?", "good","The exit question. Ask for the export format, timing, fees, deletion terms and written obligations. Have the appropriate staff review the contract before relying on a verbal promise.",""],
+   ["We don't sign on demo day. Send the contract for review.", "good","Nobody who respects your district rushes your district. The good vendors expect this answer, the other kind needs it.",""]]}
+];
+let stage=0;
+function render(){
+  const sim=document.getElementById('sim'); sim.innerHTML='';
+  const s=STAGES[stage];
+  for(let k=0;k<STAGES.length;k++){
+    const a=document.getElementById('a'+k);
+    a.className = k<stage?'done':(k===stage?'now':'');
+  }
+  const card=document.createElement('div'); card.className='card';
+  card.innerHTML='<div class="scene" tabindex="-1">'+s.scene+'</div>';
+  s.opts.forEach((o)=>{
+    const b=document.createElement('button'); b.className='opt'; b.textContent=o[0];
+    b.onclick=()=>choose(card,o); card.appendChild(b);
+  });
+  const out=document.createElement('div'); out.className='outcome'; out.setAttribute('role','status'); out.setAttribute('aria-live','polite'); card.appendChild(out);
+  const nb=document.createElement('button'); nb.className='nextbtn'; nb.textContent= stage<4?'Next Agenda Item':'See Your Checklist';
+  nb.onclick=advance; card.appendChild(nb);
+  sim.appendChild(card);
+}
+function choose(card,o){
+  [...card.querySelectorAll('.opt')].forEach(b=>{b.disabled=true; b.style.opacity=.5;});
+  const out=card.querySelector('.outcome');
+  out.className='outcome '+o[1];
+  out.innerHTML=o[2]+(o[3]?'<br><em>'+o[3]+'</em>':'');
+  card.querySelector('.nextbtn').classList.add('show');
+}
+function advance(){
+  stage++;
+  if(stage<STAGES.length){ render(); document.querySelector('.scene').focus({preventScroll:true}); window.scrollTo({top:document.getElementById('sim').offsetTop-80,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}); }
+  else{
+    document.getElementById('sim').innerHTML='';
+    for(let k=0;k<STAGES.length;k++){document.getElementById('a'+k).className='done';}
+    document.getElementById('checklist').classList.add('show');
+    document.getElementById('after').classList.add('show');
+    document.getElementById('checklist').focus({preventScroll:true}); document.getElementById('checklist').scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+  }
+}
+render();
+</script>
+</body>
+</html>

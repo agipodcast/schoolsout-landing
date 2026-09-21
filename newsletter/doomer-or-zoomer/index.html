@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Doomer Or Zoomer? | The No-Code CAIO</title>
+<link rel="canonical" href="https://schoolsout.agipodcast.ai/newsletter/doomer-or-zoomer/">
+<meta name="description" content="A playful seven-question self-check for everyday AI decisions, with practical next steps and No-Code CAIO signup.">
+<style>
+  :root{
+    --ink:#1a1d29; --paper:#f7f5f0; --accent:#e8590c; --accent2:#0b7285;
+    --meter-doom:#c92a2a; --meter-zoom:#2b8a3e; --card:#ffffff; --muted:#6b7280;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  body{background:var(--paper); color:var(--ink); font-family:Georgia,'Times New Roman',serif; line-height:1.6;}
+  .wrap{max-width:680px; margin:0 auto; padding:32px 16px 64px;}
+  header{text-align:center; padding:24px 0 8px;}
+  .kicker{font-family:Helvetica,Arial,sans-serif; text-transform:uppercase; letter-spacing:.18em; font-size:12px; color:var(--accent);}
+  h1{font-size:44px; line-height:1.1; margin:10px 0 6px;}
+  .dek{color:var(--muted); font-size:18px; margin-bottom:8px;}
+  .byline{font-family:Helvetica,Arial,sans-serif; font-size:13px; color:var(--muted);}
+  .meterbox{position:sticky; top:0; background:var(--paper); padding:14px 0 10px; z-index:5; border-bottom:1px solid #e3ded4;}
+  .meter-labels{display:flex; justify-content:space-between; font-family:Helvetica,Arial,sans-serif; font-size:12px; text-transform:uppercase; letter-spacing:.1em;}
+  .meter-labels .d{color:var(--meter-doom);} .meter-labels .z{color:var(--meter-zoom);}
+  .meter{height:14px; background:linear-gradient(90deg,var(--meter-doom),#e9b949,var(--meter-zoom)); border-radius:7px; position:relative; margin-top:6px;}
+  .needle{position:absolute; top:-6px; left:50%; width:4px; height:26px; background:var(--ink); border-radius:2px; transform:translateX(-50%); transition:left .5s ease;}
+  .card{background:var(--card); border:1px solid #e3ded4; border-radius:12px; padding:24px; margin:24px 0; box-shadow:0 2px 8px rgba(26,29,41,.06);}
+  .qnum{font-family:Helvetica,Arial,sans-serif; font-size:12px; color:var(--accent2); text-transform:uppercase; letter-spacing:.15em; margin-bottom:8px;}
+  .qtext{font-size:20px; font-weight:bold; margin-bottom:16px;}
+  .opt{display:block; width:100%; text-align:left; font-family:Georgia,serif; font-size:16px; background:var(--paper); border:1px solid #d8d2c4; border-radius:8px; padding:12px 16px; margin:8px 0; cursor:pointer; transition:all .15s;}
+  .opt:hover{border-color:var(--accent); transform:translateX(4px);}
+  .opt.picked{background:var(--ink); color:#fff; border-color:var(--ink);}
+  .opt.dim{opacity:.45; pointer-events:none;}
+  .whisper{display:none; font-size:15px; color:var(--muted); border-left:3px solid var(--accent); padding:8px 14px; margin-top:14px; font-style:italic;}
+  .card.answered .whisper{display:block;}
+  #reveal, #sections{display:none;}
+  #reveal.show, #sections.show{display:block;}
+  .verdict{font-size:26px; font-weight:bold; margin-bottom:10px;}
+  h2{font-size:26px; margin:36px 0 12px; border-bottom:3px solid var(--accent); display:inline-block; padding-bottom:4px;}
+  p{margin-bottom:14px; font-size:17px;}
+  .try{background:#fff8e6; border:1px solid #f0d58c; border-radius:12px; padding:20px 24px;}
+  .btn{font-family:Helvetica,Arial,sans-serif; font-size:15px; background:var(--accent); color:#fff; border:none; border-radius:8px; padding:12px 22px; cursor:pointer; margin-top:10px;}
+  .btn.ghost{background:transparent; color:var(--accent); border:2px solid var(--accent);}
+  footer{margin-top:56px; border-top:1px solid #d8d2c4; padding-top:28px;}
+  footer pre{white-space:pre-wrap; font-family:Georgia,serif; font-size:15px; line-height:1.7;}
+  .progress{font-family:Helvetica,Arial,sans-serif; font-size:13px; color:var(--muted); text-align:center; margin-top:4px;}
+
+  button:focus-visible,a:focus-visible{outline:3px solid #075985;outline-offset:4px;}
+  footer pre{overflow-wrap:anywhere;}
+  @media(max-width:430px){h1{font-size:34px;}.card{padding:18px;}}
+  @media(prefers-reduced-motion:reduce){*{scroll-behavior:auto!important;transition:none!important;}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header>
+    <div class="kicker">The No-Code CAIO · Interactive Edition</div>
+    <h1>Doomer Or Zoomer?</h1>
+    <p class="dek">Seven hypothetical AI decisions. Answer honestly, the meter doesn't judge, and neither do I. Mostly.</p>
+    <p class="dek">A playful self-check, not a validated assessment, prediction or measure of AI expertise. The scenarios are invented.</p>
+    <p class="byline">By Jason Padgett, your No-Code Chief AI Officer</p>
+  </header>
+
+  <div class="meterbox">
+    <div class="meter-labels"><span class="d">Doomer</span><span class="z">Zoomer</span></div>
+    <div class="meter"><div class="needle" id="needle"></div></div>
+    <div class="progress" id="progress" role="status" aria-live="polite">0 of 7 answered</div>
+  </div>
+
+  <noscript><p>This quiz needs JavaScript. You can still use the newsletter links below.</p></noscript><div id="quiz"></div>
+
+  <div id="reveal" class="card">
+    <div class="verdict" id="verdictText" tabindex="-1"></div>
+    <p id="verdictBody"></p>
+    <p>Here's my take, and I've road-tested it every Friday morning over coffee with engineers, business owners, and at least one guy who quotes the Matrix like scripture: the useful position is neither doomer nor zoomer. It's the person who asks "okay, but what do I actually do on Tuesday?" The extinction debate and the utopia debate are both spectator sports. Your business, your classroom, your Sunday night, those are the field.</p>
+    <button class="btn ghost" onclick="resetQuiz(true)">Retake As Your Boss</button>
+    <button class="btn ghost" onclick="resetQuiz(false)">Retake As Yourself</button>
+  </div>
+
+  <div id="sections">
+    <h2>From The Quiz To Your Week</h2>
+    <p>These scenarios are fictional. Try them against one decision you actually face: which model to pay for, how to check a vendor claim, or whether an automation still does its job. Your answers are a starting point for a conversation, not a scorecard for getting AI right.</p>
+
+    <h2>What It Means For You</h2>
+    <p>The loudest voices want you paralyzed or euphoric, because both keep you watching. Meanwhile the practical questions sit unanswered: does your county have backups for its critical systems, does your vendor demo survive contact with a real Tuesday, does the model you're paying for match the work you're actually doing. Boring questions. Boring questions are where the money is.</p>
+
+    <h2>One Thing To Try</h2>
+    <div class="try">
+      <p>This week, take one task you do every Sunday night, cash flow check, schedule prep, inbox triage, and hand it to whatever AI you already have. Don't buy anything new. Just see how much of your Sunday you get back. That's the whole experiment, and it beats every hot take you'll read this week.</p>
+    </div>
+  </div>
+
+
+  <section class="try" aria-labelledby="email-signup-title">
+    <h2 id="email-signup-title">Get The No-Code CAIO By Email</h2>
+    <p>Keep exploring practical AI decisions. Choose your email preferences on the signup page.</p>
+    <p><a href="https://schoolsout.agipodcast.ai/newsletter/#subscribe">Subscribe to the No-Code CAIO by email</a></p>
+    <p>Prefer LinkedIn? <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7399599285849346048">Follow the LinkedIn newsletter instead</a>.</p>
+  </section>
+  <footer>
+    <pre>Work With Me CitizenAI : We help nonprofits connect people to housing, food, childcare, and transportation, faster.
+AI literacy and education, consulting and speaking engagements welcome.
+<a href="mailto:jason@mycitizen.ai">jason@mycitizen.ai</a>
+
+The AGI Podcast Network Episodes, shows, newsletters, and everything else: <a href="https://schoolsout.agipodcast.ai/network">schoolsout.agipodcast.ai/network</a>
+
+Connect with me:
+LinkedIn: <a href="https://www.linkedin.com/in/jason-grant-padgett">linkedin.com/in/jason-grant-padgett</a>
+X: @NoCodeCAIO
+Facebook and Instagram: @AGIPodcast | @AGISchoolsout
+
+Subscribe to the No-Code CAIO: <a href="https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7399599285849346048">https://www.linkedin.com/build-relation/newsletter-follow?entityUrn=7399599285849346048</a>
+
+
+Ciao, Jason</pre>
+  </footer>
+</div>
+
+<script>
+const QUESTIONS = [
+  {q:"Imagine a public agency posts \"no dooming\" about AI. Your gut reaction?",
+   boss:"Imagine a public agency posts \"no dooming\" about AI. As the person responsible for payroll, your reaction?",
+   opts:[["Somebody has to pump the brakes, and it clearly won't be them",-2,"Noted. The brakes committee meets in your head every night at 3 AM."],
+         ["Honestly, full speed sounds right, the upside is enormous",2,"The gas pedal fan club welcomes you."],
+         ["I mostly want to know who's checking the infrastructure either way",1,"Ah, a Tuesday person. We'll get along."]]},
+  {q:"Imagine a dramatic AI documentary appears on a streaming service. Your completely non-technical relative watches it and says \"we have to do something.\" You say:",
+   boss:"Imagine your business partner watches an alarming AI documentary and panics. You say:",
+   opts:[["They're right, most people don't realize how bad this could get",-2,"The doc did its job on you too."],
+         ["Relax, people said the same thing about the printing press",2,"History rhymes, and you've got the receipts."],
+         ["Watch it together, then talk about what you can actually control",0,"Homework plus a hug. Balanced."]]},
+  {q:"Imagine someone claims an AI could take down 10 percent of the internet. What would you ask?",
+   boss:"Imagine your IT person says an AI incident could take down 10 percent of your systems. You:",
+   opts:[["Yes, and nobody running the infrastructure is ready",-1,"Hope the backups exist. Somebody should check. Check before assuming."],
+         ["A piece of code destroying global infrastructure doesn't pass the smell test",1,"Skepticism is cheap insurance."],
+         ["Wrong question. Which 10 percent, and where are the cold storage backups?",1,"You've clearly sat through a real incident review."]]},
+  {q:"Do you need the most powerful AI model to get useful work done?",
+   boss:"Your team wants the expensive frontier model subscription. You:",
+   opts:[["The daily driver does the job, most people never need the frontier",1,"Honda Civic gang. Your accountant loves you."],
+         ["Once you've seen what the big models do, you can't go back",1,"The graduate-student intern ruined you. It happens."],
+         ["Match the model to the task and stop treating it like a religion",2,"Congratulations, you're a router."]]},
+  {q:"The Matrix predicted all of this. Agree?",
+   boss:"A vendor opens their pitch with a Matrix reference. You:",
+   opts:[["More than people want to admit, and that scares me",-1,"Keep an eye on the pods, then."],
+         ["Movies inspired the builders, that's influence, not prophecy",1,"The snake eats its tail, and you brought a fork."],
+         ["I just want to know if my phone system works Monday",2,"Neo could never run a small business."]]},
+  {q:"Imagine a proposed data center raises local concerns about power and water. Your take?",
+   boss:"A data center wants to build in your county. You:",
+   opts:[["We're cooking ourselves before the AI ever gets the chance",-2,"Bring a thermometer to the apocalypse."],
+         ["Chips and models get more efficient every quarter, it solves itself",1,"The optimists' bet: the curve saves us again."],
+         ["Make the data center money fund local infrastructure while it's here",2,"Pragmatism with leverage. Wait, strike that word. Pragmatism with a crowbar."]]},
+  {q:"Last one. Can you create something smarter than you and control it?",
+   boss:"Final question. Can you hire someone smarter than you and manage them?",
+   opts:[["No, and that's the whole problem in one sentence",-2,"The classic doomer closer. Respect."],
+         ["We do it every generation, it's called having kids",2,"The zoomer closer. Also respect."],
+         ["Unknown, so build the guardrails you can and keep your hands on the work",0,"The coffee-group answer. Pull up a chair Friday."]]}
+];
+let answers = [], bossMode = false;
+function render(){
+  const quiz = document.getElementById('quiz'); quiz.innerHTML='';
+  QUESTIONS.forEach((item,i)=>{
+    const card = document.createElement('div'); card.className='card'; card.id='q'+i;
+    card.innerHTML = '<div class="qnum">Question '+(i+1)+' of 7</div><div class="qtext">'+(bossMode?item.boss:item.q)+'</div>';
+    item.opts.forEach((o,j)=>{
+      const b=document.createElement('button'); b.className='opt'; b.textContent=o[0];
+      b.onclick=()=>pick(i,j); card.appendChild(b);
+    });
+    const w=document.createElement('div'); w.className='whisper'; w.id='w'+i; card.appendChild(w);
+    quiz.appendChild(card);
+  });
+}
+function pick(i,j){
+  const card=document.getElementById('q'+i);
+  if(card.classList.contains('answered')) return;
+  card.classList.add('answered');
+  [...card.querySelectorAll('.opt')].forEach((b,k)=>{ b.classList.add(k===j?'picked':'dim'); b.disabled=true; b.setAttribute('aria-pressed',String(k===j)); });
+  document.getElementById('w'+i).textContent = QUESTIONS[i].opts[j][2];
+  answers[i]=QUESTIONS[i].opts[j][1];
+  updateMeter();
+}
+function updateMeter(){
+  const done=answers.filter(a=>a!==undefined).length;
+  const score=answers.reduce((s,a)=>s+(a||0),0);
+  const pct=50 + (score/14)*45;
+  document.getElementById('needle').style.left=Math.max(5,Math.min(95,pct))+'%';
+  document.getElementById('progress').textContent=done+' of 7 answered';
+  if(done===7) finish(score);
+}
+function finish(score){
+  const r=document.getElementById('reveal');
+  const t=document.getElementById('verdictText');
+  const b=document.getElementById('verdictBody');
+  if(score<=-5){t.textContent='Verdict: Card-Carrying Doomer';b.textContent='You have read the safety papers, and possibly slept in them. The good news: worried people check the backups. Somebody has to.';}
+  else if(score<0){t.textContent='Verdict: Doomer-Leaning, Coffee Recommended';b.textContent='One foot in the bunker, one foot at work. Honestly, a defensible place to stand.';}
+  else if(score<=4){t.textContent='Verdict: The 50-50 Club';b.textContent='Same answer half my coffee group gives. You can\'t create something smarter than you and hope to control it, and also, the demo was pretty cool.';}
+  else if(score<=8){t.textContent='Verdict: Zoomer With A Seatbelt';b.textContent='Optimistic, but you still read the contract before signing. The most employable position on this entire meter.';}
+  else {t.textContent='Verdict: Full Zoomer, AGI-Pilled';b.textContent='The printing press people were wrong, the computer people were wrong, and you are betting the pattern holds. Godspeed.';}
+  r.classList.add('show');
+  document.getElementById('sections').classList.add('show');
+  t.focus({preventScroll:true}); r.scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+}
+function resetQuiz(asBoss){ bossMode=asBoss; answers=[];
+  document.getElementById('reveal').classList.remove('show');
+  document.getElementById('sections').classList.remove('show');
+  render(); updateMeter(); document.querySelector('#q0 button').focus({preventScroll:true}); window.scrollTo({top:0,behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});
+}
+render();
+</script>
+</body>
+</html>
