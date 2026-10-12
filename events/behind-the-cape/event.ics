@@ -1,0 +1,17 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//AGI Podcast Network//Behind the Cape//EN
+CALSCALE:GREGORIAN
+BEGIN:VEVENT
+UID:behind-the-cape-20261027@agipodcast.ai
+DTSTAMP:20261012T000000Z
+DTSTART:20261027T153000Z
+DTEND:20261027T170000Z
+SUMMARY:Behind the Cape: Are Data Centers Really Scary?
+DESCRIPTION:A pragmatic conversation that makes room for every perspectiv
+ e.\nRegister on LinkedIn: https://www.linkedin.com/events/75034724667706
+ 24512/
+LOCATION:LinkedIn Live
+URL:https://www.linkedin.com/events/7503472466770624512/
+END:VEVENT
+END:VCALENDAR
