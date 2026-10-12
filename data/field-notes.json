@@ -3,8 +3,15 @@
   "description": "A weekly companion to School's Out Saturdays. Practical signals, questions, and opportunities from the edge of school and work.",
   "url": "https://schoolsout.agipodcast.ai/field-notes",
   "author": "Jason Padgett",
-  "updated": "2026-09-13",
+  "updated": "2026-10-16",
   "issues": [
+    {
+      "title": "What would count as progress?",
+      "url": "https://schoolsout.agipodcast.ai/field-notes/what-would-count-as-progress/",
+      "date": "2026-10-16",
+      "description": "An OKR planning conversation about objectives, evidence and monthly commitments.",
+      "readTime": "Explainer board"
+    },
     {
       "number": 9,
       "title": "Education 2040",
